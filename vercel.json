@@ -1,0 +1,14 @@
+{
+  "buildCommand": null,
+  "outputDirectory": "demo-html-css",
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/demo-html-css/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/demo-html-css/$1"
+    }
+  ]
+}

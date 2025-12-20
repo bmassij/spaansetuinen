@@ -20,38 +20,11 @@
     return;
   }
   
-  console.log('🌐 Production detected - fixing navigation links...');
+  console.log('🌐 Production detected on Vercel - links should work directly');
   console.log('Current URL:', window.location.href);
   console.log('Pathname:', window.location.pathname);
   
-  // Prefix die toegevoegd moet worden
-  const prefix = '/demo-html-css/';
-  let fixedCount = 0;
-  
-  // Fix all <a> tags with href attributes
-  document.querySelectorAll('a[href]').forEach(link => {
-    const href = link.getAttribute('href');
-    
-    // Skip als het al een absolute URL is, anchor link, of mailto/tel link
-    if (!href ||
-        href.startsWith('http://') ||
-        href.startsWith('https://') ||
-        href.startsWith('//') ||
-        href.startsWith('/demo-html-css/') ||
-        href.startsWith('#') ||
-        href.startsWith('mailto:') ||
-        href.startsWith('tel:')) {
-      return;
-    }
-    
-    // Fix relatieve .html links
-    if (href.endsWith('.html') || href.includes('.html#')) {
-      const newHref = prefix + href;
-      link.setAttribute('href', newHref);
-      fixedCount++;
-      console.log(`Fixed: ${href} → ${newHref}`);
-    }
-  });
-  
-  console.log(`✅ Fixed ${fixedCount} navigation links`);
+  // Op Vercel staat alles op de root dankzij vercel.json rewrite rules
+  // Dus links zoals "bonsai-olijfboom.html" zouden moeten werken
+  console.log('✅ No link fixes needed - vercel.json handles routing');
 })();
