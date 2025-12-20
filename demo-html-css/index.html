@@ -792,44 +792,53 @@
     });
 
     // ===== CLICK SUPPORT VOOR DESKTOP DROPDOWNS =====
-    // Voeg click-to-toggle toe voor ALLE devices (vooral belangrijk voor touch)
-    document.querySelectorAll('nav ul.hidden.md\\:flex > li.group').forEach(group => {
-      const trigger = group.querySelector(':scope > a, :scope > button');
-      const dropdown = group.querySelector('.absolute');
+    // Simpele click-to-toggle voor mobiele/touch support
+    console.log('🔍 Initializing dropdown click support...');
+    
+    const dropdownItems = document.querySelectorAll('nav .hidden.md\\:flex .group');
+    console.log('📋 Found dropdown items:', dropdownItems.length);
+    
+    dropdownItems.forEach((group, index) => {
+      const trigger = group.querySelector('a, button');
+      console.log(`🎯 Item ${index}:`, trigger ? trigger.textContent.trim() : 'no trigger');
       
-      if (trigger && dropdown) {
-        // Voeg click event toe
+      if (trigger) {
         trigger.addEventListener('click', (e) => {
-          // Op touch devices of als dropdown open is, prevent default
+          console.log('👆 Click detected on:', trigger.textContent.trim());
           const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-          const isOpen = group.classList.contains('open');
+          console.log('📱 Touch device:', isTouch);
           
-          if (isTouch || isOpen) {
+          if (isTouch) {
             e.preventDefault();
+            e.stopPropagation();
+            console.log('🚫 Default prevented');
             
-            // Close alle andere dropdowns
-            document.querySelectorAll('nav ul.hidden.md\\:flex > li.group').forEach(otherGroup => {
+            // Close others
+            dropdownItems.forEach(otherGroup => {
               if (otherGroup !== group) {
                 otherGroup.classList.remove('open');
               }
             });
             
-            // Toggle huidige dropdown
+            // Toggle current
+            const wasOpen = group.classList.contains('open');
             group.classList.toggle('open');
+            console.log('✅ Toggled to:', !wasOpen ? 'OPEN' : 'CLOSED');
           }
-        });
+        }, true); // Use capture phase
       }
     });
     
-    // Close bij click buiten menu
+    // Close on outside click
     document.addEventListener('click', (e) => {
-      const desktopMenu = document.querySelector('nav ul.hidden.md\\:flex');
-      if (desktopMenu && !desktopMenu.contains(e.target)) {
-        document.querySelectorAll('nav ul.hidden.md\\:flex > li.group').forEach(group => {
-          group.classList.remove('open');
-        });
+      const nav = document.querySelector('nav');
+      if (nav && !nav.contains(e.target)) {
+        console.log('🚪 Closing all dropdowns (outside click)');
+        dropdownItems.forEach(group => group.classList.remove('open'));
       }
     });
+    
+    console.log('✅ Dropdown support initialized');
 
     // ===== FEESTELIJKE ANIMATIES =====
     
