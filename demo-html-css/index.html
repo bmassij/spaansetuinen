@@ -791,21 +791,24 @@
       });
     });
 
-    // ===== TOUCH SUPPORT VOOR DESKTOP DROPDOWNS =====
-    // Click-to-toggle voor touch devices op desktop menu dropdowns
-    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-    
-    if (isTouch) {
-      document.querySelectorAll('.hidden.md\\:flex .group').forEach(group => {
-        const trigger = group.querySelector('a[role="menuitem"], button[aria-haspopup]');
-        const dropdown = group.querySelector('.opacity-0');
-        
-        if (trigger && dropdown) {
-          trigger.addEventListener('click', (e) => {
+    // ===== CLICK SUPPORT VOOR DESKTOP DROPDOWNS =====
+    // Voeg click-to-toggle toe voor ALLE devices (vooral belangrijk voor touch)
+    document.querySelectorAll('nav ul.hidden.md\\:flex > li.group').forEach(group => {
+      const trigger = group.querySelector(':scope > a, :scope > button');
+      const dropdown = group.querySelector('.absolute');
+      
+      if (trigger && dropdown) {
+        // Voeg click event toe
+        trigger.addEventListener('click', (e) => {
+          // Op touch devices of als dropdown open is, prevent default
+          const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+          const isOpen = group.classList.contains('open');
+          
+          if (isTouch || isOpen) {
             e.preventDefault();
             
             // Close alle andere dropdowns
-            document.querySelectorAll('.hidden.md\\:flex .group').forEach(otherGroup => {
+            document.querySelectorAll('nav ul.hidden.md\\:flex > li.group').forEach(otherGroup => {
               if (otherGroup !== group) {
                 otherGroup.classList.remove('open');
               }
@@ -813,20 +816,20 @@
             
             // Toggle huidige dropdown
             group.classList.toggle('open');
-          });
-        }
-      });
-      
-      // Close bij click buiten menu
-      document.addEventListener('click', (e) => {
-        const nav = document.querySelector('nav');
-        if (nav && !nav.contains(e.target)) {
-          document.querySelectorAll('.hidden.md\\:flex .group').forEach(group => {
-            group.classList.remove('open');
-          });
-        }
-      });
-    }
+          }
+        });
+      }
+    });
+    
+    // Close bij click buiten menu
+    document.addEventListener('click', (e) => {
+      const desktopMenu = document.querySelector('nav ul.hidden.md\\:flex');
+      if (desktopMenu && !desktopMenu.contains(e.target)) {
+        document.querySelectorAll('nav ul.hidden.md\\:flex > li.group').forEach(group => {
+          group.classList.remove('open');
+        });
+      }
+    });
 
     // ===== FEESTELIJKE ANIMATIES =====
     
