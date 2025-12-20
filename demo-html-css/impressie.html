@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Impressie — Spaansetuin</title>
+  <meta name="description" content="Foto impressie van onze mediterrane bomen en bloembakken">
+  
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <style>
+    .brand-green { color: #16a34a; }
+    .dropdown-shadow { box-shadow: 0 6px 18px rgba(13, 27, 39, 0.08); }
+    .group:hover .group-hover\:visible,
+    .group:focus-within .group-focus-within\:visible {
+      visibility: visible;
+      opacity: 1;
+    }
+    html { scroll-behavior: smooth; }
+    
+    /* Gallery hover effect */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="antialiased bg-gray-50">
+  
+  <div class="fixed top-0 left-4 sm:left-8 z-50">
+    <img src="logo.png" alt="Spaanse Tuin & Zo Logo" class="h-20 sm:h-24 w-auto drop-shadow-lg">
+  </div>
+
+  <nav class="bg-white/95 backdrop-blur-sm border-b shadow-sm relative z-40" role="navigation">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <div class="flex items-center">
+          <div class="w-24 sm:w-32 mr-8"></div>
+          <ul class="hidden md:flex space-x-1 items-center">
+            <li><a href="index.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Welkom</a></li>
+            <li><a href="bloembakken.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bloembakken en potgrond</a></li>
+            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
+            <li><a href="plant-en-voedingstips.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Plant- en voedingstips</a></li>
+            <li><a href="bezorgen.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bezorgen</a></li>
+            <li><a href="impressie.html" class="px-3 py-2 text-sm font-medium text-emerald-600 bg-emerald-50 transition-colors rounded-md">Impressie</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">Impressie</h1>
+        <p class="text-lg sm:text-xl text-emerald-50 leading-relaxed">Een blik op onze mediterrane bomen, bloembakken en projecten</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="bg-white py-16">
+    <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <nav class="mb-8 text-sm text-gray-600">
+        <ol class="flex items-center space-x-2">
+          <li><a href="index.html" class="hover:text-emerald-600">Home</a></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li class="text-gray-900 font-medium">Impressie</li>
+        </ol>
+      </nav>
+
+      <section class="prose prose-lg max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed text-center">
+          Ontdek onze collectie mediterrane bomen, bloembakken en gerealiseerde projecten. Laat u inspireren door de mogelijkheden voor uw eigen tuin of terras.
+        </p>
+      </section>
+
+      <!-- Gallery Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Onze bomen en planten</h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          
+          <!-- Gallery Item 1 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-1.jpg" 
+                 alt="Mediterrane boom impressie 1" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Olijfboom</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 2 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-2.jpg" 
+                 alt="Mediterrane boom impressie 2" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPalmboom%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Palmboom</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 3 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-3.jpg" 
+                 alt="Mediterrane boom impressie 3" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EVijgenboom%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Vijgenboom</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 4 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-4.jpg" 
+                 alt="Mediterrane boom impressie 4" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Bonsai Olijfboom</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 5 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-5.jpg" 
+                 alt="Mediterrane boom impressie 5" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EDruivenrank%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Druivenrank</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 6 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-6.jpg" 
+                 alt="Mediterrane boom impressie 6" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EShowroom%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Onze showroom</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 7 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-7.jpg" 
+                 alt="Mediterrane boom impressie 7" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBloembak%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Bloembak met boom</p>
+            </div>
+          </div>
+
+          <!-- Gallery Item 8 -->
+          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="placeholder-gallery-8.jpg" 
+                 alt="Mediterrane boom impressie 8" 
+                 class="w-full h-64 object-cover"
+                 onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3ETerras%3C/text%3E%3C/svg%3E'">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Terras met palmboom</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Info Section -->
+      <section class="mb-16 bg-emerald-50 rounded-2xl p-8 sm:p-12">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">Laat u inspireren</h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Wilt u zien wat de mogelijkheden zijn voor uw eigen tuin of terras? Kom langs in onze tropische binnenplaats waar u ons volledige assortiment kunt bewonderen.
+          </p>
+          <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <div class="bg-white rounded-lg p-6 shadow-md">
+              <p class="text-sm text-gray-600 mb-1">Openingstijden seizoen</p>
+              <p class="text-lg font-semibold text-gray-900">Zaterdag: 11.00 - 17.00</p>
+              <p class="text-lg font-semibold text-gray-900">Dinsdag: 13.00 - 17.00</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-md">
+              <p class="text-sm text-gray-600 mb-1">Bezoek op afspraak</p>
+              <p class="text-lg font-semibold text-gray-900">Buiten openingstijden?</p>
+              <p class="text-emerald-600 font-semibold">Neem contact op!</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 sm:p-12 text-white text-center">
+        <h2 class="text-3xl font-bold mb-4">Kom langs in onze showroom</h2>
+        <p class="text-lg text-emerald-50 mb-6 max-w-2xl mx-auto">
+          Bekijk ons volledige assortiment mediterrane bomen en bloembakken in het echt. Onze binnenplaats van 400 m² staat vol met prachtige planten.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="tel:0611929392" class="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-gray-100 transition transform hover:scale-105">
+            📞 06-11929392
+          </a>
+          <a href="mailto:lisette@spaansetuin-enzo.nl" class="inline-flex items-center px-6 py-3 bg-emerald-800 text-white font-semibold rounded-lg hover:bg-emerald-900 transition transform hover:scale-105">
+            ✉️ E-mail ons
+          </a>
+          <a href="index.html" class="inline-flex items-center px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/20 transition transform hover:scale-105">
+            🏠 Terug naar home
+          </a>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        <div>
+          <img src="logo.png" alt="Spaanse Tuin & Zo" class="h-16 w-auto mb-4 brightness-0 invert">
+          <h3 class="text-xl font-bold mb-3">Spaanse Tuin & Zo</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Mediterrane kwaliteit, van onze zorgzame handen naar uw tuin.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-emerald-400">Contact</h4>
+          <ul class="space-y-3 text-gray-300 text-sm">
+            <li class="flex items-start">
+              <span class="mr-2">📍</span>
+              <address class="not-italic">Heinsbergerweg 20<br>6074 AD Melick</address>
+            </li>
+            <li><span class="mr-2">📞</span><a href="tel:0611929392" class="hover:text-emerald-400 transition">06-11929392</a></li>
+            <li><span class="mr-2">✉️</span><a href="mailto:lisette@spaansetuin-enzo.nl" class="hover:text-emerald-400 transition">lisette@spaansetuin-enzo.nl</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-emerald-400">Openingstijden</h4>
+          <p class="text-gray-400 text-sm mb-3">Seizoen maart – september:</p>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><span class="mr-2">🕐</span><strong>Zaterdag:</strong> 11.00 - 17.00 uur</li>
+            <li><span class="mr-2">🕐</span><strong>Dinsdag:</strong> 13.00 - 17.00 uur</li>
+          </ul>
+          <p class="text-gray-400 text-xs mt-3">Buiten openingstijden? Neem contact op!</p>
+        </div>
+
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-emerald-400">Navigatie</h4>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li><a href="index.html" class="hover:text-emerald-400 transition">Welkom</a></li>
+            <li><a href="bloembakken.html" class="hover:text-emerald-400 transition">Bloembakken</a></li>
+            <li><a href="bezorgen.html" class="hover:text-emerald-400 transition">Bezorgen</a></li>
+            <li><a href="verhuur.html" class="hover:text-emerald-400 transition">Verhuur</a></li>
+            <li><a href="plant-en-voedingstips.html" class="hover:text-emerald-400 transition">Plant- en voedingstips</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-400 text-sm mb-2">&copy; 2025 Spaanse Tuin & Zo — Mediterrane bomen en planten</p>
+        <p class="text-gray-500 text-xs">KvK: 65475860 | BTW: NL001888980B55</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
