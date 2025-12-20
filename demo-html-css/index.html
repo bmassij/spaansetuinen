@@ -15,7 +15,8 @@
     
     /* Smooth transitions for dropdowns */
     .group:hover .group-hover\:visible,
-    .group:focus-within .group-focus-within\:visible {
+    .group:focus-within .group-focus-within\:visible,
+    .group.open .group-hover\:visible {
       visibility: visible;
       opacity: 1;
     }
@@ -790,6 +791,43 @@
       });
     });
 
+    // ===== TOUCH SUPPORT VOOR DESKTOP DROPDOWNS =====
+    // Click-to-toggle voor touch devices op desktop menu dropdowns
+    const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+    
+    if (isTouch) {
+      document.querySelectorAll('.hidden.md\\:flex .group').forEach(group => {
+        const trigger = group.querySelector('a[role="menuitem"], button[aria-haspopup]');
+        const dropdown = group.querySelector('.opacity-0');
+        
+        if (trigger && dropdown) {
+          trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            // Close alle andere dropdowns
+            document.querySelectorAll('.hidden.md\\:flex .group').forEach(otherGroup => {
+              if (otherGroup !== group) {
+                otherGroup.classList.remove('open');
+              }
+            });
+            
+            // Toggle huidige dropdown
+            group.classList.toggle('open');
+          });
+        }
+      });
+      
+      // Close bij click buiten menu
+      document.addEventListener('click', (e) => {
+        const nav = document.querySelector('nav');
+        if (nav && !nav.contains(e.target)) {
+          document.querySelectorAll('.hidden.md\\:flex .group').forEach(group => {
+            group.classList.remove('open');
+          });
+        }
+      });
+    }
+
     // ===== FEESTELIJKE ANIMATIES =====
     
     // Confetti animatie bij laden pagina
@@ -929,6 +967,7 @@
       }, 500);
     });
   </script>
+  <script src="scripts/desktop-nav.js"></script>
   <script src="fix-links.js"></script>
 </body>
 </html>
