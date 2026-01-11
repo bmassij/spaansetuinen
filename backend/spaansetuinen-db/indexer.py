@@ -5,9 +5,14 @@ import os
 from pathlib import Path
 import hashlib
 from datetime import datetime
-from .sections import detect_sections
-from .embeddings import get_embedding
-from .chroma_manager import ChromaManager
+try:
+    from .sections import detect_sections
+    from .embeddings import get_embedding
+    from .chroma_manager import ChromaManager
+except ImportError:
+    from sections import detect_sections
+    from embeddings import get_embedding
+    from chroma_manager import ChromaManager
 import logging
 import mimetypes
 
@@ -55,10 +60,8 @@ class Indexer:
                             self.chroma.upsert_document(doc_id, sec.get("text", ""), emb, metadata)
                             self.logger.info(f"Upserted {doc_id}")
                     else:
-                        # binary assets: only store metadata and path
-                        doc_id = f"asset::{rel}"
-                        metadata = {"page": str(rel.parent), "filetype": path.suffix, "path": str(path), "hash": fhash, "modified": modified}
-                        self.chroma.upsert_document(doc_id, "", [], metadata)
-                        self.logger.info(f"Indexed asset {doc_id}")
+                        # binary assets: skip embedding creation for now
+                        # Only index text content for vector search
+                        self.logger.info(f"Skipping binary asset {path} (no text content)")
                 except Exception as e:
                     self.logger.exception(f"Error indexing {path}: {e}")
