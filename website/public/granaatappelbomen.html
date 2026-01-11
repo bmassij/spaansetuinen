@@ -35,6 +35,10 @@
 </head>
 <body class="antialiased bg-gray-50">
   
+  <!-- ========================================
+       HEADER / NAVBAR
+       ======================================== -->
+  
   <!-- Logo positioned above navbar, overlapping -->
   <div class="fixed top-0 left-4 sm:left-8 z-50">
     <img src="logo.png" alt="Spaanse Tuin & Zo Logo" class="h-20 sm:h-24 w-auto drop-shadow-lg">
@@ -232,27 +236,48 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
   <header class="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
     <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/other1.jpg'); background-size:cover; background-position:center;"></div>
     <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/other1.jpg'); background-size:cover; background-position:center;"></div>
-    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/index/other1.jpg'); background-size:cover; background-position:center;"></div>
-    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/index/other1.jpg'); background-size:cover; background-position:center;"></div>
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- Placeholder achtergrondafbeelding -->
+      <div class="w-full h-full bg-gradient-to-br from-emerald-700/30 to-emerald-900/30"></div>
+    </div>
     
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl">
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
-          Granaatappelboom (Punica granatium)
-        </h1>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
         
-        <p class="text-lg sm:text-xl text-emerald-50 leading-relaxed">
-          Een prachtige sierwaarde voor uw tuin met rode bloemen en eetbare vruchten. Winterhard tot -12°C.
-        </p>
+        <!-- Links: Titel en beschrijving -->
+        <div>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+            Granaatappelboom (Punica granatium)
+          </h1>
+          
+          <p class="text-lg sm:text-xl text-emerald-50 leading-relaxed">
+            Een prachtige sierwaarde voor uw tuin met rode bloemen en eetbare vruchten. Winterhard tot -12°C.
+          </p>
+        </div>
+        
+        <!-- Rechts: Placeholder afbeelding -->
+        <div class="hidden md:flex justify-center items-center">
+          <div class="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
+            <div class="text-center p-8">
+              <div class="text-6xl mb-4">🌳</div>
+              <p class="text-white/80 text-sm">Afbeelding volgt</p>
+            </div>
+          </div>
+        </div>
+        
       </div>
     </div>
   </header>
 
-  <!-- CONTENT SECTION -->
+  <!-- ========================================
+       CONTENT SECTION
+       ======================================== -->
   <main class="bg-white py-16">
     <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
       
@@ -261,26 +286,29 @@
         <ol class="flex items-center space-x-2">
           <li><a href="index.html" class="hover:text-emerald-600 transition">Home</a></li>
           <li><span class="text-gray-400">/</span></li>
-          <li><a href="index.html#highlights" class="hover:text-emerald-600 transition">Onze bomen</a></li>
+          <li><a href="index.html#onze-bomen" class="hover:text-emerald-600 transition">Onze bomen</a></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li><a href="#" class="hover:text-emerald-600 transition">Overige bomen</a></li>
           <li><span class="text-gray-400">/</span></li>
           <li class="text-gray-900 font-medium">Granaatappelbomen</li>
         </ol>
       </nav>
 
-      <!-- Inleiding -->
+      <!-- ==================== INLEIDING ==================== -->
       <section class="prose prose-lg max-w-none mb-12">
         <p class="text-xl text-gray-700 leading-relaxed">
           Vroeg in het voorjaar ontstaat er een prachtige rode bloem die vervolgens doorgroeit tot een mooie vrucht. De granaatappel ontstaat in de periode oktober tot december. De granaatappelboom is een echte sierwaarde voor uw tuin.
         </p>
       </section>
 
-      <!-- CONTENT BLOK 1: De vrucht -->
+      <!-- ==================== KENMERKEN ==================== -->
       <section class="mb-16">
         <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-emerald-600 pl-4">
           De granaatappel vrucht
         </h2>
         
         <div class="grid md:grid-cols-2 gap-8 items-start">
+          <!-- Tekst kolom -->
           <div class="space-y-4 text-gray-700 leading-relaxed">
             <p>
               De granaatappel heeft een dieprode kleur en wordt 8-12 cm in diameter. De schil van de appel is niet eetbaar, maar het vruchtvlees is heerlijk zoet van smaak.
@@ -291,51 +319,68 @@
             <p>
               Van de vrucht wordt ook gelatine siroop gemaakt, wat vaak wordt gebruikt in de mediterrane keuken.
             </p>
-          </div>
-          
-          <div class="bg-emerald-50 rounded-xl p-6 border-2 border-emerald-100">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">💡 Wist u dat?</h3>
-            <ul class="space-y-2 text-gray-700">
+            
+            <!-- Opsomming eigenschappen -->
+            <ul class="space-y-2 mt-6">
               <li class="flex items-start">
-                <span class="text-emerald-600 mr-2 mt-1">•</span>
-                <span>De granaatappel bevat honderden eetbare zaadjes</span>
+                <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                <span><strong>Winterhard tot -12°C</strong> - geschikt voor Nederlandse klimaat</span>
               </li>
               <li class="flex items-start">
-                <span class="text-emerald-600 mr-2 mt-1">•</span>
-                <span>De vrucht is rijk aan antioxidanten</span>
+                <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                <span>Prachtige rode bloemen in het voorjaar</span>
               </li>
               <li class="flex items-start">
-                <span class="text-emerald-600 mr-2 mt-1">•</span>
-                <span>In de winter laat de boom zijn blad vallen en blijft er een karakteristieke stam over</span>
+                <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                <span>Eetbare vruchten in oktober-december</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                <span>Karakteristieke stam in de winter</span>
+              </li>
+              <li class="flex items-start">
+                <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                <span>Kan 2-4 meter hoog worden</span>
               </li>
             </ul>
+          </div>
+          
+          <!-- Afbeelding kolom - placeholder -->
+          <div class="flex justify-center">
+            <div class="w-full h-96 bg-gradient-to-br from-emerald-50 to-emerald-100 rounded-lg shadow-lg flex items-center justify-center border-2 border-emerald-200">
+              <div class="text-center p-8">
+                <div class="text-8xl mb-4">🌳</div>
+                <p class="text-emerald-700 font-medium">Granaatappelboom</p>
+                <p class="text-emerald-600 text-sm mt-2">Afbeelding placeholder</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTENT BLOK 2: Standplaats en verzorging -->
-      <section class="mb-16 bg-gray-50 rounded-2xl p-8">
+      <!-- ==================== VERZORGING ==================== -->
+      <section class="mb-16 bg-emerald-50 rounded-2xl p-8">
         <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-emerald-600 pl-4">
           Standplaats en verzorging
         </h2>
         
         <div class="space-y-6 text-gray-700 leading-relaxed">
           <div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">🌞 Standplaats</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Standplaats</h3>
             <p>
               De granaatappelboom heeft een zonnige of halfschaduw standplaats nodig en het liefst beschut. Een tuin op het zuiden en uit de wind is optimaal.
             </p>
           </div>
           
           <div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">❄️ Winterhardheid</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Winterhardheid</h3>
             <p>
               De granaatappelboom is winterhard tot -12°C. In strengere winters is het aan te raden om extra bescherming te bieden.
             </p>
           </div>
           
           <div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">💧 Water geven</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Water geven</h3>
             <p>
               De granaatappelboom op een bult plaatsen zodat het water wegloopt van de stam. Plaatst u een punica in een bloembak, gebruik bij voorkeur mediterrane potgrond en het is belangrijk om deze in de zomer regelmatig water te geven.
             </p>
@@ -345,7 +390,7 @@
           </div>
           
           <div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-3">✂️ Snoeien</h3>
+            <h3 class="text-xl font-semibold text-gray-900 mb-3">Snoeien</h3>
             <p>
               Februari is de beste periode om te snoeien. Snijd de dunne takjes weg zodat de kruin open blijft. Dit zorgt voor een gezonde boom met goede luchtstroom.
             </p>
@@ -353,7 +398,46 @@
         </div>
       </section>
 
-      <!-- CALL TO ACTION -->
+      <!-- ==================== PLAATSING - Grid layout ==================== -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-emerald-600 pl-4">
+          Plaatsing en gebruik
+        </h2>
+        
+        <!-- Grid met kaarten -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Kaart 1: Volle grond -->
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-2xl mb-4">
+              🌱
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Volle grond</h3>
+            <p class="text-gray-600">De granaatappelboom gedijt het best in de volle grond, op een zonnige beschutte plek. Plant op een verhoogde plek voor drainage.</p>
+          </div>
+          
+          <!-- Kaart 2: In pot -->
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-2xl mb-4">
+              🪴
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">In bloembak</h3>
+            <p class="text-gray-600">Ook geschikt voor grote bloembakken. Gebruik mediterrane potgrond en zorg voor goede drainage. Regelmatig water geven in de zomer.</p>
+          </div>
+          
+          <!-- Kaart 3: Decoratief -->
+          <div class="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center text-2xl mb-4">
+              🎨
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Sierwaarde</h3>
+            <p class="text-gray-600">Prachtige bloemen, decoratieve vruchten en karakteristieke winterstam maken deze boom een echte eyecatcher in uw tuin.</p>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- ==================== CALL TO ACTION ==================== -->
       <section class="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 sm:p-12 text-white text-center">
         <h2 class="text-3xl font-bold mb-4">Interesse in een granaatappelboom?</h2>
         <p class="text-lg text-emerald-50 mb-6 max-w-2xl mx-auto">
