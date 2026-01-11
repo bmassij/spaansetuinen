@@ -1,0 +1,18 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run ProjectIndexDB (watch)",
+      "type": "shell",
+      "command": "python ProjectIndexDB/main.py --root \"${workspaceFolder}\" --watch",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    }
+  ]
+}

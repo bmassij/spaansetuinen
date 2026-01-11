@@ -1,0 +1,6 @@
+chromadb==0.3.31
+watchdog==3.0.0
+sentence-transformers==2.2.2
+openai==1.8.0
+python-dotenv==1.0.0
+numpy==1.26.0

@@ -1,0 +1,9 @@
+chromadb
+watchdog
+beautifulsoup4
+sentence-transformers
+pillow
+pandas
+tqdm
+python-dotenv
+requests

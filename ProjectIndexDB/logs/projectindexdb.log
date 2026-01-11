@@ -1,0 +1,15 @@
+2025-12-23 21:51:20,822 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2025-12-23 21:51:20,823 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-12-23 21:51:22,704 INFO embeddings: Loaded sentence-transformers model: all-MiniLM-L6-v2
+2026-01-06 22:56:09,636 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-01-06 22:56:09,636 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-06 22:56:11,487 INFO embeddings: Loaded sentence-transformers model: all-MiniLM-L6-v2
+2026-01-09 21:31:19,740 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2026-01-09 21:31:19,741 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-09 21:31:22,080 INFO embeddings: Loaded sentence-transformers model: all-MiniLM-L6-v2
+2026-01-11 12:25:13,043 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2026-01-11 12:25:13,044 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-11 12:25:14,847 INFO embeddings: Loaded sentence-transformers model: all-MiniLM-L6-v2
+2026-01-11 12:37:50,740 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cuda:0
+2026-01-11 12:37:50,741 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2026-01-11 12:37:52,626 INFO embeddings: Loaded sentence-transformers model: all-MiniLM-L6-v2

@@ -1,0 +1,12 @@
+# Ignore scraped/raw data and local caches
+/demo-html-css/scraped-images/
+/demo-html-css/logs/
+/demo-html-css/vector-db/
+/demo-html-css/.cache/
+
+# Python
+__pycache__/
+*.pyc
+
+# Huggingface cache (optional)
+/.cache/huggingface/
