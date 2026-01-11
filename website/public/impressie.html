@@ -229,47 +229,41 @@
   </nav>
 
   <!-- ========================================
-       HERO SECTION - GRID LAYOUT
+       HERO SECTION
        ======================================== -->
-  <header class="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16 overflow-hidden">
-    <!-- Hero content in grid layout -->
+  <header class="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
+    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/index/other8.jpg'); background-size:cover; background-position:center;"></div>
+    <div class="absolute inset-0 overflow-hidden">
+      <!-- Placeholder achtergrondafbeelding -->
+      <div class="w-full h-full bg-gradient-to-br from-emerald-700/30 to-emerald-900/30"></div>
+    </div>
+    
     <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
         
-        <!-- Text content -->
+        <!-- Links: Titel en beschrijving -->
         <div>
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
             Impressie
           </h1>
-          <p class="text-lg sm:text-xl text-emerald-50 leading-relaxed mb-8">
+          
+          <p class="text-lg sm:text-xl text-emerald-50 leading-relaxed">
             Een blik op onze mediterrane bomen, bloembakken en projecten. Ontdek de mogelijkheden voor uw eigen tuin.
           </p>
-          <div class="flex flex-wrap gap-4">
-            <a href="#galerij" class="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-gray-100 transition transform hover:scale-105">
-              Bekijk galerij
-            </a>
-            <a href="tel:0611929392" class="inline-flex items-center px-6 py-3 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 transition transform hover:scale-105">
-              📞 Contact
-            </a>
-          </div>
         </div>
-
-        <!-- Image placeholder -->
-        <div class="relative">
-          <div class="aspect-square bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-white/20 flex items-center justify-center text-white/60">
-            <div class="text-center">
+        
+        <!-- Rechts: Placeholder afbeelding -->
+        <div class="hidden md:flex justify-center items-center">
+          <div class="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
+            <div class="text-center p-8">
               <div class="text-6xl mb-4">📸</div>
-              <p class="text-lg font-medium">Impressie galerij</p>
-              <p class="text-sm opacity-75">Voorbeelden van onze projecten</p>
+              <p class="text-white/80 text-sm">Afbeelding volgt</p>
             </div>
           </div>
         </div>
         
       </div>
     </div>
-
-    <!-- Background gradient overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-emerald-600/90 to-emerald-800/90"></div>
   </header>
 
   <!-- ========================================
