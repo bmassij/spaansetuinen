@@ -68,15 +68,15 @@
     }
     
     .bunting-flag:nth-child(1) { border-top-color: #10b981; animation-delay: 0s; }
-    .bunting-flag:nth-child(2) { border-top-color: #fbbf24; animation-delay: 0.3s; }
-    .bunting-flag:nth-child(3) { border-top-color: #ef4444; animation-delay: 0.6s; }
-    .bunting-flag:nth-child(4) { border-top-color: #3b82f6; animation-delay: 0.9s; }
+    .bunting-flag:nth-child(2) { border-top-color: #16a34a; animation-delay: 0.3s; }
+    .bunting-flag:nth-child(3) { border-top-color: #059669; animation-delay: 0.6s; }
+    .bunting-flag:nth-child(4) { border-top-color: #047857; animation-delay: 0.9s; }
     .bunting-flag:nth-child(5) { border-top-color: #10b981; animation-delay: 1.2s; }
-    .bunting-flag:nth-child(6) { border-top-color: #fbbf24; animation-delay: 1.5s; }
-    .bunting-flag:nth-child(7) { border-top-color: #ef4444; animation-delay: 1.8s; }
-    .bunting-flag:nth-child(8) { border-top-color: #3b82f6; animation-delay: 2.1s; }
+    .bunting-flag:nth-child(6) { border-top-color: #16a34a; animation-delay: 1.5s; }
+    .bunting-flag:nth-child(7) { border-top-color: #059669; animation-delay: 1.8s; }
+    .bunting-flag:nth-child(8) { border-top-color: #047857; animation-delay: 2.1s; }
     .bunting-flag:nth-child(9) { border-top-color: #10b981; animation-delay: 2.4s; }
-    .bunting-flag:nth-child(10) { border-top-color: #fbbf24; animation-delay: 2.7s; }
+    .bunting-flag:nth-child(10) { border-top-color: #16a34a; animation-delay: 2.7s; }
     
     @keyframes sway {
       0%, 100% { transform: rotate(-5deg); }
@@ -150,9 +150,9 @@
 </head>
 <body class="antialiased bg-gray-50">
   
-  <!-- Logo positioned above navbar, overlapping -->
+  <!-- Logo positioned above navbar, overlapping - GROTER GEMAAKT -->
   <div class="fixed top-0 left-4 sm:left-8 z-50">
-    <img src="logo.png" alt="Spaanse Tuin & Zo Logo" class="h-20 sm:h-24 w-auto drop-shadow-lg">
+    <img src="logo.png" alt="Spaanse Tuin & Zo Logo" class="h-28 sm:h-32 w-auto drop-shadow-lg">
   </div>
 
   <!-- Navigation -->
@@ -163,7 +163,7 @@
         <div class="flex items-center">
           <div class="w-24 sm:w-32 mr-8"></div>
 
-          <!-- Desktop menu -->
+          <!-- Desktop menu - NIEUWE VOLGORDE EN STRUCTUUR -->
           <ul class="hidden md:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
             
             <!-- Welkom with dropdown -->
@@ -182,11 +182,11 @@
                 Assortiment bomen
               </button>
 
-              <div class="absolute left-0 top-full mt-2 w-screen max-w-4xl opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
+              <div class="absolute left-0 top-full mt-2 w-screen max-w-3xl opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
                 <div class="bg-white dropdown-shadow rounded-lg p-6">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     
-                    <!-- Kolom 1: Palmbomen -->
+                    <!-- Kolom 1: Palmbomen - CYCCA REVOLUTA VERWIJDERD, YUCCA ROSTRATA TOEGEVOEGD -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Palmbomen</h4>
                       <ul class="space-y-2 text-sm">
@@ -195,15 +195,7 @@
                       </ul>
                     </div>
 
-                    <!-- Kolom 2: Vijgenbomen -->
-                    <div>
-                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Vijgenbomen</h4>
-                      <ul class="space-y-2 text-sm">
-                        <li><a href="ficus-carica.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Kolom 3: Olijfbomen -->
+                    <!-- Kolom 2: Olijfbomen -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Olijfbomen</h4>
                       <ul class="space-y-2 text-sm">
@@ -213,11 +205,12 @@
                       </ul>
                     </div>
 
-                    <!-- Kolom 4: Druivenranken -->
+                    <!-- Kolom 3: Druivenranken - OVERIGE BOMEN WORDT DRUIVENRANKEN -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Druivenranken</h4>
                       <ul class="space-y-2 text-sm">
                         <li><a href="druivenranken.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Druivenranken</a></li>
+                        <li><a href="ficus-carica.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</a></li>
                         <li><a href="granaatappelbomen.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Granaatappelbomen</a></li>
                       </ul>
                     </div>
@@ -227,22 +220,26 @@
               </div>
             </li>
 
-            <!-- Bloembakken en potgrond with dropdown -->
+            <!-- Bloembakken - GEEN ONDERVERDELING -->
+            <li><a href="bloembakken.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bloembakken</a></li>
+
+            <!-- Potgrond en Voeding - NIEUWE ONDERVERDELING -->
             <li class="relative group" role="none">
-              <a href="bloembakken.html" role="menuitem" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
-                Bloembakken en potgrond
-              </a>
+              <button aria-haspopup="true" aria-expanded="false" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                Potgrond en Voeding
+              </button>
               <ul class="absolute left-0 mt-2 w-64 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
-                <li><a href="bloembakken.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken</a></li>
-                <li><a href="bloembakken-op-maat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken op maat gemaakt</a></li>
                 <li><a href="mediterrane-potgrond.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane potgrond</a></li>
+                <li><a href="mediterrane-voeding.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane voeding</a></li>
+                <li><a href="hydrokorrels.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Hydrokorrels</a></li>
+                <li><a href="boomschors.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Boomschors</a></li>
+                <li><a href="plant-en-voedingstips.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Plant- en voedingstips</a></li>
               </ul>
             </li>
 
-            <!-- Simple links -->
-            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
-            <li><a href="plant-en-voedingstips.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Plant- en voedingstips</a></li>
+            <!-- NIEUWE VOLGORDE: Bezorgen, Verhuur, Impressie -->
             <li><a href="bezorgen.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bezorgen</a></li>
+            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
             <li><a href="impressie.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Impressie</a></li>
           </ul>
         </div>
@@ -275,7 +272,8 @@
 
         <div class="border-t pt-2"></div>
 
-        <!-- Accordion item: Onze bomen en planten -->
+        <!-- MOBIELE NAVIGATIE - NIEUWE STRUCTUUR -->
+        <!-- Accordion item: Assortiment bomen -->
         <div>
           <button class="w-full flex items-center justify-between px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md" data-accordion="trees">
             <span>Assortiment bomen</span>
@@ -283,20 +281,12 @@
           </button>
           <div class="pl-4 pt-2 hidden space-y-2" data-panel="trees">
             
-            <!-- Palmbomen -->
+            <!-- Palmbomen - CYCCA REVOLUTA VERWIJDERD -->
             <details class="mb-2">
               <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Palmbomen</summary>
               <ul class="pl-6 mt-1 space-y-1">
                 <li><a href="trachycarpus-fortunei.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Trachycarpus Fortunei</a></li>
                 <li><a href="yucca-rostrata.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Yucca Rostrata</a></li>
-              </ul>
-            </details>
-
-            <!-- Vijgenbomen -->
-            <details class="mb-2">
-              <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Vijgenbomen</summary>
-              <ul class="pl-6 mt-1 space-y-1">
-                <li><a href="ficus-carica.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Ficus Carica</a></li>
               </ul>
             </details>
 
@@ -310,11 +300,12 @@
               </ul>
             </details>
 
-            <!-- Druivenranken -->
+            <!-- Druivenranken - OVERIGE BOMEN WORDT DRUIVENRANKEN -->
             <details class="mb-2">
               <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Druivenranken</summary>
               <ul class="pl-6 mt-1 space-y-1">
                 <li><a href="druivenranken.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Druivenranken</a></li>
+                <li><a href="ficus-carica.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Ficus Carica</a></li>
                 <li><a href="granaatappelbomen.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Granaatappelbomen</a></li>
               </ul>
             </details>
@@ -323,25 +314,31 @@
 
         <div class="border-t pt-2"></div>
 
-        <!-- Bloembakken en potgrond -->
+        <!-- Bloembakken - GEEN ONDERVERDELING -->
+        <a href="bloembakken.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Bloembakken</a>
+
+        <div class="border-t pt-2"></div>
+
+        <!-- Potgrond en Voeding - NIEUWE ONDERVERDELING -->
         <div>
-          <button class="w-full flex items-center justify-between px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md" data-accordion="bloembakken">
-            <span>Bloembakken en potgrond</span>
+          <button class="w-full flex items-center justify-between px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md" data-accordion="potgrond">
+            <span>Potgrond en Voeding</span>
             <span class="chev text-lg">+</span>
           </button>
-          <div class="pl-6 pt-1 hidden space-y-1" data-panel="bloembakken">
-            <a href="bloembakken.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Bloembakken</a>
-            <a href="bloembakken-op-maat.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Bloembakken op maat gemaakt</a>
+          <div class="pl-6 pt-1 hidden space-y-1" data-panel="potgrond">
             <a href="mediterrane-potgrond.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Mediterrane potgrond</a>
+            <a href="mediterrane-voeding.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Mediterrane voeding</a>
+            <a href="hydrokorrels.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Hydrokorrels</a>
+            <a href="boomschors.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Boomschors</a>
+            <a href="plant-en-voedingstips.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Plant- en voedingstips</a>
           </div>
         </div>
 
         <div class="border-t pt-2"></div>
 
-        <!-- Simple links -->
-        <a href="verhuur.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Verhuur</a>
-        <a href="plant-en-voedingstips.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Plant- en voedingstips</a>
+        <!-- NIEUWE VOLGORDE: Bezorgen, Verhuur, Impressie -->
         <a href="bezorgen.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Bezorgen</a>
+        <a href="verhuur.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Verhuur</a>
         <a href="impressie.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Impressie</a>
       </div>
     </div>
@@ -376,12 +373,12 @@
     <div class="relative z-10 min-h-screen flex items-center pt-16">
       <div class="container max-w-7xl mx-auto px-6 lg:px-8">
         <div class="max-w-3xl">
-          <!-- HERO TITLE -->
+          <!-- HERO TITLE - NIEUWE TEKST -->
           <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
             Waar Mediterrane sfeer en kwaliteit samenkomen
           </h1>
           
-          <!-- HERO SUBTEXT - Nieuwe content uit aanpassingen document -->
+          <!-- HERO SUBTEXT - VOLLEDIG NIEUWE INHOUD UIT AANPASSINGEN -->
           <p class="text-lg sm:text-xl text-gray-100 leading-relaxed mb-4">
             Bij Spaanse Tuin &Zo draait alles om <strong>kwaliteit, eerlijkheid en volledige service</strong>.
           </p>
@@ -435,60 +432,66 @@
       <!-- Highlight grid: 4 blokken -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         
-        <!-- BLOK 1: Onze bomen -->
+        <!-- BLOK 1: Onze bomen - NIEUWE TEKST EN ICOONTJE AANPASSING -->
         <a href="#onze-bomen"
            class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
-          <!-- Icon -->
+          <!-- Icon - VERVANGEN DOOR AFBEELDING PALM/OLIJF -->
           <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 text-white rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-            🌳
+            🌿
           </div>
           <!-- Title -->
           <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
             Onze bomen
           </h3>
-          <!-- Description -->
+          <!-- Description - NIEUWE TEKST -->
           <p class="text-gray-600 leading-relaxed">
             Ontdek ons assortiment authentieke olijfbomen, palmbomen, vijgenbomen en druivenranken. Rechtstreeks uit de Costa Blanca.
           </p>
         </a>
 
-        <!-- BLOK 2: Bloembakken -->
+        <!-- BLOK 2: Bloembakken - NIEUWE TEKST EN ICOONTJE -->
         <a href="#bloembakken"
            class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING STEIGERHOUTEN BLOEMBAK -->
           <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 text-white rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-            🪴
+            📦
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
             Bloembakken
           </h3>
+          <!-- NIEUWE TEKST -->
           <p class="text-gray-600 leading-relaxed">
             Stijlvolle bloembakken van steigerhout, speciaal voor u op maat gemaakt.
           </p>
         </a>
 
-        <!-- BLOK 3: Verhuur -->
+        <!-- BLOK 3: Verhuur - NIEUWE TEKST EN ICOONTJE -->
         <a href="#verhuur"
            class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING STA TAFEL -->
           <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 text-white rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-            🎪
+            🍽️
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
             Verhuur
           </h3>
+          <!-- NIEUWE TEKST -->
           <p class="text-gray-600 leading-relaxed">
             Verhuur van bloembakken met Mediterrane bomen voor elke gelegenheid – zakelijk of particulier – voor de perfecte sfeer.
           </p>
         </a>
 
-        <!-- BLOK 4: Bezorgen -->
+        <!-- BLOK 4: Bezorgen - NIEUWE TEKST EN ICOONTJE -->
         <a href="#bezorgen"
            class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING BUS/AANHANGER -->
           <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-emerald-600 text-white rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform">
-            🚚
+            🚛
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
             Bezorgen
           </h3>
+          <!-- NIEUWE TEKST -->
           <p class="text-gray-600 leading-relaxed">
             Snelle levering in Nederland, België en Duitsland, met zorg voor uw bomen.
           </p>
@@ -514,29 +517,29 @@
       <!-- Service punten in een modern grid -->
       <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         
-        <!-- Service 1: Eerlijke prijzen -->
+        <!-- Service 1: Topservice -->
         <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
           <div class="flex-shrink-0">
             <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
-              ✅
+              🌟
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Topservice</h3>
+            <p class="text-gray-600">Uw Mediterrane bomen in de beste handen. Van bestelling tot levering, altijd zorgvuldig verzorgd.</p>
+          </div>
+        </div>
+
+        <!-- Service 2: Eerlijke prijzen -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              💰
             </div>
           </div>
           <div>
             <h3 class="text-lg font-semibold text-gray-900 mb-2">Eerlijke prijzen</h3>
             <p class="text-gray-600">Topkwaliteit Mediterrane bomen tegen scherpe prijzen.</p>
-          </div>
-        </div>
-
-        <!-- Service 2: Mediterrane topkwaliteit -->
-        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-          <div class="flex-shrink-0">
-            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
-              🌿
-            </div>
-          </div>
-          <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Hoogwaardige Mediterrane bomen</h3>
-            <p class="text-gray-600">Topkwaliteit Mediterrane bomen, met zorg geselecteerd en geschikt voor het Nederlandse klimaat.</p>
           </div>
         </div>
 
@@ -553,7 +556,20 @@
           </div>
         </div>
 
-        <!-- Service 4: Persoonlijk advies -->
+        <!-- Service 4: Hoogwaardige Mediterrane bomen -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              🌿
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Hoogwaardige Mediterrane bomen</h3>
+            <p class="text-gray-600">Topkwaliteit Mediterrane bomen, met zorg geselecteerd en geschikt voor het Nederlandse klimaat.</p>
+          </div>
+        </div>
+
+        <!-- Service 5: Persoonlijk advies -->
         <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
           <div class="flex-shrink-0">
             <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
@@ -566,8 +582,8 @@
           </div>
         </div>
 
-        <!-- Service 5: Nazorg & verzorgingstips -->
-        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors md:col-span-2">
+        <!-- Service 6: Nazorg -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
           <div class="flex-shrink-0">
             <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
               📋
@@ -587,7 +603,7 @@
   <section id="over-ons" class="bg-gray-50 py-20">
     <div class="container max-w-5xl mx-auto px-6 lg:px-8">
       <div class="max-w-none">
-        <!-- Hoofdtitel -->
+        <!-- Hoofdtitel - NIEUWE TEKST -->
         <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
           Passie voor mediterrane schoonheid
         </h2>
@@ -744,6 +760,34 @@
     </div>
   </footer>
 
+  <!-- WhatsApp Fixed Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/31611929392" target="_blank" rel="noopener"
+       class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+       aria-label="Contact ons via WhatsApp">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Cookie Notice -->
+  <div id="cookie-notice" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-40 transform translate-y-full transition-transform duration-300">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex-1 text-sm">
+        <p>Wij gebruiken cookies om uw ervaring op onze website te verbeteren. Door verder te browsen, gaat u akkoord met ons cookiebeleid.</p>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="acceptCookies()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg text-sm font-medium transition">
+          Accepteren
+        </button>
+        <button onclick="declineCookies()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">
+          Weigeren
+        </button>
+      </div>
+    </div>
+  </div>
+
   <script>
     // Mobile toggle functionality
     const mobileToggle = document.getElementById('mobile-toggle');
@@ -873,20 +917,20 @@
 
         const particleCount = 50 * (timeLeft / duration);
         
-        // Confetti van links
+        // Confetti van links - ALLEEN GROENTINTEN
         confetti({
           ...defaults,
           particleCount,
           origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-          colors: ['#10b981', '#fbbf24', '#ef4444', '#3b82f6', '#a855f7']
+          colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
         });
         
-        // Confetti van rechts
+        // Confetti van rechts - ALLEEN GROENTINTEN
         confetti({
           ...defaults,
           particleCount,
           origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-          colors: ['#10b981', '#fbbf24', '#ef4444', '#3b82f6', '#a855f7']
+          colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
         });
       }, 250);
     }
@@ -905,8 +949,8 @@
       sparkle.style.left = `${x}%`;
       sparkle.style.top = `${y}%`;
       
-      // Random kleur (mediterraan thema) - helderder
-      const colors = ['#10b981', '#fbbf24', '#ef4444', '#3b82f6', '#a855f7', '#ec4899', '#f97316'];
+      // Random kleur (alleen groentinten)
+      const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
       sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
       sparkle.style.color = sparkle.style.backgroundColor;
       
@@ -937,7 +981,7 @@
           sparkle.style.left = `${x}%`;
           sparkle.style.top = `${y}%`;
           
-          const colors = ['#10b981', '#fbbf24', '#ef4444', '#3b82f6', '#a855f7', '#ec4899', '#f97316'];
+          const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
           sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
           sparkle.style.color = sparkle.style.backgroundColor;
           
@@ -990,6 +1034,33 @@
         startFireworks();
       }, 500);
     });
+
+    // ===== COOKIE MANAGEMENT =====
+    function showCookieNotice() {
+      const notice = document.getElementById('cookie-notice');
+      setTimeout(() => {
+        notice.classList.remove('translate-y-full');
+      }, 2000);
+    }
+
+    function acceptCookies() {
+      localStorage.setItem('cookies-accepted', 'true');
+      document.getElementById('cookie-notice').classList.add('translate-y-full');
+    }
+
+    function declineCookies() {
+      localStorage.setItem('cookies-accepted', 'false');
+      document.getElementById('cookie-notice').classList.add('translate-y-full');
+    }
+
+    // Show cookie notice if not decided yet
+    if (!localStorage.getItem('cookies-accepted')) {
+      showCookieNotice();
+    }
+
+    // Make functions global for onclick handlers
+    window.acceptCookies = acceptCookies;
+    window.declineCookies = declineCookies;
   </script>
   <script src="scripts/desktop-nav.js"></script>
   <script src="fix-links.js"></script>
