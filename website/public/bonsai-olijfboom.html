@@ -14,13 +14,25 @@
     .group:focus-within .group-focus-within\:visible { visibility: visible; opacity: 1; }
     html { scroll-behavior: smooth; }
     img { image-rendering: -webkit-optimize-contrast; image-rendering: crisp-edges; }
-  </style>
+
+    /* Gallery hover effect */
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .gallery-item img {
+      transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+   </style>
 </head>
 <body class="antialiased bg-gray-50">
   <div class="fixed top-0 left-4 sm:left-8 z-50">
     <img src="logo.png" alt="Spaanse Tuin & Zo Logo" class="h-28 sm:h-32 w-auto drop-shadow-lg">
   </div>
-  <nav class="bg-white/95 backdrop-blur-sm border-b shadow-sm relative z-40" role="navigation" aria-label="Hoofd navigatie">
+  <nav class="bg-white/95 backdrop-blur-sm border-b shadow-sm relative z-40" role="navigation" aria-label="Hoofdnavigatie">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
         <div class="flex items-center">
@@ -270,6 +282,31 @@
           <a href="tel:0611929392" class="px-6 py-3 border border-white/70 rounded-full font-semibold hover:border-white transition">📞 06-11929392</a>
         </div>
       </section>
+
+      <section class="space-y-4">
+        <h2 class="text-3xl font-bold text-gray-900 border-l-4 border-emerald-600 pl-4">Onze bonsai olijfbomen</h2>
+
+        <ul class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="assets/impressie/fotoswebsite/Bonsai 285 ltr.JPEG" alt="Bonsai olijfboom in 285 liter pot" class="w-full h-64 object-cover responsive-img" loading="lazy">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Bonsai olijfboom 285 liter</p>
+            </div>
+          </li>
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="assets/impressie/fotoswebsite/Bonsai tarrina low pot.JPEG" alt="Bonsai olijfboom in lage tarrina pot" class="w-full h-64 object-cover responsive-img" loading="lazy">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Bonsai olijfboom lage pot</p>
+            </div>
+          </li>
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+            <img src="assets/impressie/fotoswebsite/Bonsai.JPEG" alt="Karaktervolle bonsai olijfboom" class="w-full h-64 object-cover responsive-img" loading="lazy">
+            <div class="p-4">
+              <p class="text-sm text-gray-600 text-center">Bonsai olijfboom</p>
+            </div>
+          </li>
+        </ul>
+      </section>
     </article>
   </main>
 
@@ -284,17 +321,17 @@
         <div>
           <h4 class="text-lg font-semibold mb-4 text-emerald-400">Contact</h4>
           <ul class="space-y-3 text-gray-300 text-sm">
-            <li class="flex items-start"><span class="mr-2">📍</span><address class="not-italic">Heinsbergerweg 20<br>6074 AD Melick</address></li>
-            <li class="flex items-center"><span class="mr-2">📞</span><a href="tel:0611929392" class="hover:text-emerald-400">06-11929392</a></li>
-            <li class="flex items-center"><span class="mr-2">✉️</span><a href="mailto:lisette@spaansetuin-enzo.nl" class="hover:text-emerald-400">lisette@spaansetuin-enzo.nl</a></li>
+            <li class="flex items-start"><span class="mr-2" aria-hidden="true">📍</span><address class="not-italic">Heinsbergerweg 20<br>6074 AD Melick</address></li>
+            <li class="flex items-center"><span class="mr-2" aria-hidden="true">📞</span><a href="tel:0611929392" class="hover:text-emerald-400">06-11929392</a></li>
+            <li class="flex items-center"><span class="mr-2" aria-hidden="true">✉️</span><a href="mailto:lisette@spaansetuin-enzo.nl" class="hover:text-emerald-400">lisette@spaansetuin-enzo.nl</a></li>
           </ul>
         </div>
         <div>
           <h4 class="text-lg font-semibold mb-4 text-emerald-400">Openingstijden</h4>
           <p class="text-gray-400 text-sm mb-3">Seizoen maart – september:</p>
           <ul class="space-y-2 text-gray-300 text-sm">
-            <li><span class="mr-2">🕐</span><strong>Zaterdag:</strong> 11.00 - 17.00 uur</li>
-            <li><span class="mr-2">🕐</span><strong>Dinsdag:</strong> 13.00 - 17.00 uur</li>
+            <li><span class="mr-2" aria-hidden="true">🕐</span><strong>Zaterdag:</strong> 11.00 - 17.00 uur</li>
+            <li><span class="mr-2" aria-hidden="true">🕐</span><strong>Dinsdag:</strong> 13.00 - 17.00 uur</li>
           </ul>
           <p class="text-gray-400 text-xs mt-3">Buiten openingstijden? Neem contact op voor een afspraak!</p>
         </div>
