@@ -26,47 +26,39 @@
         <div class="flex items-center">
           <div class="w-24 sm:w-32 mr-8"></div>
 
-          <!-- Desktop menu -->
+          <!-- Desktop menu - NIEUWE VOLGORDE EN STRUCTUUR -->
           <ul class="hidden md:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
-            
+
             <!-- Welkom with dropdown -->
             <li class="relative group" role="none">
               <a href="index.html" role="menuitem" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
                 Welkom
               </a>
               <ul class="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu" aria-label="Welkom submenu">
-                <li><a href="index.html#over-ons" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</a></li>
+                <li><a href="over-ons.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</a></li>
               </ul>
             </li>
 
-            <!-- Mega menu: Onze bomen en planten -->
+            <!-- Mega menu: Assortiment bomen -->
             <li class="relative group" role="none">
               <button aria-haspopup="true" aria-expanded="false" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                Onze bomen en planten
+                Assortiment bomen
               </button>
 
-              <div class="absolute left-0 top-full mt-2 w-screen max-w-4xl opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
+              <div class="absolute left-0 top-full mt-2 w-screen max-w-3xl opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
                 <div class="bg-white dropdown-shadow rounded-lg p-6">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    
-                    <!-- Kolom 1: Palmbomen -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Kolom 1: Palmbomen - CYCCA REVOLUTA VERWIJDERD, YUCCA ROSTRATA TOEGEVOEGD -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Palmbomen</h4>
                       <ul class="space-y-2 text-sm">
                         <li><a href="trachycarpus-fortunei.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Trachycarpus Fortunei</a></li>
-                        <li><a href="cycca-revoluta.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Cycca Revoluta</a></li>
+                        <li><a href="yucca-rostrata.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Yucca Rostrata</a></li>
                       </ul>
                     </div>
 
-                    <!-- Kolom 2: Vijgenbomen -->
-                    <div>
-                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Vijgenbomen</h4>
-                      <ul class="space-y-2 text-sm">
-                        <li><a href="ficus-carica.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Kolom 3: Olijfbomen -->
+                    <!-- Kolom 2: Olijfbomen -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Olijfbomen</h4>
                       <ul class="space-y-2 text-sm">
@@ -76,11 +68,12 @@
                       </ul>
                     </div>
 
-                    <!-- Kolom 4: Overige bomen -->
+                    <!-- Kolom 3: Druivenranken - OVERIGE BOMEN WORDT DRUIVENRANKEN -->
                     <div>
-                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Overige bomen</h4>
+                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Druivenranken</h4>
                       <ul class="space-y-2 text-sm">
                         <li><a href="druivenranken.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Druivenranken</a></li>
+                        <li><a href="ficus-carica.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</a></li>
                         <li><a href="granaatappelbomen.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Granaatappelbomen</a></li>
                       </ul>
                     </div>
@@ -90,22 +83,27 @@
               </div>
             </li>
 
-            <!-- Bloembakken en potgrond with dropdown -->
+            <!-- Bloembakken - GEEN ONDERVERDELING -->
+            <li><a href="bloembakken.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bloembakken</a></li>
+
+            <!-- Potgrond en Voeding - NIEUWE ONDERVERDELING -->
             <li class="relative group" role="none">
-              <a href="bloembakken.html" role="menuitem" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
-                Bloembakken en potgrond
-              </a>
+              <button aria-haspopup="true" aria-expanded="false" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                Potgrond en Voeding
+              </button>
               <ul class="absolute left-0 mt-2 w-64 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
-                <li><a href="bloembakken.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken</a></li>
-                <li><a href="bloembakken-op-maat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken op maat gemaakt</a></li>
                 <li><a href="mediterrane-potgrond.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane potgrond</a></li>
+                <li><a href="mediterrane-voeding.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane voeding</a></li>
+                <li><a href="hydrokorrels.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Hydrokorrels</a></li>
+                <li><a href="boomschors.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Boomschors</a></li>
+                <li><a href="plant-en-voedingstips.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Plant- en voedingstips</a></li>
               </ul>
             </li>
 
-            <!-- Simple links -->
-            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
+            <!-- NIEUWE VOLGORDE: Plant- en voedingstips, Onze service, Verhuur, Impressie -->
             <li><a href="plant-en-voedingstips.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Plant- en voedingstips</a></li>
-            <li><a href="bezorgen.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bezorgen</a></li>
+            <li><a href="bezorgen.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Onze service</a></li>
+            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
             <li><a href="impressie.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Impressie</a></li>
           </ul>
         </div>
