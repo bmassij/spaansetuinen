@@ -29,56 +29,52 @@
    </style>
 </head>
 <body class="antialiased bg-gray-50">
+  <!-- Logo positioned above navbar, overlapping - 10 JAAR JUBILEUM - ZELFDE GROOTTE ALS HOMEPAGE -->
   <div class="fixed top-0 left-4 sm:left-8 z-50">
-    <img src="logo.png" alt="Spaanse Tuin & Zo Logo" class="h-28 sm:h-32 w-auto drop-shadow-lg">
+    <img src="logo.png" alt="Spaanse Tuin & Zo Logo - 10 jaar" class="h-28 sm:h-32 w-auto drop-shadow-lg">
   </div>
-  <nav class="bg-white/95 backdrop-blur-sm border-b shadow-sm relative z-40" role="navigation" aria-label="Hoofdnavigatie">
+
+  <!-- Navigation -->
+  <nav class="bg-white/95 backdrop-blur-sm border-b shadow-sm relative z-40" role="navigation" aria-label="Hoofd navigatie">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-16">
+        <!-- Logo placeholder for spacing -->
         <div class="flex items-center">
           <div class="w-24 sm:w-32 mr-8"></div>
 
-          <!-- Desktop menu -->
+          <!-- Desktop menu - NIEUWE VOLGORDE EN STRUCTUUR -->
           <ul class="hidden md:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
-            
+
             <!-- Welkom with dropdown -->
             <li class="relative group" role="none">
               <a href="index.html" role="menuitem" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
                 Welkom
               </a>
               <ul class="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu" aria-label="Welkom submenu">
-                <li><a href="index.html#over-ons" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</a></li>
+                <li><a href="over-ons.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</a></li>
               </ul>
             </li>
 
-            <!-- Mega menu: Onze bomen en planten -->
+            <!-- Mega menu: Assortiment bomen -->
             <li class="relative group" role="none">
               <button aria-haspopup="true" aria-expanded="false" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                Onze bomen en planten
+                Assortiment bomen
               </button>
 
-              <div class="absolute left-0 top-full mt-2 w-screen max-w-4xl opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
+              <div class="absolute left-0 top-full mt-2 w-screen max-w-3xl opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
                 <div class="bg-white dropdown-shadow rounded-lg p-6">
-                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    
-                    <!-- Kolom 1: Palmbomen -->
+                  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Kolom 1: Palmbomen - CYCCA REVOLUTA VERWIJDERD, YUCCA ROSTRATA TOEGEVOEGD -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Palmbomen</h4>
                       <ul class="space-y-2 text-sm">
                         <li><a href="trachycarpus-fortunei.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Trachycarpus Fortunei</a></li>
-                        <li><a href="cycca-revoluta.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Cycca Revoluta</a></li>
+                        <li><a href="yucca-rostrata.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Yucca Rostrata</a></li>
                       </ul>
                     </div>
 
-                    <!-- Kolom 2: Vijgenbomen -->
-                    <div>
-                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Vijgenbomen</h4>
-                      <ul class="space-y-2 text-sm">
-                        <li><a href="ficus-carica.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</a></li>
-                      </ul>
-                    </div>
-
-                    <!-- Kolom 3: Olijfbomen -->
+                    <!-- Kolom 2: Olijfbomen -->
                     <div>
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Olijfbomen</h4>
                       <ul class="space-y-2 text-sm">
@@ -88,11 +84,12 @@
                       </ul>
                     </div>
 
-                    <!-- Kolom 4: Overige bomen -->
+                    <!-- Kolom 3: Druivenranken - OVERIGE BOMEN WORDT DRUIVENRANKEN -->
                     <div>
-                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Overige bomen</h4>
+                      <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Druivenranken</h4>
                       <ul class="space-y-2 text-sm">
                         <li><a href="druivenranken.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Druivenranken</a></li>
+                        <li><a href="ficus-carica.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</a></li>
                         <li><a href="granaatappelbomen.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Granaatappelbomen</a></li>
                       </ul>
                     </div>
@@ -102,22 +99,27 @@
               </div>
             </li>
 
-            <!-- Bloembakken en potgrond with dropdown -->
+            <!-- Bloembakken - GEEN ONDERVERDELING -->
+            <li><a href="bloembakken.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bloembakken</a></li>
+
+            <!-- Potgrond en Voeding - NIEUWE ONDERVERDELING -->
             <li class="relative group" role="none">
-              <a href="bloembakken.html" role="menuitem" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
-                Bloembakken en potgrond
-              </a>
+              <button aria-haspopup="true" aria-expanded="false" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                Potgrond en Voeding
+              </button>
               <ul class="absolute left-0 mt-2 w-64 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
-                <li><a href="bloembakken.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken</a></li>
-                <li><a href="bloembakken-op-maat.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken op maat gemaakt</a></li>
                 <li><a href="mediterrane-potgrond.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane potgrond</a></li>
+                <li><a href="mediterrane-voeding.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane voeding</a></li>
+                <li><a href="hydrokorrels.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Hydrokorrels</a></li>
+                <li><a href="boomschors.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Boomschors</a></li>
+                <li><a href="plant-en-voedingstips.html" class="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Plant- en voedingstips</a></li>
               </ul>
             </li>
 
-            <!-- Simple links -->
-            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
+            <!-- NIEUWE VOLGORDE: Plant- en voedingstips, Onze service, Verhuur, Impressie -->
             <li><a href="plant-en-voedingstips.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Plant- en voedingstips</a></li>
-            <li><a href="bezorgen.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Bezorgen</a></li>
+            <li><a href="bezorgen.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Onze service</a></li>
+            <li><a href="verhuur.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</a></li>
             <li><a href="impressie.html" class="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Impressie</a></li>
           </ul>
         </div>
@@ -144,34 +146,27 @@
         <div>
           <a href="index.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Welkom</a>
           <div class="pl-6 pt-1">
-            <a href="index.html#over-ons" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Over ons</a>
+            <a href="over-ons.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Over ons</a>
           </div>
         </div>
 
         <div class="border-t pt-2"></div>
 
-        <!-- Accordion item: Onze bomen en planten -->
+        <!-- MOBIELE NAVIGATIE - NIEUWE STRUCTUUR -->
+        <!-- Accordion item: Assortiment bomen -->
         <div>
           <button class="w-full flex items-center justify-between px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md" data-accordion="trees">
-            <span>Onze bomen en planten</span>
+            <span>Assortiment bomen</span>
             <span class="chev text-lg">+</span>
           </button>
           <div class="pl-4 pt-2 hidden space-y-2" data-panel="trees">
-            
-            <!-- Palmbomen -->
+
+            <!-- Palmbomen - CYCCA REVOLUTA VERWIJDERD -->
             <details class="mb-2">
               <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Palmbomen</summary>
               <ul class="pl-6 mt-1 space-y-1">
                 <li><a href="trachycarpus-fortunei.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Trachycarpus Fortunei</a></li>
-                <li><a href="cycca-revoluta.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Cycca Revoluta</a></li>
-              </ul>
-            </details>
-
-            <!-- Vijgenbomen -->
-            <details class="mb-2">
-              <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Vijgenbomen</summary>
-              <ul class="pl-6 mt-1 space-y-1">
-                <li><a href="ficus-carica.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Ficus Carica</a></li>
+                <li><a href="yucca-rostrata.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Yucca Rostrata</a></li>
               </ul>
             </details>
 
@@ -185,11 +180,12 @@
               </ul>
             </details>
 
-            <!-- Overige bomen -->
+            <!-- Druivenranken - OVERIGE BOMEN WORDT DRUIVENRANKEN -->
             <details class="mb-2">
-              <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Overige bomen</summary>
+              <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Druivenranken</summary>
               <ul class="pl-6 mt-1 space-y-1">
                 <li><a href="druivenranken.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Druivenranken</a></li>
+                <li><a href="ficus-carica.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Ficus Carica</a></li>
                 <li><a href="granaatappelbomen.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Granaatappelbomen</a></li>
               </ul>
             </details>
@@ -198,31 +194,39 @@
 
         <div class="border-t pt-2"></div>
 
-        <!-- Bloembakken en potgrond -->
+        <!-- Bloembakken - GEEN ONDERVERDELING -->
+        <a href="bloembakken.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Bloembakken</a>
+
+        <div class="border-t pt-2"></div>
+
+        <!-- Potgrond en Voeding - NIEUWE ONDERVERDELING -->
         <div>
-          <button class="w-full flex items-center justify-between px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md" data-accordion="bloembakken">
-            <span>Bloembakken en potgrond</span>
+          <button class="w-full flex items-center justify-between px-3 py-2 text-left text-base font-medium text-gray-700 hover:bg-gray-50 rounded-md" data-accordion="potgrond">
+            <span>Potgrond en Voeding</span>
             <span class="chev text-lg">+</span>
           </button>
-          <div class="pl-6 pt-1 hidden space-y-1" data-panel="bloembakken">
-            <a href="bloembakken.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Bloembakken</a>
-            <a href="bloembakken-op-maat.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Bloembakken op maat gemaakt</a>
+          <div class="pl-6 pt-1 hidden space-y-1" data-panel="potgrond">
             <a href="mediterrane-potgrond.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Mediterrane potgrond</a>
+            <a href="mediterrane-voeding.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Mediterrane voeding</a>
+            <a href="hydrokorrels.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Hydrokorrels</a>
+            <a href="boomschors.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Boomschors</a>
+            <a href="plant-en-voedingstips.html" class="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Plant- en voedingstips</a>
           </div>
         </div>
 
         <div class="border-t pt-2"></div>
 
-        <!-- Simple links -->
-        <a href="verhuur.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Verhuur</a>
+        <!-- NIEUWE VOLGORDE: Plant- en voedingstips, Onze service, Verhuur, Impressie -->
         <a href="plant-en-voedingstips.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Plant- en voedingstips</a>
-        <a href="bezorgen.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Bezorgen</a>
+        <a href="bezorgen.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Onze service</a>
+        <a href="verhuur.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Verhuur</a>
         <a href="impressie.html" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Impressie</a>
       </div>
     </div>
   </nav>
 
   <header class="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
+    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/fotoswebsite/Bonsai.JPEG'); background-size:cover; background-position:center;"></div>
     <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/fotoswebsite/Bonsai.JPEG'); background-size:cover; background-position:center;"></div>
     <div class="absolute inset-0 overflow-hidden">
       <div class="w-full h-full bg-gradient-to-br from-emerald-700/30 to-emerald-900/30"></div>
@@ -246,156 +250,409 @@
   </header>
 
   <main class="bg-white py-16">
-    <article class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <section class="space-y-4">
-        <h2 class="text-3xl font-bold text-gray-900 border-l-4 border-emerald-600 pl-4">Mediterrane kwaliteit, van Spaanse tuinen naar jouw buitenruimte</h2>
-        <p class="text-gray-700 leading-relaxed">We reizen enkele keren per jaar naar de Costa Blanca en selecteren de prachtigste exemplaren in diverse stamdiktes en leeftijden. Van jonge boompjes tot bomen van meer dan 1000 jaar oud.</p>
+    <article class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumbs -->
+      <nav class="mb-8 text-sm text-gray-600" aria-label="Breadcrumb">
+        <ol class="flex items-center space-x-2">
+          <li><a href="index.html" class="hover:text-emerald-600 transition">Home</a></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li><a href="index.html#onze-bomen" class="hover:text-emerald-600 transition">Onze bomen</a></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li><a href="#" class="hover:text-emerald-600 transition">Olijfbomen</a></li>
+          <li><span class="text-gray-400">/</span></li>
+          <li class="text-gray-900 font-medium">Bonsai olijfboom</li>
+        </ol>
+      </nav>
+
+      <!-- ==================== INLEIDING ==================== -->
+      <section class="prose prose-lg max-w-none mb-12">
+        <p class="text-xl text-gray-700 leading-relaxed">
+          Ontdek onze collectie bonsai olijfbomen. Laat u inspireren door de mogelijkheden voor uw eigen tuin of terras.
+        </p>
+        <p class="text-lg text-gray-600 leading-relaxed mt-4">
+          Deze bonsai olijfbomen zijn winterhard en bieden een karaktervolle toevoeging aan uw mediterrane tuin.
+        </p>
       </section>
 
-      <section class="grid lg:grid-cols-3 gap-6 text-gray-700">
-        <div class="rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Robuuste stammen</h3>
-          <p>Elke bonsai heeft een karaktervolle stam die zowel strak als grillig kan zijn. Het is jouw keuze welke vorm het beste past.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Winterhard & groenblijvend</h3>
-          <p>Onze bonsai olijfbomen zijn winterhard tot -15 à -18 graden. Door zachte winters gedijen ze uitstekend in Nederland.</p>
-        </div>
-        <div class="rounded-2xl border border-gray-100 p-6 shadow-sm hover:shadow-lg transition">
-          <h3 class="text-xl font-semibold text-gray-900 mb-3">Altijd service op maat</h3>
-          <p>Advies over planten, voeding, winters bescherming en het perfecte pot- of terrasontwerp zit inbegrepen.</p>
-        </div>
-      </section>
-
-      <section class="space-y-4">
-        <h2 class="text-3xl font-bold text-gray-900 border-l-4 border-emerald-600 pl-4">Waarom een bonsai olijfboom?</h2>
-        <ul class="space-y-3 text-gray-700">
-          <li class="flex items-start gap-3"><span class="text-emerald-600 mt-1">✓</span><span>Een tropische uitstraling die de hele tuin opfrist.</span></li>
-          <li class="flex items-start gap-3"><span class="text-emerald-600 mt-1">✓</span><span>Perfect als eye catcher op terrassen of binnenplaatsen.</span></li>
-          <li class="flex items-start gap-3"><span class="text-emerald-600 mt-1">✓</span><span>Een leven lang plezier met de juiste verzorging, ook binnen op een zeer lichte plek.</span></li>
-        </ul>
-      </section>
-
-      <section class="space-y-4 bg-emerald-50 rounded-3xl p-8 border border-emerald-200">
-        <h2 class="text-3xl font-bold text-gray-900">Planten & verzorgen</h2>
-        <p class="text-gray-700">Plant de bonsai in ruime potten, minstens 2/3 groter dan de verkooppot, met mediterrane potgrond en hydro korrels voor goede drainage.</p>
-        <p class="text-gray-700">Een olijfboom houdt van licht en lucht. Laat hem niet teveel in de verkooppot staan en bescherm de binnenkant van de pot tegen vorst met noppenfolie.</p>
-      </section>
-
-      <section class="space-y-6 bg-gray-900 text-white rounded-3xl p-10 shadow-2xl">
-        <h2 class="text-3xl font-bold">Bezoek onze tropische binnenplaats</h2>
-        <p class="text-gray-200">Kom langs tijdens het seizoen (maart - september). We zijn open op dinsdag 13.00 - 17.00 en zaterdag 11.00 - 17.00 uur. Buiten deze tijden mag je altijd op afspraak komen.</p>
-        <div class="flex flex-wrap gap-4">
-          <a href="mailto:lisette@spaansetuin-enzo.nl" class="px-6 py-3 bg-white text-emerald-600 font-semibold rounded-full hover:bg-gray-100 transition">✉️ Plan een afspraak</a>
-          <a href="tel:0611929392" class="px-6 py-3 border border-white/70 rounded-full font-semibold hover:border-white transition">📞 06-11929392</a>
-        </div>
-      </section>
-
-      <section class="mb-16" id="galerij">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-emerald-600 pl-4">Onze bonsai olijfbomen</h2>
-
-        <ul class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="assets/impressie/fotoswebsite/Bonsai 285 ltr.JPEG" alt="Bonsai olijfboom in 285 liter pot" class="responsive-img" loading="lazy" onerror="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E">
-            <div class="p-4">
-              <p class="text-sm text-gray-600 text-center">Bonsai olijfboom 285 liter</p>
+      <!-- ==================== KENMERKEN ==================== -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-emerald-600 pl-4">
+          Kenmerken
+        </h2>
+        
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+          <!-- Tekst kolom -->
+          <div class="space-y-4 text-gray-700 leading-relaxed">
+            <p>
+              Onze bonsai olijfbomen hebben robuuste, oude stammen en een compacte vorm. Ze zijn winterhard tot -15°C en groeien langzaam.
+            </p>
+            <p>
+              De bonsai olijfboom past perfect in kleine tuinen of op terrassen, en geeft een authentieke mediterrane sfeer.
+            </p>
+            <p>
+              In het voorjaar bloeit de bonsai olijfboom met kleine gele bloemen, gevolgd door olijven.
+            </p>
+            
+            <!-- Belangrijkste eigenschappen -->
+            <div class="bg-emerald-50 rounded-lg p-4 mt-6">
+              <h4 class="font-semibold text-emerald-800 mb-3">Belangrijkste eigenschappen:</h4>
+              <ul class="space-y-2">
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                  <span><strong>Winterhard tot -15 °C</strong></span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                  <span><strong>Compact formaat</strong></span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                  <span><strong>Robuuste stam</strong></span>
+                </li>
+                <li class="flex items-start">
+                  <span class="text-emerald-600 mr-2 mt-1">✓</span>
+                  <span><strong>Authentieke mediterrane uitstraling</strong></span>
+                </li>
+              </ul>
             </div>
-          </li>
-          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="assets/impressie/fotoswebsite/Bonsai tarrina low pot.JPEG" alt="Bonsai olijfboom in lage tarrina pot" class="responsive-img" loading="lazy" onerror="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22/%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E">
-            <div class="p-4">
-              <p class="text-sm text-gray-600 text-center">Bonsai olijfboom lage pot</p>
-            </div>
-          </li>
-          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
-            <img src="assets/impressie/fotoswebsite/Bonsai.JPEG" alt="Karaktervolle bonsai olijfboom" class="responsive-img" loading="lazy" onerror="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22/%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E">
-            <div class="p-4">
-              <p class="text-sm text-gray-600 text-center">Bonsai olijfboom</p>
-            </div>
-          </li>
-        </ul>
+          </div>
+          
+          <!-- Afbeelding kolom - gallery -->
+          <div class="flex justify-center">
+            <ul class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Bonsai.JPEG"
+                     alt="Bonsai olijfboom"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Bonsai olijfboom</p>
+                </div>
+              </li>
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Bonsai 285 ltr.JPEG"
+                     alt="Bonsai olijfboom 285 liter"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Bonsai olijfboom 285 liter</p>
+                </div>
+              </li>
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Bonsai tarrina low pot.JPEG"
+                     alt="Bonsai olijfboom lage pot"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Bonsai olijfboom lage pot</p>
+                </div>
+              </li>
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Olea europea 1.JPEG"
+                     alt="Olijfboom"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Olijfboom</p>
+                </div>
+              </li>
+              <!-- TODO: confirm image -->
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Olea europea 35 ltr.JPEG"
+                     alt="Olijfboom 35 liter"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Olijfboom 35 liter</p>
+                </div>
+              </li>
+              <!-- TODO: confirm image -->
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Olea europea ramif 35 ltr.JPEG"
+                     alt="Olijfboom ramificatie 35 liter"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Olijfboom ramificatie</p>
+                </div>
+              </li>
+              <!-- TODO: confirm image -->
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Olea europea ramif Turba.JPEG"
+                     alt="Olijfboom ramificatie Turba"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Olijfboom ramificatie Turba</p>
+                </div>
+              </li>
+              <!-- TODO: confirm image -->
+
+              <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+                <img src="assets/impressie/fotoswebsite/Olea europea.JPEG"
+                     alt="Olijfboom"
+                     class="w-full h-96 object-cover responsive-img"
+                     loading="lazy"
+                     onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
+                <div class="p-4">
+                  <p class="text-sm text-gray-600 text-center">Olijfboom</p>
+                </div>
+              </li>
+              <!-- TODO: confirm image -->
+
+            </ul>
+          </div>
+        </div>
       </section>
+
+      <!-- ==================== VERZORGING ==================== -->
+      <section class="mb-16 bg-emerald-50 rounded-2xl p-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-emerald-600 pl-4">
+          Verzorging
+        </h2>
+        
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+          
+          <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">🌿 Snoeien:</h3>
+          <p>
+            In het voorjaar kunt u de bonsai olijfboom snoeien om de vorm te behouden. Verwijder dode takken en snoei voor compactheid.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">❄️ Winterbescherming:</h3>
+          <p>
+            De bonsai olijfboom is winterhard tot -15°C. Bij extreme kou kunt u de pot isoleren of binnen zetten.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">💧 Hydrateren:</h3>
+          <div class="space-y-4">
+            <div class="bg-blue-50 p-4 rounded-lg">
+              <h4 class="font-semibold text-blue-800 mb-2">Bonsai in pot:</h4>
+              <ul class="text-sm space-y-1">
+                <li>• Geef regelmatig water, laat de grond niet uitdrogen.</li>
+                <li>• In warme periodes dagelijks water geven.</li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-900 mt-8 mb-3">🌱 Voeding:</h3>
+          <p>
+            Voed de bonsai olijfboom twee keer per jaar met mediterrane plantenvoeding voor optimale groei.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== PLAATSING ==================== -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-6 border-l-4 border-emerald-600 pl-4">
+          Plaatsing
+        </h2>
+        
+        <div class="space-y-6 text-gray-700 leading-relaxed">
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">🌱 Volle grond</h3>
+          <p>
+            De bonsai olijfboom kan in de volle grond worden geplant voor natuurlijke groei.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">🪴 Bloembak/Bloempot</h3>
+          <p>
+            Perfect voor terrassen en balkons in een pot of bloembak. Zorg voor goede drainage.
+          </p>
+
+          <h3 class="text-xl font-semibold text-gray-900 mb-3">☀️ Locatie</h3>
+          <p>
+            Zonnig tot halfschaduw, beschermd tegen koude wind.
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== CALL TO ACTION ==================== -->
+      <section class="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 sm:p-12 text-white text-center">
+        <h2 class="text-3xl font-bold mb-4">Interesse in een bonsai olijfboom?</h2>
+        <p class="text-lg text-emerald-50 mb-4 max-w-2xl mx-auto">
+          Vanaf €XX,- voor een bonsai olijfboom.
+        </p>
+        <p class="text-lg text-emerald-50 mb-6 max-w-2xl mx-auto">
+          Wilt u weten welke bonsai het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid en persoonlijk advies. Wij denken met plezier met u mee om de ideale bonsai olijfboom te vinden!
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="tel:+31611929392" class="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg hover:bg-gray-100 transition transform hover:scale-105">
+            📞 +31 6 11929392
+          </a>
+          <a href="mailto:lisette@spaansetuin-enzo.nl" class="inline-flex items-center px-6 py-3 bg-emerald-800 text-white font-semibold rounded-lg hover:bg-emerald-900 transition transform hover:scale-105">
+            ✉️ E-mail ons
+          </a>
+        </div>
+      </section>
+
     </article>
   </main>
 
   <footer class="bg-gray-900 text-white py-16">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        <!-- Kolom 1: Bedrijfsinfo & Logo -->
         <div>
-          <img src="logo.png" alt="Spaanse Tuin & Zo" class="h-16 mb-4 brightness-0 invert">
+          <img src="logo.png" alt="Spaanse Tuin & Zo - 10 jaar" class="h-16 w-auto mb-4">
           <h3 class="text-xl font-bold mb-3">Spaanse Tuin & Zo</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Mediterrane kwaliteit, van onze zorgzame handen naar uw tuin.</p>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Waar Mediterrane sfeer en kwaliteit samenkomen.
+          </p>
         </div>
+
+        <!-- Kolom 2: Contactgegevens -->
         <div>
           <h4 class="text-lg font-semibold mb-4 text-emerald-400">Contact</h4>
           <ul class="space-y-3 text-gray-300 text-sm">
-            <li class="flex items-start"><span class="mr-2" aria-hidden="true">📍</span><address class="not-italic">Heinsbergerweg 20<br>6074 AD Melick</address></li>
-            <li class="flex items-center"><span class="mr-2" aria-hidden="true">📞</span><a href="tel:0611929392" class="hover:text-emerald-400">06-11929392</a></li>
-            <li class="flex items-center"><span class="mr-2" aria-hidden="true">✉️</span><a href="mailto:lisette@spaansetuin-enzo.nl" class="hover:text-emerald-400">lisette@spaansetuin-enzo.nl</a></li>
+            <li class="flex items-start">
+              <span class="mr-2" aria-hidden="true">📍</span>
+              <address class="not-italic">
+                Heinsbergerweg 20<br>6074 AD Melick
+              </address>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2" aria-hidden="true">📞</span>
+              <a href="tel:+31611929392" class="hover:text-emerald-400 transition" aria-label="Bel ons op +31 6 11929392">+31 6 11929392</a>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2" aria-hidden="true">✉️</span>
+              <a href="mailto:lisette@spaansetuin-enzo.nl" class="hover:text-emerald-400 transition" aria-label="E-mail naar lisette@spaansetuin-enzo.nl">lisette@spaansetuin-enzo.nl</a>
+            </li>
           </ul>
         </div>
+
+        <!-- Kolom 3: Openingstijden -->
         <div>
           <h4 class="text-lg font-semibold mb-4 text-emerald-400">Openingstijden</h4>
           <p class="text-gray-400 text-sm mb-3">Seizoen maart – september:</p>
           <ul class="space-y-2 text-gray-300 text-sm">
-            <li><span class="mr-2" aria-hidden="true">🕐</span><strong>Zaterdag:</strong> 11.00 - 17.00 uur</li>
-            <li><span class="mr-2" aria-hidden="true">🕐</span><strong>Dinsdag:</strong> 13.00 - 17.00 uur</li>
+            <li class="flex items-center">
+              <span class="mr-2" aria-hidden="true">🕐</span>
+              <span><strong>Zaterdag:</strong> 11.00 - 17.00 uur</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2" aria-hidden="true">🕐</span>
+              <span><strong>Dinsdag:</strong> 13.00 - 17.00 uur</span>
+            </li>
           </ul>
-          <p class="text-gray-400 text-xs mt-3">Buiten openingstijden? Neem contact op voor een afspraak!</p>
+          <p class="text-gray-400 text-xs mt-3">
+            Ook buiten openingstijden ben je welkom. Neem contact met ons op voor een afspraak.
+          </p>
         </div>
+
+        <!-- Kolom 4: Menu & Social -->
         <div>
           <h4 class="text-lg font-semibold mb-4 text-emerald-400">Navigatie</h4>
-          <ul class="space-y-2 text-gray-300 text-sm mb-6">
-            <li><a href="index.html" class="hover:text-emerald-400">Welkom</a></li>
-            <li><a href="index.html#over-ons" class="hover:text-emerald-400">Over ons</a></li>
-            <li><a href="bezorgen.html" class="hover:text-emerald-400">Bezorgen</a></li>
-            <li><a href="bloembakken.html" class="hover:text-emerald-400">Bloembakken</a></li>
-            <li><a href="plant-en-voedingstips.html" class="hover:text-emerald-400">Plant- en voedingstips</a></li>
-            <li><a href="verhuur.html" class="hover:text-emerald-400">Verhuur</a></li>
-          </ul>
+          <nav aria-label="Footer navigatie">
+            <ul class="space-y-2 text-gray-300 text-sm mb-6">
+              <li><a href="index.html" class="hover:text-emerald-400 transition">Welkom</a></li>
+              <li><a href="index.html#over-ons" class="hover:text-emerald-400 transition">Over ons</a></li>
+              <li><a href="bloembakken.html" class="hover:text-emerald-400 transition">Bloembakken</a></li>
+              <li><a href="bezorgen.html" class="hover:text-emerald-400 transition">Bezorgen</a></li>
+              <li><a href="verhuur.html" class="hover:text-emerald-400 transition">Verhuur</a></li>
+              <li><a href="plant-en-voedingstips.html" class="hover:text-emerald-400 transition">Plant- en voedingstips</a></li>
+            </ul>
+          </nav>
+          
+          <!-- Social Media -->
+          <h5 class="text-sm font-semibold mb-3 text-emerald-400">Volg ons</h5>
           <div class="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="w-10 h-10 bg-white/10 hover:bg-emerald-600 rounded-full flex items-center justify-center transition transform hover:scale-110">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Bezoek onze Facebook pagina" class="w-10 h-10 bg-white/10 hover:bg-emerald-600 rounded-full flex items-center justify-center transition transform hover:scale-110">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="w-10 h-10 bg-white/10 hover:bg-emerald-600 rounded-full flex items-center justify-center transition transform hover:scale-110">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Bezoek onze Instagram pagina" class="w-10 h-10 bg-white/10 hover:bg-emerald-600 rounded-full flex items-center justify-center transition transform hover:scale-110">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/>
+              </svg>
             </a>
           </div>
         </div>
       </div>
+
+      <!-- Bottom bar -->
       <div class="border-t border-gray-800 pt-8 text-center">
-        <p class="text-gray-400 text-sm mb-2">&copy; 2025 Spaanse Tuin & Zo — Mediterrane bomen en planten</p>
-        <p class="text-gray-500 text-xs">KvK: 65475860 | BTW: NL001888980B55</p>
+        <p class="text-gray-400 text-sm mb-2">
+          &copy; 2025 Spaanse Tuin & Zo — Mediterrane bomen
+        </p>
+        <p class="text-gray-500 text-xs">
+          KvK: 65475860 | BTW: NL001888980B55
+        </p>
       </div>
     </div>
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const toggle = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
+    // Mobile toggle functionality
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
     const hamburger = document.getElementById('hamburger');
     const closeIcon = document.getElementById('close-icon');
 
-    if (toggle && menu) {
-      toggle.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
-        hamburger.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', !expanded);
-      });
-    }
+    mobileToggle.addEventListener('click', () => {
+      const isHidden = mobileMenu.classList.toggle('hidden');
+      mobileToggle.setAttribute('aria-expanded', !isHidden);
+      hamburger.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    });
 
-    // Mobile accordion functionality
+    // Accordion functionality for mobile menu
     document.querySelectorAll('[data-accordion]').forEach(btn => {
       btn.addEventListener('click', () => {
-        const panelName = btn.getAttribute('data-accordion');
-        const panel = document.querySelector(`[data-panel="${panelName}"]`);
+        const key = btn.getAttribute('data-accordion');
+        const panel = document.querySelector(`[data-panel="${key}"]`);
         const chevron = btn.querySelector('.chev');
-        if (panel) {
-          panel.classList.toggle('hidden');
-          if (chevron) chevron.textContent = panel.classList.contains('hidden') ? '+' : '−';
+        
+        const isHidden = panel.classList.toggle('hidden');
+        if (chevron) {
+          chevron.textContent = isHidden ? '+' : '−';
+        }
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          hamburger.classList.remove('hidden');
+          closeIcon.classList.add('hidden');
+          mobileToggle.setAttribute('aria-expanded', 'false');
+        }
+      }
+    });
+
+    // Keyboard accessibility for desktop menu
+    document.querySelectorAll('nav [role="menuitem"], nav button[aria-haspopup]').forEach(item => {
+      item.addEventListener('focus', () => {
+        const group = item.closest('.group');
+        if (group) group.classList.add('focus-within');
+      });
+      
+      item.addEventListener('blur', (e) => {
+        const group = item.closest('.group');
+        if (group) {
+          setTimeout(() => {
+            if (!group.contains(document.activeElement)) {
+              group.classList.remove('focus-within');
+            }
+          }, 100);
         }
       });
     });
