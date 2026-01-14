@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+ #!/usr/bin/env python3
 """
 Classify images using OpenCLIP and organize them into the required folder structure.
 
@@ -41,8 +41,10 @@ except Exception as e:
     sys.exit(1)
 
 # Workspace-relative paths
-ROOT = Path(__file__).resolve().parents[1]  # demo-html-css
-ASSETS = ROOT / 'assets'
+ROOT = Path(__file__).resolve().parents[1]
+# default assets path (original behavior)
+DEFAULT_ASSETS = ROOT / 'assets'
+ASSETS = DEFAULT_ASSETS
 
 # Labels exactly as provided
 LABELS = [
@@ -64,35 +66,37 @@ LABELS = [
 THRESHOLD = 0.35
 
 # Destination mapping
-def label_to_dest(label):
-    # Returns a Path under ASSETS where file should be moved
+def label_to_dest(label, assets_root=None):
+    # Returns a Path under assets_root (or ASSETS) where file should be moved
+    if assets_root is None:
+        assets_root = ASSETS
     if label in ("palmbomen", "trachycarpus palm", "cycas revoluta"):
-        base = ASSETS / 'bomen' / 'palmbomen'
+        base = assets_root / 'bomen' / 'palmbomen'
         if label == 'trachycarpus palm':
             return base / 'trachycarpus'
         if label == 'cycas revoluta':
             return base / 'cycas'
         return base
     if label == 'olijfboom':
-        return ASSETS / 'bomen' / 'olijfbomen'
+        return assets_root / 'bomen' / 'olijfbomen'
     if label == 'vijgenboom':
-        return ASSETS / 'bomen' / 'vijgenbomen'
+        return assets_root / 'bomen' / 'vijgenbomen'
     if label == 'druivenrank':
-        return ASSETS / 'bomen' / 'druivenranken'
+        return assets_root / 'bomen' / 'druivenranken'
     if label == 'granaatappelboom':
-        return ASSETS / 'bomen' / 'granaatappelbomen'
+        return assets_root / 'bomen' / 'granaatappelbomen'
     if label == 'bloembak':
-        return ASSETS / 'bloembakken'
+        return assets_root / 'bloembakken'
     if label == 'mediterrane potgrond':
-        return ASSETS / 'potgrond'
+        return assets_root / 'potgrond'
     if label == 'tuin impressie':
-        return ASSETS / 'impressie'
+        return assets_root / 'impressie'
     if label == 'bezorgen':
-        return ASSETS / 'bezorgen'
+        return assets_root / 'bezorgen'
     if label == 'verhuur':
-        return ASSETS / 'verhuur'
+        return assets_root / 'verhuur'
     # fallback
-    return ASSETS / 'onzeker'
+    return assets_root / 'onzeker'
 
 # Files to skip scanning (target folders)
 TARGET_TOPS = set(["bomen", "bloembakken", "potgrond", "impressie", "bezorgen", "verhuur", "onzeker"])
@@ -138,11 +142,14 @@ def cosine_sim(a, b):
     b_norm = b / np.linalg.norm(b, axis=1, keepdims=True)
     return (b_norm @ a).flatten()
 
-# Gather source images to classify: scan ASSETS but skip target folders
-def gather_source_images():
+# Gather source images to classify: scan a provided assets_root but skip target folders
+def gather_source_images_for(assets_root):
     images = []
-    for root, dirs, files in os.walk(ASSETS):
-        rel = Path(root).relative_to(ASSETS)
+    for root, dirs, files in os.walk(assets_root):
+        try:
+            rel = Path(root).relative_to(assets_root)
+        except Exception:
+            rel = Path('.')
         if len(rel.parts) > 0 and rel.parts[0] in TARGET_TOPS:
             # skip scanning images already in target folders
             continue
@@ -180,18 +187,19 @@ PAGE_FILES = {
     'verhuur': 'verhuur.html',
 }
 
-def pick_hero_for_pages():
+
+def pick_hero_for_pages(assets_root):
     # For each page, pick first suitable image (one per page). Fallback to impressie.
     hero_map = {}
-    impressie_dir = ASSETS / 'impressie'
+    impressie_dir = assets_root / 'impressie'
 
     for page_key, page_file in PAGE_FILES.items():
         folder = None
-        # Find folder path under ASSETS
+        # Find folder path under assets_root
         if page_key in ('palmbomen', 'olijfbomen', 'vijgenbomen', 'druivenranken', 'granaatappelbomen'):
-            folder = ASSETS / 'bomen' / page_key
+            folder = assets_root / 'bomen' / page_key
         else:
-            folder = ASSETS / page_key
+            folder = assets_root / page_key
 
         chosen = None
         if folder and folder.exists():
@@ -205,7 +213,7 @@ def pick_hero_for_pages():
                     chosen = f
                     break
         if chosen:
-            hero_map[page_file] = str(chosen.relative_to(Path.cwd()))
+            hero_map[page_file] = os.path.relpath(str(chosen), start=str(Path.cwd()))
     return hero_map
 
 
@@ -213,14 +221,20 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dry-run', action='store_true', help='Do not move files; only analyze and write CSV + summary')
     parser.add_argument('--apply', action='store_true', help='Actually move files')
-    parser.add_argument('--src', type=str, default=str(ASSETS), help='Source folder to scan (default: demo-html-css/assets)')
+    parser.add_argument('--src', type=str, default=None, help='Source folder to scan (defaults to website/public/assets or website/assets)')
     args = parser.parse_args()
 
-    if not args.dry_run and not args.apply:
-        print('Specify --dry-run to test or --apply to perform moves')
-        sys.exit(1)
+    # Determine assets root
+    if args.src:
+        src_dir = Path(args.src)
+    else:
+        # prefer public/assets if it exists (project uses website/public/assets)
+        candidate = ROOT / 'public' / 'assets'
+        if candidate.exists():
+            src_dir = candidate
+        else:
+            src_dir = DEFAULT_ASSETS
 
-    src_dir = Path(args.src)
     if not src_dir.exists():
         print('Source folder not found:', src_dir)
         sys.exit(1)
@@ -230,7 +244,7 @@ def main():
     model, preprocess, tokenizer = load_clip(device)
 
     print('Gathering source images...')
-    images = gather_source_images()
+    images = gather_source_images_for(src_dir)
     print(f'Found {len(images)} images to analyze')
 
     # Prepare text embeddings
@@ -251,9 +265,9 @@ def main():
         score = float(sims[best_idx])
 
         if score > THRESHOLD:
-            dest = label_to_dest(best_label)
+            dest = label_to_dest(best_label, assets_root=src_dir)
         else:
-            dest = ASSETS / 'onzeker'
+            dest = src_dir / 'onzeker'
             best_label = 'onzeker'
 
         # compute destination path but do not perform move yet unless --apply
@@ -268,8 +282,8 @@ def main():
 
         results.append({
             'filename': dest_path.name,
-            'old_location': str(img_path.relative_to(Path.cwd())),
-            'new_location': str(dest_path.relative_to(Path.cwd())),
+            'old_location': os.path.relpath(str(img_path), start=str(Path.cwd())),
+            'new_location': os.path.relpath(str(dest_path), start=str(Path.cwd())),
             'recognized_category': best_label,
             'confidence': score,
             'src_full': str(img_path),
@@ -325,7 +339,7 @@ def main():
         print(f'Moved {moved} files')
 
     # Hero mapping
-    hero_map = pick_hero_for_pages()
+    hero_map = pick_hero_for_pages(src_dir)
     hero_json = ROOT / 'hero-mapping.json'
     with open(hero_json, 'w', encoding='utf-8') as f:
         json.dump(hero_map, f, indent=2, ensure_ascii=False)
@@ -340,6 +354,7 @@ def main():
     print(f'  uncertain: {uncertain}')
     if not args.apply:
         print('\nDry-run complete. To actually move files re-run with --apply')
+
 
 if __name__ == '__main__':
     main()

@@ -2,19 +2,19 @@ import os
 import pandas as pd
 import json
 from PIL import Image
-from transformers import AutoProcessor, AutoModelForVision2Seq2Seq
+from transformers import AutoProcessor, AutoModelForCausalLM
 
 # Map met afbeeldingen (alleen lezen)
-ASSETS_DIR = r"C:\Users\styxi\OneDrive\Bureaublad\spaansetuinen\demo-html-css\assets"
+ASSETS_DIR = r"C:\Users\styxi\OneDrive\Bureaublad\spaansetuinen\website\public\assets"
 
 # Output map
-OUTPUT_DIR = r"C:\vision-tools\output"
+OUTPUT_DIR = r"C:\Users\styxi\OneDrive\Bureaublad\spaansetuinen\website"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 # Model en processor
-model_name = "microsoft/florence-2"
-processor = AutoProcessor.from_pretrained(model_name)
-model = AutoModelForVision2Seq2Seq.from_pretrained(model_name)
+model_name = "microsoft/Florence-2-base"
+processor = AutoProcessor.from_pretrained(model_name, trust_remote_code=True)
+model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True)
 
 results = []
 hero_mapping = {}
@@ -25,9 +25,10 @@ for root, dirs, files in os.walk(ASSETS_DIR):
             file_path = os.path.join(root, file)
             image = Image.open(file_path).convert("RGB")
             
-            inputs = processor(images=image, return_tensors="pt")
-            output = model.generate(**inputs)
-            description = processor.decode(output[0], skip_special_tokens=True)
+            prompt = "<CAPTION>"
+            inputs = processor(text=prompt, images=image, return_tensors="pt")
+            output = model.generate(**inputs, max_new_tokens=50)
+            description = processor.decode(output[0][len(inputs.input_ids[0]):], skip_special_tokens=True)
             
             # Simpele categorisatie
             category = "onzeker"
