@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Impressie — Spaansetuin</title>
-  <meta name="description" content="Foto impressie van onze mediterrane bomen en bloembakken">
+  <meta name="description" content="Impressie: projecten en foto’s van Spaansetuin — bloembakken, palmen en mediterrane planten.">
   
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -35,7 +35,7 @@
 <body class="antialiased bg-gray-50">
   
   <div class="fixed top-0 left-4 sm:left-8 z-50">
-    <img src="logo.png" alt="Spaanse Tuin & Zo Logo - 10 jaar" class="h-28 sm:h-32 w-auto drop-shadow-lg">
+    <img src="logo.png" alt="Spaanse Tuin & Zo Logo - 10 jaar" class="h-28 sm:h-32 w-auto drop-shadow-lg" loading="eager">
   </div>
 
   <nav class="bg-white/95 backdrop-blur-sm border-b shadow-sm relative z-40" role="navigation" aria-label="Hoofd navigatie">
@@ -232,7 +232,7 @@
        HERO SECTION
        ======================================== -->
   <header class="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
-    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/index/other8.jpg'); background-size:cover; background-position:center;"></div>
+    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/other8.jpg'); background-size:cover; background-position:center;"></div>
     <div class="absolute inset-0 overflow-hidden">
       <!-- Placeholder achtergrondafbeelding -->
       <div class="w-full h-full bg-gradient-to-br from-emerald-700/30 to-emerald-900/30"></div>
@@ -292,97 +292,105 @@
       <section class="mb-16" id="galerij">
         <h2 class="text-3xl font-bold text-gray-900 mb-8 border-l-4 border-emerald-600 pl-4">Onze bomen en planten</h2>
         
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <ul class="gallery grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           
           <!-- Gallery Item 1 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other1.jpg"
-                 alt="Mediterrane boom impressie 1"
+                 alt="Olijfboom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EOlijfboom%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Olijfboom</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 2 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other2.jpg"
-                 alt="Mediterrane boom impressie 2"
+                 alt="Palmboom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EPalmboom%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Palmboom</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 3 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other3.jpg"
-                 alt="Mediterrane boom impressie 3"
+                 alt="Vijgenboom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EVijgenboom%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Vijgenboom</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 4 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other4.jpg"
-                 alt="Mediterrane boom impressie 4"
+                 alt="Bonsai Olijfboom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBonsai%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Bonsai Olijfboom</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 5 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other5.jpg"
-                 alt="Mediterrane boom impressie 5"
+                 alt="Druivenrank"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EDruivenrank%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Druivenrank</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 6 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other6.jpg"
-                 alt="Mediterrane boom impressie 6"
+                 alt="Onze showroom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EShowroom%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Onze showroom</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 7 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other7.jpg"
-                 alt="Mediterrane boom impressie 7"
+                 alt="Bloembak met boom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EBloembak%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Bloembak met boom</p>
             </div>
-          </div>
+          </li>
 
           <!-- Gallery Item 8 -->
-          <div class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
+          <li class="gallery-item bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow">
             <img src="assets/impressie/other8.jpg"
-                 alt="Mediterrane boom impressie 8"
+                 alt="Terras met palmboom"
                  class="w-full h-64 object-cover"
+                 loading="lazy"
                  onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22%3E%3Crect fill=%22%23d1fae5%22 width=%22400%22 height=%22400%22/%3E%3Ctext fill=%22%2316a34a%22 font-family=%22Arial%22 font-size=%2220%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3ETerras%3C/text%3E%3C/svg%3E'">
             <div class="p-4">
               <p class="text-sm text-gray-600 text-center">Terras met palmboom</p>
             </div>
-          </div>
+          </li>
 
-        </div>
+        </ul>
       </section>
 
       <!-- Info Section -->
@@ -438,7 +446,7 @@
         
         <!-- Kolom 1: Bedrijfsinfo & Logo -->
         <div>
-          <img src="logo.png" alt="Spaanse Tuin & Zo" class="h-16 w-auto mb-4 brightness-0 invert">
+          <img src="logo.png" alt="Spaanse Tuin & Zo" class="h-16 w-auto mb-4 brightness-0 invert" loading="eager">
           <h3 class="text-xl font-bold mb-3">Spaanse Tuin & Zo</h3>
           <p class="text-gray-400 text-sm leading-relaxed">
             Mediterrane kwaliteit, van onze zorgzame handen naar uw tuin.
