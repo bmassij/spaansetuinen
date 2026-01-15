@@ -1,12 +1,9 @@
 document.addEventListener('DOMContentLoaded', ()=>{
-  console.log('Jubilee popup script loaded');
   const popup = document.getElementById('jubilee-popup');
   const close = document.getElementById('jubilee-close');
-  console.log('Popup element:', popup);
   if(!popup) return;
   // Altijd tonen bij laden
   popup.style.display = 'flex';
-  console.log('Popup displayed');
   // Sluit alleen voor deze pagina (niet persistent)
   close && close.addEventListener('click', ()=>{ popup.style.display = 'none'; });
   // Optioneel sluitbaar met ESC
