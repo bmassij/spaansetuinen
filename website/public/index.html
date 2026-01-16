@@ -1196,21 +1196,20 @@
   </div>
   <script>
     document.addEventListener('DOMContentLoaded', ()=>{
-      console.log('Jubilee popup script started');
       const popup = document.getElementById('jubilee-popup');
       const close = document.getElementById('jubilee-close');
-      console.log('Popup element:', popup);
-      if(!popup) {
-        console.error('Popup element not found');
-        return;
+      if(!popup) return;
+      // Toon alleen als niet eerder gesloten
+      if(!localStorage.getItem('jubilee-popup-closed')) {
+        popup.style.display = 'flex';
       }
-      // Altijd tonen bij laden
-      popup.style.display = 'flex';
-      console.log('Popup displayed');
-      // Sluit alleen voor deze pagina (niet persistent)
-      close && close.addEventListener('click', ()=>{ popup.style.display = 'none'; });
-      // Optioneel sluitbaar met ESC
-      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') popup.style.display='none'; });
+      // Sluit en onthoud
+      const closePopup = () => {
+        popup.style.display = 'none';
+        localStorage.setItem('jubilee-popup-closed', 'true');
+      };
+      close && close.addEventListener('click', closePopup);
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePopup(); });
     });
   </script>
 </body>
