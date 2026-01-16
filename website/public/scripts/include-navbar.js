@@ -20,8 +20,10 @@
     })
     .then(html => {
       navbarContainer.innerHTML = html;
-      // Dispatch event when navbar is loaded
-      window.dispatchEvent(new CustomEvent('navbarLoaded'));
+      // Dispatch event when navbar is loaded on both window and document
+      const evt = new CustomEvent('navbarLoaded');
+      try { window.dispatchEvent(evt); } catch(e) {}
+      try { document.dispatchEvent(evt); } catch(e) {}
     })
     .catch(error => {
       console.error('Error loading navbar:', error);

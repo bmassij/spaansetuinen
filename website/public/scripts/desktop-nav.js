@@ -1,11 +1,11 @@
 // Desktop navigation enhancements: hover open with small delay, keyboard support, and click-outside handling
 (function(){
   // Wait for navbar to be loaded
-  function initNav() {
+  function initNavbar() {
     const nav = document.querySelector('nav[role="navigation"]') || document.querySelector('#site-navbar nav');
     if (!nav) {
       console.warn('Navigation element not found, retrying...');
-      setTimeout(initNav, 100);
+      setTimeout(initNavbar, 100);
       return;
     }
 
@@ -194,8 +194,12 @@
 
   // Initialize when navbar is loaded or immediately if already present
   if (document.querySelector('nav[role="navigation"]') || document.querySelector('#site-navbar nav')) {
-    initNav();
+    initNavbar();
   } else {
-    document.addEventListener('navbarLoaded', initNav);
+    document.addEventListener('navbarLoaded', initNavbar);
+    window.addEventListener('navbarLoaded', initNavbar);
   }
+
+  // expose for debugging or manual re-init
+  try { window.initNavbar = initNavbar; } catch(e) {}
 })();
