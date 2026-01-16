@@ -1,5 +1,37 @@
-// Desktop navigation enhancements: hover open with small delay, keyboard support, and click-outside handling
+// Desktop navigation enhancements: unify navbar source, hover open with small delay, keyboard support, and click-outside handling
 (function(){
+  'use strict';
+
+  // Ensure all pages use a single navbar source:
+  // If an inline <nav role="navigation"> exists but no #site-navbar, replace it with <div id="site-navbar"></div>
+  // and dynamically load scripts/include-navbar.js so the template is injected.
+  function ensureUnifiedNavbar() {
+    try {
+      if (document.getElementById('site-navbar')) return;
+      const inlineNav = document.querySelector('nav[role="navigation"]');
+      if (!inlineNav) return;
+      const placeholder = document.createElement('div');
+      placeholder.id = 'site-navbar';
+      inlineNav.parentNode.replaceChild(placeholder, inlineNav);
+
+      // Inject include-navbar.js if not present
+      if (!document.querySelector('script[src="scripts/include-navbar.js"]')) {
+        const s = document.createElement('script');
+        s.src = 'scripts/include-navbar.js';
+        s.defer = true;
+        document.body.appendChild(s);
+      }
+    } catch (e) {
+      console.error('ensureUnifiedNavbar error', e);
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', ensureUnifiedNavbar);
+  } else {
+    ensureUnifiedNavbar();
+  }
+
   // Wait for navbar to be loaded
   function initNavbar() {
     const nav = document.querySelector('nav[role="navigation"]') || document.querySelector('#site-navbar nav');
