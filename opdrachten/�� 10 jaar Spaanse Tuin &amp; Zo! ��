@@ -1,24 +1,107 @@
-�� 10 jaar Spaanse Tuin &amp; Zo! ��
-Kom ons jubileum vieren van 21 t/m 31 maart, dagelijks geopend van 11.00 – 17.00 uur.
-Ontvang een cadeautje bij uw aankoop, doe mee aan onze winacties en wordt warm ontvangen met
-koffie, thee en iets lekkers!
-�� [Meer info &amp; actievoorwaarden]
-Bovenstaande stukje is de pop up. Moet er goed feestelijk uitzien. Bij het klikken op meer info komen
-ze op onderstaande:
-Informatie en actievoorwaarden
- Geldig: van 21 t/m 31 maart.
- Winnaars: worden bekendgemaakt op 1 april (nee, dit is geen grap!) en ontvangen
-persoonlijk bericht.
- Deelnemen: na uw bezoek ontvangt u een briefje waarop u uw naam en telefoonnummer
-kunt invullen.
- Cadeau bij aankoop: bij een aankoop vanaf €50 ontvangt u een presentje.
- Winacties: iedere klant maakt kans op:
-o een startpakket ter waarde van €34, bestaande uit: 2 zakken mediterrane potgrond,
-1 kg mediterrane korrelvoeding en een fles vloeibare voeding
-o een cadeaubon van Spaanse Tuin &amp; Zo ter waarde van €25
-o een Trachycarpus Fortunei ter waarde van €136
-o een Olea Europea (olijfboom) ter waarde van €100
-o een handgeschilderde keramische schalenset ter waarde van €79
+Je bent een senior brand designer en high-end copywriter voor premium retail en lifestylemerken.
 
-Kom langs op onze tropische binnenplaats en vier samen met ons het jubileum van Spaanse Tuin &amp;
-ZO. Wij staan voor u klaar!
+Project:
+“10 jaar Spaanse Tuin & Zo” – jubileumcampagne (premium uitstraling)
+
+Doel:
+Ontwerp en schrijf een exclusieve, stijlvolle jubileum-popup en bijbehorende
+informatiepagina met een luxe mediterrane uitstraling.
+
+Merkpositionering:
+- Premium tuin- & belevingswinkel
+- Rust, kwaliteit, aandacht
+- Geen schreeuwerige actie-communicatie
+- Subtiele luxe, warme gastvrijheid
+- Beleving staat boven korting
+
+Stijl:
+- Elegant, verfijnd, warm
+- Rustige zinnen, geen uitroeptekens in overvloed
+- Luxe gevoel door witruimte, typografie en kleurgebruik
+- Subtiele emoji’s alleen indien passend (max. 1)
+
+Kleuren & sfeer:
+- Aardetinten: zand, warm wit, olijfgroen, terracotta
+- Zachte schaduw, afgeronde hoeken
+- Serif of moderne humanist fonts (denk boutique-stijl)
+
+========================
+1. JUBILEUM POPUP (PREMIUM)
+========================
+
+Inhoud:
+- Subtiele headline:
+  “10 jaar Spaanse Tuin & Zo”
+- Korte introzin:
+  Een dankbare viering van tien jaar mediterrane sfeer en vakmanschap.
+- Details:
+  - 21 t/m 31 maart
+  - Dagelijks geopend van 11.00 – 17.00 uur
+- Extra’s:
+  - Een attent presentje bij aankoop
+  - Deelname aan exclusieve winacties
+  - Warme ontvangst met koffie, thee en iets lekkers
+- CTA-knop:
+  - Tekst: “Bekijk jubileuminformatie”
+  - Link: #actievoorwaarden
+  - Luxe knopstijl (outline of zacht gevuld)
+
+Techniek:
+- Lever HTML + CSS
+- Popup als modal (geen JS nodig)
+- Veel witruimte, rustige hiërarchie
+- Volledig responsive
+
+========================
+2. INFORMATIEPAGINA (PREMIUM)
+========================
+
+Titel:
+“Tien jaar Spaanse Tuin & Zo”
+
+Intro:
+- Dankbare en warme opening
+- Nadruk op ontmoeting, sfeer en beleving
+- Geen verkooppraatje
+
+Sectie: Jubileuminformatie
+- Geldig van 21 t/m 31 maart
+- Deelname via kaartje na bezoek
+- Winnaars bekend op 1 april (subtiele knipoog)
+- Bij aankoop vanaf €50 ontvangt u een attent presentje
+
+Sectie: Jubileumprijzen
+Presenteer de prijzen als curated selectie:
+- Startpakket mediterrane verzorging – €34
+- Cadeaubon Spaanse Tuin & Zo – €25
+- Trachycarpus Fortunei – €136
+- Olea Europea (olijfboom) – €100
+- Handgeschilderde keramische schalenset – €79
+
+Afsluiting:
+- Uitnodiging om langs te komen
+- Benoem de tropische binnenplaats
+- Warm, persoonlijk en stijlvol slot
+- Geen CTA-schreeuw, wel een zachte uitnodiging
+
+Techniek:
+- HTML + CSS
+- Luxe layout (max-width, veel ademruimte)
+- Subtiele lijnen/dividers
+- Zelfde kleurpalet als popup
+
+========================
+OUTPUTSTRUCTUUR
+========================
+
+Geef de output exact in deze volgorde:
+1. POPUP – HTML
+2. POPUP – CSS
+3. INFORMATIEPAGINA – HTML
+4. INFORMATIEPAGINA – CSS
+
+Randvoorwaarden:
+- Correct Nederlands
+- Consequent: “Spaanse Tuin & Zo”
+- Geen placeholders behalve links
+- Direct geschikt voor live gebruik

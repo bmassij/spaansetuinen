@@ -383,7 +383,7 @@
   </nav>
 
   <!-- HERO SECTION - Fullscreen met achtergrond afbeelding en filter -->
-  <header id="hero-section" class="relative bg-gray-900 text-white">
+  <header id="welkom" class="relative bg-gray-900 text-white">
     <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/other1.jpg'); background-size:cover; background-position:center;"></div>
     <!-- Background image with opacity filter -->
     <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('hero-section.jpg');"></div>
@@ -1055,7 +1055,7 @@
 
     // Vuurwerk sparkles in hero-achtergrond
     function createFireworkSparkle() {
-      const hero = document.getElementById('hero-section');
+      const hero = document.getElementById('welkom');
       if (!hero) return;
 
       const sparkle = document.createElement('div');
@@ -1182,16 +1182,25 @@
     window.acceptCookies = acceptCookies;
     window.declineCookies = declineCookies;
   </script>
-  <script src="../scripts/desktop-nav.js"></script>
+  <script src="scripts/desktop-nav.js"></script>
   <script src="fix-links.js"></script>
 
   <!-- Jubilee Popup -->
-  <div id="jubilee-popup" class="jubilee-popup" role="dialog" aria-modal="true">
-    <div class="jubilee-popup__inner">
-      <button class="jubilee-popup__close" id="jubilee-close" aria-label="Sluiten">✕</button>
-      <h2>10 jaar Spaanse Tuin & Zo!</h2>
-      <p>Vier ons jubileum met speciale acties. Bekijk de actiepagina voor meer informatie.</p>
-      <a href="10-jaar.html" class="jubilee-popup__btn">Bekijk actie</a>
+  <div id="jubilee-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" role="dialog" aria-modal="true">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md mx-4 p-8 text-center">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl" id="jubilee-close" aria-label="Sluiten">✕</button>
+      <h2 class="text-2xl font-serif text-gray-800 mb-4">10 jaar Spaanse Tuin & Zo</h2>
+      <p class="text-gray-600 mb-6 leading-relaxed">Een dankbare viering van tien jaar mediterrane sfeer en vakmanschap.</p>
+      <div class="bg-amber-50 rounded-lg p-4 mb-6">
+        <p class="text-sm text-gray-700 mb-2"><strong>21 t/m 31 maart</strong></p>
+        <p class="text-sm text-gray-700 mb-2">Dagelijks geopend van 11.00 – 17.00 uur</p>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>• Een attent presentje bij aankoop</li>
+          <li>• Deelname aan exclusieve winacties</li>
+          <li>• Warme ontvangst met koffie, thee en iets lekkers</li>
+        </ul>
+      </div>
+      <a href="10-jaar.html#actievoorwaarden" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">Bekijk jubileuminformatie</a>
     </div>
   </div>
   <script>
