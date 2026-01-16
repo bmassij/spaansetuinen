@@ -7,7 +7,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Canvas Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
-  <script src="scripts/include-navbar.js"></script>
   <style>
     /* Custom brand colors */
     .brand-green { color: #16a34a; }
@@ -158,6 +157,7 @@
 
   <!-- Navigation -->
   <div id="site-navbar"></div>
+  <script src="scripts/include-navbar.js"></script>
 
   <!-- HERO SECTION - Fullscreen met achtergrond afbeelding en filter -->
   <header id="welkom" class="relative bg-gray-900 text-white">
@@ -358,8 +358,10 @@
             </div>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Volledige service</h3>
-            <p class="text-gray-600">Uw Mediterrane bomen, van A tot Z verzorgd. Van bestelling tot levering en planting, met volledige aandacht.</p>
+            <h3 class="text-lg font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Op onze tropische binnenplaats van maar liefst <strong>400 m²</strong> vind je een ruim assortiment mediterrane bomen. We importeren rechtstreeks uit de Costa Blanca en selecteren elke boom persoonlijk en met detail.
+            </p>
           </div>
         </div>
 
@@ -384,8 +386,10 @@
             </div>
           </div>
           <div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">Persoonlijk advies</h3>
-            <p class="text-gray-600">Een aanpak die perfect aansluit bij jouw wensen.</p>
+            <h3 class="text-lg font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Meerdere keren per jaar reizen we zelf naar Spanje om de mooiste exemplaren uit te zoeken. Elke boom wordt persoonlijk bekeken, gekeurd en gelabeld, zodat hij bij aankomst in Nederland precies aan onze hoge standaarden voldoet.
+            </p>
           </div>
         </div>
 
@@ -684,280 +688,296 @@
   </div>
 
   <script>
-    // Mobile toggle functionality
-    const mobileToggle = document.getElementById('mobile-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const hamburger = document.getElementById('hamburger');
-    const closeIcon = document.getElementById('close-icon');
+    (function(){
+      function initNavbarDependent() {
+        // Mobile toggle functionality
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburger = document.getElementById('hamburger');
+        const closeIcon = document.getElementById('close-icon');
 
-    mobileToggle.addEventListener('click', () => {
-      const isHidden = mobileMenu.classList.toggle('hidden');
-      mobileToggle.setAttribute('aria-expanded', !isHidden);
-      hamburger.classList.toggle('hidden');
-      closeIcon.classList.toggle('hidden');
-    });
-
-    // Accordion functionality for mobile menu
-    document.querySelectorAll('[data-accordion]').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const key = btn.getAttribute('data-accordion');
-        const panel = document.querySelector(`[data-panel="${key}"]`);
-        const chevron = btn.querySelector('.chev');
-        
-        const isHidden = panel.classList.toggle('hidden');
-        if (chevron) {
-          chevron.textContent = isHidden ? '+' : '−';
-        }
-      });
-    });
-
-    // Close mobile menu when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
-        if (!mobileMenu.classList.contains('hidden')) {
-          mobileMenu.classList.add('hidden');
-          hamburger.classList.remove('hidden');
-          closeIcon.classList.add('hidden');
-          mobileToggle.setAttribute('aria-expanded', 'false');
-        }
-      }
-    });
-
-    // Keyboard accessibility for desktop menu
-    document.querySelectorAll('nav [role="menuitem"], nav button[aria-haspopup]').forEach(item => {
-      item.addEventListener('focus', () => {
-        const group = item.closest('.group');
-        if (group) group.classList.add('focus-within');
-      });
-      
-      item.addEventListener('blur', (e) => {
-        const group = item.closest('.group');
-        if (group) {
-          setTimeout(() => {
-            if (!group.contains(document.activeElement)) {
-              group.classList.remove('focus-within');
+        if (mobileToggle && mobileMenu) {
+          mobileToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileToggle.setAttribute('aria-expanded', !isHidden);
+            if (hamburger && closeIcon) {
+              hamburger.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
             }
-          }, 100);
+          });
         }
-      });
-    });
 
-    // ===== CLICK SUPPORT VOOR DESKTOP DROPDOWNS =====
-    // Simpele click-to-toggle voor mobiele/touch support
-    console.log('🔍 Initializing dropdown click support...');
-    
-    const dropdownItems = document.querySelectorAll('nav .hidden.md\\:flex .group');
-    console.log('📋 Found dropdown items:', dropdownItems.length);
-    
-    dropdownItems.forEach((group, index) => {
-      const trigger = group.querySelector('a, button');
-      console.log(`🎯 Item ${index}:`, trigger ? trigger.textContent.trim() : 'no trigger');
-      
-      if (trigger) {
-        trigger.addEventListener('click', (e) => {
-          console.log('👆 Click detected on:', trigger.textContent.trim());
-          const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
-          console.log('📱 Touch device:', isTouch);
-          
-          if (isTouch) {
-            e.preventDefault();
-            e.stopPropagation();
-            console.log('🚫 Default prevented');
+        // Accordion functionality for mobile menu
+        document.querySelectorAll('[data-accordion]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-accordion');
+            const panel = document.querySelector(`[data-panel="${key}"]`);
+            const chevron = btn.querySelector('.chev');
             
-            // Close others
-            dropdownItems.forEach(otherGroup => {
-              if (otherGroup !== group) {
-                otherGroup.classList.remove('open');
+            const isHidden = panel.classList.toggle('hidden');
+            if (chevron) {
+              chevron.textContent = isHidden ? '+' : '−';
+            }
+          });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (mobileToggle && mobileMenu && !mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+              if (hamburger && closeIcon) {
+                hamburger.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
               }
+              mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+
+        // Keyboard accessibility for desktop menu
+        document.querySelectorAll('nav [role="menuitem"], nav button[aria-haspopup]').forEach(item => {
+          item.addEventListener('focus', () => {
+            const group = item.closest('.group');
+            if (group) group.classList.add('focus-within');
+          });
+          
+          item.addEventListener('blur', (e) => {
+            const group = item.closest('.group');
+            if (group) {
+              setTimeout(() => {
+                if (!group.contains(document.activeElement)) {
+                  group.classList.remove('focus-within');
+                }
+              }, 100);
+            }
+          });
+        });
+
+        // ===== CLICK SUPPORT VOOR DESKTOP DROPDOWNS =====
+        // Simpele click-to-toggle voor mobiele/touch support
+        console.log('🔍 Initializing dropdown click support...');
+        
+        const dropdownItems = document.querySelectorAll('nav .hidden.md\\:flex .group');
+        console.log('📋 Found dropdown items:', dropdownItems.length);
+        
+        dropdownItems.forEach((group, index) => {
+          const trigger = group.querySelector('a, button');
+          console.log(`🎯 Item ${index}:`, trigger ? trigger.textContent.trim() : 'no trigger');
+          
+          if (trigger) {
+            trigger.addEventListener('click', (e) => {
+              console.log('👆 Click detected on:', trigger.textContent.trim());
+              const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+              console.log('📱 Touch device:', isTouch);
+              
+              if (isTouch) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('🚫 Default prevented');
+                
+                // Close others
+                dropdownItems.forEach(otherGroup => {
+                  if (otherGroup !== group) {
+                    otherGroup.classList.remove('open');
+                  }
+                });
+                
+                // Toggle current
+                const wasOpen = group.classList.contains('open');
+                group.classList.toggle('open');
+                console.log('✅ Toggled to:', !wasOpen ? 'OPEN' : 'CLOSED');
+              }
+            }, true); // Use capture phase
+          }
+        });
+        
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+          const nav = document.querySelector('nav');
+          if (nav && !nav.contains(e.target)) {
+            console.log('🚪 Closing all dropdowns (outside click)');
+            dropdownItems.forEach(group => group.classList.remove('open'));
+          }
+        });
+        
+        console.log('✅ Dropdown support initialized');
+
+        // ===== FEESTELIJKE ANIMATIES =====
+        
+        // Confetti animatie bij laden pagina
+        function triggerConfetti() {
+          const duration = 3000;
+          const animationEnd = Date.now() + duration;
+          const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 20 };
+
+          function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+          }
+
+          const interval = setInterval(function() {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+              return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+            
+            // Confetti van links - ALLEEN GROENTINTEN
+            confetti({
+              ...defaults,
+              particleCount,
+              origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+              colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
             });
             
-            // Toggle current
-            const wasOpen = group.classList.contains('open');
-            group.classList.toggle('open');
-            console.log('✅ Toggled to:', !wasOpen ? 'OPEN' : 'CLOSED');
-          }
-        }, true); // Use capture phase
-      }
-    });
-    
-    // Close on outside click
-    document.addEventListener('click', (e) => {
-      const nav = document.querySelector('nav');
-      if (nav && !nav.contains(e.target)) {
-        console.log('🚪 Closing all dropdowns (outside click)');
-        dropdownItems.forEach(group => group.classList.remove('open'));
-      }
-    });
-    
-    console.log('✅ Dropdown support initialized');
-
-    // ===== FEESTELIJKE ANIMATIES =====
-    
-    // Confetti animatie bij laden pagina
-    function triggerConfetti() {
-      const duration = 3000;
-      const animationEnd = Date.now() + duration;
-      const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 20 };
-
-      function randomInRange(min, max) {
-        return Math.random() * (max - min) + min;
-      }
-
-      const interval = setInterval(function() {
-        const timeLeft = animationEnd - Date.now();
-
-        if (timeLeft <= 0) {
-          return clearInterval(interval);
+            // Confetti van rechts - ALLEEN GROENTINTEN
+            confetti({
+              ...defaults,
+              particleCount,
+              origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+              colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
+            });
+          }, 250);
         }
 
-        const particleCount = 50 * (timeLeft / duration);
-        
-        // Confetti van links - ALLEEN GROENTINTEN
-        confetti({
-          ...defaults,
-          particleCount,
-          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-          colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
-        });
-        
-        // Confetti van rechts - ALLEEN GROENTINTEN
-        confetti({
-          ...defaults,
-          particleCount,
-          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-          colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
-        });
-      }, 250);
-    }
-
-    // Vuurwerk sparkles in hero-achtergrond
-    function createFireworkSparkle() {
-      const hero = document.getElementById('welkom');
-      if (!hero) return;
-
-      const sparkle = document.createElement('div');
-      sparkle.className = 'firework';
-      
-      // Random positie in hero
-      const x = Math.random() * 100;
-      const y = Math.random() * 70 + 10; // Tussen 10% en 80% van hero hoogte
-      sparkle.style.left = `${x}%`;
-      sparkle.style.top = `${y}%`;
-      
-      // Random kleur (alleen groentinten)
-      const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
-      sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-      sparkle.style.color = sparkle.style.backgroundColor;
-      
-      // Random richting voor burst - grotere afstand
-      const tx = (Math.random() - 0.5) * 200;
-      const ty = (Math.random() - 0.5) * 200;
-      sparkle.style.setProperty('--tx', `${tx}px`);
-      sparkle.style.setProperty('--ty', `${ty}px`);
-      
-      hero.appendChild(sparkle);
-      
-      // Verwijder na animatie
-      setTimeout(() => {
-        sparkle.remove();
-      }, 3500);
-    }
-
-    // Creëer vuurwerk-burst met meerdere sparkles
-    function createFireworkBurst(x, y) {
-      const sparkleCount = Math.floor(Math.random() * 8) + 8; // 8-15 sparkles per burst
-      for (let i = 0; i < sparkleCount; i++) {
-        setTimeout(() => {
-          const hero = document.getElementById('hero-section');
+        // Vuurwerk sparkles in hero-achtergrond
+        function createFireworkSparkle() {
+          const hero = document.getElementById('welkom');
           if (!hero) return;
 
           const sparkle = document.createElement('div');
           sparkle.className = 'firework';
+          
+          // Random positie in hero
+          const x = Math.random() * 100;
+          const y = Math.random() * 70 + 10; // Tussen 10% en 80% van hero hoogte
           sparkle.style.left = `${x}%`;
           sparkle.style.top = `${y}%`;
           
+          // Random kleur (alleen groentinten)
           const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
           sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
           sparkle.style.color = sparkle.style.backgroundColor;
           
-          // Sparkles in alle richtingen
-          const angle = (Math.PI * 2 * i) / sparkleCount;
-          const distance = Math.random() * 150 + 100;
-          const tx = Math.cos(angle) * distance;
-          const ty = Math.sin(angle) * distance;
+          // Random richting voor burst - grotere afstand
+          const tx = (Math.random() - 0.5) * 200;
+          const ty = (Math.random() - 0.5) * 200;
           sparkle.style.setProperty('--tx', `${tx}px`);
           sparkle.style.setProperty('--ty', `${ty}px`);
           
           hero.appendChild(sparkle);
           
-          setTimeout(() => sparkle.remove(), 3500);
-        }, i * 50);
-      }
-    }
+          // Verwijder na animatie
+          setTimeout(() => {
+            sparkle.remove();
+          }, 3500);
+        }
 
-    // Herhalende vuurwerk sparkles
-    function startFireworks() {
-      // Start meteen met enkele grote bursts
-      setTimeout(() => createFireworkBurst(30, 30), 300);
-      setTimeout(() => createFireworkBurst(70, 40), 600);
-      setTimeout(() => createFireworkBurst(50, 60), 900);
-      
-      // Herhaal elke 2 seconden met mix van bursts en losse sparkles
-      setInterval(() => {
-        const shouldBurst = Math.random() > 0.4;
-        
-        if (shouldBurst) {
-          // Grote burst
-          const x = Math.random() * 80 + 10;
-          const y = Math.random() * 60 + 20;
-          createFireworkBurst(x, y);
-        } else {
-          // Losse sparkles
-          const count = Math.floor(Math.random() * 5) + 3; // 3-7 sparkles
-          for (let i = 0; i < count; i++) {
-            setTimeout(() => createFireworkSparkle(), i * 150);
+        // Creëer vuurwerk-burst met meerdere sparkles
+        function createFireworkBurst(x, y) {
+          const sparkleCount = Math.floor(Math.random() * 8) + 8; // 8-15 sparkles per burst
+          for (let i = 0; i < sparkleCount; i++) {
+            setTimeout(() => {
+              const hero = document.getElementById('hero-section');
+              if (!hero) return;
+
+              const sparkle = document.createElement('div');
+              sparkle.className = 'firework';
+              sparkle.style.left = `${x}%`;
+              sparkle.style.top = `${y}%`;
+              
+              const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
+              sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+              sparkle.style.color = sparkle.style.backgroundColor;
+              
+              // Sparkles in alle richtingen
+              const angle = (Math.PI * 2 * i) / sparkleCount;
+              const distance = Math.random() * 150 + 100;
+              const tx = Math.cos(angle) * distance;
+              const ty = Math.sin(angle) * distance;
+              sparkle.style.setProperty('--tx', `${tx}px`);
+              sparkle.style.setProperty('--ty', `${ty}px`);
+              
+              hero.appendChild(sparkle);
+              
+              setTimeout(() => sparkle.remove(), 3500);
+            }, i * 50);
           }
         }
-      }, 2000);
-    }
 
-    // Start alle animaties wanneer pagina geladen is
-    window.addEventListener('load', function() {
-      // Wacht 500ms zodat pagina zichtbaar is
-      setTimeout(() => {
-        triggerConfetti();
-        startFireworks();
-      }, 500);
-    });
+        // Herhalende vuurwerk sparkles
+        function startFireworks() {
+          // Start meteen met enkele grote bursts
+          setTimeout(() => createFireworkBurst(30, 30), 300);
+          setTimeout(() => createFireworkBurst(70, 40), 600);
+          setTimeout(() => createFireworkBurst(50, 60), 900);
+          
+          // Herhaal elke 2 seconden met mix van bursts en losse sparkles
+          setInterval(() => {
+            const shouldBurst = Math.random() > 0.4;
+            
+            if (shouldBurst) {
+              // Grote burst
+              const x = Math.random() * 80 + 10;
+              const y = Math.random() * 60 + 20;
+              createFireworkBurst(x, y);
+            } else {
+              // Losse sparkles
+              const count = Math.floor(Math.random() * 5) + 3; // 3-7 sparkles
+              for (let i = 0; i < count; i++) {
+                setTimeout(() => createFireworkSparkle(), i * 150);
+              }
+            }
+          }, 2000);
+        }
 
-    // ===== COOKIE MANAGEMENT =====
-    function showCookieNotice() {
-      const notice = document.getElementById('cookie-notice');
-      setTimeout(() => {
-        notice.classList.remove('translate-y-full');
-      }, 2000);
-    }
+        // Start alle animaties wanneer pagina geladen is
+        window.addEventListener('load', function() {
+          // Wacht 500ms zodat pagina zichtbaar is
+          setTimeout(() => {
+            triggerConfetti();
+            startFireworks();
+          }, 500);
+        });
 
-    function acceptCookies() {
-      localStorage.setItem('cookies-accepted', 'true');
-      document.getElementById('cookie-notice').classList.add('translate-y-full');
-    }
+        // ===== COOKIE MANAGEMENT =====
+        function showCookieNotice() {
+          const notice = document.getElementById('cookie-notice');
+          setTimeout(() => {
+            notice.classList.remove('translate-y-full');
+          }, 2000);
+        }
 
-    function declineCookies() {
-      localStorage.setItem('cookies-accepted', 'false');
-      document.getElementById('cookie-notice').classList.add('translate-y-full');
-    }
+        function acceptCookies() {
+          localStorage.setItem('cookies-accepted', 'true');
+          document.getElementById('cookie-notice').classList.add('translate-y-full');
+        }
 
-    // Show cookie notice if not decided yet
-    // For testing: always show for now
-    setTimeout(() => {
-      showCookieNotice();
-    }, 1000);
-    // Original: if (!localStorage.getItem('cookies-accepted')) { showCookieNotice(); }
+        function declineCookies() {
+          localStorage.setItem('cookies-accepted', 'false');
+          document.getElementById('cookie-notice').classList.add('translate-y-full');
+        }
 
-    // Make functions global for onclick handlers
-    window.acceptCookies = acceptCookies;
-    window.declineCookies = declineCookies;
+        // Show cookie notice if not decided yet
+        // For testing: always show for now
+        setTimeout(() => {
+          showCookieNotice();
+        }, 1000);
+        // Original: if (!localStorage.getItem('cookies-accepted')) { showCookieNotice(); }
+
+        // Make functions global for onclick handlers
+        window.acceptCookies = acceptCookies;
+        window.declineCookies = declineCookies;
+      }
+
+      if (document.querySelector('#site-navbar nav') || window.navbarInjected) {
+        try { initNavbarDependent(); } catch (e) { console.error(e); }
+      } else {
+        document.addEventListener('navbarLoaded', initNavbarDependent);
+      }
+    })();
   </script>
   <script src="scripts/desktop-nav.js"></script>
   <script src="fix-links.js"></script>
