@@ -10,6 +10,60 @@
   <script src="https://cdn.tailwindcss.com"></script>
   
   <style>
+.jubilee-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.jubilee-popup__inner {
+  background: linear-gradient(135deg, #fef3c7 0%, #fbbf24 100%);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  border: 4px solid #f59e0b;
+  text-align: center;
+}
+
+.jubilee-popup__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #92400e;
+}
+
+.jubilee-popup__btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.jubilee-popup__btn:hover {
+  background: #15803d;
+}
+
     /* Custom brand colors */
     .brand-green { color: #16a34a; }
     .brand-green-bg { background-color: #16a34a; }
@@ -80,7 +134,7 @@
                       <h4 class="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Palmbomen</h4>
                       <ul class="space-y-2 text-sm">
                         <li><a href="trachycarpus-fortunei.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Trachycarpus Fortunei</a></li>
-                        <li><a href="yucca-rostrata.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Yucca Rostrata</a></li>
+                        <li><a href="cycca-revoluta.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Cycca Revoluta</a></li>
                       </ul>
                     </div>
 
@@ -194,7 +248,7 @@
               <summary class="cursor-pointer px-3 py-1 text-sm font-medium text-gray-700 hover:text-emerald-600">Palmbomen</summary>
               <ul class="pl-6 mt-1 space-y-1">
                 <li><a href="trachycarpus-fortunei.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Trachycarpus Fortunei</a></li>
-                <li><a href="yucca-rostrata.html" class="block py-1 text-sm text-gray-600 hover:text-emerald-600">Yucca Rostrata</a></li>
+                <li><a href="cycca-revoluta.html" class="block text-gray-700 hover:text-emerald-600 transition-colors">Cycca Revoluta</a></li>
               </ul>
             </details>
 
@@ -650,5 +704,16 @@
     });
   </script>
   <script src="fix-links.js"></script>
+
+  <!-- Jubilee Popup -->
+  <div id="jubilee-popup" class="jubilee-popup" role="dialog" aria-modal="true">
+    <div class="jubilee-popup__inner">
+      <button class="jubilee-popup__close" id="jubilee-close" aria-label="Sluiten">✕</button>
+      <h2>10 jaar Spaanse Tuin & Zo!</h2>
+      <p>Vier ons jubileum met speciale acties. Bekijk de actiepagina voor meer informatie.</p>
+      <a href="opdrachten/�� 10 jaar Spaanse Tuin & Zo! ��" class="jubilee-popup__btn">Bekijk actie</a>
+    </div>
+  </div>
+  <script src="scripts/jubilee-popup.js" defer></script>
 </body>
 </html>
