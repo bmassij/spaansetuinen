@@ -1,0 +1,93 @@
+﻿<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>10 jaar Spaanse Tuin & Zo! — Spaansetuin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .brand-green { color: #16a34a; }
+  </style>
+</head>
+<body class="antialiased bg-gray-50">
+
+  <!-- Logo positioned above navbar -->
+  <div class="fixed top-0 left-4 sm:left-8 z-50">
+    <img src="logo.png" alt="Spaanse Tuin & Zo Logo - 10 jaar" class="h-28 sm:h-32 w-auto drop-shadow-lg">
+  </div>
+
+  <div id="site-navbar"></div>`n<script src="scripts/include-navbar.js"></script>
+
+  <!-- Hero Section -->
+  <header class="relative bg-gray-900 text-white">
+    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/other1.jpg'); background-size:cover; background-position:center;"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50"></div>
+    <div class="relative z-10 min-h-screen flex items-center pt-16">
+      <div class="container max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            🎉 10 jaar Spaanse Tuin & Zo! 🎉
+          </h1>
+          <p class="text-lg sm:text-xl text-gray-100 leading-relaxed mb-4">
+            Een decennium vol passie voor mediterrane schoonheid!
+          </p>
+          <p class="text-base sm:text-lg text-gray-200 leading-relaxed mb-8">
+            Om ons jubileum te vieren, bieden wij speciale acties aan op ons complete assortiment.
+          </p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <section class="py-20 bg-white">
+    <div class="container max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Speciale Jubileum Acties
+        </h2>
+        <p class="text-lg text-gray-600">
+          Dankzij jullie steun zijn we 10 jaar verder. Als dank bieden we exclusieve kortingen!
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-emerald-50 rounded-2xl p-8 border-2 border-emerald-100">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">🌿 10% Korting op Alle Bomen</h3>
+          <p class="text-gray-700 mb-4">
+            Gebruik code <strong>JUBILEUM10</strong> bij bestelling voor 10% korting op ons volledige assortiment mediterrane bomen.
+          </p>
+          <p class="text-sm text-gray-600">Geldig t/m 31 december 2025</p>
+        </div>
+
+        <div class="bg-emerald-50 rounded-2xl p-8 border-2 border-emerald-100">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">🏡 Gratis Plantadvies</h3>
+          <p class="text-gray-700 mb-4">
+            Bij aankoop van een boom van €100 of meer, ontvang je gratis persoonlijk plantadvies op locatie.
+          </p>
+          <p class="text-sm text-gray-600">Voor bestellingen in Nederland</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="index.html#contact" class="inline-flex items-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105">
+          Neem contact op voor meer info
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <p class="text-gray-400 text-sm mb-2">
+        &copy; 2025 Spaanse Tuin & Zo — Mediterrane bomen
+      </p>
+      <p class="text-gray-500 text-xs">
+        KvK: 65475860 | BTW: NL001888980B55
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Welkom — Spaansetuin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Canvas Confetti Library -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+  <style>
+    /* Custom brand colors */
+    .brand-green { color: #16a34a; }
+    .brand-green-hover:hover { color: #16a34a; }
+    .dropdown-shadow { box-shadow: 0 6px 18px rgba(13, 27, 39, 0.08); }
+    
+    /* Smooth transitions for dropdowns */
+    .group:hover .group-hover\:visible,
+    .group:focus-within .group-focus-within\:visible,
+    .group.open .group-hover\:visible {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    /* Smooth scroll behavior */
+    html { scroll-behavior: smooth; }
+    
+    /* Bounce animation for scroll indicator */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0) translateX(-50%); }
+      50% { transform: translateY(10px) translateX(-50%); }
+    }
+    .animate-bounce {
+      animation: bounce 2s infinite;
+    }
+
+    /* ===== FEESTELIJKE ANIMATIES ===== */
+    
+    /* Slingers container aan bovenkant hero */
+    .bunting-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 15;
+    }
+    
+    /* Individuele slinger vlaggetjes */
+    .bunting {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-content: space-around;
+    }
+    
+    .bunting-flag {
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 40px solid;
+      animation: sway 3s ease-in-out infinite;
+      transform-origin: top center;
+    }
+    
+    .bunting-flag:nth-child(1) { border-top-color: #10b981; animation-delay: 0s; }
+    .bunting-flag:nth-child(2) { border-top-color: #16a34a; animation-delay: 0.3s; }
+    .bunting-flag:nth-child(3) { border-top-color: #059669; animation-delay: 0.6s; }
+    .bunting-flag:nth-child(4) { border-top-color: #047857; animation-delay: 0.9s; }
+    .bunting-flag:nth-child(5) { border-top-color: #10b981; animation-delay: 1.2s; }
+    .bunting-flag:nth-child(6) { border-top-color: #16a34a; animation-delay: 1.5s; }
+    .bunting-flag:nth-child(7) { border-top-color: #059669; animation-delay: 1.8s; }
+    .bunting-flag:nth-child(8) { border-top-color: #047857; animation-delay: 2.1s; }
+    .bunting-flag:nth-child(9) { border-top-color: #10b981; animation-delay: 2.4s; }
+    .bunting-flag:nth-child(10) { border-top-color: #16a34a; animation-delay: 2.7s; }
+    
+    @keyframes sway {
+      0%, 100% { transform: rotate(-5deg); }
+      50% { transform: rotate(5deg); }
+    }
+    
+    /* Vuurwerk sparkles in achtergrond */
+    .firework {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 5;
+      box-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+      animation: firework-burst 3.5s ease-out forwards;
+    }
+    
+    @keyframes firework-burst {
+      0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+        filter: brightness(1.5);
+      }
+      50% {
+        opacity: 0.8;
+        transform: translate(calc(var(--tx) * 0.7), calc(var(--ty) * 0.7)) scale(1.3);
+        filter: brightness(2);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(var(--tx), var(--ty)) scale(0.3);
+        filter: brightness(0.5);
+      }
+    }
+    
+    /* Vuurwerk trails */
+    .firework::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: inherit;
+      animation: trail 3.5s ease-out forwards;
+    }
+    
+    @keyframes trail {
+      0% {
+        opacity: 0.6;
+        transform: scale(1.5);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+    }
+    
+    /* Responsive: kleinere slingers op mobiel */
+    @media (max-width: 768px) {
+      .bunting-container {
+        height: 60px;
+      }
+      .bunting-flag {
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 30px solid;
+      }
+    }
+  </style>
+</head>
+<body class="antialiased bg-gray-50">
+  
+  <!-- Logo positioned above navbar, overlapping - GROTER GEMAAKT + 10 JAAR JUBILEUM -->
+  <div class="fixed top-0 left-4 sm:left-8 z-50">
+    <img src="assets/logo.svg" alt="Spaanse Tuin & Zo Logo - 10 jaar" class="h-28 sm:h-32 w-auto drop-shadow-lg">
+  </div>
+
+  <!-- Navigation -->
+  <div id="site-navbar"></div>
+  <script src="scripts/include-navbar.js"></script>
+
+  <!-- HERO SECTION - Fullscreen met achtergrond afbeelding en filter -->
+  <header id="welkom" class="relative bg-gray-900 text-white">
+    <div class="absolute inset-0 opacity-40" style="background-image:url('assets/impressie/other1.jpg'); background-size:cover; background-position:center;"></div>
+    <!-- Background image with opacity filter -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-70" style="background-image: url('hero-section.jpg');"></div>
+    
+    <!-- Dark overlay for better text readability -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50"></div>
+
+    <!-- Feestelijke slingers aan bovenkant -->
+    <div class="bunting-container">
+      <div class="bunting">
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+        <div class="bunting-flag"></div>
+      </div>
+    </div>
+
+    <!-- Hero content -->
+    <div class="relative z-10 min-h-screen flex items-center pt-16">
+      <div class="container max-w-7xl mx-auto px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <!-- HERO TITLE - NIEUWE TEKST -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+            Waar Mediterrane sfeer en kwaliteit samenkomen
+          </h1>
+          
+          <!-- HERO SUBTEXT - VOLLEDIG NIEUWE INHOUD UIT AANPASSINGEN -->
+          <p class="text-lg sm:text-xl text-gray-100 leading-relaxed mb-4">
+            Bij Spaanse Tuin &Zo draait alles om <strong>kwaliteit, eerlijkheid en volledige service</strong>.
+          </p>
+          <p class="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">
+            Wij zijn een kleinschalig familiebedrijf met een passie voor mediterrane bomen en persoonlijke aandacht voor onze klanten.
+          </p>
+          <p class="text-base sm:text-lg text-gray-200 leading-relaxed mb-8">
+            Met toewijding en vakmanschap maken wij jouw mediterrane droom waar – van eerste advies tot plaatsing.
+          </p>
+
+          <!-- CALL TO ACTION BUTTONS -->
+          <div class="flex flex-wrap gap-4">
+            <!-- Primary CTA: Onze bomen -->
+            <a href="#highlights"
+               class="inline-flex items-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105">
+              🌳 Bekijk ons assortiment
+            </a>
+            
+            <!-- Secondary CTA: Contact -->
+            <a href="#footer"
+               class="inline-flex items-center px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border-2 border-white/30 transition transform hover:scale-105">
+              📞 Neem contact op
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+      <a href="#highlights" class="text-white/70 hover:text-white transition text-2xl" aria-label="Scroll naar beneden">
+        ↓
+      </a>
+    </div>
+  </header>
+
+  <!-- HIGHLIGHT SECTION - 4 blokken -->
+  <section id="highlights" class="bg-gradient-to-b from-white to-gray-50 py-20">
+    <div class="container max-w-7xl mx-auto px-6 lg:px-8">
+      
+      <!-- Section header -->
+      <div class="max-w-3xl mx-auto text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Alles wat wij voor u regelen
+        </h2>
+        <p class="text-lg text-gray-600">
+          Van authentieke bomen tot stijlvolle steigerhouten bloembakken en bezorgservice – alles voor u tot in de puntjes verzorgd.
+        </p>
+      </div>
+
+      <!-- Highlight grid: 4 blokken -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        
+        <!-- BLOK 1: Onze bomen - NIEUWE TEKST EN ICOONTJE AANPASSING -->
+        <a href="#onze-bomen"
+           class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING PALM/OLIJF -->
+          <img src="assets/palm.svg" alt="Palmboom" class="w-16 h-16 mb-6 group-hover:scale-110 transition-transform">
+          <!-- Title -->
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+            Onze bomen
+          </h3>
+          <!-- Description - NIEUWE TEKST -->
+          <p class="text-gray-600 leading-relaxed">
+            Ontdek ons assortiment authentieke olijfbomen, palmbomen, vijgenbomen en druivenranken. Rechtstreeks uit de Costa Blanca.
+          </p>
+        </a>
+
+        <!-- BLOK 2: Bloembakken - NIEUWE TEKST EN ICOONTJE -->
+        <a href="#bloembakken"
+           class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING STEIGERHOUTEN BLOEMBAK -->
+          <img src="assets/bloembak.svg" alt="Bloembak" class="w-16 h-16 mb-6 group-hover:scale-110 transition-transform">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+            Bloembakken
+          </h3>
+          <!-- NIEUWE TEKST -->
+          <p class="text-gray-600 leading-relaxed">
+            Stijlvolle bloembakken van steigerhout, speciaal voor u op maat gemaakt.
+          </p>
+        </a>
+
+        <!-- BLOK 3: Verhuur - NIEUWE TEKST EN ICOONTJE -->
+        <a href="#verhuur"
+           class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING STA TAFEL -->
+          <img src="assets/verhuur/other1.jpg" alt="Statafel" class="w-16 h-16 object-cover rounded-xl mb-6 group-hover:scale-110 transition-transform">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+            Verhuur
+          </h3>
+          <!-- NIEUWE TEKST -->
+          <p class="text-gray-600 leading-relaxed">
+            Verhuur van bloembakken met Mediterrane bomen voor elke gelegenheid – zakelijk of particulier – voor de perfecte sfeer.
+          </p>
+        </a>
+
+        <!-- BLOK 4: Bezorgen - NIEUWE TEKST EN ICOONTJE -->
+        <a href="#bezorgen"
+           class="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+          <!-- Icon - VERVANGEN DOOR AFBEELDING BUS/AANHANGER -->
+          <img src="assets/bezorgen/other1.jpg" alt="Bezorging" class="w-16 h-16 object-cover rounded-xl mb-6 group-hover:scale-110 transition-transform">
+          <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">
+            Bezorgen
+          </h3>
+          <!-- NIEUWE TEKST -->
+          <p class="text-gray-600 leading-relaxed">
+            Snelle levering in Nederland, België en Duitsland, met zorg voor uw bomen.
+          </p>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TOPSERVICE SECTION - Waarom klanten voor ons kiezen (uit Welkom.pdf) -->
+  <section id="topservice" class="bg-white py-20 border-t border-gray-100">
+    <div class="container max-w-6xl mx-auto px-6 lg:px-8">
+      <!-- Titel -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          🌟 Topservice
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Bij ons draait alles om kwaliteit, eerlijkheid en complete ontzorging. Als kleinschalig familiebedrijf hebben we een grote liefde voor mediterrane bomen én voor onze klanten. Daarom leveren wij méér dan alleen een boom:
+        </p>
+      </div>
+
+      <!-- Service punten in een modern grid -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        
+        <!-- Service 1: Topservice -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              🌟
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Topservice</h3>
+            <p class="text-gray-600">Uw Mediterrane bomen in de beste handen. Van bestelling tot levering, altijd zorgvuldig verzorgd.</p>
+          </div>
+        </div>
+
+        <!-- Service 2: Eerlijke prijzen -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              💰
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Eerlijke prijzen</h3>
+            <p class="text-gray-600">Topkwaliteit Mediterrane bomen tegen scherpe prijzen.</p>
+          </div>
+        </div>
+
+        <!-- Service 3: Volledige service -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              🛠️
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Op onze tropische binnenplaats van maar liefst <strong>400 m²</strong> vind je een ruim assortiment mediterrane bomen. We importeren rechtstreeks uit de Costa Blanca en selecteren elke boom persoonlijk en met detail.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 4: Hoogwaardige Mediterrane bomen -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              🌿
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Hoogwaardige Mediterrane bomen</h3>
+            <p class="text-gray-600">Topkwaliteit Mediterrane bomen, met zorg geselecteerd en geschikt voor het Nederlandse klimaat.</p>
+          </div>
+        </div>
+
+        <!-- Service 5: Persoonlijk advies -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              💬
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Meerdere keren per jaar reizen we zelf naar Spanje om de mooiste exemplaren uit te zoeken. Elke boom wordt persoonlijk bekeken, gekeurd en gelabeld, zodat hij bij aankomst in Nederland precies aan onze hoge standaarden voldoet.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 6: Nazorg -->
+        <div class="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+          <div class="flex-shrink-0">
+            <div class="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">
+              📋
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">Nazorg</h3>
+            <p class="text-gray-600">Professionele nazorg gegarandeerd. Wij blijven betrokken bij uw Mediterrane bomen.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OVER ONS SECTION - Echte content uit Over ons.pdf -->
+  <section id="over-ons" class="bg-gray-50 py-20">
+    <div class="container max-w-5xl mx-auto px-6 lg:px-8">
+      <div class="max-w-none">
+        <!-- Hoofdtitel - NIEUWE TEKST -->
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">
+          Passie voor mediterrane schoonheid
+        </h2>
+        <p class="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+          Een hobby uitgegroeid tot vakmanschap – onze passie voor Mediterrane bomen. Wat ooit begon als liefde voor de Mediterrane stijl, is uitgegroeid tot een gespecialiseerd bedrijf in bijzondere, karaktervolle bomen.
+        </p>
+
+        <!-- Content in twee kolommen op desktop -->
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Hoe het begon</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Even kort voorstellen: wij zijn Lisette en Hans Janssen, trotse eigenaren van Spaanse Tuin & Zo.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Enkele jaren geleden begon ons avontuur. Hans – toen nog eigen rijder met ritten naar Spanje – nam een palmboom mee voor onze eigen tuin. Het uitzoeken van de perfecte boom duurde uren, maar het klikte meteen tussen Hans en de Spaanse kweker. Al snel werd de palmboom een echte blikvanger. Iedereen die hem zag, was razend enthousiast en vroeg of Hans er ook één voor hen kon meenemen.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Niet veel later groeide de vraag naar palmen en ontstond er ook interesse in andere mediterrane bomen, zoals olijf- en vijgenbomen. Bij elke rit naar Zuid-Spanje vulde Hans zijn trailer met een paar extra bomen voor vrienden en bekenden. Toen de belangstelling bleef groeien, besloten we in 2016 de stap te zetten: Spaanse Tuin & Zo werd geboren. Sindsdien zetten Hans en Lisette zich met veel passie en liefde in voor Spaanse Tuin & Zo.
+            </p>
+          </div>
+
+          <div class="space-y-4">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
+            <p class="text-gray-700 leading-relaxed">
+              Op onze tropische binnenplaats van maar liefst <strong>400 m²</strong> vind je een ruim assortiment mediterrane bomen. We importeren rechtstreeks uit de Costa Blanca en selecteren elke boom persoonlijk en met detail.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Door de jaren heen hebben we hechte vriendschappen opgebouwd met onze kwekers. Zij weten precies wat we zoeken: <strong>bomen van topkwaliteit tegen eerlijke prijzen</strong>. Zo blijft het mediterrane gevoel voor iedereen bereikbaar.
+            </p>
+            <p class="text-gray-700 leading-relaxed">
+              Meerdere keren per jaar reizen we zelf naar Spanje om de mooiste exemplaren uit te zoeken. Elke boom wordt persoonlijk bekeken, gekeurd en gelabeld, zodat hij bij aankomst in Nederland precies aan onze hoge standaarden voldoet.
+            </p>
+          </div>
+        </div>
+
+        <!-- Highlight box: meer dan alleen bomen -->
+        <div class="bg-emerald-50 rounded-2xl p-8 border-2 border-emerald-100">
+          <h3 class="text-2xl font-bold text-gray-900 mb-4">Daarom kiezen klanten voor ons</h3>
+          <ul class="space-y-2 text-gray-700 mb-4">
+            <li class="flex items-start">
+              <span class="text-emerald-600 mr-2">✓</span>
+              <span><strong>Eerlijk en transparant advies</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-600 mr-2">✓</span>
+              <span><strong>Betrouwbaarheid en vakmanschap</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-600 mr-2">✓</span>
+              <span><strong>Grote betrokkenheid bij het gehele proces</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-600 mr-2">✓</span>
+              <span><strong>Topkwaliteit tegen eerlijke prijzen</strong></span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-emerald-600 mr-2">✓</span>
+              <span><strong>Alles geregeld van A tot Z</strong></span>
+            </li>
+          </ul>
+          <p class="text-gray-800 font-semibold mt-6 text-lg">
+            Bij Spaanse Tuin & Zo staan service, kwaliteit en eerlijkheid voorop. ✨
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENSIES EN TRUSTPILOT SECTION -->
+  <section id="recensies" class="bg-white py-20">
+    <div class="container max-w-6xl mx-auto px-6 lg:px-8">
+      <!-- Titel -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          Wat onze klanten zeggen
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          Lees de ervaringen van onze tevreden klanten en deel uw eigen verhaal.
+        </p>
+      </div>
+
+      <!-- Trustpilot widget placeholder -->
+      <div class="text-center mb-12">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Beoordeel ons op Trustpilot</h3>
+        <p class="text-gray-600 mb-6">Help ons om beter te worden door uw ervaring te delen.</p>
+        <a href="https://nl.trustpilot.com/review/spaansetuin-enzo.nl" target="_blank" rel="noopener"
+           class="inline-flex items-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">
+          Schrijf een recensie op Trustpilot
+        </a>
+      </div>
+
+      <!-- Recensies grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <!-- Recensie 1 -->
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400">
+              ★★★★★
+            </div>
+            <span class="ml-2 text-sm text-gray-600">5.0</span>
+          </div>
+          <p class="text-gray-700 mb-4 italic">
+            "Fantastische service! De olijfboom die we kochten is prachtig en de bezorging was perfect georganiseerd. Lisette en Hans zijn echte professionals."
+          </p>
+          <div class="text-sm text-gray-600">
+            <strong>Maria van der Berg</strong><br>
+            Klant sinds 2023
+          </div>
+        </div>
+
+        <!-- Recensie 2 -->
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400">
+              ★★★★★
+            </div>
+            <span class="ml-2 text-sm text-gray-600">5.0</span>
+          </div>
+          <p class="text-gray-700 mb-4 italic">
+            "Eindelijk een bedrijf dat doet wat het belooft! De palmbomen zijn van topkwaliteit en het advies was eerlijk en deskundig."
+          </p>
+          <div class="text-sm text-gray-600">
+            <strong>Jan Peters</strong><br>
+            Klant sinds 2022
+          </div>
+        </div>
+
+        <!-- Recensie 3 -->
+        <div class="bg-gray-50 rounded-xl p-6 border border-gray-200">
+          <div class="flex items-center mb-4">
+            <div class="flex text-yellow-400">
+              ★★★★★
+            </div>
+            <span class="ml-2 text-sm text-gray-600">5.0</span>
+          </div>
+          <p class="text-gray-700 mb-4 italic">
+            "De verhuur van bloembakken voor ons feest was een groot succes. Mooie kwaliteit en uitstekende service. Bedankt!"
+          </p>
+          <div class="text-sm text-gray-600">
+            <strong>Sarah de Vries</strong><br>
+            Klant sinds 2024
+          </div>
+        </div>
+      </div>
+
+      <!-- Schrijf recensie sectie -->
+      <div class="text-center">
+        <h3 class="text-2xl font-semibold text-gray-900 mb-4">Deel uw ervaring</h3>
+        <p class="text-gray-600 mb-6">Heeft u ook een mooie ervaring met Spaanse Tuin & Zo? Deel deze met ons!</p>
+        <a href="#footer" class="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">
+          Neem contact op
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER - Uitgebreide versie met alle info -->
+  <footer id="footer" class="bg-gray-900 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        
+        <!-- Kolom 1: Bedrijfsinfo & Logo -->
+        <div>
+          <img src="logo.png" alt="Spaanse Tuin & Zo - 10 jaar" class="h-16 w-auto mb-4">
+          <h3 class="text-xl font-bold mb-3">Spaanse Tuin & Zo</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">
+            Waar Mediterrane sfeer en kwaliteit samenkomen.
+          </p>
+        </div>
+
+        <!-- Kolom 2: Contactgegevens -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-emerald-400">Contact</h4>
+          <ul class="space-y-3 text-gray-300 text-sm">
+            <li class="flex items-start">
+              <span class="mr-2">📍</span>
+              <span>Heinsbergerweg 20<br>6074 AD Melick</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">📞</span>
+              <a href="tel:+31611929392" class="hover:text-emerald-400 transition">+31 6 11929392</a>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">✉️</span>
+              <a href="mailto:lisette@spaansetuin-enzo.nl" class="hover:text-emerald-400 transition">lisette@spaansetuin-enzo.nl</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Openingstijden -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-emerald-400">Openingstijden</h4>
+          <p class="text-gray-400 text-sm mb-3">Seizoen maart – september:</p>
+          <ul class="space-y-2 text-gray-300 text-sm">
+            <li class="flex items-center">
+              <span class="mr-2">🕐</span>
+              <span><strong>Zaterdag:</strong> 11.00 - 17.00 uur</span>
+            </li>
+            <li class="flex items-center">
+              <span class="mr-2">🕐</span>
+              <span><strong>Dinsdag:</strong> 13.00 - 17.00 uur</span>
+            </li>
+          </ul>
+          <p class="text-gray-400 text-xs mt-3">
+            Ook buiten openingstijden ben je welkom. Neem contact met ons op voor een afspraak.
+          </p>
+        </div>
+
+        <!-- Kolom 4: Menu & Social -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4 text-emerald-400">Navigatie</h4>
+          <ul class="space-y-2 text-gray-300 text-sm mb-6">
+            <li><a href="#welkom" class="hover:text-emerald-400 transition">Welkom</a></li>
+            <li><a href="#over-ons" class="hover:text-emerald-400 transition">Over ons</a></li>
+            <li><a href="#highlights" class="hover:text-emerald-400 transition">Assortiment</a></li>
+            <li><a href="#bezorgen" class="hover:text-emerald-400 transition">Onze service</a></li>
+            <li><a href="#verhuur" class="hover:text-emerald-400 transition">Verhuur</a></li>
+          </ul>
+          
+          <!-- Social Media -->
+          <div class="flex space-x-4">
+            <a href="#" aria-label="Facebook" class="w-10 h-10 bg-white/10 hover:bg-emerald-600 rounded-full flex items-center justify-center transition transform hover:scale-110">
+              <span class="text-xl">f</span>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-10 h-10 bg-white/10 hover:bg-emerald-600 rounded-full flex items-center justify-center transition transform hover:scale-110">
+              <span class="text-xl">📷</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="border-t border-gray-800 pt-8 text-center">
+        <p class="text-gray-400 text-sm mb-2">
+          &copy; 2025 Spaanse Tuin & Zo — Mediterrane bomen
+        </p>
+        <p class="text-gray-500 text-xs">
+          KvK: 65475860 | BTW: NL001888980B55
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Fixed Button -->
+  <div class="fixed bottom-6 right-6 z-50">
+    <a href="https://wa.me/31611929392" target="_blank" rel="noopener"
+       class="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110"
+       aria-label="Contact ons via WhatsApp">
+      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- Cookie Notice -->
+  <div id="cookie-notice" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-40 transform translate-y-full transition-transform duration-300">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex-1 text-sm">
+        <p>Wij gebruiken cookies om uw ervaring op onze website te verbeteren. Door verder te browsen, gaat u akkoord met ons cookiebeleid.</p>
+      </div>
+      <div class="flex gap-2">
+        <button onclick="acceptCookies()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg text-sm font-medium transition">
+          Accepteren
+        </button>
+        <button onclick="declineCookies()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg text-sm font-medium transition">
+          Weigeren
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      function initNavbarDependent() {
+        // Mobile toggle functionality
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburger = document.getElementById('hamburger');
+        const closeIcon = document.getElementById('close-icon');
+
+        if (mobileToggle && mobileMenu) {
+          mobileToggle.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.toggle('hidden');
+            mobileToggle.setAttribute('aria-expanded', !isHidden);
+            if (hamburger && closeIcon) {
+              hamburger.classList.toggle('hidden');
+              closeIcon.classList.toggle('hidden');
+            }
+          });
+        }
+
+        // Accordion functionality for mobile menu
+        document.querySelectorAll('[data-accordion]').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const key = btn.getAttribute('data-accordion');
+            const panel = document.querySelector(`[data-panel="${key}"]`);
+            const chevron = btn.querySelector('.chev');
+            
+            const isHidden = panel.classList.toggle('hidden');
+            if (chevron) {
+              chevron.textContent = isHidden ? '+' : '−';
+            }
+          });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+          if (mobileToggle && mobileMenu && !mobileToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+            if (!mobileMenu.classList.contains('hidden')) {
+              mobileMenu.classList.add('hidden');
+              if (hamburger && closeIcon) {
+                hamburger.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+              }
+              mobileToggle.setAttribute('aria-expanded', 'false');
+            }
+          }
+        });
+
+        // Keyboard accessibility for desktop menu
+        document.querySelectorAll('nav [role="menuitem"], nav button[aria-haspopup]').forEach(item => {
+          item.addEventListener('focus', () => {
+            const group = item.closest('.group');
+            if (group) group.classList.add('focus-within');
+          });
+          
+          item.addEventListener('blur', (e) => {
+            const group = item.closest('.group');
+            if (group) {
+              setTimeout(() => {
+                if (!group.contains(document.activeElement)) {
+                  group.classList.remove('focus-within');
+                }
+              }, 100);
+            }
+          });
+        });
+
+        // ===== CLICK SUPPORT VOOR DESKTOP DROPDOWNS =====
+        // Simpele click-to-toggle voor mobiele/touch support
+        console.log('🔍 Initializing dropdown click support...');
+        
+        const dropdownItems = document.querySelectorAll('nav .hidden.md\\:flex .group');
+        console.log('📋 Found dropdown items:', dropdownItems.length);
+        
+        dropdownItems.forEach((group, index) => {
+          const trigger = group.querySelector('a, button');
+          console.log(`🎯 Item ${index}:`, trigger ? trigger.textContent.trim() : 'no trigger');
+          
+          if (trigger) {
+            trigger.addEventListener('click', (e) => {
+              console.log('👆 Click detected on:', trigger.textContent.trim());
+              const isTouch = ('ontouchstart' in window) || navigator.maxTouchPoints > 0;
+              console.log('📱 Touch device:', isTouch);
+              
+              if (isTouch) {
+                e.preventDefault();
+                e.stopPropagation();
+                console.log('🚫 Default prevented');
+                
+                // Close others
+                dropdownItems.forEach(otherGroup => {
+                  if (otherGroup !== group) {
+                    otherGroup.classList.remove('open');
+                  }
+                });
+                
+                // Toggle current
+                const wasOpen = group.classList.contains('open');
+                group.classList.toggle('open');
+                console.log('✅ Toggled to:', !wasOpen ? 'OPEN' : 'CLOSED');
+              }
+            }, true); // Use capture phase
+          }
+        });
+        
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+          const nav = document.querySelector('nav');
+          if (nav && !nav.contains(e.target)) {
+            console.log('🚪 Closing all dropdowns (outside click)');
+            dropdownItems.forEach(group => group.classList.remove('open'));
+          }
+        });
+        
+        console.log('✅ Dropdown support initialized');
+
+        // ===== FEESTELIJKE ANIMATIES =====
+        
+        // Confetti animatie bij laden pagina
+        function triggerConfetti() {
+          const duration = 3000;
+          const animationEnd = Date.now() + duration;
+          const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 20 };
+
+          function randomInRange(min, max) {
+            return Math.random() * (max - min) + min;
+          }
+
+          const interval = setInterval(function() {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+              return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+            
+            // Confetti van links - ALLEEN GROENTINTEN
+            confetti({
+              ...defaults,
+              particleCount,
+              origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+              colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
+            });
+            
+            // Confetti van rechts - ALLEEN GROENTINTEN
+            confetti({
+              ...defaults,
+              particleCount,
+              origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+              colors: ['#10b981', '#16a34a', '#059669', '#047857', '#065f46']
+            });
+          }, 250);
+        }
+
+        // Vuurwerk sparkles in hero-achtergrond
+        function createFireworkSparkle() {
+          const hero = document.getElementById('welkom');
+          if (!hero) return;
+
+          const sparkle = document.createElement('div');
+          sparkle.className = 'firework';
+          
+          // Random positie in hero
+          const x = Math.random() * 100;
+          const y = Math.random() * 70 + 10; // Tussen 10% en 80% van hero hoogte
+          sparkle.style.left = `${x}%`;
+          sparkle.style.top = `${y}%`;
+          
+          // Random kleur (alleen groentinten)
+          const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
+          sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+          sparkle.style.color = sparkle.style.backgroundColor;
+          
+          // Random richting voor burst - grotere afstand
+          const tx = (Math.random() - 0.5) * 200;
+          const ty = (Math.random() - 0.5) * 200;
+          sparkle.style.setProperty('--tx', `${tx}px`);
+          sparkle.style.setProperty('--ty', `${ty}px`);
+          
+          hero.appendChild(sparkle);
+          
+          // Verwijder na animatie
+          setTimeout(() => {
+            sparkle.remove();
+          }, 3500);
+        }
+
+        // Creëer vuurwerk-burst met meerdere sparkles
+        function createFireworkBurst(x, y) {
+          const sparkleCount = Math.floor(Math.random() * 8) + 8; // 8-15 sparkles per burst
+          for (let i = 0; i < sparkleCount; i++) {
+            setTimeout(() => {
+              const hero = document.getElementById('hero-section');
+              if (!hero) return;
+
+              const sparkle = document.createElement('div');
+              sparkle.className = 'firework';
+              sparkle.style.left = `${x}%`;
+              sparkle.style.top = `${y}%`;
+              
+              const colors = ['#10b981', '#16a34a', '#059669', '#047857', '#065f46', '#22c55e', '#15803d'];
+              sparkle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+              sparkle.style.color = sparkle.style.backgroundColor;
+              
+              // Sparkles in alle richtingen
+              const angle = (Math.PI * 2 * i) / sparkleCount;
+              const distance = Math.random() * 150 + 100;
+              const tx = Math.cos(angle) * distance;
+              const ty = Math.sin(angle) * distance;
+              sparkle.style.setProperty('--tx', `${tx}px`);
+              sparkle.style.setProperty('--ty', `${ty}px`);
+              
+              hero.appendChild(sparkle);
+              
+              setTimeout(() => sparkle.remove(), 3500);
+            }, i * 50);
+          }
+        }
+
+        // Herhalende vuurwerk sparkles
+        function startFireworks() {
+          // Start meteen met enkele grote bursts
+          setTimeout(() => createFireworkBurst(30, 30), 300);
+          setTimeout(() => createFireworkBurst(70, 40), 600);
+          setTimeout(() => createFireworkBurst(50, 60), 900);
+          
+          // Herhaal elke 2 seconden met mix van bursts en losse sparkles
+          setInterval(() => {
+            const shouldBurst = Math.random() > 0.4;
+            
+            if (shouldBurst) {
+              // Grote burst
+              const x = Math.random() * 80 + 10;
+              const y = Math.random() * 60 + 20;
+              createFireworkBurst(x, y);
+            } else {
+              // Losse sparkles
+              const count = Math.floor(Math.random() * 5) + 3; // 3-7 sparkles
+              for (let i = 0; i < count; i++) {
+                setTimeout(() => createFireworkSparkle(), i * 150);
+              }
+            }
+          }, 2000);
+        }
+
+        // Start alle animaties wanneer pagina geladen is
+        window.addEventListener('load', function() {
+          // Wacht 500ms zodat pagina zichtbaar is
+          setTimeout(() => {
+            triggerConfetti();
+            startFireworks();
+          }, 500);
+        });
+
+        // ===== COOKIE MANAGEMENT =====
+        function showCookieNotice() {
+          const notice = document.getElementById('cookie-notice');
+          setTimeout(() => {
+            notice.classList.remove('translate-y-full');
+          }, 2000);
+        }
+
+        function acceptCookies() {
+          localStorage.setItem('cookies-accepted', 'true');
+          document.getElementById('cookie-notice').classList.add('translate-y-full');
+        }
+
+        function declineCookies() {
+          localStorage.setItem('cookies-accepted', 'false');
+          document.getElementById('cookie-notice').classList.add('translate-y-full');
+        }
+
+        // Show cookie notice if not decided yet
+        // For testing: always show for now
+        setTimeout(() => {
+          showCookieNotice();
+        }, 1000);
+        // Original: if (!localStorage.getItem('cookies-accepted')) { showCookieNotice(); }
+
+        // Make functions global for onclick handlers
+        window.acceptCookies = acceptCookies;
+        window.declineCookies = declineCookies;
+      }
+
+      if (document.querySelector('#site-navbar nav') || window.navbarInjected) {
+        try { initNavbarDependent(); } catch (e) { console.error(e); }
+      } else {
+        document.addEventListener('navbarLoaded', initNavbarDependent);
+      }
+    })();
+  </script>
+  <script src="scripts/desktop-nav.js"></script>
+  <script src="fix-links.js"></script>
+
+  <!-- Jubilee Popup -->
+  <div id="jubilee-popup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" role="dialog" aria-modal="true" style="display: none;">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md mx-4 p-8 text-center">
+      <button class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-xl" id="jubilee-close" aria-label="Sluiten">✕</button>
+      <h2 class="text-2xl font-serif text-gray-800 mb-4">10 jaar Spaanse Tuin & Zo</h2>
+      <p class="text-gray-600 mb-6 leading-relaxed">Een dankbare viering van tien jaar mediterrane sfeer en vakmanschap.</p>
+      <div class="bg-amber-50 rounded-lg p-4 mb-6">
+        <p class="text-sm text-gray-700 mb-2"><strong>21 t/m 31 maart</strong></p>
+        <p class="text-sm text-gray-700 mb-2">Dagelijks geopend van 11.00 – 17.00 uur</p>
+        <ul class="text-sm text-gray-700 space-y-1">
+          <li>• Een attent presentje bij aankoop</li>
+          <li>• Deelname aan exclusieve winacties</li>
+          <li>• Warme ontvangst met koffie, thee en iets lekkers</li>
+        </ul>
+      </div>
+      <a href="10-jaar.html#actievoorwaarden" class="inline-block bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">Bekijk jubileuminformatie</a>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const popup = document.getElementById('jubilee-popup');
+      const close = document.getElementById('jubilee-close');
+      if(!popup) return;
+      // Toon alleen als niet eerder gesloten
+      if(!localStorage.getItem('jubileeDismissed')) {
+        popup.style.display = 'flex';
+      }
+      // Sluit en onthoud
+      const closePopup = () => {
+        popup.style.display = 'none';
+        localStorage.setItem('jubileeDismissed', 'true');
+      };
+      close && close.addEventListener('click', closePopup);
+      // Klik buiten popup sluit hem
+      popup.addEventListener('click', (e) => {
+        if (e.target === popup) {
+          closePopup();
+        }
+      });
+      document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closePopup(); });
+    });
+  </script>
+</body>
+</html>
