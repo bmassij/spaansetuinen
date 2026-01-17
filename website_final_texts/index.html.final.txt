@@ -1,0 +1,33 @@
+========================
+PAGINA: index.html
+
+DEFINITIEVE TEKSTCORRECTIES
+
+- (Extracteer elk item uit SECTION B van website_audit/index.html.audit.txt en zet hier als: Origineel → Verbeterd)
+
+Voorbeeld placeholder:
+Origineel: <koptekst of zin uit index.html waarvan B aangeeft:>
+→ Final: <definitieve gecorrigeerde zin volgens opdrachten/aanpassingen website.docx>
+
+
+DEFINITIEVE HERSCHRIJVINGEN
+
+- (Als SECTION C in website_audit/index.html.audit.txt items heeft: plaats hier volledige, publicatieklare tekstblokken. Kopieer en pas alleen taal- of structuurcorrecties aan op basis van opdrachten/aanpassingen website.docx.)
+
+Voorbeeld placeholder:
+[SECTION C block 1 — plak hier de volledige voorgestelde herschrijving uit audit gecombineerd met klanttekst]
+
+
+DEFINITIEVE LINK-AANPASSINGEN
+
+Current link → Problem → Final correct link
+- (Vul per link uit SECTION D van website_audit/index.html.audit.txt)
+
+Voorbeeld placeholder:
+index.html#oude-anker → anker bestaat niet / onjuiste verwijzing → index.html#over-ons
+
+STATUS
+
+BLOCKED (waiting for client confirmation and for explicit text entries in website_audit/index.html.audit.txt and to confirm exact final phrasing from opdrachten/aanpassingen website.docx)
+
+========================

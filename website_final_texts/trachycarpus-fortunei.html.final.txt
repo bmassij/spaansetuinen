@@ -1,0 +1,21 @@
+========================
+PAGINA: trachycarpus-fortunei.html
+
+DEFINITIEVE TEKSTCORRECTIES
+
+- (Extracteer elk item uit SECTION B van website_audit/trachycarpus-fortunei.html.audit.txt en zet hier als: Origineel → Verbeterd)
+
+DEFINITIEVE HERSCHRIJVINGEN
+
+- (Als SECTION C in website_audit/trachycarpus-fortunei.html.audit.txt items heeft: plaats hier volledige, publicatieklare tekstblokken. Gebruik de klanttekst uit opdrachten/aanpassingen website.docx als leidraad.)
+
+DEFINITIEVE LINK-AANPASSINGEN
+
+Current link → Problem → Final correct link
+- (Vul per link uit SECTION D van website_audit/trachycarpus-fortunei.html.audit.txt)
+
+STATUS
+
+BLOCKED (waiting for client confirmation and exact phrasing from opdrachten/aanpassingen website.docx)
+
+========================

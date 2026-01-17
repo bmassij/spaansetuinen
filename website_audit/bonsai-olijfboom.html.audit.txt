@@ -1,0 +1,26 @@
+========================
+PAGINA: bonsai-olijfboom.html
+
+A. TEKST IS GOED ZO
+
+– Letterlijke teksten die correct overeenkomen met het klantdocument
+
+B. LICHT REDACTIONEEL VERBETEREN
+Origineel:
+Verbeterd:
+
+C. MOET HERSCHREVEN WORDEN
+
+
+D. LINK-CONTROLE
+
+Huidige link:
+Probleem:
+Correcte link:
+Bestaat doelpagina: JA/NEE
+
+E. ONTBREKENDE ONDERDELEN
+
+Wat volgens het klantdocument nog ontbreekt op deze pagina
+
+========================

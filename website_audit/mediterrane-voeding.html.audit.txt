@@ -1,0 +1,32 @@
+========================
+PAGINA: mediterrane-voeding.html
+
+A. TEKST IS GOED ZO
+
+Bulletlijst met teksten die correct overeenkomen met het klantdocument
+
+B. LICHT REDACTIONEEL VERBETEREN
+Per item exact dit format:
+
+Origineel:
+Verbeterd:
+
+(alleen kleine taalkundige verbeteringen, inhoud blijft gelijk)
+
+C. MOET HERSCHREVEN WORDEN
+
+Teksten die inhoudelijk niet kloppen, vaag zijn of niet overeenkomen met klantdocument
+
+D. LINK-CONTROLE
+Per link exact dit format:
+
+Huidige link:
+Probleem:
+Correcte link:
+Bestaat doelpagina: JA / NEE
+
+E. ONTBREKENDE ONDERDELEN
+
+Wat volgens het klantdocument nog ontbreekt op deze pagina
+
+========================
