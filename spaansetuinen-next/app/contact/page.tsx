@@ -2,29 +2,14 @@ import fs from 'fs/promises'
 import path from 'path'
 
 export default async function Page() {
-  const indexPath = path.join(process.cwd(), 'website', 'public', 'index.html')
   let contactHtml = ''
   try {
-    const raw = await fs.readFile(indexPath, 'utf8')
-    const m = raw.match(/<h3[^>]*>\s*Deel uw ervaring\s*<\/h3>[\s\S]*?<a[^>]*href=["']#footer["'][^>]*>/i)
-    if (m) contactHtml = m[0]
-    if (!contactHtml) {
-      const f = raw.match(/<footer[\s\S]*?<\/footer>/i)
-      if (f) contactHtml = f[0]
-    }
+    const filePath = path.join(process.cwd(), 'spaansetuinen-next', 'content', 'contact.json')
+    const raw = await fs.readFile(filePath, 'utf8')
+    const obj = JSON.parse(raw)
+    contactHtml = obj.contactHtml || ''
   } catch (e) {
     contactHtml = ''
-  }
-
-  if (!contactHtml) {
-    try {
-      const samplePath = path.join(process.cwd(), 'spaansetuinen-next', 'content', 'trachycarpus-fortunei.json')
-      const rawSample = await fs.readFile(samplePath, 'utf8')
-      const sample = JSON.parse(rawSample)
-      if (sample.cta) contactHtml = `<div><p>${sample.cta}</p></div>`
-    } catch (e) {
-      // ignore
-    }
   }
 
   return (
