@@ -16,7 +16,7 @@ export default function Navbar() {
 
           {/* Logo (left) */}
           <div className="">
-            <div style={{position: 'absolute', left: 'clamp(12px, 3vw, 32px)', top: 'calc(100% - (clamp(72px, 12vw, 128px) / 2))', height: 'clamp(72px, 12vw, 128px)', zIndex: 20}}>
+            <div style={{position: 'absolute', left: 'clamp(12px, 3vw, 32px)', top: 'calc(100% - (clamp(72px, 12vw, 128px) / 2))', height: 'clamp(72px, 12vw, 128px)', zIndex: 20, pointerEvents: 'none'}}>
               <Link href="/">
                 <img
                   src="/logo.png"
