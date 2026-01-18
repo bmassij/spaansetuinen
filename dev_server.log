@@ -1,0 +1,18 @@
+
+> spaansetuinen-next@0.1.0 dev
+> next dev
+
+   ▲ Next.js 14.0.0
+   - Local:        http://localhost:3000
+
+ ⚠ Invalid next.config.js options detected: 
+ ⚠     Unrecognized key(s) in object: 'appDir' at "experimental"
+ ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+ ✓ Ready in 1476ms
+(node:10916) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+ ○ Compiling /bomen/[slug]/page ...
+ ✓ Compiled /bomen/[slug]/page in 1872ms (492 modules)
+ ✓ Compiled in 77ms (244 modules)
+ ✓ Compiled /page in 128ms (471 modules)
+ ✓ Compiled /not-found in 90ms (475 modules)
