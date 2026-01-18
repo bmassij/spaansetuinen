@@ -28,16 +28,38 @@ export default function ProductTemplate(props: ProductProps) {
   } = props;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       {/* Hero */}
-      <header
-        className="relative bg-cover bg-center"
-        style={{ backgroundImage: heroImage ? `url('${heroImage}')` : undefined }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-black/25" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white">{title || ''}</h1>
-          <p className="mt-4 text-lg text-white/90 max-w-3xl">{short_description || ''}</p>
+      <header className="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
+        {/* Image layer(s) */}
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: heroImage ? `url('${heroImage}')` : undefined,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+
+        {/* Extra gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-700/30 to-emerald-900/30" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center py-8">
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title || ''}</h1>
+              <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{short_description || ''}</p>
+            </div>
+
+            <div className="hidden md:flex justify-center items-center">
+              <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
+                <div className="text-center p-8">
+                  <div className="text-6xl mb-4">🌳</div>
+                  <p className="text-white/80 text-sm">Afbeelding volgt</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
