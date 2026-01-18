@@ -1,0 +1,46 @@
+{
+  "title": "Cycca Revoluta",
+  "slug": "cycca-revoluta",
+  "short_description": "Ook wel de vredespalm genoemd. Een langzaamgroeiende palm die tot 100 jaar oud kan worden. Perfect voor in pot.",
+  "long_description": "Deze palm kan heel oud worden tot wel 100 jaar. Het is een langzaam groeiende palm die een elegante uitstraling heeft en perfect past in verschillende tuinstijlen. Het beste kunt u deze palm in een pot plaatsen. De Cycca hoeft niet veel water te hebben en kan niet goed tegen vorst, dus hij staat in de winter graag binnen.",
+  "heroImage": "",
+  "gallery": [],
+  "kenmerken": [
+    "Kan tot 100 jaar oud worden",
+    "Langzaam groeiend",
+    "Perfect voor in pot",
+    "Weinig water nodig",
+    "Niet vorstbestendig - in winter binnen plaatsen"
+  ],
+  "verzorging": {
+    "sections": [
+      {
+        "title": "In pot",
+        "content": "De Cycca Revoluta groeit het best in een pot. Hierdoor kunt u hem gemakkelijk binnen en buiten plaatsen afhankelijk van het seizoen."
+      },
+      {
+        "title": "Water",
+        "content": "Deze palm heeft weinig water nodig. Zorg dat de grond niet te nat wordt en laat hem tussen de waterbeurten licht uitdrogen."
+      },
+      {
+        "title": "Winterperiode",
+        "content": "Kan niet goed tegen vorst. Zet de palm in de winter binnen op een lichte plek met een temperatuur tussen 5-15°C."
+      }
+    ]
+  },
+  "plaatsing": {
+    "sections": [
+      {
+        "title": "Plaatsing",
+        "content": "Het beste kunt u deze palm in een pot plaatsen."
+      }
+    ]
+  },
+  "price": null,
+  "cta": {
+    "heading": "Interesse in een Cycca Revoluta?",
+    "intro": "Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. De vredespalm is een prachtige toevoeging aan elk interieur of terras!",
+    "phone": { "href": "tel:0611929392", "text": "06-11929392" },
+    "email": { "href": "mailto:lisette@spaansetuin-enzo.nl", "text": "lisette@spaansetuin-enzo.nl" }
+  }
+}

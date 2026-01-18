@@ -1,0 +1,71 @@
+{
+  "title": "Trachycarpus Fortunei",
+  "slug": "trachycarpus-fortunei",
+  "short_description": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom geniet u het hele jaar door van een blijvend zomers gevoel. Deze Trachycarpus fortunei is winterhard tot -18 °C en goed geschikt voor het Nederlandse klimaat.",
+  "long_description": "Deze Trachycarpus fortunei is verkrijgbaar in meerdere stamhoogtes. De palmkenmerken omvatten een harige stam en waaiervormig blad, dat breed kan uitgroeien. De boom doet het goed op een zonnige of halfbeschaduwde plek en vormt in het voorjaar bloemen en later kleine vruchten.",
+  "heroImage": "",
+  "gallery": [],
+  "kenmerken": [
+    "Winterhard tot -18 °C",
+    "Waaiervormig blad tot 1,5 meter",
+    "Harige stam",
+    "Groeit circa 10 cm per jaar",
+    "Maximale hoogte: circa 9 meter"
+  ],
+  "verzorging": {
+    "sections": [
+      {
+        "title": "Snoeien",
+        "content": "Verwijder in het voorjaar verdorde of beschadigde bladeren tot ongeveer 5 cm van de stam om de boom gezond te houden."
+      },
+      {
+        "title": "Winterbescherming",
+        "content": "Dankzij zijn harige stam is de Trachycarpus relatief winterhard tot -18 °C. Bij veel sneeuw of strenge vorst is het verstandig bladeren sneeuwvrij te maken en extra bescherming te bieden indien nodig."
+      },
+      {
+        "title": "Hydrateren",
+        "content": "Geef extra water bij aanhoudende droogte, afgestemd op standplaats en potmaat. In potten is frequentere bewatering nodig."
+      },
+      {
+        "title": "Palmen in een bloembak of pot",
+        "list": [
+          "Bij 10–20 °C: wekelijks water geven",
+          "Bij 20–25 °C: twee keer per week",
+          "Bij >25 °C: drie keer per week"
+        ],
+        "content": "Gebruik een ruime pot met goede drainage en bescherm de wortelkluit bij vorst."
+      },
+      {
+        "title": "Palmen in de volle grond",
+        "content": "In de volle grond kunnen wortels dieper water bereiken; geef bij hete perioden wekelijks extra water om uitdroging te voorkomen."
+      },
+      {
+        "title": "Voeding",
+        "content": "Bemest twee keer per jaar met mediterrane plantenvoeding voor gezonde groei en bladkleur."
+      }
+    ]
+  },
+  "plaatsing": {
+    "sections": [
+      {
+        "title": "Volle grond",
+        "content": "De palm groeit het beste in de volle grond waar de wortels zich optimaal kunnen ontwikkelen."
+      },
+      {
+        "title": "Bloembak/Bloempot",
+        "content": "Bij potcultuur is het belangrijk de pot ruim te kiezen en te zorgen voor goede drainage en isolatie tegen vorst."
+      },
+      {
+        "title": "Locatie",
+        "content": "Bij voorkeur een zonnige of licht beschaduwde plek, beschut tegen koude wind."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Interesse in Trachycarpus?",
+    "intro": "Neem contact op voor beschikbaarheid en advies.",
+    "body": "Wij helpen u graag bij het kiezen van de juiste palm en het bepalen van de beste standplaats.",
+    "phone": { "href": "tel:+31611929392", "text": "+31 6 11929392" },
+    "email": { "href": "mailto:lisette@spaansetuin-enzo.nl", "text": "lisette@spaansetuin-enzo.nl" }
+  }
+}
