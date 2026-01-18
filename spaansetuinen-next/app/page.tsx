@@ -17,9 +17,9 @@ export default async function Page() {
     data = {}
   }
 
-  const heroTitle = data.heroTitle || ''
-  const heroSubtitle = data.heroSubtitle || ''
-  const intro = data.intro || ''
+  const heroTitle = home.heroTitle || data.heroTitle || ''
+  const heroSubtitle = home.heroSubtitle || data.heroSubtitle || ''
+  const intro = home.intro || data.intro || ''
   const blocks = Array.isArray(data.blocks) ? data.blocks : []
   const usp = Array.isArray(data.usp) ? data.usp : []
   const aboutTeaser = data.aboutTeaser || ''
@@ -238,3 +238,4 @@ export default async function Page() {
     </>
   )
 }
+
