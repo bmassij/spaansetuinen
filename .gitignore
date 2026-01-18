@@ -10,3 +10,8 @@ __pycache__/
 
 # Huggingface cache (optional)
 /.cache/huggingface/
+
+node_modules/
+.next/
+out/
+.env*
