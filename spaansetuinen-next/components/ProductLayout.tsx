@@ -1,18 +1,23 @@
-import Navbar from './Navbar';
-import HtmlFooter from './HtmlFooter';
-
 export default function ProductLayout({ page }: { page: any }) {
   return (
     <>
-      <Navbar />
-
       <header>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {page?.title && <h1 className="text-3xl font-bold mb-4">{page.title}</h1>}
-          {page?.heroText && <p className="text-lg mb-4">{page.heroText}</p>}
+          {page?.title && (
+            <h1 className="text-3xl font-bold mb-4">{page.title}</h1>
+          )}
+
+          {page?.heroText && (
+            <p className="text-lg mb-4">{page.heroText}</p>
+          )}
+
           {page?.image && (
             <div className="mb-4">
-              <img src={page.image} alt={page.title || ''} className="w-full h-auto object-cover" />
+              <img
+                src={page.image}
+                alt={page.title || ''}
+                className="w-full h-auto object-cover"
+              />
             </div>
           )}
         </div>
@@ -31,7 +36,9 @@ export default function ProductLayout({ page }: { page: any }) {
             <section className="mb-6">
               <h2 className="text-xl font-semibold mb-2">Kenmerken</h2>
               <ul className="list-disc pl-5">
-                {page.kenmerken.map((k: any, i: number) => k && <li key={i}>{k}</li>)}
+                {page.kenmerken.map(
+                  (k: any, i: number) => k && <li key={i}>{k}</li>
+                )}
               </ul>
             </section>
           )}
@@ -56,12 +63,15 @@ export default function ProductLayout({ page }: { page: any }) {
             </section>
           )}
 
-          {page?.short_description && <p className="mb-4">{page.short_description}</p>}
-          {page?.long_description && <div className="prose max-w-none">{page.long_description}</div>}
+          {page?.short_description && (
+            <p className="mb-4">{page.short_description}</p>
+          )}
+
+          {page?.long_description && (
+            <div className="prose max-w-none">{page.long_description}</div>
+          )}
         </div>
       </main>
-
-      <HtmlFooter />
     </>
   );
 }

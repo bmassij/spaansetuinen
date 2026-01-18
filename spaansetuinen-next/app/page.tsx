@@ -1,5 +1,4 @@
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -243,7 +242,7 @@ export default async function Page() {
       </section>
 
       {/* FOOTER - use existing component */}
-      <Footer />
+    
     </>
   )
 }
