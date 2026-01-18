@@ -1,12 +1,3 @@
 {
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/website/public/index.html"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/website/public/$1"
-    }
-  ]
+  "rewrites": []
 }
