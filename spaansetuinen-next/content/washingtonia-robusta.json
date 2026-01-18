@@ -1,0 +1,43 @@
+{
+  "title": "Washingtonia Robusta",
+  "heroText": "Sierlijke, snelgroeiende waaierpalm voor een tropische uitstraling.",
+  "intro": "Washingtonia robusta is een indrukwekkende waaierpalm met lange slanke stam en grote waaierbladen. Hij geeft snel hoogte en sfeer in grotere tuinen.",
+  "description": "Deze palm groeit relatief snel en vormt een hoge, slanke stam met een kroon van waaiervormig blad. In ons klimaat is hij met enige zorg te houden, vooral in beschutte, zonnige locaties.",
+  "kenmerken": {
+    "heading": "Kenmerken",
+    "content": "Washingtonia heeft lange, uitgespreide waaierbladen en een karakteristieke stam. Door de snelle groei is hij populair voor een directe tropische look.",
+    "list": [
+      "Snelgroeiend",
+      "Waaierblad",
+      "Hoogte op middellange termijn",
+      "Goed zichtbaar in grote tuinen",
+      "Spectaculaire uitstraling"
+    ]
+  },
+  "image": { "url": "", "alt": "Washingtonia robusta", "placeholder": "🌴" },
+  "verzorging": {
+    "heading": "Verzorging",
+    "sections": [
+      { "title": "Water", "content": "Geef regelmatig water in de groeiperiode, vooral bij jonge exemplaren. Volwassen palmen zijn resistenter tegen droogte." },
+      { "title": "Snoeien", "content": "Verwijder enkel dode of zwaar beschadigde bladeren. Laat de canarische vezels zoveel mogelijk zitten ter bescherming." },
+      { "title": "Winterbescherming", "content": "Bescherming tegen strenge vorst is aanbevolen; wikkel de kroon en stam indien nodig of geef extra mulch rond de kluit." },
+      { "title": "Voeding", "content": "Een jaarbemesting met palm- of mediterrane voeding ondersteunt de groei en kleur van het blad." }
+    ]
+  },
+  "plaatsing": {
+    "heading": "Plaatsing",
+    "sections": [
+      { "title": "Locatie", "content": "Kies een zonnige, warme en beschutte plek. Wind kan jonge bladeren beschadigen." },
+      { "title": "Bodem", "content": "Doorlatende grond met voldoende voedingsstoffen is ideaal. Voeg bij zware grond zand toe voor betere drainage." },
+      { "title": "Afstand en zicht", "content": "Plant op voldoende afstand van gebouwen en andere bomen zodat de hoge kroon kan ontwikkelen." }
+    ]
+  },
+  "cta": {
+    "heading": "Interesse in Washingtonia?",
+  "intro": "Beschikbare maten en prijzen op aanvraag.",
+    "body": "Neem contact op voor leveringsopties en advies over geschikte locaties in uw tuin.",
+    "phone": { "href": "tel:+31611929392", "text": "📞 +31 6 11929392" },
+    "email": { "href": "mailto:lisette@spaansetuin-enzo.nl", "text": "✉️ E-mail ons" }
+  },
+  "breadcrumbs": { "home": "Home", "trees": "Onze bomen", "category": "Palmen" }
+}

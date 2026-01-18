@@ -1,0 +1,68 @@
+{
+  "title": "Olea Europaea",
+  "heroText": "Klassieke olijfboom voor een mediterrane sfeer in uw tuin.",
+  "intro": "De Olea europaea is een karaktervolle olijfboom met grijsgroen blad en een gedrongen groeiwijze. Deze boom is geschikt voor zowel grote tuinen als potten op terrassen en balkons.",
+  "description": "Olijfbomen zijn winterhard in milde winters en vragen een zonnige, beschutte standplaats. Ze groeien langzaam maar geven veel sfeer en karakter aan de tuin. De Olea europaea kan ook vruchten dragen onder gunstige omstandigheden.",
+  "kenmerken": {
+    "heading": "Kenmerken",
+    "content": "De olijfboom heeft leerachtig blad, een gedraaide stam en een compacte kroon. Hij is goed bestand tegen droogte zodra hij is aangeslagen.",
+    "list": [
+      "Langzaam groeiend",
+      "Grijsgroen leerachtig blad",
+      "Sierlijke, gedraaide stam",
+      "Geschikt voor pot en volle grond",
+      "Weinig onderhoud nodig"
+    ]
+  },
+  "image": {
+    "url": "",
+    "alt": "Olijfboom (Olea europaea)",
+    "placeholder": "🌿"
+  },
+  "verzorging": {
+    "heading": "Verzorging",
+    "sections": [
+      {
+        "title": "Water geven",
+        "content": "Bij jonge aanplant regelmatig water geven totdat de boom goed geworteld is. Daarna volstaat bij droogte extra water geven."
+      },
+      {
+        "title": "Snoeien",
+        "content": "Snoei licht om dode takken te verwijderen en de gewenste vorm te behouden. Snoei bij voorkeur in het voorjaar."
+      },
+      {
+        "title": "Winterbescherming",
+        "content": "Op koude, tochtige locaties is enige bescherming gewenst. In potten is extra isolatie aan te raden bij strenge vorst."
+      },
+      {
+        "title": "Bemesting",
+        "content": "Geef in het voorjaar een uitgebalanceerde organische mest voor een gezonde groei en betere vruchtzetting."
+      }
+    ]
+  },
+  "plaatsing": {
+    "heading": "Plaatsing",
+    "sections": [
+      {
+        "title": "Standplaats",
+        "content": "Een zonnige, warme en liefst beschutte plek is ideaal voor de olijfboom. Vermijd natte en koude windgevoelige plaatsen."
+      },
+      {
+        "title": "Potcultuur",
+        "content": "Olijfbomen doen het goed in grote potten met goede drainage. Gebruik potgrond met organisch materiaal en zorg voor voldoende afwatering."
+      },
+      {
+        "title": "Bodem",
+        "content": "Een goed doorlatende, kalkrijke bodem werkt het beste. Vermijd natte, slecht doorlatende grond."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Interesse in een olijfboom?",
+    "intro": "Informeer naar beschikbaarheid en formaten.",
+    "body": "Neem contact met ons op voor advies en actuele voorraad. We helpen u met het kiezen van de juiste olijfboom voor uw situatie.",
+    "phone": { "href": "tel:+31611929392", "text": "📞 +31 6 11929392" },
+    "email": { "href": "mailto:lisette@spaansetuin-enzo.nl", "text": "✉️ E-mail ons" }
+  },
+  "breadcrumbs": { "home": "Home", "trees": "Onze bomen", "category": "Olijfbomen" }
+}
