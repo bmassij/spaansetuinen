@@ -8,135 +8,148 @@ export default function Navbar() {
   const toggleMobile = () => setMobileOpen((v) => !v);
 
   return (
-    <nav className="bg-white/95 backdrop-blur-sm border-b shadow-sm fixed top-0 left-0 right-0 z-40" role="navigation" aria-label="Hoofdnavigatie">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <div className="w-24 sm:w-32 mr-8 flex items-center">
+    <nav className="relative bg-white/95 backdrop-blur-sm border-b shadow-sm z-40 flex items-center justify-center" role="navigation" aria-label="Hoofdnavigatie" style={{height: 'clamp(52px, 6svh, 64px)'}}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+
+        {/* Main row: logo left, menu right */}
+        <div className="flex justify-between items-start">
+
+          {/* Logo (left) */}
+          <div className="">
+            <div style={{position: 'absolute', left: 'clamp(12px, 3vw, 32px)', top: 'calc(100% - (clamp(72px, 12vw, 128px) / 2))', height: 'clamp(72px, 12vw, 128px)', zIndex: 20}}>
               <Link href="/">
-                <img src="/assets/logo.svg" alt="Spaanse Tuin & Zo Logo" className="h-8 w-auto" />
+                <img
+                  src="/logo.png"
+                  alt="Spaanse Tuin & Zo Logo"
+                  style={{height: '100%', width: 'auto', display: 'block'}}
+                />
               </Link>
             </div>
+          </div>
 
-            {/* Desktop menu */}
-            <ul className="hidden lg:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
+          {/* Menu (right) */}
+          <div className="flex items-start z-10">
+            <div className="hidden lg:flex items-center">
+              <ul className="hidden lg:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
 
-              {/* Welkom */}
-              <li className="relative group" role="none">
-                <Link href="/" role="menuitem" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
-                  Welkom
-                </Link>
-                <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu" aria-label="Welkom submenu">
-                  <li><Link href="/over-ons" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</Link></li>
-                </ul>
-              </li>
+                {/* Welkom */}
+                <li className="relative group" role="none">
+                  <Link href="/" role="menuitem" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
+                    Welkom
+                  </Link>
+                  <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu" aria-label="Welkom submenu">
+                    <li><Link href="/over-ons" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</Link></li>
+                  </ul>
+                </li>
 
-              {/* Assortiment bomen */}
-              <li className="relative group" role="none">
-                <button aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-                  Assortiment bomen
-                </button>
+                {/* Assortiment bomen */}
+                <li className="relative group" role="none">
+                  <button aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+                    Assortiment bomen
+                  </button>
 
-                <div className="absolute left-0 top-full mt-2 w-screen max-w-4xl bg-white dropdown-shadow rounded-lg p-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="absolute left-0 top-full mt-2 w-screen max-w-4xl bg-white dropdown-shadow rounded-lg p-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-                    {/* Kolom 1: Palmbomen */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Palmbomen</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li><Link href="/bomen/trachycarpus-fortunei" className="block text-gray-700 hover:text-emerald-600 transition-colors">Trachycarpus Fortunei</Link></li>
-                        <li><Link href="/bomen/yucca-rostrata" className="block text-gray-700 hover:text-emerald-600 transition-colors">Yucca Rostrata</Link></li>
-                      </ul>
+                      {/* Kolom 1: Palmbomen */}
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Palmbomen</h4>
+                        <ul className="space-y-2 text-sm">
+                          <li><Link href="/bomen/trachycarpus-fortunei" className="block text-gray-700 hover:text-emerald-600 transition-colors">Trachycarpus Fortunei</Link></li>
+                          <li><Link href="/bomen/yucca-rostrata" className="block text-gray-700 hover:text-emerald-600 transition-colors">Yucca Rostrata</Link></li>
+                        </ul>
+                      </div>
+
+                      {/* Kolom 2: Vijgenbomen */}
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Vijgenbomen</h4>
+                        <ul className="space-y-2 text-sm">
+                          <li><Link href="/bomen/ficus-carica" className="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</Link></li>
+                        </ul>
+                      </div>
+
+                      {/* Kolom 3: Olijfbomen */}
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Olijfbomen</h4>
+                        <ul className="space-y-2 text-sm">
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Bonsai / Bonsai doble</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Copa</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Hoija Blanca</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Piel Joven</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Piel Vieja</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Bonsai Ramif</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Pata Bola</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Tubo</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Plato</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Lechin</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Multi Bola / Multi Plato</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Tarrina</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Andalusia</Link></li>
+                          <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Pon Pon</Link></li>
+                        </ul>
+                      </div>
+
+                      {/* Kolom 4: Druivenranken */}
+                      <div>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Druivenranken</h4>
+                        <ul className="space-y-2 text-sm">
+                          <li><Link href="/druivenranken" className="block text-gray-700 hover:text-emerald-600 transition-colors">Vitis Vinifera</Link></li>
+                        </ul>
+                      </div>
+
                     </div>
-
-                    {/* Kolom 2: Vijgenbomen */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Vijgenbomen</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li><Link href="/bomen/ficus-carica" className="block text-gray-700 hover:text-emerald-600 transition-colors">Ficus Carica</Link></li>
-                      </ul>
-                    </div>
-
-                    {/* Kolom 3: Olijfbomen */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Olijfbomen</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Bonsai / Bonsai doble</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Copa</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Hoija Blanca</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Piel Joven</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Piel Vieja</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Bonsai Ramif</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Pata Bola</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Tubo</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Plato</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Lechin</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Multi Bola / Multi Plato</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Tarrina</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Andalusia</Link></li>
-                        <li><Link href="/bomen/olea-europea" className="block text-gray-700 hover:text-emerald-600 transition-colors">Olea Europea Pon Pon</Link></li>
-                      </ul>
-                    </div>
-
-                    {/* Kolom 4: Druivenranken */}
-                    <div>
-                      <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Druivenranken</h4>
-                      <ul className="space-y-2 text-sm">
-                        <li><Link href="/druivenranken" className="block text-gray-700 hover:text-emerald-600 transition-colors">Vitis Vinifera</Link></li>
-                      </ul>
-                    </div>
-
                   </div>
-                </div>
-              </li>
+                </li>
 
-              {/* Bloembakken */}
-              <li className="relative group" role="none">
-                <Link href="/bloembakken" role="menuitem" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
-                  Bloembakken
-                </Link>
-                <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
-                  <li><Link href="/bloembakken" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken</Link></li>
-                  <li><Link href="/bloembakken-op-maat" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken op maat gemaakt</Link></li>
-                </ul>
-              </li>
+                {/* Bloembakken */}
+                <li className="relative group" role="none">
+                  <Link href="/bloembakken" role="menuitem" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
+                    Bloembakken
+                  </Link>
+                  <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
+                    <li><Link href="/bloembakken" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken</Link></li>
+                    <li><Link href="/bloembakken-op-maat" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Bloembakken op maat gemaakt</Link></li>
+                  </ul>
+                </li>
 
-              {/* Potgrond en Voeding */}
-              <li className="relative group" role="none">
-                <Link href="/mediterrane-potgrond" role="menuitem" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
-                  Potgrond en Voeding
-                </Link>
-                <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
-                  <li><Link href="/mediterrane-potgrond" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane potgrond</Link></li>
-                  <li><Link href="/mediterrane-voeding" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane voeding</Link></li>
-                  <li><Link href="/hydrokorrels" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Hydrokorrels</Link></li>
-                  <li><Link href="/boomschors" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Boomschors</Link></li>
-                </ul>
-              </li>
+                {/* Potgrond en Voeding */}
+                <li className="relative group" role="none">
+                  <Link href="/mediterrane-potgrond" role="menuitem" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">
+                    Potgrond en Voeding
+                  </Link>
+                  <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu">
+                    <li><Link href="/mediterrane-potgrond" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane potgrond</Link></li>
+                    <li><Link href="/mediterrane-voeding" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Mediterrane voeding</Link></li>
+                    <li><Link href="/hydrokorrels" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Hydrokorrels</Link></li>
+                    <li><Link href="/boomschors" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Boomschors</Link></li>
+                  </ul>
+                </li>
 
-              {/* Plant- en voedingstips */}
-              <li><Link href="/plant-en-voedingstips" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Plant- en voedingstips</Link></li>
+                {/* Plant- en voedingstips */}
+                <li><Link href="/plant-en-voedingstips" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Plant- en voedingstips</Link></li>
 
-              {/* Onze service */}
-              <li><Link href="/bezorgen" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Onze service</Link></li>
+                {/* Onze service */}
+                <li><Link href="/bezorgen" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Onze service</Link></li>
 
-              <li><Link href="/verhuur" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</Link></li>
-              <li><Link href="/impressie" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Impressie</Link></li>
-            </ul>
+                <li><Link href="/verhuur" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Verhuur</Link></li>
+                <li><Link href="/impressie" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">Impressie</Link></li>
+              </ul>
+            </div>
+
+            {/* Mobile hamburger button */}
+            <div className="lg:hidden flex items-center">
+              <button id="mobile-toggle" type="button" aria-controls="mobile-menu" aria-expanded={mobileOpen ? 'true' : 'false'} className="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-500" onClick={toggleMobile}>
+                <svg id="hamburger" className={mobileOpen ? 'h-6 w-6 hidden' : 'h-6 w-6 block'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+                <svg id="close-icon" className={mobileOpen ? 'h-6 w-6 block' : 'h-6 w-6 hidden'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
           </div>
 
-          {/* Mobile hamburger button */}
-          <div className="lg:hidden flex items-center">
-            <button id="mobile-toggle" type="button" aria-controls="mobile-menu" aria-expanded={mobileOpen ? 'true' : 'false'} className="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-500" onClick={toggleMobile}>
-              <svg id="hamburger" className={mobileOpen ? 'h-6 w-6 hidden' : 'h-6 w-6 block'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              <svg id="close-icon" className={mobileOpen ? 'h-6 w-6 block' : 'h-6 w-6 hidden'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
         </div>
       </div>
 
@@ -243,8 +256,8 @@ export default function Navbar() {
           {/* Onze service */}
           <Link href="/bezorgen" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Onze service</Link>
 
-          <Link href="/verhuur" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Verhuur</Link>
-          <Link href="/impressie" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Impressie</Link>
+          <Link href="/verhuur" className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Verhuur</Link>
+          <Link href="/impressie" className="block px-3 py-3 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Impressie</Link>
         </div>
       </div>
     </nav>

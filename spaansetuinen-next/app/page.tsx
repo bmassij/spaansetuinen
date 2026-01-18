@@ -1,4 +1,3 @@
-import Navbar from '../components/Navbar'
 import fs from 'fs/promises'
 import path from 'path'
 
@@ -25,7 +24,6 @@ export default async function Page() {
 
   return (
     <>
-      <Navbar />
 
       {/* HERO SECTION - fullscreen with background images and overlays */}
       <header id="welkom" className="relative bg-gray-900 text-white">
