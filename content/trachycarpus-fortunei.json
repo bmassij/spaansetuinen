@@ -1,54 +1,55 @@
 {
   "title": "Trachycarpus Fortunei",
-  "heroText": "",
-  "intro": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom, door ons persoonlijk geselecteerd en rechtstreeks geïmporteerd, geniet u het hele jaar door van een blijvend zomers gevoel. Een sterke palmboom, winterhard tot -18 °C en perfect geschikt voor het Nederlandse klimaat. Geef uw tuin met deze boom een echte tropische uitstraling.",
-  "description": "",
+  "heroText": "Wintervast tot -18 °C. Geef uw tuin een tropisch tintje met deze robuuste palm.",
+  "intro": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom geniet u het hele jaar door van een blijvend zomers gevoel. Deze Trachycarpus fortunei is winterhard tot -18 °C en goed geschikt voor het Nederlandse klimaat.",
+  "description": "Deze Trachycarpus fortunei is verkrijgbaar in meerdere stamhoogtes. De palmkenmerken omvatten een harige stam en waaiervormig blad, dat breed kan uitgroeien. De boom doet het goed op een zonnige of halfbeschaduwde plek en vormt in het voorjaar bloemen en later kleine vruchten.",
   "kenmerken": {
     "heading": "Kenmerken",
-    "content": "Deze Trachycarpus Fortunei bieden wij aan in verschillende stamhoogtes. Een van de kenmerkende eigenschappen van deze palmboom is zijn harige stam en waaiervormig blad, dat een indrukwekkende breedte van wel 1,5 meter kan bereiken. De palm groeit het beste op een zonnige, zuidelijke plek, maar kan ook prima overleven in halfschaduw. In volle bloei is deze Trachycarpus fortunei een lust voor het oog Eerst verschijnen zachte, gele bloemen, die na de bloei transformeren tot mooie trosjes donkerblauwe besjes.",
+    "content": "De Trachycarpus staat bekend om zijn harige stam en robuuste groeivorm. De bladeren zijn waaiervormig en kunnen een aanzienlijke breedte bereiken.",
     "list": [
       "Winterhard tot -18 °C",
-      "Waaiervormig blad tot 1,5 meter breed",
-      "Kenmerkende harige stam",
-      "Groei tot 10 cm per jaar",
-      "Maximale hoogte: 9 meter"
+      "Waaiervormig blad tot 1,5 meter",
+      "Harige stam",
+      "Groeit circa 10 cm per jaar",
+      "Maximale hoogte: circa 9 meter"
     ]
   },
   "image": {
     "url": "",
-    "alt": "",
+    "alt": "Trachycarpus fortunei",
     "placeholder": ""
   },
   "verzorging": {
     "heading": "Verzorging",
     "sections": [
       {
-        "title": "Snoeien:",
-        "content": "In het voorjaar kunt u de onderste bladeren die verdord of verkleurd zijn, zorgvuldig wegsnoeien. Snijd het blad tot ongeveer 5 cm van de stam af om de boom gezond te houden."
+        "title": "Snoeien",
+        "content": "Verwijder in het voorjaar verdorde of beschadigde bladeren tot ongeveer 5 cm van de stam om de boom gezond te houden."
       },
       {
-        "title": "Winterbescherming:",
-        "content": "De Trachycarpus fortunei is één van de sterkste onder de palmen en dankzij zijn harige stam winterhard tot wel -18 °C. Bij veel sneeuw is het verstandig de sneeuw van de bladeren te verwijderen, zodat de bladeren niet afbreken en de palm zijn tropische uitstraling behoudt."
+        "title": "Winterbescherming",
+        "content": "Dankzij zijn harige stam is de Trachycarpus relatief winterhard tot -18 °C. Bij veel sneeuw of strenge vorst is het verstandig bladeren sneeuwvrij te maken en extra bescherming te bieden indien nodig."
       },
       {
-        "title": "Hydrateren:",
-        "content": ""
+        "title": "Hydrateren",
+        "content": "Geef extra water bij aanhoudende droogte, afgestemd op standplaats en potmaat. In potten is frequentere bewatering nodig."
       },
       {
-        "title": "Palmen in een bloembak of pot:",
+        "title": "Palmen in een bloembak of pot",
         "list": [
-          "Bij temperaturen tussen 10 en 20 °C: wekelijks water geven.",
-          "Bij temperaturen tussen 20 en 25 °C: twee keer per week water geven.",
-          "Bij temperaturen boven 25 °C: drie keer per week water geven."
-        ]
+          "Bij 10–20 °C: wekelijks water geven",
+          "Bij 20–25 °C: twee keer per week",
+          "Bij >25 °C: drie keer per week"
+        ],
+        "content": "Gebruik een ruime pot met goede drainage en bescherm de wortelkluit bij vorst."
       },
       {
-        "title": "Palmen in de volle grond:",
-        "content": "De wortels van palmen in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de palm wekelijks extra water geven om uitdroging te voorkomen."
+        "title": "Palmen in de volle grond",
+        "content": "In de volle grond kunnen wortels dieper water bereiken; geef bij hete perioden wekelijks extra water om uitdroging te voorkomen."
       },
       {
-        "title": "Voeding:",
-        "content": "Voed de palm twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid. Ga voor gedetailleerde voedingstips naar onderstaande link: …….(hier linkje)."
+        "title": "Voeding",
+        "content": "Bemest twee keer per jaar met mediterrane plantenvoeding voor gezonde groei en bladkleur."
       }
     ]
   },
@@ -57,31 +58,27 @@
     "sections": [
       {
         "title": "Volle grond",
-        "content": "De palm groeit het beste in de volle grond, waar de wortels zich optimaal kunnen ontwikkelen. Zo kan de boom tot wel 10 cm per jaar groeien."
+        "content": "De palm groeit het beste in de volle grond waar de wortels zich optimaal kunnen ontwikkelen."
       },
       {
         "title": "Bloembak/Bloempot",
-        "content": "Wilt u de palm in een bloembak of pot plaatsen? Ook dat is mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot vervolgens met noppenfolie om de wortels optimaal te isoleren tegen kou. Houdt hierbij de bodem vrij van noppenfolie."
+        "content": "Bij potcultuur is het belangrijk de pot ruim te kiezen en te zorgen voor goede drainage en isolatie tegen vorst."
       },
       {
         "title": "Locatie",
-        "content": "De palm groeit het beste op een zonnige, zuidelijke plek, maar kan ook prima overleven in halfschaduw."
+        "content": "Bij voorkeur een zonnige of licht beschaduwde plek, beschut tegen koude wind."
       }
     ]
   },
   "cta": {
-    "heading": "",
-    "intro": "Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. We helpen u graag bij het kiezen van de perfecte palmboom voor uw tuin!",
-    "body": "Wilt u weten welke palm het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale palmboom te vinden!",
-    "phone": {
-      "text": "+31 611929392"
-    },
-    "email": {
-      "text": ""
-    }
+    "heading": "Interesse in Trachycarpus?",
+    "intro": "Neem contact op voor beschikbaarheid en advies.",
+    "body": "Wij helpen u graag bij het kiezen van de juiste palm en het bepalen van de beste standplaats.",
+    "phone": { "href": "tel:+31611929392", "text": "+31 6 11929392" },
+    "email": { "href": "mailto:lisette@spaansetuin-enzo.nl", "text": "lisette@spaansetuin-enzo.nl" }
   },
   "breadcrumbs": {
-    "home": "Welkom",
+    "home": "Home",
     "trees": "Assortiment bomen",
     "category": "Palmen"
   }
