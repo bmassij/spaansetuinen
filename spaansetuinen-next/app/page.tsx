@@ -1,5 +1,7 @@
 import fs from 'fs/promises'
 import path from 'path'
+import FourBlocks from '../components/home/FourBlocks'
+import home from '../content/home.json'
 
 export const metadata = {
   title: 'Home',
@@ -74,15 +76,7 @@ export default async function Page() {
             <p className="text-lg text-gray-600">{intro}</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {blocks.map((b: any, i: number) => (
-              <a key={i} href="#" className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
-                <div className="w-16 h-16 mb-6 flex items-center justify-center" />
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">{b.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{b.text}</p>
-              </a>
-            ))}
-          </div>
+          <FourBlocks blocks={home.blocks} />
         </div>
       </section>
 
