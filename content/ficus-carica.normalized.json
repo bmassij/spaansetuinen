@@ -1,0 +1,24 @@
+{
+  "title": "Ficus Carica (voorbeeld)",
+  "slug": "ficus-carica",
+  "short_description": "Voorbeeldtekst",
+  "long_description": "Dit is placeholder content voor de ficus carica. Geen echte teksten.",
+  "heroImage": "/assets/ficus-placeholder.jpg",
+  "gallery": [
+    "/assets/ficus-placeholder-1.jpg",
+    "/assets/ficus-placeholder-2.jpg"
+  ],
+  "kenmerken": [],
+  "verzorging": {
+    "sections": []
+  },
+  "plaatsing": {
+    "sections": []
+  },
+  "cta": {
+    "heading": null,
+    "intro": null,
+    "phone": null,
+    "email": null
+  }
+}

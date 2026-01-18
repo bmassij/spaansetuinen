@@ -1,3 +1,15 @@
+/**
+ * PRODUCT TEMPLATE — LOCKED
+ * ------------------------------------------------
+ * Deze component is visueel en structureel definitief.
+ * Geen layout-, styling- of structuurwijzigingen toegestaan.
+ * Alleen bugfixes bij crashes of TypeScript errors.
+ *
+ * Wijzigingen aan content gebeuren uitsluitend via JSON.
+ * Datum lock: 2026-01-18
+ */
+
+
 import React from 'react';
 
 export type ProductProps = {
@@ -21,27 +33,38 @@ function firstLine(s?: string) {
 }
 
 // Helper: produce a short readable summary for info-boxes
-function getSummaryText(value: any): string {
+function getSummaryText(value: unknown): string {
   if (!value) return '';
   if (typeof value === 'string') return firstLine(value);
   if (Array.isArray(value)) {
     for (const item of value) {
       if (typeof item === 'string') return firstLine(item);
       if (item && typeof item === 'object') {
-        const c = item.content || item.text || item.body || item.intro;
-        if (typeof c === 'string' && c.trim()) return firstLine(c);
+        const obj = item as Record<string, unknown>;
+        if ('content' in obj && typeof obj.content === 'string' && obj.content.trim()) return firstLine(obj.content as string);
+        if ('text' in obj && typeof obj.text === 'string' && obj.text.trim()) return firstLine(obj.text as string);
+        if ('body' in obj && typeof obj.body === 'string' && obj.body.trim()) return firstLine(obj.body as string);
+        if ('intro' in obj && typeof obj.intro === 'string' && obj.intro.trim()) return firstLine(obj.intro as string);
       }
     }
     return '';
   }
-  if (typeof value === 'object') {
+  if (typeof value === 'object' && value !== null) {
+    const obj = value as Record<string, unknown>;
     // common shape: { sections: [ { title, content } ] }
-    if (Array.isArray(value.sections) && value.sections.length > 0) {
-      const s = value.sections[0];
-      return (s && (s.content || s.text || s.body || s.intro)) ? firstLine(s.content || s.text || s.body || s.intro) : '';
+    if ('sections' in obj && Array.isArray(obj.sections) && obj.sections.length > 0) {
+      const s = obj.sections[0];
+      if (s && typeof s === 'object') {
+        const so = s as Record<string, unknown>;
+        if ('content' in so && typeof so.content === 'string' && so.content.trim()) return firstLine(so.content as string);
+        if ('text' in so && typeof so.text === 'string' && so.text.trim()) return firstLine(so.text as string);
+        if ('body' in so && typeof so.body === 'string' && so.body.trim()) return firstLine(so.body as string);
+        if ('intro' in so && typeof so.intro === 'string' && so.intro.trim()) return firstLine(so.intro as string);
+      }
+      return '';
     }
     // fallback: pick first string property
-    for (const v of Object.values(value)) {
+    for (const v of Object.values(obj)) {
       if (typeof v === 'string' && v.trim()) return firstLine(v);
       if (Array.isArray(v)) {
         for (const item of v) {
@@ -49,8 +72,11 @@ function getSummaryText(value: any): string {
         }
       }
       if (v && typeof v === 'object') {
-        const c = v.content || v.text || v.body || v.intro;
-        if (typeof c === 'string' && c.trim()) return firstLine(c);
+        const vo = v as Record<string, unknown>;
+        if ('content' in vo && typeof vo.content === 'string' && vo.content.trim()) return firstLine(vo.content as string);
+        if ('text' in vo && typeof vo.text === 'string' && vo.text.trim()) return firstLine(vo.text as string);
+        if ('body' in vo && typeof vo.body === 'string' && vo.body.trim()) return firstLine(vo.body as string);
+        if ('intro' in vo && typeof vo.intro === 'string' && vo.intro.trim()) return firstLine(vo.intro as string);
       }
     }
   }
