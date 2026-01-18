@@ -15,3 +15,9 @@ node_modules/
 .next/
 out/
 .env*
+
+# Legacy HTML artifacts
+index.html
+website/
+legacy-html/
+_archive/

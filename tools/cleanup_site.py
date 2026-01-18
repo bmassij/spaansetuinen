@@ -19,6 +19,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+# legacy HTML was removed; guard references to website/public
 PUBLIC = ROOT / 'website' / 'public'
 INDEX = PUBLIC / 'index.html'
 

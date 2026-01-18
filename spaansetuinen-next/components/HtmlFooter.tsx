@@ -54,12 +54,12 @@ export default function HtmlFooter() {
             <h4 className="text-lg font-semibold mb-4 text-emerald-400">Navigatie</h4>
             <nav aria-label="Footer navigatie">
               <ul className="space-y-2 text-gray-300 text-sm mb-6">
-                <li><a href="index.html" className="hover:text-emerald-400 transition">Welkom</a></li>
-                <li><a href="index.html#over-ons" className="hover:text-emerald-400 transition">Over ons</a></li>
-                <li><a href="bloembakken.html" className="hover:text-emerald-400 transition">Bloembakken</a></li>
-                <li><a href="bezorgen.html" className="hover:text-emerald-400 transition">Bezorgen</a></li>
-                <li><a href="verhuur.html" className="hover:text-emerald-400 transition">Verhuur</a></li>
-                <li><a href="plant-en-voedingstips.html" className="hover:text-emerald-400 transition">Plant- en voedingstips</a></li>
+                <li><a href="/" className="hover:text-emerald-400 transition">Welkom</a></li>
+                <li><a href="/over-ons" className="hover:text-emerald-400 transition">Over ons</a></li>
+                <li><a href="/assortiment" className="hover:text-emerald-400 transition">Bloembakken</a></li>
+                <li><a href="/bezorgen" className="hover:text-emerald-400 transition">Bezorgen</a></li>
+                <li><a href="/verhuur" className="hover:text-emerald-400 transition">Verhuur</a></li>
+                <li><a href="/plant-en-voedingstips" className="hover:text-emerald-400 transition">Plant- en voedingstips</a></li>
               </ul>
             </nav>
 
