@@ -1,108 +1,256 @@
-import Image from 'next/image'
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
-export default function Home() {
+export const metadata = {
+  title: 'Home',
+}
+
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-in-200 lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <Navbar />
+
+      {/* HERO SECTION - fullscreen with background images and overlays */}
+      <header id="welkom" className="relative bg-gray-900 text-white">
+        <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "url('/assets/impressie/other1.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
+        <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: "url('/hero-section.jpg')" }} />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50" />
+
+        <div className="bunting-container">
+          <div className="bunting">
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+            <div className="bunting-flag" />
+          </div>
         </div>
-      </div>
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:translate-y-1/2 before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:to-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:to-transparent after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          src="/next.svg"
-          alt="Next.js Logo"
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              ->
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1/2 motion-reduce:transform-none">
-              ->
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1/2 motion-reduce:transform-none">
-              ->
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1/2 motion-reduce:transform-none">
-              ->
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+
+        <div className="relative z-10 min-h-screen flex items-center pt-16">
+          <div className="container max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-3xl">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">Voorbeeldtitel</h1>
+              <p className="text-lg sm:text-xl text-gray-100 leading-relaxed mb-4">Voorbeeldtekst</p>
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">Voorbeeldtekst</p>
+              <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-8">Voorbeeldtekst</p>
+
+              <div className="flex flex-wrap gap-4">
+                <a href="#highlights" className="inline-flex items-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105">CTA voorbeeld</a>
+                <a href="#footer" className="inline-flex items-center px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border-2 border-white/30 transition transform hover:scale-105">CTA voorbeeld</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
+          <a href="#highlights" className="text-white/70 hover:text-white transition text-2xl" aria-label="Scroll naar beneden">↓</a>
+        </div>
+      </header>
+
+      {/* HIGHLIGHT SECTION - 4 blocks */}
+      <section id="highlights" className="bg-gradient-to-b from-white to-gray-50 py-20">
+        <div className="container max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Voorbeeldtitel</h2>
+            <p className="text-lg text-gray-600">Voorbeeldtekst</p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <a href="#onze-bomen" className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+              <img src="/assets/palm.svg" alt="icon" className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Voorbeeldtitel</h3>
+              <p className="text-gray-600 leading-relaxed">Voorbeeldtekst</p>
+            </a>
+
+            <a href="#bloembakken" className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+              <img src="/assets/bloembak.svg" alt="icon" className="w-16 h-16 mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Voorbeeldtitel</h3>
+              <p className="text-gray-600 leading-relaxed">Voorbeeldtekst</p>
+            </a>
+
+            <a href="#verhuur" className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+              <img src="/assets/verhuur/other1.jpg" alt="icon" className="w-16 h-16 object-cover rounded-xl mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Voorbeeldtitel</h3>
+              <p className="text-gray-600 leading-relaxed">Voorbeeldtekst</p>
+            </a>
+
+            <a href="#bezorgen" className="group block bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 p-8">
+              <img src="/assets/bezorgen/other1.jpg" alt="icon" className="w-16 h-16 object-cover rounded-xl mb-6 group-hover:scale-110 transition-transform" />
+              <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-600 transition-colors">Voorbeeldtitel</h3>
+              <p className="text-gray-600 leading-relaxed">Voorbeeldtekst</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* TOPSERVICE SECTION */}
+      <section id="topservice" className="bg-white py-20 border-t border-gray-100">
+        <div className="container max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Voorbeeldtitel</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">Voorbeeldtekst</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Voorbeeldtitel</h3>
+                <p className="text-gray-600">Voorbeeldtekst</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Voorbeeldtitel</h3>
+                <p className="text-gray-600">Voorbeeldtekst</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-emerald-700 mb-3">Voorbeeldtitel</h3>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Voorbeeldtitel</h3>
+                <p className="text-gray-600">Voorbeeldtekst</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-emerald-700 mb-3">Voorbeeldtitel</h3>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+              </div>
+            </div>
+
+            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+              <div className="flex-shrink-0">
+                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Voorbeeldtitel</h3>
+                <p className="text-gray-600">Voorbeeldtekst</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* OVER ONS SECTION */}
+      <section id="over-ons" className="bg-gray-50 py-20">
+        <div className="container max-w-5xl mx-auto px-6 lg:px-8">
+          <div className="max-w-none">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 text-center">Voorbeeldtitel</h2>
+            <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">Voorbeeldtekst</p>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-12">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-emerald-700 mb-3">Voorbeeldtitel</h3>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-emerald-700 mb-3">Voorbeeldtitel</h3>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+                <p className="text-gray-700 leading-relaxed">Voorbeeldtekst</p>
+              </div>
+            </div>
+
+            <div className="bg-emerald-50 rounded-2xl p-8 border-2 border-emerald-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">Voorbeeldtitel</h3>
+              <ul className="space-y-2 text-gray-700 mb-4">
+                <li className="flex items-start"><span className="text-emerald-600 mr-2">✓</span><span>Voorbeeldtekst</span></li>
+                <li className="flex items-start"><span className="text-emerald-600 mr-2">✓</span><span>Voorbeeldtekst</span></li>
+                <li className="flex items-start"><span className="text-emerald-600 mr-2">✓</span><span>Voorbeeldtekst</span></li>
+                <li className="flex items-start"><span className="text-emerald-600 mr-2">✓</span><span>Voorbeeldtekst</span></li>
+                <li className="flex items-start"><span className="text-emerald-600 mr-2">✓</span><span>Voorbeeldtekst</span></li>
+              </ul>
+              <p className="text-gray-800 font-semibold mt-6 text-lg">Voorbeeldtekst</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RECENSIES SECTION */}
+      <section id="recensies" className="bg-white py-20">
+        <div className="container max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Voorbeeldtitel</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">Voorbeeldtekst</p>
+          </div>
+
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Voorbeeldtitel</h3>
+            <p className="text-gray-600 mb-6">Voorbeeldtekst</p>
+            <a href="#footer" className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">CTA voorbeeld</a>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">★★★★★</div>
+                <span className="ml-2 text-sm text-gray-600">5.0</span>
+              </div>
+              <p className="text-gray-700 mb-4 italic">Voorbeeldtekst</p>
+              <div className="text-sm text-gray-600"><strong>Voorbeeldtitel</strong><br />Voorbeeldtekst</div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">★★★★★</div>
+                <span className="ml-2 text-sm text-gray-600">5.0</span>
+              </div>
+              <p className="text-gray-700 mb-4 italic">Voorbeeldtekst</p>
+              <div className="text-sm text-gray-600"><strong>Voorbeeldtitel</strong><br />Voorbeeldtekst</div>
+            </div>
+
+            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
+              <div className="flex items-center mb-4">
+                <div className="flex text-yellow-400">★★★★★</div>
+                <span className="ml-2 text-sm text-gray-600">5.0</span>
+              </div>
+              <p className="text-gray-700 mb-4 italic">Voorbeeldtekst</p>
+              <div className="text-sm text-gray-600"><strong>Voorbeeldtitel</strong><br />Voorbeeldtekst</div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Voorbeeldtitel</h3>
+            <p className="text-gray-600 mb-6">Voorbeeldtekst</p>
+            <a href="#footer" className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">CTA voorbeeld</a>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER - use existing component */}
+      <Footer />
+    </>
   )
 }

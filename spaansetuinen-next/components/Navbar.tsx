@@ -26,7 +26,7 @@ export default function Navbar() {
                   Welkom
                 </a>
                 <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu" aria-label="Welkom submenu">
-                  <li><a href="/index.html#over-ons" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</a></li>
+                  <li><a href="/#over-ons" className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">Over ons</a></li>
                 </ul>
               </li>
 
@@ -147,7 +147,7 @@ export default function Navbar() {
           <div>
             <a href="/" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-emerald-600 hover:bg-gray-50 rounded-md">Welkom</a>
             <div className="pl-6 pt-1">
-              <a href="/index.html#over-ons" className="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Over ons</a>
+              <a href="/#over-ons" className="block px-3 py-1 text-sm text-gray-600 hover:text-emerald-600">Over ons</a>
             </div>
           </div>
 
