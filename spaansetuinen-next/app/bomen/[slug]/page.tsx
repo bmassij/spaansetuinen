@@ -5,7 +5,7 @@ import path from 'path';
 
 export default async function Page({ params }: { params: { slug: string } }) {
   const { slug } = params;
-  const filePath = path.join(process.cwd(), 'content', `${slug}.json`);
+  const filePath = path.join(process.cwd(), 'spaansetuinen-next', 'content', `${slug}.json`);
   try {
     const raw = await fs.readFile(filePath, 'utf8');
     const pageData = JSON.parse(raw);
