@@ -211,7 +211,7 @@ export default async function Page() {
                 <div className="flex text-yellow-400">★★★★★</div>
                 <span className="ml-2 text-sm text-gray-600">5.0</span>
               </div>
-              <p className="text-gray-700 mb-4 italic">"Fantastische service! De olijfboom die we kochten is prachtig en de bezorging was perfect georganiseerd. Lisette en Hans zijn echte professionals."</p>
+              <p className="text-gray-700 mb-4 italic">{`"Fantastische service! De olijfboom die we kochten is prachtig en de bezorging was perfect georganiseerd. Lisette en Hans zijn echte professionals."`}</p>
               <div className="text-sm text-gray-600"><strong>Maria van der Berg</strong><br />Klant sinds 2023</div>
             </div>
 
@@ -220,7 +220,7 @@ export default async function Page() {
                 <div className="flex text-yellow-400">★★★★★</div>
                 <span className="ml-2 text-sm text-gray-600">5.0</span>
               </div>
-              <p className="text-gray-700 mb-4 italic">"Eindelijk een bedrijf dat doet wat het belooft! De palmbomen zijn van topkwaliteit en het advies was eerlijk en deskundig."</p>
+              <p className="text-gray-700 mb-4 italic">{`"Eindelijk een bedrijf dat doet wat het belooft! De palmbomen zijn van topkwaliteit en het advies was eerlijk en deskundig."`}</p>
               <div className="text-sm text-gray-600"><strong>Jan Peters</strong><br />Klant sinds 2022</div>
             </div>
 
@@ -229,7 +229,7 @@ export default async function Page() {
                 <div className="flex text-yellow-400">★★★★★</div>
                 <span className="ml-2 text-sm text-gray-600">5.0</span>
               </div>
-              <p className="text-gray-700 mb-4 italic">"De verhuur van bloembakken voor ons feest was een groot succes. Mooie kwaliteit en uitstekende service. Bedankt!"</p>
+              <p className="text-gray-700 mb-4 italic">{`"De verhuur van bloembakken voor ons feest was een groot succes. Mooie kwaliteit en uitstekende service. Bedankt!"`}</p>
               <div className="text-sm text-gray-600"><strong>Sarah de Vries</strong><br />Klant sinds 2024</div>
             </div>
           </div>
