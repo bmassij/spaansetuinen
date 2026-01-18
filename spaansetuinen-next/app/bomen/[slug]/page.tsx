@@ -1,15 +1,6 @@
-import ProductLayout from '../../components/ProductLayout';
-
-const dummyPage = {
-  title: "Voorbeeld product",
-  heroText: "Voorbeeld hero tekst",
-  intro: "Voorbeeld intro",
-  kenmerken: "Voorbeeld kenmerken",
-  verzorging: "Voorbeeld verzorging",
-  plaatsing: "Voorbeeld plaatsing",
-  cta: "Voorbeeld call to action"
-};
+import ProductLayout from '@/components/ProductLayout';
+import pageData from '../../../../content/trachycarpus-fortunei.json';
 
 export default function Page() {
-  return <ProductLayout page={dummyPage} />;
+  return <ProductLayout page={pageData} />;
 }
