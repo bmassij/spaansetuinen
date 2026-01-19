@@ -2,63 +2,14 @@
   "hero": {
     "title": "Onze service",
     "subtitle": "",
-    "image": ""
+    "image": "/foto bezorgen/20200606_171756.jpg",
+    "secondaryImage": "/foto bezorgen/20200628_123731.jpg"
   },
   "core": {
-    "title": "",
-    "html": ""
+    "html": "Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken, inclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen de rest.\n\nKlanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen uit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich nergens druk om te maken en bent u verzekerd van een vakkundige aanpak.\n\nOf het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of terras."
   },
   "short_description": "",
   "long_description": "",
   "details": [],
-  "sections": [
-    {
-      "title": "Van A tot Z geregeld",
-      "items": [
-        {
-          "text": "Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken, inclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen de rest."
-        },
-        {
-          "text": "Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen uit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich nergens druk om te maken en bent u verzekerd van een vakkundige aanpak."
-        },
-        {
-          "text": "Of het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of terras."
-        }
-      ]
-    },
-    {
-      "title": "Onze service",
-      "items": [
-        {
-          "title": "Bezorging",
-          "description": "Snelle en zorgvuldige levering van uw mediterrane bomen op locatie."
-        },
-        {
-          "title": "Planten in de volle grond",
-          "description": "Professioneel aanplanten in de volle grond, met aandacht voor stabiliteit en juiste bodemopbouw."
-        },
-        {
-          "title": "Op maat gemaakte bloembakken",
-          "description": "Levering in op maat gemaakte bloembakken, voorzien van noppenfolie en antiworteldoek."
-        },
-        {
-          "title": "Persoonlijk advies",
-          "description": "Wij staan u graag te woord voor een persoonlijk advies."
-        },
-        {
-          "title": "Huisbezoek",
-          "description": "Indien gewenst komen wij bij u langs om de situatie ter plaatse te beoordelen."
-        },
-        {
-          "title": "Snoeien",
-          "description": "Voor vakkundig onderhoud en nazorg kunt u ook bij ons terecht."
-        },
-        {
-          "title": "Bezorgkosten",
-          "description": "Bezorgkosten zijn vanaf €30. De overige omschrijving blijft ongewijzigd."
-        }
-      ]
-    }
-  ],
-  "benefits": []
+  "sections": []
 }
