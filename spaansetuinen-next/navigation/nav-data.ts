@@ -15,6 +15,7 @@ export interface LinkItem extends NavItemBase {
 
 export interface DropdownItem extends NavItemBase {
   type: 'dropdown';
+  href?: string;
   children: LinkItem[];
 }
 
@@ -87,9 +88,9 @@ export const NAV_DATA: NavNode[] = [
     type: 'dropdown',
     id: 'bloembakken',
     label: 'Bloembakken',
+    href: '/bloembakken',
     children: [
-      { type: 'link', id: 'bloembakken-overview', label: 'Bloembakken', href: '/bloembakken' },
-      { type: 'link', id: 'bloembakken-op-maat', label: 'Bloembakken op maat gemaakt', href: '/bloembakken-op-maat' },
+      { type: 'link', id: 'bloembakken-op-maat', label: 'Bloembakken op maat', href: '/bloembakken-op-maat' },
     ],
   },
   {

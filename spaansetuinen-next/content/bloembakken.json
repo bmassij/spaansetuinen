@@ -1,27 +1,31 @@
 {
   "hero": {
     "title": "Bloembakken",
-    "subtitle": "Douglas steigerhouten bloembakken",
+    "subtitle": "",
     "image": ""
   },
   "core": {
-    "html": "<h3>Douglas steigerhouten bloembakken</h3><p>Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw bedrijfspand? Wij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw wensen. Bij Spaanse Tuin & Zo vindt u prachtige, met de hand gemaakte bloembakken van duurzaam Douglas steigerhout.</p><p>Onze bloembakken zijn verkrijgbaar met of zonder beplanting, geheel afgestemd op uw voorkeur.</p><p>Kiest u voor een bloembak met beplanting en een bij ons gekochte boom? Dan vullen wij de bak met speciale mediterrane potgrond, inclusief basisbemesting voor minimaal 6 tot 9 weken. De afwerking gebeurt met Franse boomschors van hoge kwaliteit, zodat het geheel er direct perfect uitziet. Zo is uw bloembak klaar om te shinen!</p>"
+    "html": "<p>Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw bedrijfspand?\nWij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw wensen.</p><p>Bij Spaanse Tuin & Zo vindt u prachtige, met de hand gemaakte bloembakken van duurzaam Douglas steigerhout.\nOnze bloembakken zijn verkrijgbaar met of zonder beplanting, geheel afgestemd op uw voorkeur.</p>"
   },
   "short_description": "Wilt u uw terras of tuin mooi aankleden? Wij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw wensen.",
-  "long_description": "Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw bedrijfspand? Wij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw wensen. Bij Spaanse Tuin & Zo vindt u prachtige, met de hand gemaakte bloembakken van duurzaam Douglas steigerhout.\n\nOnze bloembakken zijn verkrijgbaar met of zonder beplanting, geheel afgestemd op uw voorkeur.\n\nKiest u voor een bloembak met beplanting en een bij ons gekochte boom? Dan vullen wij de bak met speciale mediterrane potgrond, inclusief basisbemesting voor minimaal 6 tot 9 weken. De afwerking gebeurt met Franse boomschors van hoge kwaliteit, zodat het geheel er direct perfect uitziet. Zo is uw bloembak klaar om te shinen!",
-  "details": [
-    "Hout hoeft niet te worden behandeld",
-    "Plankdikte: 32/200 mm",
-    "Op maat gemaakt",
-    "Voorzien van isolatie tegen vorst",
-    "Voorzien van antiworteldoek",
-    "Optioneel: zwenkbare wielen",
-    "Optioneel: beplanting"
-  ],
+  "long_description": "Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw bedrijfspand? Wij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw wensen.\n\nBij Spaanse Tuin & Zo vindt u prachtige, met de hand gemaakte bloembakken van duurzaam Douglas steigerhout. Onze bloembakken zijn verkrijgbaar met of zonder beplanting, geheel afgestemd op uw voorkeur.",
+  "details": [],
   "sections": [
     {
-      "title": "Kenmerken van de bloembak",
-      "content": "✓ Hout hoeft niet te worden behandeld\n✓ Plankdikte: 32/200 mm\n✓ Op maat gemaakt\n✓ Voorzien van isolatie tegen vorst\n✓ Voorzien van antiworteldoek\n✓ Optioneel: zwenkbare wielen\n✓ Optioneel: beplanting"
+      "title": "Douglas steigerhouten bloembakken",
+      "content": "Kiest u voor een bloembak met beplanting en een bij ons gekochte boom?\nDan vullen wij de bak met speciale mediterrane potgrond, inclusief basisbemesting voor minimaal 6 tot 9 weken.\n\nDe afwerking gebeurt met Franse boomschors van hoge kwaliteit, zodat het geheel er direct perfect uitziet.\nZo is uw bloembak klaar om te shinen!\n\nKenmerken:\n- Hout hoeft niet te worden behandeld\n- Plankdikte: 32/200 mm\n- Op maat gemaakt\n- Voorzien van isolatie tegen vorst\n- Voorzien van antiworteldoek\n- Optioneel: zwenkbare wielen\n- Optioneel: beplanting\n\n/bloembakken/douglas-steigerhouten-bloembakken"
+    },
+    {
+      "title": "Prijzen bloembakken",
+      "content": "Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek.\nDe prijzen zijn exclusief: mediterrane boom, mediterrane potgrond en boomschors.\nMeerprijs zwenkwielen op aanvraag.\n\nOpmerking:\nDe prijzentabel wordt via layout/component getoond (geen prijzendata in JSON).\n\n/bloembakken/prijzen"
+    },
+    {
+      "title": "Bloembakken voor beplanting",
+      "content": "Onderstaande bloembakken zijn geïsoleerd met noppenfolie en bekleed met antiworteldoek.\nDe prijzen zijn inclusief speciale mediterrane potgrond en Franse boomschors,\nmaar exclusief de aanschafprijs van de mediterrane boom.\n\nDeze bloembakken zijn uitsluitend verkrijgbaar bij aanschaf van een mediterrane boom bij Spaanse Tuin & Zo.\nDe aankleding en beplanting van de bak wordt door ons zorgvuldig en professioneel uitgevoerd,\nzodat uw boom direct een prachtige uitstraling krijgt.\n\n/bloembakken-op-maat"
+    },
+    {
+      "title": "Douglas steigerhouten statafel",
+      "content": "Naast onze met de hand gemaakte bloembakken biedt Spaanse Tuin & Zo ook een Douglas steigerhouten statafel aan.\nDeze tafel is een echte aanrader voor op uw terras of balkon.\n\nIn het midden van de statafel staat een prachtige Trachycarpus Fortunei palmboom,\ndie niet alleen een tropische uitstraling geeft, maar ook als natuurlijke parasol dient.\nZo combineert u functionaliteit met sfeer en haalt u een echte blikvanger in uw buitenruimte.\n\nDeze statafel wordt geïsoleerd met noppenfolie en bekleed met antiworteldoek.\nDe palmboom wordt zorgvuldig geplant met speciale mediterrane potgrond.\n\nPrijs:\n€ ?\n\n/bloembakken/douglas-steigerhouten-statafel"
     }
   ]
 }
