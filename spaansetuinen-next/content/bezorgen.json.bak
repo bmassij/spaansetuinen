@@ -1,0 +1,23 @@
+{
+  "hero": {
+    "title": "Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen de rest.",
+    "subtitle": "Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken, inclusief persoonlijk advies.",
+    "image": ""
+  },
+  "core": {
+    "title": "",
+    "html": "<div class=\"space-y-4\">\n  <h3 class=\"text-xl font-semibold text-emerald-700 mb-3\">Wij verzorgen het totaalpakket</h3>\n  <p class=\"text-gray-700 leading-relaxed\">Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen uit handen, van advies en levering tot aan het planten en de nazorg.</p>\n  <p class=\"text-gray-700 leading-relaxed\">Op die manier hoeft u zich nergens druk om te maken en bent u verzekerd van een vakkundige aanpak.</p>\n  <p class=\"text-gray-700 leading-relaxed\">Of het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of terras.</p>\n</div>"
+  },
+  "services": [
+    {
+      "title": "Onze service",
+      "html": "<div class=\"space-y-4\">\n  <h3 class=\"text-xl font-semibold text-emerald-700 mb-3\">Onze service</h3>\n  <p class=\"text-gray-700 leading-relaxed\">Onze service (stukje met icoontjes)</p>\n  <p class=\"text-gray-700 leading-relaxed\">Bezorging is goed.</p>\n  <p class=\"text-gray-700 leading-relaxed\">Planten in de volle grond.</p>\n  <p class=\"text-gray-700 leading-relaxed\">Levering in op maat gemaakte bloembakken, voorzien van noppenfolie en antiworteldoek.</p>\n</div>"
+    }
+  ],
+  "benefits": [
+    {
+      "html": "<div class=\"bg-emerald-50 rounded-2xl p-8 border-2 border-emerald-100\">\n  <h3 class=\"text-2xl font-bold text-gray-900 mb-4\">Waarom kiezen voor onze service</h3>\n  <ul class=\"space-y-2 text-gray-700 mb-4\">\n    <li class=\"flex items-start\">\n      <span class=\"text-emerald-600 mr-2\">✓</span>\n      <span>Bezorging is goed.</span>\n    </li>\n    <li class=\"flex items-start\">\n      <span class=\"text-emerald-600 mr-2\">✓</span>\n      <span>Planten in de volle grond</span>\n    </li>\n    <li class=\"flex items-start\">\n      <span class=\"text-emerald-600 mr-2\">✓</span>\n      <span>Op maat gemaakte bloembakken (voorzien van noppenfolie en antiworteldoek)</span>\n    </li>\n    <li class=\"flex items-start\">\n      <span class=\"text-emerald-600 mr-2\">✓</span>\n      <span>Persoonlijk advies</span>\n    </li>\n    <li class=\"flex items-start\">\n      <span class=\"text-emerald-600 mr-2\">✓</span>\n      <span>Snoeien</span>\n    </li>\n  </ul>\n  <p class=\"text-gray-800 font-semibold mt-6 text-lg\">Bezorgkosten is vanaf 30 euro!</p>\n</div>"
+    }
+  ],
+  "sections": []
+}

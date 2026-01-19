@@ -1,0 +1,42 @@
+{
+  "slug": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta",
+  "url": "https://spaansetuin-enzo.nl/index.php/onze-bomen-en-planten/palmbomen/cycca-revoluta?rCH=-2",
+  "page_title": "Cycca Revoluta",
+  "scrape_date": "2026-01-19",
+  "text_files": [
+    "text.html",
+    "text.txt"
+  ],
+  "images": [
+    {
+      "filename": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta__hero__01.jpg",
+      "type": "hero",
+      "source_url": "https://spaansetuin-enzo.nl/images/artikel_fotos/Cycca_Revoluta_spaansetuin-enzo.jpg"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta__content__01.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/header.png"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta__content__02.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/object454024537.png"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta__content__03.gif",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/spacer.gif"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta__content__04.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/footerrssicon.png"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta__content__05.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/media/system/images/modal/closebox.png"
+    }
+  ]
+}

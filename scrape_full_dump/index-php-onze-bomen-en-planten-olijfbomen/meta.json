@@ -1,0 +1,37 @@
+{
+  "slug": "index-php-onze-bomen-en-planten-olijfbomen",
+  "url": "https://spaansetuin-enzo.nl/index.php/onze-bomen-en-planten/olijfbomen?rCH=-2",
+  "page_title": "Olijfbomen",
+  "scrape_date": "2026-01-19",
+  "text_files": [
+    "text.html",
+    "text.txt"
+  ],
+  "images": [
+    {
+      "filename": "index-php-onze-bomen-en-planten-olijfbomen__hero__01.png",
+      "type": "hero",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/header.png"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-olijfbomen__content__01.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/object454024537.png"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-olijfbomen__content__02.gif",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/spacer.gif"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-olijfbomen__content__03.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/footerrssicon.png"
+    },
+    {
+      "filename": "index-php-onze-bomen-en-planten-olijfbomen__content__04.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/media/system/images/modal/closebox.png"
+    }
+  ]
+}

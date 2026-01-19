@@ -5,7 +5,7 @@
   "blocks": [
     {
       "title": "Onze bomen",
-      "text": "Ontdek ons assortiment authentieke olijfbomen, palmbomen, vijgenbomen en druivenranken. Rechtstreeks uit de Costa Blanca.",
+      "text": "Ontdek ons assortiment authentieke olijfbomen, palmbomen, vijgenbomen en druivenranken.\nRechtstreeks uit de Costa Blanca.",
       "href": "/bomen"
     },
     {
@@ -20,7 +20,7 @@
     },
     {
       "title": "Bezorgen",
-      "text": "Snelle levering in Nederland, België en Duitsland, met zorg voor uw bomen.",
+      "text": "“Snelle levering in Nederland, België en Duitsland, met zorg voor uw bomen.”",
       "href": "/bezorgen"
     }
   ],

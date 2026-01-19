@@ -1,0 +1,277 @@
+{
+  "slug": "homepage",
+  "url": "https://spaansetuin-enzo.nl/",
+  "page_title": "Onze bomen en planten",
+  "scrape_date": "2026-01-19",
+  "text_files": [
+    "text.html",
+    "text.txt"
+  ],
+  "images": [
+    {
+      "filename": "homepage__hero__01.jpg",
+      "type": "hero",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/nieuwsassortiment/Olea%20europea.jpg"
+    },
+    {
+      "filename": "homepage__content__01.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/Olea_europea_Bonsai.jpg"
+    },
+    {
+      "filename": "homepage__content__02.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/Olea_europea_Bonsai_rasm.jpg"
+    },
+    {
+      "filename": "homepage__content__03.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/oleabonsai/Olea%20europea%20Bonsai1.jpg"
+    },
+    {
+      "filename": "homepage__content__04.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/oleabonsai/Olea%20europea%20Bonsai2.jpg"
+    },
+    {
+      "filename": "homepage__content__05.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/oleabonsai/Olea%20europea%20Bonsai3.jpg"
+    },
+    {
+      "filename": "homepage__content__06.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/oleabonsai/Olea%20europea%20Bonsai4.jpg"
+    },
+    {
+      "filename": "homepage__content__07.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/nieuwsassortiment/Olea%20europea%20Hoija%20Blanca.jpg"
+    },
+    {
+      "filename": "homepage__content__08.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/nieuwsassortiment/Olea%20europea%20Plato.jpg"
+    },
+    {
+      "filename": "homepage__content__09.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/nieuwsassortiment/Olea%20europea%20Tubo.jpg"
+    },
+    {
+      "filename": "homepage__content__10.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropea_2019_1.jpg"
+    },
+    {
+      "filename": "homepage__content__11.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaBonsaiDoble%202019.jpg"
+    },
+    {
+      "filename": "homepage__content__12.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaBonsaiDobleMaxi_13042022.jpg"
+    },
+    {
+      "filename": "homepage__content__13.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaCala_2.jpg"
+    },
+    {
+      "filename": "homepage__content__14.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaChampion_4.jpg"
+    },
+    {
+      "filename": "homepage__content__15.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaDisco_2019.jpg"
+    },
+    {
+      "filename": "homepage__content__16.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaPielJoven_3.jpg"
+    },
+    {
+      "filename": "homepage__content__17.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/OleaEuropeaPonPonMaja%202019.jpg"
+    },
+    {
+      "filename": "homepage__content__18.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0000.jpg"
+    },
+    {
+      "filename": "homepage__content__19.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0019.jpg"
+    },
+    {
+      "filename": "homepage__content__20.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0020.jpg"
+    },
+    {
+      "filename": "homepage__content__21.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0023.jpg"
+    },
+    {
+      "filename": "homepage__content__22.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0033.jpg"
+    },
+    {
+      "filename": "homepage__content__23.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0035.jpg"
+    },
+    {
+      "filename": "homepage__content__24.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0037.jpg"
+    },
+    {
+      "filename": "homepage__content__25.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/nieuwsassortiment/Cycca%20revolta.jpg"
+    },
+    {
+      "filename": "homepage__content__26.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/trachycarpus%20fortunei/bewerkt/trachycarpus%20%20fortunei%20120%20tm%20150.jpg"
+    },
+    {
+      "filename": "homepage__content__27.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/trachycarpus%20fortunei/bewerkt/trachycarpus%20%20fortunei%20160%20tm%20180.jpg"
+    },
+    {
+      "filename": "homepage__content__28.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/trachycarpus%20fortunei/bewerkt/trachycarpus%20%20fortunei%20190%20tm%20220.jpg"
+    },
+    {
+      "filename": "homepage__content__29.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/trachycarpus%20fortunei/bewerkt/trachycarpus%20%20fortunei60%2070.jpg"
+    },
+    {
+      "filename": "homepage__content__30.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/trachycarpus%20fortunei/bewerkt/trachycarpus%20%20fortunei%2080%20tm%20110.jpg"
+    },
+    {
+      "filename": "homepage__content__31.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/TrachycarpusFortunei1_20-30.jpg"
+    },
+    {
+      "filename": "homepage__content__32.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/TrachycarpusFortunei2_35-40.jpg"
+    },
+    {
+      "filename": "homepage__content__33.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/TrachycarpusFortuneiMeerstammig2019.jpg"
+    },
+    {
+      "filename": "homepage__content__34.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0045.jpg"
+    },
+    {
+      "filename": "homepage__content__35.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0046.jpg"
+    },
+    {
+      "filename": "homepage__content__36.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0051.jpg"
+    },
+    {
+      "filename": "homepage__content__37.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0056.jpg"
+    },
+    {
+      "filename": "homepage__content__38.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/Aanbiedingen/Mei2018/ChameropHummilis_Spaansetuin_enzo_72.jpg"
+    },
+    {
+      "filename": "homepage__content__39.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/nieuwsassortiment/Yucca%20rostrata.jpg"
+    },
+    {
+      "filename": "homepage__content__40.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/plantenprijsaanpassingen/Yucca_rostrata.jpg"
+    },
+    {
+      "filename": "homepage__content__41.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/FicusCarcia23.jpg"
+    },
+    {
+      "filename": "homepage__content__42.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/FicusCarcia24.jpg"
+    },
+    {
+      "filename": "homepage__content__43.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/Aanbiedingen/Mei2018/FicusCarica20-25_SpaanseTuin_enzo_72.jpg"
+    },
+    {
+      "filename": "homepage__content__44.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0073.jpg"
+    },
+    {
+      "filename": "homepage__content__45.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/Aanbiedingen/Mei2018/VitisviriferaAlta240_SpaanseTuin_enzo_72.jpg"
+    },
+    {
+      "filename": "homepage__content__46.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2019/VitisviriferaBaja18.jpg"
+    },
+    {
+      "filename": "homepage__content__47.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/planten2025/IMG-20180506-WA0068.jpg"
+    },
+    {
+      "filename": "homepage__content__48.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/header.png"
+    },
+    {
+      "filename": "homepage__content__49.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/object454024537.png"
+    },
+    {
+      "filename": "homepage__content__50.gif",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/spacer.gif"
+    },
+    {
+      "filename": "homepage__content__51.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/footerrssicon.png"
+    },
+    {
+      "filename": "homepage__content__52.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/media/system/images/modal/closebox.png"
+    }
+  ]
+}

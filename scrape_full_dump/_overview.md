@@ -1,0 +1,109 @@
+# Scrape overview
+
+- homepage — tekst: middel — afbeeldingen: 53
+  - opmerkingen: veel beeldmateriaal
+- mediterrane-potgrond — tekst: weinig — afbeeldingen: 0
+- mediterrane-voeding — tekst: weinig — afbeeldingen: 0
+- hydrokorrels — tekst: weinig — afbeeldingen: 0
+- boomschors — tekst: weinig — afbeeldingen: 0
+- verhuur — tekst: middel — afbeeldingen: 8
+- bezorgen — tekst: middel — afbeeldingen: 8
+- plant-en-voedingstips — tekst: weinig — afbeeldingen: 0
+- impressie — tekst: weinig — afbeeldingen: 60
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen-trachycarpus-fortunei — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta — tekst: weinig — afbeeldingen: 6
+- index-php-onze-bomen-en-planten-vijgenbomen-ficus-carica — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen — tekst: middel — afbeeldingen: 5
+- index-php-onze-bomen-en-planten-olijfbomen-bonsai-olijfboom — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-olea-europea — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-hoija-blanca — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-druivenranken — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-granaatappelbomen — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken-klaar-voor-beplanting — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-mediterraan-potgrond — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen-trachycarpus-fortunei — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen-trachycarpus-fortunei — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen-trachycarpus-fortunei — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta — tekst: weinig — afbeeldingen: 6
+- index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta — tekst: weinig — afbeeldingen: 6
+- index-php-onze-bomen-en-planten-palmbomen-cycca-revoluta — tekst: weinig — afbeeldingen: 6
+- index-php-onze-bomen-en-planten-vijgenbomen-ficus-carica — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-vijgenbomen-ficus-carica — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-vijgenbomen-ficus-carica — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen — tekst: middel — afbeeldingen: 5
+- index-php-onze-bomen-en-planten-olijfbomen — tekst: middel — afbeeldingen: 5
+- index-php-onze-bomen-en-planten-olijfbomen — tekst: middel — afbeeldingen: 5
+- index-php-onze-bomen-en-planten-olijfbomen-bonsai-olijfboom — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-bonsai-olijfboom — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-bonsai-olijfboom — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-olea-europea — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-olea-europea — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-olea-europea — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-hoija-blanca — tekst: weinig — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-hoija-blanca — tekst: weinig — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-olijfbomen-hoija-blanca — tekst: weinig — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-druivenranken — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-druivenranken — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-druivenranken — tekst: middel — afbeeldingen: 28
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-granaatappelbomen — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-granaatappelbomen — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-onze-bomen-en-planten-overige-bomen-granaatappelbomen — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken — tekst: middel — afbeeldingen: 30
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken-klaar-voor-beplanting — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken-klaar-voor-beplanting — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-bloembakken-klaar-voor-beplanting — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-mediterraan-potgrond — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-mediterraan-potgrond — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal
+- index-php-bloembakken-en-potgrond-mediterraan-potgrond — tekst: middel — afbeeldingen: 29
+  - opmerkingen: veel beeldmateriaal

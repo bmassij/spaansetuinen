@@ -1,0 +1,312 @@
+{
+  "slug": "impressie",
+  "url": "https://spaansetuin-enzo.nl/impressie/",
+  "page_title": "Impressie",
+  "scrape_date": "2026-01-19",
+  "text_files": [
+    "text.html",
+    "text.txt"
+  ],
+  "images": [
+    {
+      "filename": "impressie__hero__01.jpg",
+      "type": "hero",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie4/20200807_183335.jpg"
+    },
+    {
+      "filename": "impressie__content__01.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie4/20180427_163521.jpg"
+    },
+    {
+      "filename": "impressie__content__02.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie/20170312_101405.jpg"
+    },
+    {
+      "filename": "impressie__content__03.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie/20170821_162603.jpg"
+    },
+    {
+      "filename": "impressie__content__04.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie/20170821_162703.jpg"
+    },
+    {
+      "filename": "impressie__content__05.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie3/20200723_185741.jpg"
+    },
+    {
+      "filename": "impressie__content__06.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie4/FB_IMG_1557186896421.jpg"
+    },
+    {
+      "filename": "impressie__content__07.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie4/20190813_163203.jpg"
+    },
+    {
+      "filename": "impressie__content__08.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie2/IMG-20200726-WA0006.jpg"
+    },
+    {
+      "filename": "impressie__content__09.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie2/IMG-20201008-WA0011.jpg"
+    },
+    {
+      "filename": "impressie__content__10.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie2/IMG-20210417-WA0002.jpg"
+    },
+    {
+      "filename": "impressie__content__11.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie2/IMG-20220319-WA0009.jpg"
+    },
+    {
+      "filename": "impressie__content__12.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/impressie3/20220622_112259.jpg"
+    },
+    {
+      "filename": "impressie__content__13.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/modules/mod_djimageslider/themes/default/images/prev.png"
+    },
+    {
+      "filename": "impressie__content__14.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/modules/mod_djimageslider/themes/default/images/next.png"
+    },
+    {
+      "filename": "impressie__content__15.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/modules/mod_djimageslider/themes/default/images/play.png"
+    },
+    {
+      "filename": "impressie__content__16.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/modules/mod_djimageslider/themes/default/images/pause.png"
+    },
+    {
+      "filename": "impressie__content__17.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_fb_img_1557186896421.jpg"
+    },
+    {
+      "filename": "impressie__content__18.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_fb_img_1560182459278.jpg"
+    },
+    {
+      "filename": "impressie__content__19.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_fb_img_1563698164287.jpg"
+    },
+    {
+      "filename": "impressie__content__20.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_fb_img_1564923181453.jpg"
+    },
+    {
+      "filename": "impressie__content__21.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_fb_img_1624914274890.jpg"
+    },
+    {
+      "filename": "impressie__content__22.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20160528-wa0014.jpg"
+    },
+    {
+      "filename": "impressie__content__23.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20170514-wa0008.jpg"
+    },
+    {
+      "filename": "impressie__content__24.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20180901-wa0010.jpg"
+    },
+    {
+      "filename": "impressie__content__25.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20180911-wa0025.jpg"
+    },
+    {
+      "filename": "impressie__content__26.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20190728-wa0009.jpg"
+    },
+    {
+      "filename": "impressie__content__27.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20200613-wa0007.jpg"
+    },
+    {
+      "filename": "impressie__content__28.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20200726-wa0006.jpg"
+    },
+    {
+      "filename": "impressie__content__29.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20201008-wa0011.jpg"
+    },
+    {
+      "filename": "impressie__content__30.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20201101-wa0008.jpg"
+    },
+    {
+      "filename": "impressie__content__31.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20210417-wa0013.jpg"
+    },
+    {
+      "filename": "impressie__content__32.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20210423-wa0030.jpg"
+    },
+    {
+      "filename": "impressie__content__33.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20210529-wa0012.jpg"
+    },
+    {
+      "filename": "impressie__content__34.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20210529-wa0029.jpg"
+    },
+    {
+      "filename": "impressie__content__35.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20210905-wa0001.jpg"
+    },
+    {
+      "filename": "impressie__content__36.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220319-wa0003.jpg"
+    },
+    {
+      "filename": "impressie__content__37.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220507-wa0001.jpg"
+    },
+    {
+      "filename": "impressie__content__38.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220521-wa0049.jpg"
+    },
+    {
+      "filename": "impressie__content__39.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220621-wa0011.jpg"
+    },
+    {
+      "filename": "impressie__content__40.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220716-wa0005.jpg"
+    },
+    {
+      "filename": "impressie__content__41.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220827-wa0008.jpg"
+    },
+    {
+      "filename": "impressie__content__42.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220904-wa0004.jpg"
+    },
+    {
+      "filename": "impressie__content__43.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20220910-wa0002.jpg"
+    },
+    {
+      "filename": "impressie__content__44.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20240328-wa0012.jpg"
+    },
+    {
+      "filename": "impressie__content__45.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20240420-wa0006.jpg"
+    },
+    {
+      "filename": "impressie__content__46.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20240516-wa0004.jpg"
+    },
+    {
+      "filename": "impressie__content__47.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20240730-wa0004.jpg"
+    },
+    {
+      "filename": "impressie__content__48.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20250317-wa0021.jpg"
+    },
+    {
+      "filename": "impressie__content__49.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_img-20250421-wa0010.jpg"
+    },
+    {
+      "filename": "impressie__content__50.jpeg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_received_148431443951265.jpeg"
+    },
+    {
+      "filename": "impressie__content__51.jpeg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_received_358448681801585.jpeg"
+    },
+    {
+      "filename": "impressie__content__52.jpeg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_received_613919602884150.jpeg"
+    },
+    {
+      "filename": "impressie__content__53.jpeg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_received_1275715629466187.jpeg"
+    },
+    {
+      "filename": "impressie__content__54.jpeg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/phocagallery/impressie/thumbs/phoca_thumb_l_received_1524235378013346.jpeg"
+    },
+    {
+      "filename": "impressie__content__55.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/header.png"
+    },
+    {
+      "filename": "impressie__content__56.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/object454024537.png"
+    },
+    {
+      "filename": "impressie__content__57.gif",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/spacer.gif"
+    },
+    {
+      "filename": "impressie__content__58.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/footerrssicon.png"
+    },
+    {
+      "filename": "impressie__content__59.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/media/system/images/modal/closebox.png"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "slug": "verhuur",
+  "url": "https://spaansetuin-enzo.nl/verhuur/",
+  "page_title": "Verhuur",
+  "scrape_date": "2026-01-19",
+  "text_files": [
+    "text.html",
+    "text.txt"
+  ],
+  "images": [
+    {
+      "filename": "verhuur__hero__01.jpg",
+      "type": "hero",
+      "source_url": "https://spaansetuin-enzo.nl/images/artikel_fotos/Verhuur_Spaansetuin-enzo_1.jpg"
+    },
+    {
+      "filename": "verhuur__content__01.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/artikel_fotos/Verhuur_Spaansetuin-enzo_2.jpg"
+    },
+    {
+      "filename": "verhuur__content__02.jpg",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/images/artikel_fotos/Verhuur_Spaansetuin-enzo_3.jpg"
+    },
+    {
+      "filename": "verhuur__content__03.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/header.png"
+    },
+    {
+      "filename": "verhuur__content__04.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/object454024537.png"
+    },
+    {
+      "filename": "verhuur__content__05.gif",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/spacer.gif"
+    },
+    {
+      "filename": "verhuur__content__06.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/templates/spaansetuin_enzo_rev11_tweekolom/images/footerrssicon.png"
+    },
+    {
+      "filename": "verhuur__content__07.png",
+      "type": "content",
+      "source_url": "https://spaansetuin-enzo.nl/media/system/images/modal/closebox.png"
+    }
+  ]
+}
