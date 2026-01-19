@@ -1,3 +1,13 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals"],
+  "overrides": [
+    {
+      "files": ["next.config.js"],
+      "rules": {
+        "@typescript-eslint/naming-convention": "off",
+        "camelcase": "off",
+        "clean-code-assistant/naming-convention": "off"
+      }
+    }
+  ]
 }
