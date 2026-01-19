@@ -1,6 +1,13 @@
 import ProductLayout from '../../components/ProductLayout';
 import content from '../../content/hydrokorrels.json';
 
+type ContentBlock = {
+  title?: string;
+  html?: string;
+  text?: string;
+  content?: string;
+};
+
 function stripTags(html?: string) {
   if (!html) return '';
   return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
@@ -34,7 +41,8 @@ export default function Page() {
     return p || '';
   })();
 
-  const coreParas = extractParagraphs(content?.core?.html || '');
+  const coreBlock = content.core as ContentBlock | undefined;
+  const coreParas = extractParagraphs(coreBlock?.html ?? coreBlock?.text ?? coreBlock?.content ?? '');
   const long_description = coreParas.map(p => `<p>${p}</p>`).join('\n');
 
   const page = {

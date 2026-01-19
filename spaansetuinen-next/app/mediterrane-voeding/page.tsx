@@ -1,6 +1,13 @@
 import ProductLayout from '../../components/ProductLayout';
 import content from '../../content/mediterrane-voeding.json';
 
+type ContentBlock = {
+  title?: string;
+  html?: string;
+  text?: string;
+  content?: string;
+};
+
 function stripTags(html?: string) {
   if (!html) return '';
   return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
@@ -40,8 +47,8 @@ export default function Page() {
   const verzorging: Array<{ title?: string; text?: string }> = [];
 
   if (content?.core) {
-    const h = extractHeading(content.core.html || '');
-    const paras = extractParagraphs(content.core.html || '');
+    const h = extractHeading(content.core.html ?? '');
+    const paras = extractParagraphs(content.core.html ?? '');
     if (h || paras.length > 0) {
       verzorging.push({ title: h || '', text: paras.join('\n\n') || '' });
     }

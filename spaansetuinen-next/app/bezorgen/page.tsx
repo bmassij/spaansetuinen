@@ -1,6 +1,13 @@
 import ProductLayout from '../../components/ProductLayout';
 import content from '../../content/bezorgen.json';
 
+type ContentBlock = {
+  title?: string;
+  html?: string;
+  text?: string;
+  content?: string;
+};
+
 function stripTags(html?: string) {
   if (!html) return '';
   return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
@@ -28,60 +35,61 @@ function extractHeading(html?: string) {
 export default function Page() {
   const title = content?.hero?.title || '';
 
+  const coreBlock = content.core as ContentBlock | undefined;
+
   const short_description = (() => {
     if (content?.hero?.subtitle) return String(content.hero.subtitle).trim();
     // fallback: first paragraph from core
-    const p = extractParagraphs(content?.core?.html || '')[0];
+    const p = extractParagraphs(coreBlock?.html ?? coreBlock?.text ?? coreBlock?.content ?? '')[0];
     return p || '';
   })();
 
   // long_description must contain only <p> paragraphs (no headings, no wrappers)
-  const coreParas = extractParagraphs(content?.core?.html || '');
+  const coreParas = extractParagraphs(coreBlock?.html ?? coreBlock?.text ?? coreBlock?.content ?? '');
   const long_description = coreParas.map(p => `<p>${p}</p>`).join('\n');
+
+  // typed content arrays
+  const services = (content.services ?? []) as ContentBlock[];
+  const sections = (content.sections ?? []) as ContentBlock[];
+  const benefits = (content.benefits ?? []) as ContentBlock[];
 
   // Map service sections into verzorging
   const verzorging: Array<{ title?: string; text?: string }> = [];
 
-  // core: try to extract heading + paragraphs
-  if (content?.core) {
-    const h = extractHeading(content.core.html || '');
-    const paras = extractParagraphs(content.core.html || '');
-    if (h || paras.length > 0) {
-      verzorging.push({ title: h || '', text: paras.join('\n\n') || '' });
+  // core: try to extract heading + raw body
+  if (coreBlock) {
+    const h = extractHeading(coreBlock.html ?? coreBlock.text ?? coreBlock.content ?? '');
+    const body = coreBlock.html ?? coreBlock.text ?? coreBlock.content ?? '';
+    if (h || body) {
+      verzorging.push({ title: h || '', text: body || '' });
     }
   }
 
   // services -> verzorging
-  if (Array.isArray(content?.services)) {
-    for (const s of content.services) {
-      const title = s?.title || extractHeading(s?.html || '');
-      const paras = extractParagraphs(s?.html || '');
-      if (title || paras.length > 0) {
-        verzorging.push({ title: title || '', text: paras.join('\n\n') || '' });
-      }
+  for (const s of services) {
+    const title = s.title ?? extractHeading(s.html ?? s.text ?? s.content ?? '');
+    const body = s.html ?? s.text ?? s.content ?? '';
+    if (title || body) {
+      verzorging.push({ title: title || '', text: body || '' });
     }
   }
 
   // sections -> plaatsing
   const plaatsing: Array<{ title?: string; text?: string }> = [];
-  if (Array.isArray(content?.sections)) {
-    for (const s of content.sections) {
-      const title = s?.title || '';
-      const paras = extractParagraphs(s?.html || s?.text || '');
-      if (title || paras.length > 0) {
-        plaatsing.push({ title: title || '', text: paras.join('\n\n') || '' });
-      }
+  for (const s of sections) {
+    const title = s.title ?? '';
+    const body = s.html ?? s.text ?? s.content ?? '';
+    if (title || body) {
+      plaatsing.push({ title: title || '', text: body || '' });
     }
   }
 
   // benefits -> details
   const details: Array<{ title?: string; text?: string }> = [];
-  if (Array.isArray(content?.benefits)) {
-    for (const b of content.benefits) {
-      const title = '';
-      const paras = extractParagraphs(b?.html || '');
-      if (paras.length > 0) details.push({ title, text: paras.join('\n\n') });
-    }
+  for (const b of benefits) {
+    const title = b.title ?? '';
+    const body = b.html ?? b.text ?? b.content ?? '';
+    if (body) details.push({ title, text: body });
   }
 
   const page = {

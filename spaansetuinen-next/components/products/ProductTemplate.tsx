@@ -83,20 +83,37 @@ function getSummaryText(value: unknown): string {
   return '';
 }
 
+// Helper: boolean check for non-empty structured content
+function hasContent(value: unknown): boolean {
+  if (!value) return false;
+  if (typeof value === 'string') return value.trim().length > 0;
+  if (Array.isArray(value)) return value.length > 0 && value.some((it) => (typeof it === 'string' ? (it as string).trim().length > 0 : (it && typeof it === 'object')));
+  if (typeof value === 'object') {
+    const obj = value as Record<string, unknown>;
+    if ('sections' in obj && Array.isArray(obj.sections) && obj.sections.length > 0) return true;
+    for (const v of Object.values(obj)) {
+      if (typeof v === 'string' && v.trim()) return true;
+      if (Array.isArray(v) && v.length > 0) return true;
+      if (v && typeof v === 'object') return true;
+    }
+  }
+  return false;
+}
+
 // Helper: render sections for detailed rendering (verzorging / plaatsing)
 function renderSections(value: any) {
   if (!value) return null;
-  if (typeof value === 'string') return <p>{value}</p>;
+  if (typeof value === 'string') return <div dangerouslySetInnerHTML={{ __html: value }} />;
   if (Array.isArray(value)) {
     return value.map((item: any, i: number) => {
-      if (typeof item === 'string') return <p key={i}>{item}</p>;
+      if (typeof item === 'string') return <div key={i} dangerouslySetInnerHTML={{ __html: item }} />;
       if (item && typeof item === 'object') {
         const title = item.title || item.heading || '';
         const content = item.content || item.text || item.body || item.intro || '';
         return (
           <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
             {title && <h4 className="font-semibold text-gray-900">{title}</h4>}
-            {content && <p className="mt-2 text-sm">{String(content)}</p>}
+            {content && <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(content) }} />}
           </div>
         );
       }
@@ -109,7 +126,7 @@ function renderSections(value: any) {
         <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
           {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
           {(s.content || s.text || s.body || s.intro) && (
-            <p className="mt-2 text-sm">{String(s.content || s.text || s.body || s.intro)}</p>
+            <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(s.content || s.text || s.body || s.intro) }} />
           )}
         </div>
       ));
@@ -117,9 +134,9 @@ function renderSections(value: any) {
     // fallback: render first string properties
     const nodes: JSX.Element[] = [];
     Object.values(value).forEach((v, i) => {
-      if (typeof v === 'string') nodes.push(<p key={i}>{v}</p>);
+      if (typeof v === 'string') nodes.push(<div key={i} dangerouslySetInnerHTML={{ __html: v }} />);
       else if (Array.isArray(v)) {
-        v.forEach((it, j) => { if (typeof it === 'string') nodes.push(<p key={`${i}-${j}`}>{it}</p>); });
+        v.forEach((it, j) => { if (typeof it === 'string') nodes.push(<div key={`${i}-${j}`} dangerouslySetInnerHTML={{ __html: it }} />); });
       }
     });
     return nodes.length > 0 ? nodes : null;
@@ -130,14 +147,14 @@ function renderSections(value: any) {
 // Helper: render CTA content safely
 function renderCTAContent(cta: any) {
   if (!cta) return null;
-  if (typeof cta === 'string') return <p className="text-lg text-emerald-50 mb-4">{cta}</p>;
+  if (typeof cta === 'string') return <div className="text-lg text-emerald-50 mb-4" dangerouslySetInnerHTML={{ __html: cta }} />;
   if (typeof cta === 'object') {
     const heading = cta.heading || cta.title || '';
     const intro = cta.intro || cta.body || cta.text || cta.description || '';
     return (
       <>
-        {heading && <p className="text-lg text-emerald-50 font-semibold mb-2">{heading}</p>}
-        {intro && <p className="text-lg text-emerald-50 mb-4">{intro}</p>}
+        {heading && <div className="text-lg text-emerald-50 font-semibold mb-2" dangerouslySetInnerHTML={{ __html: heading }} />}
+        {intro && <div className="text-lg text-emerald-50 mb-4" dangerouslySetInnerHTML={{ __html: intro }} />}
       </>
     );
   }
@@ -161,6 +178,21 @@ export default function ProductTemplate(props: ProductProps) {
   // helper: choose main visual
   const mainImage = (gallery && gallery.length > 0) ? gallery[0] : heroImage;
 
+  // page context (may be passed in props)
+  const pageType = (props as any).page?.type || (props as any).type || '';
+  const excludedTypes = ['potgrond', 'voeding', 'verhuur', 'tips'];
+const hasPlaatsing = hasContent(plaatsing);
+const hasKenmerken = Array.isArray(kenmerken) && kenmerken.length > 0;
+const hasVerzorging = hasContent(verzorging);
+
+
+  // Verzorging should appear either as summary in intro-grid OR as full section, not both
+  const showFullVerzorging = hasVerzorging; // full section renders when verzorging exists
+  const showVerzorgingSummaryInGrid = hasVerzorging && !showFullVerzorging ? true : false; // effectively false
+
+  // Intro info-grid should only render for trees OR when standplaats/kenmerken exist, and never for excluded types
+  const showInfoGrid = !excludedTypes.includes(String(pageType).toLowerCase()) && (String(pageType).toLowerCase() === 'tree' || hasPlaatsing || hasKenmerken);
+
   return (
     <div className="min-h-screen">
       {/* Hero (preserve existing look) */}
@@ -179,7 +211,12 @@ export default function ProductTemplate(props: ProductProps) {
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title || ''}</h1>
-              <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{short_description || ''}</p>
+              {short_description && (
+                <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: short_description }} />
+              )}
+              {!short_description && (props as any).intro && (
+                <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: (props as any).intro }} />
+              )}
             </div>
 
             <div className="hidden md:flex justify-center items-center">
@@ -212,32 +249,44 @@ export default function ProductTemplate(props: ProductProps) {
           <>
             <section className="mb-6">
               <div className="prose prose-lg max-w-none text-gray-700">
-                <p>{short_description || (props as any).intro}</p>
+                {short_description ? (
+                  <div dangerouslySetInnerHTML={{ __html: short_description }} />
+                ) : (
+                  <div dangerouslySetInnerHTML={{ __html: (props as any).intro }} />
+                )}
               </div>
             </section>
 
             {/* Info-box grid (compact summaries) */}
-            <section className="mb-12">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {/* Standplaats */}
-                <div className="bg-emerald-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">Standplaats</h4>
-                  <p className="text-sm text-gray-700">{getSummaryText(plaatsing)}</p>
-                </div>
+            {showInfoGrid && (
+              <section className="mb-12">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {/* Standplaats */}
+                  {hasPlaatsing && (
+                    <div className="bg-emerald-50 rounded-lg p-4">
+                      <h4 className="font-semibold text-gray-900 mb-1">Standplaats</h4>
+                      <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: getSummaryText(plaatsing) }} />
+                    </div>
+                  )}
 
-                {/* Kenmerken */}
-                <div className="bg-emerald-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">Kenmerken</h4>
-                  <p className="text-sm text-gray-700">{(kenmerken && kenmerken.length > 0) ? kenmerken.slice(0, 3).join(', ') : ''}</p>
-                </div>
+                  {/* Kenmerken */}
+                  {hasKenmerken && (
+                    <div className="bg-emerald-50 rounded-lg p-4">
+                      <h4 className="font-semibold text-gray-900 mb-1">Kenmerken</h4>
+                      <div className="text-sm text-gray-700">{kenmerken.slice(0, 3).join(', ')}</div>
+                    </div>
+                  )}
 
-                {/* Verzorging */}
-                <div className="bg-emerald-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">Verzorging</h4>
-                  <p className="text-sm text-gray-700">{getSummaryText(verzorging)}</p>
+                  {/* Verzorging (only as summary when not rendered as full section) */}
+                  {hasVerzorging && !showFullVerzorging && (
+                    <div className="bg-emerald-50 rounded-lg p-4">
+                      <h4 className="font-semibold text-gray-900 mb-1">Verzorging</h4>
+                      <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: getSummaryText(verzorging) }} />
+                    </div>
+                  )}
                 </div>
-              </div>
-            </section>
+              </section>
+            )}
           </>
         )}
 
@@ -246,7 +295,7 @@ export default function ProductTemplate(props: ProductProps) {
           {/* Left: structured text in fixed order */}
           <div className="space-y-8">
             {/* Plaatsing */}
-            {plaatsing && (
+            {hasPlaatsing && (
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">Ideale standplaats</h2>
                 <div className="text-gray-700 space-y-4">
@@ -256,7 +305,7 @@ export default function ProductTemplate(props: ProductProps) {
             )}
 
             {/* Kenmerken */}
-            {kenmerken && kenmerken.length > 0 && (
+            {hasKenmerken && (
               <div>
                 <h3 className="text-2xl font-semibold mb-3">Kenmerken</h3>
                 <ul className="space-y-2 bg-emerald-50 rounded-lg p-6 list-disc pl-5 text-gray-700">
@@ -271,7 +320,7 @@ export default function ProductTemplate(props: ProductProps) {
             )}
 
             {/* Verzorging */}
-            {verzorging && (
+            {hasVerzorging && (
               <div>
                 <h3 className="text-2xl font-semibold mb-3">Verzorging</h3>
                 <div className="space-y-4 text-gray-700">
@@ -284,7 +333,7 @@ export default function ProductTemplate(props: ProductProps) {
             {long_description && (
               <div>
                 <h3 className="text-2xl font-semibold mb-3">Details</h3>
-                <div className="prose max-w-none text-gray-700">{long_description}</div>
+                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: long_description }} />
               </div>
             )}
           </div>
