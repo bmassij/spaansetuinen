@@ -12,31 +12,48 @@ export default function BloembakkenPage() {
       intro={undefined}
       blocks={undefined}
     >
-      {/* Intro / core content — rendered as a single prose card */}
-      {c?.core?.html && (
+      {/* Intro / core content — always render first as a wide prose card */}
+      {(c?.core?.html || c?.core?.content || c?.core?.text) && (
         <section className="bg-white p-6 rounded-lg shadow-sm mb-6 prose max-w-none">
-          <div dangerouslySetInnerHTML={{ __html: c.core.html }} />
+          {c?.core?.html ? (
+            <div dangerouslySetInnerHTML={{ __html: c.core.html }} />
+          ) : c?.core?.content ? (
+            <div dangerouslySetInnerHTML={{ __html: c.core.content }} />
+          ) : (
+            <div>{c.core.text}</div>
+          )}
         </section>
       )}
 
-      {/* Sections arranged in responsive grid of cards */}
-      {Array.isArray(c?.sections) && c.sections.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {c.sections.map((section: any, idx: number) => (
-            <article key={idx} className="bg-white p-6 rounded-lg shadow-sm">
-              {section?.title && <h2 className="text-xl font-semibold mb-3">{section.title}</h2>}
+      {/* Sections rendered as separate two-column cards (text + placeholder image) */}
+      {Array.isArray(c?.sections) &&
+        c.sections.map((section: any, idx: number) => (
+          <section key={idx} className="bg-white rounded-xl shadow-sm p-6 md:p-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+              {/* Text */}
+              <div>
+                {section.title && <h2 className="text-xl font-semibold mb-3">{section.title}</h2>}
 
-              {section?.html ? (
-                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: section.html }} />
-              ) : section?.content ? (
-                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: section.content }} />
-              ) : section?.text ? (
-                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: section.text }} />
-              ) : null}
-            </article>
-          ))}
-        </div>
-      )}
+                {section.html ? (
+                  <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: section.html }} />
+                ) : section.content ? (
+                  <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />
+                ) : section.text ? (
+                  <p className="text-gray-700 leading-relaxed">{section.text}</p>
+                ) : null}
+              </div>
+
+              {/* Image placeholder */}
+              <div className="hidden md:block">
+                <img
+                  src="/images/placeholder-bloembakken.jpg"
+                  alt={section.title ?? 'Bloembakken'}
+                  className="w-full h-48 object-cover rounded-lg"
+                />
+              </div>
+            </div>
+          </section>
+        ))}
 
       {/* Benefits shown as compact cards in a grid */}
       {Array.isArray(c?.benefits) && c.benefits.length > 0 && (
