@@ -1,11 +1,11 @@
 {
   "hero": {
-    "title": "",
+    "title": "Prijzen Bloembakken",
     "subtitle": "",
     "image": ""
   },
   "core": {
-    "html": "Pagina Prijzen Bloembakken:\nOnderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek. De\nprijzen zijn exclusief: mediterrane boom, mediterrane potgrond en boomschors. Meerprijs\nzwenkwielen op aanvraag.\n\nPrijzentabel wordt hieronder getoond. (deze heb je al)"
+    "html": "<h2>Tarieven bloembakken – incl. potgrond & boomschors</h2>\n<p>Bovenstaande bloembakken zijn excl. mediterrane boom en incl. mediterrane potgrond, isolatie, antiworteldoek en als afwerking boomschors naar keuze.<br/>Prijzen zijn alleen geldig in combinatie met de aanschaf van een mediterrane boom bij Spaanse Tuin & Zo. Deze wordt door ons zorgvuldig en professioneel geplant.</p>\n<table class=\"w-full border-collapse\" border=\"1\">\n  <thead>\n    <tr>\n      <th>Afmeting</th>\n      <th>Prijs excl. 21% BTW</th>\n      <th>Prijs incl. 21% BTW</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>60 x 60 x 80</td><td>€241</td><td>€292</td></tr>\n    <tr><td>80 x 80 x 80</td><td>€292,50</td><td>€354</td></tr>\n    <tr><td>80 x 120 x 80</td><td>€380</td><td>€460</td></tr>\n    <tr><td>100 x 100 x 80</td><td>€380</td><td>€460</td></tr>\n    <tr><td>120 x 120 x 80</td><td>€405</td><td>€490</td></tr>\n  </tbody>\n</table>\n\n<h2>Tarieven bloembakken – zonder potgrond & boomschors</h2>\n<p>Bovenstaande bloembakken zijn excl. mediterrane boom, mediterrane potgrond en boomschors.</p>\n<table class=\"w-full border-collapse\" border=\"1\">\n  <thead>\n    <tr>\n      <th>Afmeting</th>\n      <th>Prijs excl. 21% BTW</th>\n      <th>Prijs incl. 21% BTW</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr><td>60 x 60 x 80</td><td>€229</td><td>€277</td></tr>\n    <tr><td>80 x 80 x 80</td><td>€271</td><td>€328</td></tr>\n    <tr><td>80 x 120 x 80</td><td>€355</td><td>€430</td></tr>\n    <tr><td>100 x 100 x 80</td><td>€355</td><td>€430</td></tr>\n    <tr><td>120 x 120 x 80</td><td>€384</td><td>€465</td></tr>\n  </tbody>\n</table>\n\n<h2>Scheidingsbakken</h2>\n<ul>\n  <li>Afmeting: L200 x H80 x B20</li>\n  <li>Prijs excl. BTW: €368</li>\n  <li>Prijs incl. BTW: €445</li>\n</ul>"
   },
   "short_description": "",
   "long_description": "",
