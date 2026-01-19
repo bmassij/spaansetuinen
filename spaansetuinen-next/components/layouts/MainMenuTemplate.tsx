@@ -1,14 +1,13 @@
 import React from 'react';
 
 type MainMenuTemplateProps = {
-  content?: any;
-  children?: React.ReactNode;
+  content: any;
 };
 
-export default function MainMenuTemplate({ content, children }: MainMenuTemplateProps) {
+export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
   const c = content ?? {};
 
-  const resolvedHeroTitle = c.hero?.title ?? c.title ?? '';
+  const headerTitle = c?.hero?.title ?? c?.title ?? c?.name ?? '';
   const resolvedHeroSubtitle = c.hero?.subtitle ?? c.subtitle ?? undefined;
   const resolvedHeroImage = c.hero?.image ?? undefined;
 
@@ -30,9 +29,7 @@ export default function MainMenuTemplate({ content, children }: MainMenuTemplate
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
-              {resolvedHeroTitle && (
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white" dangerouslySetInnerHTML={{ __html: String(resolvedHeroTitle) }} />
-              )}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white" dangerouslySetInnerHTML={{ __html: String(headerTitle) }} />
               {resolvedHeroSubtitle && (
                 <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: String(resolvedHeroSubtitle) }} />
               )}
@@ -87,7 +84,7 @@ export default function MainMenuTemplate({ content, children }: MainMenuTemplate
                     </div>
                   )}
 
-                  {section.title && section.title !== resolvedHeroTitle && (
+                  {section.title && (
                     <h2 className="text-xl font-semibold mb-3" dangerouslySetInnerHTML={{ __html: String(section.title) }} />
                   )}
 
@@ -164,7 +161,6 @@ export default function MainMenuTemplate({ content, children }: MainMenuTemplate
             </div>
           )}
 
-          {children}
         </div>
       </main>
     </div>

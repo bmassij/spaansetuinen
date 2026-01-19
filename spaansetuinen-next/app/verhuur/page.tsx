@@ -3,6 +3,5 @@ import content from '../../content/verhuur.json';
 export const dynamic = 'force-dynamic';
 
 export default function Page() {
-  const c = content as any;
-  return <MainMenuTemplate content={c} />;
+  return <MainMenuTemplate content={content} />;
 }
