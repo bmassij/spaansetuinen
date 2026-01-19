@@ -100,7 +100,9 @@ export default function MainMenuLayout({
                     </div>
                   )}
 
-                  {section.title && <h2 className="text-xl font-semibold mb-3">{section.title}</h2>}
+                  {section.title && section.title !== resolvedHeroTitle && (
+                    <h2 className="text-xl font-semibold mb-3">{section.title}</h2>
+                  )}
 
                   {section.html ? (
                     <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: section.html }} />
@@ -118,10 +120,12 @@ export default function MainMenuLayout({
                 </div>
               );
 
+              const imageSrc = section.image ?? '/images/placeholder-bloembakken.jpg';
+
               const ImageColumn = (
-                <div className="hidden md:block">
-                  <div className="w-full h-48 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
-                    <img src="/images/placeholder-bloembakken.jpg" alt={section.title ?? 'Afbeelding'} className="w-full h-full object-cover rounded-lg" />
+                <div className="w-full">
+                  <div className="w-full h-48 md:h-56 lg:h-64 bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center">
+                    <img src={imageSrc} alt={section.title ?? 'Afbeelding'} className="w-full h-full object-cover rounded-lg" />
                   </div>
                 </div>
               );
