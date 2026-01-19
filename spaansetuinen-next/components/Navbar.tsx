@@ -20,8 +20,8 @@ export default function Navbar() {
 
   const renderDropdown = (node: DropdownItem) => (
     <li key={node.id} className="relative group" role="none">
-      {node.href ? (
-        <Link href={(node as any).href} aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+      {('href' in node && node.href) ? (
+        <Link href={node.href} aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
           {node.label}
         </Link>
       ) : (
@@ -39,15 +39,9 @@ export default function Navbar() {
 
   const renderMega = (node: MegaItem) => (
     <li key={node.id} className="relative group" role="none">
-      {node.href ? (
-        <Link href={node.href} aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-          {node.label}
-        </Link>
-      ) : (
-        <button aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-          {node.label}
-        </button>
-      )}
+      <button aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+        {node.label}
+      </button>
 
       <div className="absolute left-0 top-full mt-2 w-screen max-w-4xl bg-white dropdown-shadow rounded-lg p-6 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -100,18 +94,16 @@ export default function Navbar() {
           <div className="flex items-start ml-auto z-30">
             <ul className="hidden lg:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
               {NAV_DATA.map((node: NavNode) => {
-                if ((node as LinkItem).type === 'link') {
-                  return (
-                    <li key={(node as LinkItem).id}><Link href={(node as LinkItem).href} className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50">{(node as LinkItem).label}</Link></li>
-                  );
+                if (node.type === 'link') {
+                  return renderLinkItem(node);
                 }
 
-                if ((node as DropdownItem).type === 'dropdown') {
-                  return renderDropdown(node as DropdownItem);
+                if (node.type === 'dropdown') {
+                  return renderDropdown(node);
                 }
 
-                if ((node as MegaItem).type === 'mega') {
-                  return renderMega(node as MegaItem);
+                if (node.type === 'mega') {
+                  return renderMega(node);
                 }
 
                 return null;
