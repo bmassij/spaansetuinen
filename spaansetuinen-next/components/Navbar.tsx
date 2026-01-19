@@ -20,9 +20,15 @@ export default function Navbar() {
 
   const renderDropdown = (node: DropdownItem) => (
     <li key={node.id} className="relative group" role="none">
-      <button aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
-        {node.label}
-      </button>
+      {node.href ? (
+        <Link href={node.href} aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          {node.label}
+        </Link>
+      ) : (
+        <button aria-haspopup="true" aria-expanded="false" className="px-3 py-2 text-sm font-medium text-gray-700 hover:text-emerald-600 transition-colors rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-emerald-500">
+          {node.label}
+        </button>
+      )}
       <ul className="absolute left-0 mt-2 w-56 bg-white dropdown-shadow rounded-md py-2 opacity-0 invisible group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 z-50" role="menu" aria-label={`${node.label} submenu`}>
         {node.children.map((c) => (
           <li key={c.id}><Link href={c.href} className="block px-4 py-2 text-sm text-gray-700 hover:text-emerald-600 hover:bg-gray-50">{c.label}</Link></li>

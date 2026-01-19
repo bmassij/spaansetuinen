@@ -1,110 +1,62 @@
-import ProductLayout from '../../components/ProductLayout';
 import content from '../../content/bezorgen.json';
+const contentData: any = content;
+export const dynamic = 'force-dynamic';
 
-type ContentBlock = {
-  title?: string;
-  html?: string;
-  text?: string;
-  content?: string;
-};
+export default function Page(): JSX.Element {
+  const hero = contentData?.hero ?? {};
+  const coreHtml = contentData?.core?.html ?? contentData?.core?.content ?? contentData?.core?.text ?? '';
+  const sections = Array.isArray(contentData?.sections) ? contentData.sections : [];
+  const benefits = Array.isArray(contentData?.benefits) ? contentData.benefits : [];
 
-function stripTags(html?: string) {
-  if (!html) return '';
-  return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-}
+  return (
+    <main className="max-w-5xl mx-auto px-4 py-12">
+      {(hero.title || hero.subtitle || hero.image) && (
+        <header className="mb-8 text-center">
+          {hero.title && <h1 className="text-3xl font-bold">{hero.title}</h1>}
+          {hero.subtitle && <p className="mt-2 text-lg text-gray-700">{hero.subtitle}</p>}
+          {hero.image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={hero.image} alt={hero.title ?? 'Hero image'} className="mx-auto mt-4" />
+          )}
+        </header>
+      )}
 
-function extractParagraphs(html?: string) {
-  if (!html) return [];
-  const matches = html.match(/<p[\s\S]*?>[\s\S]*?<\/p>/gi);
-  if (!matches) {
-    const text = stripTags(html);
-    return text ? [text] : [];
-  }
-  return matches.map(p => {
-    const inner = p.replace(/<p[^>]*>/i, '').replace(/<\/p>/i, '');
-    return stripTags(inner);
-  });
-}
+      {coreHtml && (
+        <section className="prose mb-8" dangerouslySetInnerHTML={{ __html: coreHtml }} />
+      )}
 
-function extractHeading(html?: string) {
-  if (!html) return '';
-  const m = html.match(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/i);
-  return m ? stripTags(m[1]) : '';
-}
+      {sections.length > 0 && (
+        <section className="mb-8">
+          {sections.map((sec: any, i: number) => (
+            <div key={i} className="mb-6">
+              {sec.title && <h2 className="text-2xl font-semibold mb-2">{sec.title}</h2>}
 
-export default function Page() {
-  const title = content?.hero?.title || '';
+              {Array.isArray(sec.items) ? (
+                <ul className="list-disc pl-6 space-y-2">
+                  {sec.items.map((it: any, j: number) => (
+                    <li key={j}>
+                      {it.title && <strong>{it.title}</strong>}
+                      {it.description && <div className="mt-1">{it.description}</div>}
+                    </li>
+                  ))}
+                </ul>
+              ) : sec.html ? (
+                <div dangerouslySetInnerHTML={{ __html: sec.html }} />
+              ) : sec.text ? (
+                <p>{sec.text}</p>
+              ) : null}
+            </div>
+          ))}
+        </section>
+      )}
 
-  const coreBlock = content.core as ContentBlock | undefined;
-
-  const short_description = (() => {
-    if (content?.hero?.subtitle) return String(content.hero.subtitle).trim();
-    // fallback: first paragraph from core
-    const p = extractParagraphs(coreBlock?.html ?? coreBlock?.text ?? coreBlock?.content ?? '')[0];
-    return p || '';
-  })();
-
-  // long_description must contain only <p> paragraphs (no headings, no wrappers)
-  const coreParas = extractParagraphs(coreBlock?.html ?? coreBlock?.text ?? coreBlock?.content ?? '');
-  const long_description = coreParas.map(p => `<p>${p}</p>`).join('\n');
-
-  // typed content arrays
-  const services = (content.services ?? []) as ContentBlock[];
-  const sections = (content.sections ?? []) as ContentBlock[];
-  const benefits = (content.benefits ?? []) as ContentBlock[];
-
-  // Map service sections into verzorging
-  const verzorging: Array<{ title?: string; text?: string }> = [];
-
-  // core: try to extract heading + raw body
-  if (coreBlock) {
-    const h = extractHeading(coreBlock.html ?? coreBlock.text ?? coreBlock.content ?? '');
-    const body = coreBlock.html ?? coreBlock.text ?? coreBlock.content ?? '';
-    if (h || body) {
-      verzorging.push({ title: h || '', text: body || '' });
-    }
-  }
-
-  // services -> verzorging
-  for (const s of services) {
-    const title = s.title ?? extractHeading(s.html ?? s.text ?? s.content ?? '');
-    const body = s.html ?? s.text ?? s.content ?? '';
-    if (title || body) {
-      verzorging.push({ title: title || '', text: body || '' });
-    }
-  }
-
-  // sections -> plaatsing
-  const plaatsing: Array<{ title?: string; text?: string }> = [];
-  for (const s of sections) {
-    const title = s.title ?? '';
-    const body = s.html ?? s.text ?? s.content ?? '';
-    if (title || body) {
-      plaatsing.push({ title: title || '', text: body || '' });
-    }
-  }
-
-  // benefits -> details
-  const details: Array<{ title?: string; text?: string }> = [];
-  for (const b of benefits) {
-    const title = b.title ?? '';
-    const body = b.html ?? b.text ?? b.content ?? '';
-    if (body) details.push({ title, text: body });
-  }
-
-  const page = {
-    title,
-    short_description,
-    long_description,
-    heroImage: content?.hero?.image || '',
-    gallery: [],
-    kenmerken: [],
-    verzorging: verzorging.length > 0 ? verzorging : null,
-    plaatsing: plaatsing.length > 0 ? plaatsing : null,
-    // map details into long_description fallback area if desired; keep as null to avoid altering ProductTemplate
-    price: null,
-    cta: null,
-  };
-
-  return <ProductLayout page={page} />;
+      {benefits.length > 0 && (
+        <section>
+          {benefits.map((b: any, k: number) => (
+            <div key={k} className="mb-4" dangerouslySetInnerHTML={{ __html: b.html ?? b.content ?? b.text ?? '' }} />
+          ))}
+        </section>
+      )}
+    </main>
+  );
 }
