@@ -1,4 +1,5 @@
 import React from 'react';
+import ServiceCard from '@/components/cards/ServiceCard';
 
 type MainMenuTemplateProps = {
   content: any;
@@ -140,18 +141,17 @@ export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
                 <div className="prose" dangerouslySetInnerHTML={{ __html: c.benefits.html }} />
               ) : Array.isArray(c.benefits) ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                  {c.benefits.map((b: any, i: number) => (
-                    <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
-                      {b?.title && <h3 className="text-lg font-medium mb-2">{b.title}</h3>}
-                      {b?.html ? (
-                        <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: b.html }} />
-                      ) : b?.text ? (
-                        <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: b.text }} />
-                      ) : (
-                        null
-                      )}
-                    </div>
-                  ))}
+                  {c.benefits.map((b: any, i: number) => {
+                    const desc = b?.text ?? (b?.html ? String(b.html).replace(/<[^>]+>/g, '') : '');
+                    return (
+                      <ServiceCard
+                        key={i}
+                        icon={<span aria-hidden>🌿</span>}
+                        title={b?.title ?? ''}
+                        description={desc}
+                      />
+                    );
+                  })}
                 </div>
               ) : (
                 <aside className="mt-12">
