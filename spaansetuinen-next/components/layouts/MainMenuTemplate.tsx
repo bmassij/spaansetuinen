@@ -13,6 +13,7 @@ export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
   const headerTitle = c?.hero?.title ?? c?.title ?? c?.name ?? '';
   const resolvedHeroSubtitle = c.hero?.subtitle ?? c.subtitle ?? undefined;
   const resolvedHeroImage = c.hero?.image ?? undefined;
+  const resolvedHeroSecondaryImage = c.hero?.secondaryImage ?? c.secondaryImage ?? undefined;
 
   const getActionHref = (section: any) => section?.link ?? '/contact';
 
@@ -41,14 +42,22 @@ export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
               )}
             </div>
 
-            <div className="hidden md:flex justify-center items-center">
-              <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
-                <div className="text-center p-8">
-                  <div className="text-6xl mb-4">🌳</div>
-                  <p className="text-white/80 text-sm">Afbeelding volgt</p>
+            {resolvedHeroSecondaryImage ? (
+              <div className="hidden md:flex justify-center items-center">
+                <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20 overflow-hidden">
+                  <img src={resolvedHeroSecondaryImage} alt={headerTitle ?? 'Afbeelding'} className="w-full h-full object-cover rounded-2xl" />
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="hidden md:flex justify-center items-center">
+                <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
+                  <div className="text-center p-8">
+                    <div className="text-6xl mb-4">🌳</div>
+                    <p className="text-white/80 text-sm">Afbeelding volgt</p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </header>
