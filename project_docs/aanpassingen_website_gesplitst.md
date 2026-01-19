@@ -1,122 +1,99 @@
-Homepagina:
-- Logo links boven staat over Welkom.
-- Logo groter.
-- Vlaggetjes in alleen verschillende kleuren groen? Anders weglaten.
+# AANPASSINGEN WEBSITE – GESPLITST EN GENORMALISEERD
 
-Volgorde balk bovenin:
-Welkom, Assortiment bomen, Bloembakken, Potgrond en Voeding, Plant- en voedingstips, Onze
-service , Verhuur,
-Impressie.
+Dit document is de **genormaliseerde bron** op basis van het aangeleverde document.
+Het is bewust opgesplitst in **drie strikt gescheiden secties** zodat Roo Code exact weet:
+- wat **tekst (content)** is,
+- wat **structuur/menu** is,
+- en wat **idee/wens** is.
 
-Assortiment bomen:
-Palmen: verwijderen Cycca Revoluta, toevoegen Yucca Rostrata.
-Olijfbomen: toevoegen
-Overige bomen: wordt druivenranken.
+Gebruik deze secties als **drie losse .md-bestanden**:
+- `A_TEKSTEN.md`
+- `B_STRUCTUUR.md`
+- `C_IDEEEN.md`
 
-Bloembakken, Bezorgen en Impressie  geen onderverdeling.
-Potgrond en Voeding:
+---
 
-Onderverdelen in: Mediterrane potgrond, Mediterrane voeding, Hydrokorrels, Boomschors, Plant- en
+## =============================
+## A_TEKSTEN.md  (CONCRETE PAGINATEKSTEN)
+## =============================
 
-voedingstips.
+### HOME / VOORPAGINA
 
-Tekst voorpagina:
 Waar Mediterrane sfeer en kwaliteit samenkomen.
-Bij Spaanse Tuin &amp;Zo draait alles om kwaliteit, eerlijkheid en volledige service.
-Wij zijn een kleinschalig familiebedrijf met een passie voor mediterrane bomen en persoonlijke
-aandacht voor onze klanten.
-Met toewijding en vakmanschap maken wij jouw mediterrane droom waar – van eerste advies tot
-plaatsing.
-Wat we voor u doen wordt  Alles wat wij voor u regelen
 
-Daaronder:
- Van authentieke bomen tot stijlvolle steigerhouten bloembakken en bezorgservice – alles
-voor u tot in de puntjes verzorgd.
-Onze bomen:
-Icoontje veranderen in afbeelding palm of olijf.
+Bij Spaanse Tuin & Zo draait alles om kwaliteit, eerlijkheid en volledige service.
+Wij zijn een kleinschalig familiebedrijf met een passie voor mediterrane bomen en persoonlijke aandacht voor onze klanten.
+Met toewijding en vakmanschap maken wij jouw mediterrane droom waar – van eerste advies tot plaatsing.
 
-Tekst:
- Ontdek ons assortiment authentieke olijfbomen, palmbomen, vijgenbomen en druivenranken.
+**Alles wat wij voor u regelen**
+Van authentieke bomen tot stijlvolle steigerhouten bloembakken en bezorgservice – alles voor u tot in de puntjes verzorgd.
+
+**Onze bomen**
+Ontdek ons assortiment authentieke olijfbomen, palmbomen, vijgenbomen en druivenranken.
 Rechtstreeks uit de Costa Blanca.
 
-Bloembakken:
-Icoontje veranderen naar afbeelding steigerhouten bloembak.
+**Bloembakken**
+Stijlvolle bloembakken van steigerhout, speciaal voor u op maat gemaakt.
 
-Tekst: Stijlvolle bloembakken van steigerhout, speciaal voor u op maat gemaakt.
-Verhuur:
-Icoontje veranderen naar afbeelding van sta tafel.
+**Verhuur**
+Verhuur van bloembakken met Mediterrane bomen voor elke gelegenheid – zakelijk of particulier – voor de perfecte sfeer.
 
-Tekst: Verhuur van bloembakken met Mediterrane bomen voor elke gelegenheid – zakelijk of
-particulier – voor de perfecte sfeer.
+**Bezorgen**
+Snelle levering in Nederland, België en Duitsland, met zorg voor uw bomen.
 
-Bezorgen:
-Icoontje veranderen in afbeelding met bus/aanhanger.
+**Topservice**
+Uw Mediterrane bomen in de beste handen. Van bestelling tot levering, altijd zorgvuldig verzorgd.
 
-Tekst: “Snelle levering in Nederland, België en Duitsland, met zorg voor uw bomen.”
-
-Topservice:
-“Uw Mediterrane bomen in de beste handen. Van bestelling tot levering, altijd zorgvuldig verzorgd.”
-
-Eerlijke prijzen:
+**Eerlijke prijzen**
 Topkwaliteit Mediterrane bomen tegen scherpe prijzen.
 
-Volledige service:
-Uw Mediterrane bomen, van A tot Z verzorgd. Van bestelling tot levering en planting, met volledige
-aandacht.
-Mediterrane topkwaliteit wordt  Hoogwaardige Mediterrane bomen:
+**Volledige service**
+Uw Mediterrane bomen, van A tot Z verzorgd. Van bestelling tot levering en planting, met volledige aandacht.
+
+**Hoogwaardige Mediterrane bomen**
 Topkwaliteit Mediterrane bomen, met zorg geselecteerd en geschikt voor het Nederlandse klimaat.
 
-Persoonlijk advies:
+**Persoonlijk advies**
 Een aanpak die perfect aansluit bij jouw wensen.
-Nazorg en verzorgingstips wordt  Nazorg
+
+**Nazorg**
 Professionele nazorg gegarandeerd. Wij blijven betrokken bij uw Mediterrane bomen.
-Een uit de hand gelopen hobby... of juist: Passie voor mediterrane schoonheid wordt
-Een hobby uitgegroeid tot vakmanschap – onze passie voor Mediterrane bomen. Wat ooit begon
-als liefde voor de Mediterrane stijl, is uitgegroeid tot een gespecialiseerd bedrijf in bijzondere,
-karaktervolle bomen.
-Hoe het begon
-Even kort voorstellen: wij zijn Lisette en Hans Janssen, trotse eigenaren van Spaanse Tuin &amp; Zo.
-Enkele jaren geleden begon ons avontuur. Hans – toen nog eigen rijder met ritten naar Spanje – nam
-een palmboom mee voor onze eigen tuin. Het uitzoeken van de perfecte boom duurde uren, maar
-het klikte meteen tussen Hans en de Spaanse kweker. Al snel werd de palmboom een echte
-blikvanger. Iedereen die hem zag, was razend enthousiast en vroeg of Hans er ook één voor hen kon
-meenemen.
-Niet veel later groeide de vraag naar palmen en ontstond er ook interesse in andere mediterrane
-bomen, zoals olijf- en vijgenbomen. Bij elke rit naar Zuid-Spanje vulde Hans zijn trailer met een paar
-extra bomen voor vrienden en bekenden. Toen de belangstelling bleef groeien, besloten we in 2016
-de stap te zetten: Spaanse Tuin &amp; Zo werd geboren. Sindsdien zetten Hans en Lisette zich met veel
-passie en liefde in voor Spaanse Tuin &amp; Zo.
 
-Onze werkwijze wordt  Ons selectieproces
-Op onze tropische binnenplaats van maar liefst 400 m² vind je een ruim assortiment mediterrane
-bomen. We importeren rechtstreeks uit de Costa Blanca en selecteren elke boom persoonlijk en met
-detail.
+---
 
-Door de jaren heen hebben we hechte vriendschappen opgebouwd met onze kwekers. Zij weten
-precies wat we zoeken: bomen van topkwaliteit tegen eerlijke prijzen. Zo blijft het mediterrane
-gevoel voor iedereen bereikbaar.
-Meerdere keren per jaar reizen we zelf naar Spanje om de mooiste exemplaren uit te zoeken. Elke
-boom wordt persoonlijk bekeken, gekeurd en gelabeld, zodat hij bij aankomst in Nederland precies
-aan onze hoge standaarden voldoet.
-Meer dan alleen bomen wordt Daarom kiezen klanten voor ons
+### OVER ONS / PASSIE
+
+Een hobby uitgegroeid tot vakmanschap – onze passie voor Mediterrane bomen. Wat ooit begon als liefde voor de Mediterrane stijl, is uitgegroeid tot een gespecialiseerd bedrijf in bijzondere, karaktervolle bomen.
+
+**Hoe het begon**
+Even kort voorstellen: wij zijn Lisette en Hans Janssen, trotse eigenaren van Spaanse Tuin & Zo.
+Enkele jaren geleden begon ons avontuur. Hans – toen nog eigen rijder met ritten naar Spanje – nam een palmboom mee voor onze eigen tuin.
+Het uitzoeken van de perfecte boom duurde uren, maar het klikte meteen tussen Hans en de Spaanse kweker.
+Al snel werd de palmboom een echte blikvanger. Iedereen die hem zag, was razend enthousiast en vroeg of Hans er ook één voor hen kon meenemen.
+Niet veel later groeide de vraag naar palmen en ontstond er ook interesse in andere mediterrane bomen, zoals olijf- en vijgenbomen.
+Bij elke rit naar Zuid-Spanje vulde Hans zijn trailer met een paar extra bomen voor vrienden en bekenden.
+Toen de belangstelling bleef groeien, besloten we in 2016 de stap te zetten: Spaanse Tuin & Zo werd geboren.
+Sindsdien zetten Hans en Lisette zich met veel passie en liefde in voor Spaanse Tuin & Zo.
+
+**Ons selectieproces**
+Op onze tropische binnenplaats van maar liefst 400 m² vind je een ruim assortiment mediterrane bomen.
+We importeren rechtstreeks uit de Costa Blanca en selecteren elke boom persoonlijk en met detail.
+Door de jaren heen hebben we hechte vriendschappen opgebouwd met onze kwekers.
+Zij weten precies wat we zoeken: bomen van topkwaliteit tegen eerlijke prijzen.
+Zo blijft het mediterrane gevoel voor iedereen bereikbaar.
+Meerdere keren per jaar reizen we zelf naar Spanje om de mooiste exemplaren uit te zoeken.
+Elke boom wordt persoonlijk bekeken, gekeurd en gelabeld, zodat hij bij aankomst in Nederland precies aan onze hoge standaarden voldoet.
+
+**Daarom kiezen klanten voor ons**
 Eerlijk en transparant advies
 Betrouwbaarheid en vakmanschap
 Grote betrokkenheid bij het gehele proces
 Topkwaliteit tegen eerlijke prijzen
 Alles geregeld van A tot Z
-Links onder aan de pagina staat Mediterrane kwaliteit, van onze zorgzame handen naar uw tuin
-wordt  Waar Mediterrane sfeer en kwaliteit samenkomen.
-Telefoonnummer wordt: +31 611929392
-Buiten openingstijden? Neem contact op voor een afspraak wordtOok buiten openingstijden ben
-je welkom. Neem contact met ons op voor een afspraak.
-Onder aan de pagina staat : Mediterrane bomen en planten, dit moet alleen bomen worden
 
-Graag toevoegen:
-- mogelijkheid tot schrijven recensie
-- trustpilot?
-- cookies
-whatss app icoontje
+---
 
+### PRODUCTPAGINA – TRACHYCARPUS FORTUNEI
 Pagina Trachycarpus Fortunei
 Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige
 palmboom, door ons persoonlijk geselecteerd en rechtstreeks geïmporteerd, geniet u het hele jaar
@@ -193,7 +170,8 @@ denken met plezier met u mee om de ideale palmboom te vinden!
 
 Ook hier telefoonnummer +316 (alle telefoonnummers aanpassen)
 
-Pagina Cycca Revoluta wordt Yucca Rostrata
+### PRODUCTPAGINA – YUCCA ROSTRATA
+Yucca Rostrata
 
 Breng een vleugje tropen in uw tuin met deze zorgvuldig geselecteerde palmboom, rechtstreeks
 geïmporteerd uit de Costa Blanca.
@@ -259,6 +237,7 @@ het kiezen van de perfecte palmboom voor uw tuin! Wordt Wilt u weten welke pa
 uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij
 denken met plezier met u mee om de ideale palmboom te vinden!
 
+### PRODUCTPAGINA – FICUS CARICA
 Pagina Ficus Carica
 De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat. Met
 
@@ -331,29 +310,8 @@ beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee
 vijgenboom te vinden!
 Ook hier telefoonnummer +316 (alle telefoonnummers aanpassen)
 
-Onder het kopje olijbomen komen de volgende namen:
-- Olea Europea
-- Olea Europea Bonsai / Bonsai doble
-- Olea Europea Copa
-- Olea Europea Hoija Blanca
-- Olea Europea Piel Joven
-- Olea Europea Piel Vieja
-- Olea Europea Bonsai Ramif
-- Olea Europea Pata Bola
-- Olea Europea Tubo
-- Olea Europea Plato
-- Olea Europea Lechin
-- Olea Europea Multi Bola/Multi Plato
-- Olea Europea Tarrina
-- Olea Europea Andalusia
-
--Olea Europea Pon Pon
-
-Bij het klikken op de naam komt de klant steeds op dezelfde pagina. We maken geen onderscheid.
-Deze maken we op de pagina zelf pas.
-Opzet van de olijfboom pagina wordt dus wel anders.
-
-pagina: Olea Europea
+### PRODUCTPAGINA – OLEA EUROPAEA
+agina: Olea Europea
 
 Breng een vleugje mediterrane sfeer in uw tuin met één van onze olijfbomen uit de Costa Blanca.
 Deze prachtige, karakteristieke boom staat symbool voor warmte, zon en een ontspannen levensstijl.
@@ -441,9 +399,8 @@ beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee
 olijfboom te vinden!
 Ook hier telefoonnummer +316 (alle telefoonnummers aanpassen)
 
-Overige bomen wordt  Druivenranken
-
-Onderkopje: Vitis Vinifera
+### PRODUCTPAGINA – VITIS VINIFERA
+Vitis Vinifera
 
 Pagina :
 Wilt u uw tuin een tropische uitstraling geven? Met onze druivenrank brengt u direct sfeer en
@@ -509,10 +466,7 @@ beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee
 druivenrank te vinden!
 Ook hier telefoonnummer +316 (alle telefoonnummers aanpassen)
 
-Pagina Bloembakken: onderverdeling: 
-Douglas steigerhouten bloembakken, Douglas steigerhouten
-statafel, prijzen bloembakken, prijzen bloembakken voor beplanting
-
+### BLOEMBAKKEN / POTGROND / VOEDING / PLANTTIPS / SERVICE / VERHUUR
 Intro pagina Douglas steigerhouten bloembakken:
 
 Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw
@@ -535,6 +489,8 @@ Kenmerken van de bloembak:
 ✓ Voorzien van antiworteldoek
 ✓ Optioneel: zwenkbare wielen
 ✓ Optioneel: beplanting
+
+---
 
 Pagina Prijzen Bloembakken:
 Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek. De
@@ -672,79 +628,44 @@ Met deze stap-voor-stap tips uit onze oude gids blijft uw boom gezond, sterk en 
 vragen of wilt u extra advies? Wij helpen u graag. Wordt  Met deze stap-voor-stap tips blijft uw
 boom gezond, sterk en vol karakter. Heeft u vragen of wilt u extra advies? Wij helpen u graag.
 
-Pagina Bezorgen wordt Onze service
-Intro:
- Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken,
-inclusief persoonlijk advies. Wordt Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen
-de rest.
 
-Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen
-uit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich
-nergens druk om te maken en bent u verzekerd van een vakkundige aanpak.
-Of het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het
-leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt
-geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of
-terras.
+## =============================
+## B_STRUCTUUR.md  (MENU & STRUCTUUR)
+## =============================
 
-Onze service (stukje met icoontjes)
-Bezorging is goed.
-Planten in grond  Planten in de volle grond. (tekst erbij prima)
-Op maat bakken  Op maat gemaakte bloembakken (Levering in op maat gemaakte bloembakken,
-voorzien van noppenfolie en antiworteldoek).
-Duurzame bakken HELEMAAL WEG
-Persoonlijk advies  Wij staan u graag te woord voor een persoonlijk advies.
-Huisbezoek is goed.
+- Logo linksboven positionering
+- Logo groter
+- Vlaggetjes alleen groen of verwijderen
 
-TOEVOEGEN:
-Snoeien  Voor vakkundig onderhoudt en nazorg kunt u ook bij ons terecht.
-Bezorgkosten is vanaf 30 euro! De rest van omschrijving klopt.
-Stuk waarom kiezen voor onze service is in orde
+**Hoofdnavigatie volgorde**
+Welkom, Assortiment bomen, Bloembakken, Potgrond en Voeding, Plant- en voedingstips, Onze service, Verhuur, Impressie
 
-Pagina verhuur
-Verhuur Complete Bloembakken
-Creëer de perfecte mediterrane sfeer voor uw event, bruiloft of bedrijfsterrein. Van 1 dag tot 1 jaar
-mogelijk!
-Word
+**Assortiment bomen**
+- Palmen: Cycca Revoluta verwijderen
+- Yucca Rostrata toevoegen
+- Overige bomen → Druivenranken
 
-Verhuur van complete bloembakken
-Onze verhuurservice voor complete bloembakken neemt u alle zorg uit handen. De bloembakken
-worden geleverd met zorgvuldig geselecteerde beplanting en professionele potgrond, zodat ze er
-direct verzorgd en sfeervol uitzien. Ideaal voor horecagelegenheden, bedrijven, evenementen of
-particulieren gelegenheden.
+- Bloembakken / Bezorgen / Impressie: geen onderverdeling
+- Potgrond en voeding opdelen in subcategorieën
+- Olijfbomen: meerdere namen → één pagina
+- Telefoonnummers uniform aanpassen
+- Footer: alleen “Mediterrane bomen”
 
-Een olijfboom zorgt meteen voor een aangekleed terras, tuin of binnenplaats. Steeds meer
-horecaondernemers kiezen voor zo&#39;n uitnodigende sfeer.
-Bedrijven en particulieren kunnen de bomen kopen, maar ook huren. Wij plaatsen de bomen aan het
-begin van het buitenseizoen op de gewenste plaats. Zaken als extra voeding en snoeiwerk nemen we
-uit handen.
-Wordt
+---
 
-Een mediterrane boom zorgt direct voor een sfeervol en aangekleed terras, tuin of binnenplaats.
-Steeds meer horecaondernemers kiezen voor deze uitnodigende uitstraling. Zowel bedrijven als
-particulieren kunnen onze bomen kopen of huren.
-Bij verhuur plaatsen wij de bomen aan het begin van het buitenseizoen op de gewenste locatie. Alle
-verzorging, zoals extra voeding en snoeiwerk, nemen wij volledig uit handen. Dat maakt het huren
-bijzonder gemakkelijk. Aan het einde van het seizoen halen wij de bomen weer op, zodat ze bij ons
-op de juiste manier kunnen overwinteren. Huren is zelfs al mogelijk per dag.
-Organiseert u een bruiloft, bedrijfsfeest of evenement? Overweeg dan eens het huren van
-palmbomen voor die echte wow-factor. Een statafel met een palmboom in het midden behoort
-eveneens tot de mogelijkheden en is gegarandeerd een blikvanger op uw feest.
-Voor iedere gelegenheid hebben wij de perfecte boom en bloembak – de ideale match voor sfeer en
-gemak!
+## =============================
+## C_IDEEEN.md  (IDEËEN & WENSEN)
+## =============================
 
-Stuk perfect voor elk event kan weg
-Stuk bloembakken op maat kan weg
-Voordelen van huren (stuk met icoontjes)
-Scherpe tarieven  Zeer scherpe huurtarieven voor korte en lange termijn.
-0% Risico Geen risico voor de klant.
-Topkwaliteit  Hoge kwaliteit mediterrane bomen geleverd in steigerhouten bloembakken.
-Volledige service  Bomen worden volledig door ons verzorgd.
-Flexibel huren  Huren mogelijk van 1 dag tot 1 jaar. Altijd in overleg.
-Eye catcher  Eye catcher bij uw bedrijf of evenement.
+- Reviews schrijven
+- Trustpilot
+- Cookies
+- WhatsApp icoon
+- Placeholder prijzen
+- “Hier linkje” opmerkingen
+- Onderdelen die expliciet mogen verdwijnen
 
-Voordelen: Elk seizoen een andere aankleding van uw terras mogelijk. Bomen en planten worden
-geleverd inclusief bloembak. Perfect voor terras, evenementen, feesten, etc.
-DIT MAG WEG!
+---
 
-Bent u geïnteresseerd? Wij vertellen u graag meer over de mogelijkheden.
-Hier een contactformulier.
+
+
