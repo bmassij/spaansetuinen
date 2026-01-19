@@ -1,54 +1,68 @@
-import ProductLayout from '../../components/ProductLayout';
-import content from '../../content/verhuur.json';
+import fs from 'fs/promises';
+import path from 'path';
+export const dynamic = 'force-dynamic';
 
-function stripTags(html?: string) {
-  if (!html) return '';
-  return html.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
-}
-
-function extractParagraphs(html?: string) {
-  if (!html) return [];
-  const matches = html.match(/<p[\s\S]*?>[\s\S]*?<\/p>/gi);
-  if (!matches) {
-    const text = stripTags(html);
-    return text ? [text] : [];
+export default async function Page() {
+  const filePath = path.join(process.cwd(), 'content', 'verhuur.json');
+  let content: any = {};
+  try {
+    const raw = await fs.readFile(filePath, 'utf8');
+    content = JSON.parse(raw);
+  } catch (err) {
+    content = {};
   }
-  return matches.map(p => {
-    const inner = p.replace(/<p[^>]*>/i, '').replace(/<\/p>/i, '');
-    return stripTags(inner);
-  });
-}
 
-function extractHeading(html?: string) {
-  if (!html) return '';
-  const m = html.match(/<h[1-6][^>]*>([\s\S]*?)<\/h[1-6]>/i);
-  return m ? stripTags(m[1]) : '';
-}
+  return (
+    <main className="max-w-5xl mx-auto px-4 py-12">
+      <header className="mb-8">
+        {content.hero?.title && (
+          <h1 className="text-3xl font-bold mb-2" dangerouslySetInnerHTML={{ __html: content.hero.title }} />
+        )}
+        {content.hero?.subtitle && (
+          <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: content.hero.subtitle }} />
+        )}
+      </header>
 
-export default function Page() {
-  const title = content?.hero?.title || '';
+      {content.core?.html ? (
+        <article className="prose mb-8" dangerouslySetInnerHTML={{ __html: content.core.html }} />
+      ) : content.core?.content ? (
+        <article className="prose mb-8" dangerouslySetInnerHTML={{ __html: content.core.content }} />
+      ) : content.core?.text ? (
+        <article className="prose mb-8">{content.core.text}</article>
+      ) : null}
 
-  const short_description = (() => {
-    if (content?.hero?.subtitle) return String(content.hero.subtitle).trim();
-    const p = extractParagraphs(content?.core?.html || '')[0];
-    return p || '';
-  })();
+      {Array.isArray(content.sections) &&
+        content.sections.map((section: any, idx: number) => (
+          <section key={idx} className="mb-8">
+            {section.title && (
+              <h2 className="text-2xl font-semibold mb-2" dangerouslySetInnerHTML={{ __html: section.title }} />
+            )}
 
-  const coreParas = extractParagraphs(content?.core?.html || '');
-  const long_description = coreParas.map(p => `<p>${p}</p>`).join('\n');
+            {section.html ? (
+              <div className="prose" dangerouslySetInnerHTML={{ __html: section.html }} />
+            ) : section.content ? (
+              <div className="prose" dangerouslySetInnerHTML={{ __html: section.content }} />
+            ) : section.text ? (
+              <div className="prose">{section.text}</div>
+            ) : null}
+          </section>
+        ))}
 
-  const page = {
-    title,
-    short_description,
-    long_description,
-    heroImage: content?.hero?.image || '',
-    gallery: [],
-    kenmerken: [],
-    verzorging: null,
-    plaatsing: null,
-    price: null,
-    cta: null,
-  };
-
-  return <ProductLayout page={page} />;
+      {content.benefits ? (
+        <aside className="mt-12">
+          {content.benefits.html ? (
+            <div className="prose" dangerouslySetInnerHTML={{ __html: content.benefits.html }} />
+          ) : Array.isArray(content.benefits) ? (
+            <ul className="list-disc ml-6">
+              {content.benefits.map((b: any, i: number) => (
+                <li key={i} dangerouslySetInnerHTML={{ __html: b }} />
+              ))}
+            </ul>
+          ) : (
+            <div className="prose">{content.benefits}</div>
+          )}
+        </aside>
+      ) : null}
+    </main>
+  );
 }
