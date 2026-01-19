@@ -1,16 +1,9 @@
 {
-  "hero": {
-    "title": "Prijzen Bloembakken",
-    "subtitle": "",
-    "image": ""
-  },
-  "core": {
-    "html": ""
-  },
+  "title": "Prijzen Bloembakken",
   "intro_text": "Bovenstaande bloembakken zijn beschikbaar in verschillende afmetingen.\nAlle prijzen zijn weergegeven exclusief en inclusief 21% BTW.",
   "group1": {
     "title": "Bloembakken incl. potgrond & boomschors",
-    "context": "Prijzen alleen geldig in combinatie met de aanschaf van een mediterrane boom bij Spaanse Tuin & Zo.\nDe boom wordt door ons zorgvuldig en professioneel geplant.",
+    "context_text": "Prijzen alleen geldig in combinatie met de aanschaf van een mediterrane boom bij Spaanse Tuin & Zo.\nDe boom wordt door ons zorgvuldig en professioneel geplant.",
     "cards": [
       {
         "title": "60 × 60 × 80",
@@ -36,7 +29,7 @@
   },
   "group2": {
     "title": "Bloembakken zonder potgrond & boomschors",
-    "context": "Bovenstaande bloembakken zijn exclusief mediterrane boom, mediterrane potgrond en boomschors.",
+    "context_text": "Bovenstaande bloembakken zijn exclusief mediterrane boom, mediterrane potgrond en boomschors.",
     "cards": [
       {
         "title": "60 × 60 × 80",
@@ -63,13 +56,7 @@
   "scheidingsbakken": {
     "afmeting": "L200 × H80 × B20",
     "prijs_excl": "€368",
-    "prijs_incl": "€445"
-  },
-  "editor_notes": {
-    "fase_4_uiux": "FASE 4 – UI/UX VERBETERING:\nDe prijsweergave van bloembakken dient visueel te worden verbeterd.\nWens:\n- Grotere kaarten\n- Meer witruimte\n- Tabel-achtige presentatie binnen de kaart (key/value: afmeting, prijs excl. BTW, prijs incl. BTW)\n- Meer visuele hiërarchie tussen afmeting en prijzen\nDe content is correct; alleen presentatie aanpassen."
-  },
-  "short_description": "",
-  "long_description": "",
-  "details": [],
-  "sections": []
+    "prijs_incl": "€445",
+    "text": "Afmeting: L200 × H80 × B20\nPrijs excl. BTW: €368\nPrijs incl. BTW: €445"
+  }
 }

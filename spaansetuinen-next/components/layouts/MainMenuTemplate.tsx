@@ -5,9 +5,10 @@ import home from '@/content/home.json';
 
 type MainMenuTemplateProps = {
   content: any;
+  showServiceCards?: boolean;
 };
 
-export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
+export default function MainMenuTemplate({ content, showServiceCards }: MainMenuTemplateProps) {
   const c = content ?? {};
 
   const headerTitle = c?.hero?.title ?? c?.title ?? c?.name ?? '';
@@ -65,9 +66,11 @@ export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-6">
           {/* Four-blocks (homepage cards) rendered inside white content wrapper above core text */}
-          <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
-            <FourBlocks blocks={home.blocks} />
-          </section>
+          {showServiceCards !== false && (
+            <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
+              <FourBlocks blocks={c?.blocks ?? home.blocks} />
+            </section>
+          )}
 
           {/* Core / intro block */}
           {(c?.core?.html || c?.core?.content || c?.core?.text) && (
