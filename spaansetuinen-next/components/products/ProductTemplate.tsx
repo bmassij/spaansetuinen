@@ -161,7 +161,7 @@ function renderCTAContent(cta: any) {
   return null;
 }
 
-export default function ProductTemplate(props: ProductProps) {
+export default function ProductTemplate(props: ProductProps & { topContent?: React.ReactNode }) {
   const {
     title,
     short_description,
@@ -173,7 +173,7 @@ export default function ProductTemplate(props: ProductProps) {
     plaatsing,
     price,
     cta,
-  } = props;
+  } = props as ProductProps & { topContent?: React.ReactNode };
 
   // helper: choose main visual
   const mainImage = (gallery && gallery.length > 0) ? gallery[0] : heroImage;
@@ -243,6 +243,12 @@ const hasVerzorging = hasContent(verzorging);
             <li className="font-medium">{title || ''}</li>
           </ol>
         </nav>
+
+        {props.topContent && (
+          <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
+            {props.topContent}
+          </section>
+        )}
 
         {/* 1) Intro (full width) */}
         {(short_description || (props as any).intro) && (

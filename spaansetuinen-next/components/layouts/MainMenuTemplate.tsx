@@ -1,5 +1,7 @@
 import React from 'react';
 import ServiceCard from '@/components/cards/ServiceCard';
+import FourBlocks from '@/components/home/FourBlocks';
+import home from '@/content/home.json';
 
 type MainMenuTemplateProps = {
   content: any;
@@ -53,6 +55,11 @@ export default function MainMenuTemplate({ content }: MainMenuTemplateProps) {
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-6">
+          {/* Four-blocks (homepage cards) rendered inside white content wrapper above core text */}
+          <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
+            <FourBlocks blocks={home.blocks} />
+          </section>
+
           {/* Core / intro block */}
           {(c?.core?.html || c?.core?.content || c?.core?.text) && (
             <section className="bg-white p-6 rounded-lg shadow-sm mb-6 prose max-w-none">

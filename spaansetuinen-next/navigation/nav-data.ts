@@ -92,7 +92,6 @@ export const NAV_DATA: NavNode[] = [
       { type: 'link', id: 'bloembakken-prijzen', label: 'Prijzen bloembakken', href: '/bloembakken/prijzen' },
       { type: 'link', id: 'bloembakken-beplanting', label: 'Bloembakken voor beplanting', href: '/bloembakken/beplanting' },
       { type: 'link', id: 'bloembakken-statafel', label: 'Douglas steigerhouten statafel', href: '/bloembakken/statafel' },
-      { type: 'link', id: 'bloembakken-op-maat', label: 'Bloembakken op maat', href: '/bloembakken-op-maat' },
     ],
   },
   {

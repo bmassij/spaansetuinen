@@ -1,19 +1,14 @@
 {
   "hero": {
-    "title": "Prijzen bloembakken",
+    "title": "",
     "subtitle": "",
     "image": ""
   },
   "core": {
-    "html": "<h3>Prijzen bloembakken</h3><p>Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn exclusief: mediterrane boom, mediterrane potgrond en boomschors. Meerprijs zwenkwielen op aanvraag.</p>"
+    "html": "Pagina Prijzen Bloembakken:\nOnderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek. De\nprijzen zijn exclusief: mediterrane boom, mediterrane potgrond en boomschors. Meerprijs\nzwenkwielen op aanvraag.\n\nPrijzentabel wordt hieronder getoond. (deze heb je al)"
   },
-  "short_description": "Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn exclusief: mediterrane boom, mediterrane potgrond en boomschors.",
-  "long_description": "Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn exclusief: mediterrane boom, mediterrane potgrond en boomschors. Meerprijs zwenkwielen op aanvraag.",
+  "short_description": "",
+  "long_description": "",
   "details": [],
-  "sections": [
-    {
-      "title": "Opmerking",
-      "content": "Er wordt een bestaande prijzentabel getoond (reeds aanwezig)."
-    }
-  ]
+  "sections": []
 }
