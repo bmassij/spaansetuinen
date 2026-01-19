@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "title": "Onze Service",
+    "subtitle": "Van advies tot levering, wij regelen alles",
+    "image": "/images/placeholder-bloembakken.jpg"
+  },
+  "core": {
+    "html": "<p>Welkom bij onze servicepagina. Hier vindt u informatie over de diensten die wij aanbieden, van persoonlijk advies tot levering en installatie. Onze aanpak is pragmatisch en klantgericht, zodat uw project soepel verloopt.</p>"
+  },
+  "sections": [
+    {
+      "title": "Advies op maat",
+      "text": "Wij bieden advies op maat voor elke klant, zodat u de beste keuze maakt voor uw situatie. Onze experts denken mee over plantenkeuze, locatie en onderhoud."
+    },
+    {
+      "title": "Professionele beplanting",
+      "text": "Onze planten worden professioneel geselecteerd en beplant. Wij zorgen voor correcte aanplanting en nazorg zodat uw beplanting direct goed kan groeien."
+    },
+    {
+      "title": "Levering en installatie",
+      "text": "Wij verzorgen levering en, indien gewenst, installatie op locatie. Met zorg en ervaring zorgen we dat alles op de juiste plek komt te staan."
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Persoonlijk advies",
+      "text": "Advies afgestemd op uw wensen en situatie."
+    },
+    {
+      "title": "Snelle levering",
+      "text": "Wij plannen snel en zorgvuldig, zodat u niet lang hoeft te wachten."
+    }
+  ]
+}

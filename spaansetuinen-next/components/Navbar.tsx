@@ -76,16 +76,21 @@ export default function Navbar() {
 
           {/* Logo (left) */}
           <div className="">
-            <div style={{position: 'absolute', left: 'clamp(12px, 3vw, 32px)', top: 'calc(100% - (clamp(72px, 12vw, 128px) / 2))', height: 'clamp(72px, 12vw, 128px)', zIndex: 20}}>
-              <Link href="/" style={{pointerEvents: 'none'}}>
-                <Image
-                  src="/logo.png"
-                  alt="Spaanse Tuin & Zo Logo"
-                  width={128}
-                  height={128}
-                  style={{height: '100%', width: 'auto', display: 'block'}}
-                  priority
-                />
+            {/* Use relative positioning and Image fill to ensure the original source is used without upscaling.
+                The wrapper is positioned as before; inner container is relative for next/image fill. */}
+            <div style={{position: 'absolute', left: 'clamp(12px, 3vw, 32px)', top: 'calc(100% - (clamp(72px, 12vw, 128px) / 2))', height: 'clamp(72px, 12vw, 128px)', zIndex: 20}} className="relative">
+              <Link href="/" className="block" aria-label="Home">
+                <div style={{position: 'relative', width: 'auto', height: '100%'}}>
+                  <Image
+                    src="/logo.png"
+                    alt="Spaanse Tuin & Zo Logo"
+                    fill
+                    sizes="(max-width: 640px) 72px, (max-width: 1024px) 96px, 128px"
+                    style={{objectFit: 'contain'}}
+                    priority
+                    unoptimized
+                  />
+                </div>
               </Link>
             </div>
           </div>
