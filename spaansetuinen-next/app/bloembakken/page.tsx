@@ -1,68 +1,58 @@
-import fs from 'fs/promises';
-import path from 'path';
-export const dynamic = 'force-dynamic';
+import MainMenuTemplate from '../../components/layouts/MainMenuTemplate';
+import content from '../../content/bloembakken.json';
 
-export default async function Page() {
-  const filePath = path.join(process.cwd(), 'content', 'bloembakken.json');
-  let content: any = {};
-  try {
-    const raw = await fs.readFile(filePath, 'utf8');
-    content = JSON.parse(raw);
-  } catch (err) {
-    content = {};
-  }
+export default function BloembakkenPage() {
+  const c = content as any;
 
   return (
-    <main className="max-w-5xl mx-auto px-4 py-12">
-      <header className="mb-8">
-        {content.title && (
-          <h1 className="text-3xl font-bold mb-2" dangerouslySetInnerHTML={{ __html: content.title }} />
-        )}
-        {content.subtitle && (
-          <p className="text-lg text-gray-700" dangerouslySetInnerHTML={{ __html: content.subtitle }} />
-        )}
-      </header>
+    <MainMenuTemplate
+      heroTitle={c?.hero?.title}
+      heroSubtitle={c?.hero?.subtitle ?? undefined}
+      heroImage={c?.hero?.image ?? undefined}
+      intro={undefined}
+      blocks={undefined}
+    >
+      {/* Intro / core content — rendered as a single prose card */}
+      {c?.core?.html && (
+        <section className="bg-white p-6 rounded-lg shadow-sm mb-6 prose max-w-none">
+          <div dangerouslySetInnerHTML={{ __html: c.core.html }} />
+        </section>
+      )}
 
-      {content.core?.html ? (
-        <article className="prose mb-8" dangerouslySetInnerHTML={{ __html: content.core.html }} />
-      ) : content.core?.content ? (
-        <article className="prose mb-8" dangerouslySetInnerHTML={{ __html: content.core.content }} />
-      ) : content.core?.text ? (
-        <article className="prose mb-8">{content.core.text}</article>
-      ) : null}
+      {/* Sections arranged in responsive grid of cards */}
+      {Array.isArray(c?.sections) && c.sections.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {c.sections.map((section: any, idx: number) => (
+            <article key={idx} className="bg-white p-6 rounded-lg shadow-sm">
+              {section?.title && <h2 className="text-xl font-semibold mb-3">{section.title}</h2>}
 
-      {Array.isArray(content.sections) &&
-        content.sections.map((section: any, idx: number) => (
-          <section key={idx} className="mb-8">
-            {section.title && (
-              <h2 className="text-2xl font-semibold mb-2" dangerouslySetInnerHTML={{ __html: section.title }} />
-            )}
+              {section?.html ? (
+                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: section.html }} />
+              ) : section?.content ? (
+                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: section.content }} />
+              ) : section?.text ? (
+                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: section.text }} />
+              ) : null}
+            </article>
+          ))}
+        </div>
+      )}
 
-            {section.html ? (
-              <div className="prose" dangerouslySetInnerHTML={{ __html: section.html }} />
-            ) : section.content ? (
-              <div className="prose" dangerouslySetInnerHTML={{ __html: section.content }} />
-            ) : section.text ? (
-              <div className="prose">{section.text}</div>
-            ) : null}
-          </section>
-        ))}
-
-      {content.benefits ? (
-        <aside className="mt-12">
-          {content.benefits.html ? (
-            <div className="prose" dangerouslySetInnerHTML={{ __html: content.benefits.html }} />
-          ) : Array.isArray(content.benefits) ? (
-            <ul className="list-disc ml-6">
-              {content.benefits.map((b: any, i: number) => (
-                <li key={i} dangerouslySetInnerHTML={{ __html: b }} />
-              ))}
-            </ul>
-          ) : (
-            <div className="prose">{content.benefits}</div>
-          )}
-        </aside>
-      ) : null}
-    </main>
+      {/* Benefits shown as compact cards in a grid */}
+      {Array.isArray(c?.benefits) && c.benefits.length > 0 && (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {c.benefits.map((b: any, i: number) => (
+            <div key={i} className="bg-white p-6 rounded-lg shadow-sm">
+              {b?.title && <h3 className="text-lg font-medium mb-2">{b.title}</h3>}
+              {b?.html ? (
+                <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: b.html }} />
+              ) : b?.text ? (
+                <div className="text-gray-700" dangerouslySetInnerHTML={{ __html: b.text }} />
+              ) : null}
+            </div>
+          ))}
+        </div>
+      )}
+    </MainMenuTemplate>
   );
 }

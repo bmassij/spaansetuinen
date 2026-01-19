@@ -1,61 +1,65 @@
-import FourBlocks from '../home/FourBlocks'
+import React from 'react';
 
 type MainMenuTemplateProps = {
-  heroTitle: string
-  heroSubtitle?: string
-  intro?: string
-  blocks?: any[]
-  children?: React.ReactNode
-}
+  heroTitle?: string;
+  heroSubtitle?: string;
+  intro?: any;
+  blocks?: any;
+  children?: React.ReactNode;
+  heroImage?: string;
+};
 
-export default function MainMenuTemplate({ heroTitle, heroSubtitle, intro, blocks, children }: MainMenuTemplateProps) {
+export default function MainMenuTemplate({
+  heroTitle,
+  heroSubtitle,
+  intro,
+  blocks,
+  children,
+  heroImage,
+}: MainMenuTemplateProps) {
   return (
-    <>
-      {/* HERO - render only when heroTitle is provided */}
-      {heroTitle ? (
-        <header className="relative bg-gray-900 text-white">
-          <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "url('/assets/impressie/other1.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50" />
+    <div className="min-h-screen">
+      {/* Header copied from ProductTemplate to ensure identical appearance */}
+      <header className="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: heroImage ? `url('${heroImage}')` : undefined,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-700/30 to-emerald-900/30" />
 
-          <div className="relative z-10 min-h-[60vh] flex items-center py-16">
-            <div className="container max-w-7xl mx-auto px-6 lg:px-8">
-              <div className="max-w-3xl">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">{heroTitle}</h1>
-                {heroSubtitle ? <p className="text-lg sm:text-xl text-gray-100 leading-relaxed mb-3">{heroSubtitle}</p> : null}
-                {intro ? <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">{intro}</p> : null}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-8 items-center py-8">
+            <div>
+              {heroTitle && (
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{heroTitle}</h1>
+              )}
+              {heroSubtitle && (
+                <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: String(heroSubtitle) }} />
+              )}
+              {intro && (
+                <div className="mt-4 text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: String(intro) }} />
+              )}
+            </div>
 
-                <div className="flex flex-wrap gap-4">
-                  <a className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow transition">Bekijk ons assortiment</a>
-                  <a className="inline-flex items-center px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border-2 border-white/30 transition">Neem contact op</a>
+            <div className="hidden md:flex justify-center items-center">
+              <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
+                <div className="text-center p-8">
+                  <div className="text-6xl mb-4">🌳</div>
+                  <p className="text-white/80 text-sm">Afbeelding volgt</p>
                 </div>
               </div>
             </div>
           </div>
-        </header>
-      ) : null}
-
-      {/* BLOCKS - render only when blocks provided */}
-      {blocks && blocks.length > 0 ? (
-        <section className="bg-gradient-to-b from-white to-gray-50 py-16">
-          <div className="container max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="max-w-3xl mx-auto text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Highlights</h2>
-              {intro ? <p className="text-lg text-gray-600">{intro}</p> : null}
-            </div>
-
-            <FourBlocks blocks={blocks} />
-          </div>
-        </section>
-      ) : null}
-
-      {/* GENERAL CONTENT SLOT - children always rendered */}
-      <main className="py-12">
-        <div className="container max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="prose max-w-none">
-            {children}
-          </div>
         </div>
+      </header>
+
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid gap-6">{children}</div>
       </main>
-    </>
-  )
+    </div>
+  );
 }
