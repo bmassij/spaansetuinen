@@ -107,7 +107,7 @@ export default function Navbar() {
                     <div>
                       <h4 className="text-sm font-semibold text-gray-900 mb-3 uppercase tracking-wide">Druivenranken</h4>
                       <ul className="space-y-2 text-sm">
-                        <li><Link href="/druivenranken" className="block text-gray-700 hover:text-emerald-600 transition-colors">Vitis Vinifera</Link></li>
+                        <li><Link href="/bomen/vitis-vinifera" className="block text-gray-700 hover:text-emerald-600 transition-colors">Vitis Vinifera</Link></li>
                       </ul>
                     </div>
 

@@ -2,7 +2,7 @@ import ProductTemplate from './products/ProductTemplate';
 
 export default function ProductLayout({ page }: { page: any }) {
   const mappedProps = {
-    title: page?.title ?? page?.name,
+    title: page?.title ?? page?.name ?? '',
     short_description: page?.short_description ?? page?.intro,
     long_description: page?.long_description ?? page?.longDescription,
     heroImage: page?.heroImage ?? page?.image,

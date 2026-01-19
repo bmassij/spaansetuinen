@@ -78,7 +78,7 @@ export const NAV_DATA: NavNode[] = [
       {
         title: 'Druivenranken',
         items: [
-          { type: 'link', id: 'vitis-vinifera', label: 'Vitis Vinifera', href: '/druivenranken' },
+          { type: 'link', id: 'vitis-vinifera', label: 'Vitis Vinifera', href: '/bomen/vitis-vinifera' },
         ],
       },
     ],
