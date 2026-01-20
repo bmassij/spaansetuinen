@@ -1,9 +1,12 @@
 {
-  "title": "Ficus Carica (voorbeeld)",
+  "title": "Ficus Carica",
   "slug": "ficus-carica",
-  "short_description": "Voorbeeldtekst",
-  "long_description": "Dit is placeholder content voor de ficus carica. Geen echte teksten.",
+  "short_description": "De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat.",
+  "long_description": "De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat. Met deze boom haalt u niet alleen een mediterrane uitstraling in uw tuin, maar geniet u ook van heerlijke, verse vijgen uit eigen tuin!\n\nKenmerken\nDe Ficus Carica is verkrijgbaar als struik en op stam. Deze vijgenboom is te herkennen aan zijn mooie, decoratieve groene bladeren en grijze, gladde stam. De Ficus Carica draagt één keer per jaar vruchten. Zodra de vijgen vanzelf loslaten van de boom, zijn ze rijp en kunt u ze eten.\n\nBelangrijkste eigenschappen:\n✓ Winterhard tot -15 °C\n✓ Grote, lichtgroene bladeren\n✓ Gladde, grijze stam\n✓ Bladverliezend\n✓ Breed vertakkende groeiwijze\n✓ Draagt vijgen in kleuren van groen tot paars/zwart\n\nBloei en verzorging\nSnoeien:\nDe vijgenboom verliest in het najaar zijn bladeren. Zodra de boom kaal is, kunt u de takken terug snoeien. Let op bij het snoeien van een bloedende tak: dit herkent u aan het witachtige vocht dat uit de tak stroomt. Dit sap kan huidirritatie veroorzaken, dus draag bij voorkeur handschoenen.\n\nWinterbescherming:\nDe Ficus Carica is winterhard tot -15 °C en heeft verder geen extra winterbescherming nodig.\n\nHydrateren:\nVijgenboom in een bloembak of pot:\nDe vijgenboom groeit het beste in grond die licht vochtig blijft. Zorg ervoor dat de bodem nooit volledig uitdroogt, maar voorkom ook dat de wortels in water blijven staan.\n\nVijgenbomen in de volle grond:\nDe wortels van de Ficus Carica in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de vijg extra water geven om uitdroging te voorkomen. Houdt de bodem altijd licht vochtig. Let op! De Ficus Carica houdt niet van natte voeten. Wordt het blad geel, dan heeft de boom te weinig of juist te veel water gekregen. In het najaar is dit vaak normaal, omdat de boom zijn bladeren natuurlijk afwerpt voor de winter.\n\nVoeding:\nVoed de Ficus Carica twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid.",
   "heroImage": "/assets/ficus-placeholder.jpg",
-  "gallery": ["/assets/ficus-placeholder-1.jpg", "/assets/ficus-placeholder-2.jpg"],
+  "gallery": [
+    "/assets/ficus-placeholder-1.jpg",
+    "/assets/ficus-placeholder-2.jpg"
+  ],
   "price": "Op aanvraag"
 }

@@ -160,7 +160,7 @@ export default function UnifiedPageLayout({ page }: UnifiedProps) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title || ''}</h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title}</h1>
               <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{short_description || ''}</p>
             </div>
 
@@ -177,35 +177,7 @@ export default function UnifiedPageLayout({ page }: UnifiedProps) {
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Intro (kept identical to ProductTemplate) */}
-        {(short_description || (page as any).intro) && (
-          <>
-            <section className="mb-6">
-              <div className="prose prose-lg max-w-none text-gray-700">
-                <p>{short_description || (page as any).intro}</p>
-              </div>
-            </section>
-
-            <section className="mb-12">
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <div className="bg-emerald-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">Standplaats</h4>
-                  <p className="text-sm text-gray-700">{getSummaryText(plaatsing)}</p>
-                </div>
-
-                <div className="bg-emerald-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">Kenmerken</h4>
-                  <p className="text-sm text-gray-700">{(kenmerken && kenmerken.length > 0) ? kenmerken.slice(0, 3).join(', ') : ''}</p>
-                </div>
-
-                <div className="bg-emerald-50 rounded-lg p-4">
-                  <h4 className="font-semibold text-gray-900 mb-1">Verzorging</h4>
-                  <p className="text-sm text-gray-700">{getSummaryText(verzorging)}</p>
-                </div>
-              </div>
-            </section>
-          </>
-        )}
+        {/* Body intro under breadcrumbs disabled per task */}
 
         {/* Two-column main section: left=content, right=visual (reused structure) */}
         <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">

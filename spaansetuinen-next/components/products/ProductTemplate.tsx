@@ -210,7 +210,7 @@ const hasVerzorging = hasContent(verzorging);
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title || ''}</h1>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{firstLine(title)}</h1>
               {short_description && (
                 <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: short_description }} />
               )}
@@ -250,51 +250,7 @@ const hasVerzorging = hasContent(verzorging);
           </section>
         )}
 
-        {/* 1) Intro (full width) */}
-        {(short_description || (props as any).intro) && (
-          <>
-            <section className="mb-6">
-              <div className="prose prose-lg max-w-none text-gray-700">
-                {short_description ? (
-                  <div dangerouslySetInnerHTML={{ __html: short_description }} />
-                ) : (
-                  <div dangerouslySetInnerHTML={{ __html: (props as any).intro }} />
-                )}
-              </div>
-            </section>
-
-            {/* Info-box grid (compact summaries) */}
-            {showInfoGrid && (
-              <section className="mb-12">
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  {/* Standplaats */}
-                  {hasPlaatsing && (
-                    <div className="bg-emerald-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 mb-1">Standplaats</h4>
-                      <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: getSummaryText(plaatsing) }} />
-                    </div>
-                  )}
-
-                  {/* Kenmerken */}
-                  {hasKenmerken && (
-                    <div className="bg-emerald-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 mb-1">Kenmerken</h4>
-                      <div className="text-sm text-gray-700">{kenmerken.slice(0, 3).join(', ')}</div>
-                    </div>
-                  )}
-
-                  {/* Verzorging (only as summary when not rendered as full section) */}
-                  {hasVerzorging && !showFullVerzorging && (
-                    <div className="bg-emerald-50 rounded-lg p-4">
-                      <h4 className="font-semibold text-gray-900 mb-1">Verzorging</h4>
-                      <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: getSummaryText(verzorging) }} />
-                    </div>
-                  )}
-                </div>
-              </section>
-            )}
-          </>
-        )}
+        {/* Body intro under breadcrumbs disabled per task */}
 
         {/* 2) Two-column section: left=content, right=visual */}
         <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
