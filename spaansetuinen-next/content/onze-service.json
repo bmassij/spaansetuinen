@@ -1,11 +1,11 @@
 {
   "hero": {
-    "title": "Onze Service",
+    "title": "Onze service",
     "subtitle": "Van advies tot levering, wij regelen alles",
     "image": "/images/placeholder-bloembakken.jpg"
   },
   "core": {
-    "html": "<p>Welkom bij onze servicepagina. Hier vindt u informatie over de diensten die wij aanbieden, van persoonlijk advies tot levering en installatie. Onze aanpak is pragmatisch en klantgericht, zodat uw project soepel verloopt.</p>"
+    "html": "<p>Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken,\ninclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen\nde rest.</p>\n\n<p>Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen\nuit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich\nnergens druk om te maken en bent u verzekerd van een vakkundige aanpak.\nOf het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het\nleveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt\ngeregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of\nterras.</p>"
   },
   "sections": [
     {
@@ -19,6 +19,36 @@
     {
       "title": "Levering en installatie",
       "text": "Wij verzorgen levering en, indien gewenst, installatie op locatie. Met zorg en ervaring zorgen we dat alles op de juiste plek komt te staan."
+    }
+  ],
+  "services": [
+    {
+      "title": "Bezorging",
+      "text": "Bezorging is goed."
+    },
+    {
+      "title": "Planten in de volle grond",
+      "text": "Planten in de volle grond. (tekst erbij prima)"
+    },
+    {
+      "title": "Op maat gemaakte bloembakken",
+      "text": "Op maat gemaakte bloembakken (Levering in op maat gemaakte bloembakken,\nvoorzien van noppenfolie en antiworteldoek)."
+    },
+    {
+      "title": "Persoonlijk advies",
+      "text": "Wij staan u graag te woord voor een persoonlijk advies."
+    },
+    {
+      "title": "Huisbezoek",
+      "text": "Huisbezoek is goed."
+    },
+    {
+      "title": "Snoeien",
+      "text": "Voor vakkundig onderhoudt en nazorg kunt u ook bij ons terecht."
+    },
+    {
+      "title": "Bezorgkosten",
+      "text": "Bezorgkosten is vanaf 30 euro! De rest van omschrijving klopt."
     }
   ],
   "benefits": [

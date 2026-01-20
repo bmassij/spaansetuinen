@@ -11,5 +11,23 @@
   "short_description": "",
   "long_description": "",
   "details": [],
-  "sections": []
+  "sections": [],
+  "benefits": [
+    {
+      "title": "Persoonlijk advies",
+      "text": "Advies afgestemd op uw wensen en situatie."
+    },
+    {
+      "title": "Snelle levering",
+      "text": "Wij plannen snel en zorgvuldig, zodat u niet lang hoeft te wachten."
+    },
+    {
+      "title": "Snoeien",
+      "text": "Voor vakkundig onderhoudt en nazorg kunt u ook bij ons terecht."
+    },
+    {
+      "title": "Bezorgkosten",
+      "text": "Bezorgkosten is vanaf 30 euro! De rest van omschrijving klopt."
+    }
+  ]
 }
