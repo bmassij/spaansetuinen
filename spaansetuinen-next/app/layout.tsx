@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '../components/Navbar'
 import HtmlFooter from '../components/HtmlFooter'
+import CookieBanner from '../components/CookieBanner'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <HtmlFooter />
++25 |         <CookieBanner />
       </body>
     </html>
   )
