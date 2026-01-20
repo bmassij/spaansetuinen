@@ -31,10 +31,13 @@ export interface MegaItem extends NavItemBase {
 
 export const NAV_DATA: NavNode[] = [
   {
-    type: 'link',
+    type: 'dropdown',
     id: 'home',
     label: 'Home',
     href: '/',
+    children: [
+      { type: 'link', id: 'over-ons', label: 'Over ons', href: '/#over-ons' },
+    ],
   },
   {
     type: 'mega',

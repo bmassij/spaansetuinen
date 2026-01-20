@@ -55,7 +55,7 @@ export default function HtmlFooter() {
             <nav aria-label="Footer navigatie">
               <ul className="space-y-2 text-gray-300 text-sm mb-6">
                 <li><a href="/" className="hover:text-emerald-400 transition">Welkom</a></li>
-                <li><a href="/over-ons" className="hover:text-emerald-400 transition">Over ons</a></li>
+                <li><a href="/#over-ons" className="hover:text-emerald-400 transition">Over ons</a></li>
                 <li><a href="/assortiment" className="hover:text-emerald-400 transition">Bloembakken</a></li>
                 <li><a href="/bezorgen" className="hover:text-emerald-400 transition">Bezorgen</a></li>
                 <li><a href="/verhuur" className="hover:text-emerald-400 transition">Verhuur</a></li>

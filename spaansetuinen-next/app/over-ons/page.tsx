@@ -4,7 +4,7 @@ import path from 'path'
 export default async function Page() {
   let sectionHtml = ''
   try {
-    const filePath = path.join(process.cwd(), 'spaansetuinen-next', 'content', 'over-ons.json')
+    const filePath = path.join(process.cwd(), 'content', 'over-ons.json')
     const raw = await fs.readFile(filePath, 'utf8')
     const obj = JSON.parse(raw)
     sectionHtml = obj.sectionHtml || ''
