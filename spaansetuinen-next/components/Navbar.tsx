@@ -69,26 +69,30 @@ export default function Navbar() {
         style={{ height: 'clamp(52px, 6svh, 64px)' }}
       >
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        {/* Main row: logo left, menu right */}
-        <div className="flex justify-between items-start">
+        {/* Flex header with three zones: logo | spacer | nav */}
+        <div className="flex items-center">
 
-          {/* Logo (left) */}
-          <div className="flex items-center h-full">
+          {/* Logo container (left) */}
+          <div className="flex items-center flex-shrink-0">
             <Link href="/" aria-label="Home">
               <Image
                 src="/logo.png"
                 alt="Spaanse Tuin & Zo"
-                width={140}
-                height={140}
+                width={800}
+                height={300}
                 priority
+                style={{ width: 'clamp(80px, 10vw, 220px)', height: 'auto' }}
               />
             </Link>
           </div>
 
-          {/* Menu (right) */}
-          <div className="flex items-start ml-auto z-30">
+          {/* Flexible spacer */}
+          <div className="flex-1" />
+
+          {/* Navigation container (right) */}
+          <div className="flex items-center flex-shrink-0 z-30">
             <ul className="hidden lg:flex space-x-1 items-center" role="menubar" aria-label="Hoofdmenu">
               {NAV_DATA.map((node: NavNode) => {
                 if (node.type === 'link') {
@@ -108,7 +112,7 @@ export default function Navbar() {
             </ul>
 
             {/* Mobile hamburger button */}
-            <div className="lg:hidden flex items-center">
+            <div className="lg:hidden flex items-center ml-4">
               <button id="mobile-toggle" type="button" aria-controls="mobile-menu" aria-expanded={mobileOpen ? 'true' : 'false'} className="p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-emerald-500" onClick={toggleMobile}>
                 <svg id="hamburger" className={mobileOpen ? 'h-6 w-6 hidden' : 'h-6 w-6 block'} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
