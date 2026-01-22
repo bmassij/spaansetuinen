@@ -155,10 +155,6 @@ export default function JubileumPage() {
               <strong className="font-semibold text-gray-900">Geldig tot:</strong> 31 december 2026
             </p>
             <p>
-              <strong className="font-semibold text-gray-900">Geldig op:</strong> Alle producten en diensten 
-              op onze locatie in Apeldoorn
-            </p>
-            <p>
               <strong className="font-semibold text-gray-900">Actievoorwaarden:</strong> Jubileumverrassingen 
               en extra aandacht zijn beschikbaar zolang de voorraad strekt. Niet geldig in combinatie met 
               andere lopende acties, tenzij anders aangegeven.
