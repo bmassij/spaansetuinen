@@ -1,62 +1,30 @@
 {
-  "title": "Prijzen Bloembakken",
-  "intro_text": "Bovenstaande bloembakken zijn beschikbaar in verschillende afmetingen.\nAlle prijzen zijn weergegeven exclusief en inclusief 21% BTW.",
-  "group1": {
-    "title": "Bloembakken incl. potgrond & boomschors",
-    "context_text": "Prijzen alleen geldig in combinatie met de aanschaf van een mediterrane boom bij Spaanse Tuin & Zo.\nDe boom wordt door ons zorgvuldig en professioneel geplant.",
-    "cards": [
-      {
-        "title": "60 × 60 × 80",
-        "description": "Prijs excl. 21% BTW: €241<br/>Prijs incl. 21% BTW: €292"
-      },
-      {
-        "title": "80 × 80 × 80",
-        "description": "Prijs excl. 21% BTW: €292,50<br/>Prijs incl. 21% BTW: €354"
-      },
-      {
-        "title": "80 × 120 × 80",
-        "description": "Prijs excl. 21% BTW: €380<br/>Prijs incl. 21% BTW: €460"
-      },
-      {
-        "title": "100 × 100 × 80",
-        "description": "Prijs excl. 21% BTW: €380<br/>Prijs incl. 21% BTW: €460"
-      },
-      {
-        "title": "120 × 120 × 80",
-        "description": "Prijs excl. 21% BTW: €405<br/>Prijs incl. 21% BTW: €490"
-      }
-    ]
-  },
-  "group2": {
-    "title": "Bloembakken zonder potgrond & boomschors",
-    "context_text": "Bovenstaande bloembakken zijn exclusief mediterrane boom, mediterrane potgrond en boomschors.",
-    "cards": [
-      {
-        "title": "60 × 60 × 80",
-        "description": "Prijs excl. 21% BTW: €229<br/>Prijs incl. 21% BTW: €277"
-      },
-      {
-        "title": "80 × 80 × 80",
-        "description": "Prijs excl. 21% BTW: €271<br/>Prijs incl. 21% BTW: €328"
-      },
-      {
-        "title": "80 × 120 × 80",
-        "description": "Prijs excl. 21% BTW: €355<br/>Prijs incl. 21% BTW: €430"
-      },
-      {
-        "title": "100 × 100 × 80",
-        "description": "Prijs excl. 21% BTW: €355<br/>Prijs incl. 21% BTW: €430"
-      },
-      {
-        "title": "120 × 120 × 80",
-        "description": "Prijs excl. 21% BTW: €384<br/>Prijs incl. 21% BTW: €465"
-      }
-    ]
-  },
-  "scheidingsbakken": {
-    "afmeting": "L200 × H80 × B20",
-    "prijs_excl": "€368",
-    "prijs_incl": "€445",
-    "text": "Afmeting: L200 × H80 × B20\nPrijs excl. BTW: €368\nPrijs incl. BTW: €445"
+  "slug": "bloembakken-prijzen",
+  "type": "bloembakken",
+  "title": "Prijzen bloembakken",
+
+  "description": "Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek.\nDe prijzen zijn exclusief mediterrane boom, mediterrane potgrond en boomschors.\nMeerprijs voor zwenkwielen is op aanvraag.",
+
+  "details": [
+    "Bloembakken verkrijgbaar in diverse afmetingen",
+    "Geïsoleerd met noppenfolie",
+    "Bekleed met antiworteldoek",
+    "Prijzen exclusief mediterrane boom",
+    "Prijzen exclusief mediterrane potgrond en boomschors",
+    "Meerprijs voor zwenkwielen op aanvraag",
+    "Prijsindicatie beschikbaar op locatie of via persoonlijk contact"
+  ],
+
+  "cta": {
+    "heading": "Prijslijst ontvangen?",
+    "body": "Wilt u de actuele prijzen en mogelijkheden voor bloembakken ontvangen? Neem contact met ons op voor persoonlijk advies en een duidelijke prijsopgave.",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
   }
 }
