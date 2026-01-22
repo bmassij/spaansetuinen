@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import HtmlFooter from '../components/HtmlFooter'
 import CookieBanner from '../components/CookieBanner'
 import WhatsAppButton from '../components/WhatsAppButton'
-import { anniversaryConfig, isAnniversaryActive } from '../config/anniversary'
+import { anniversaryConfig, isAnniversaryActive, ANNIVERSARY_TEST_MODE } from '../config/anniversary'
 import JubileumPopup from '../components/JubileumPopup'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -27,9 +27,9 @@ export default function RootLayout({
         <Navbar />
         {children}
         <HtmlFooter />
-        <CookieBanner />
+        <CookieBanner disablePersistence={ANNIVERSARY_TEST_MODE} />
         <WhatsAppButton />
-        {isAnniversaryActive() && anniversaryConfig.showPopup && <JubileumPopup />}
+        {isAnniversaryActive() && anniversaryConfig.showPopup && <JubileumPopup disablePersistence={ANNIVERSARY_TEST_MODE} />}
       </body>
     </html>
   )

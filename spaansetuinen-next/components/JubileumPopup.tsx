@@ -2,36 +2,46 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import { anniversaryConfig, isAnniversaryActive } from '@/config/anniversary';
 import JubileumDecor from './JubileumDecor';
 
 const STORAGE_KEY = 'jubileum-popup-dismissed';
 
-export default function JubileumPopup() {
+export default function JubileumPopup({ disablePersistence = false }: { disablePersistence?: boolean }) {
   const [isVisible, setIsVisible] = useState(false);
   const [shouldRender, setShouldRender] = useState(false);
 
   useEffect(() => {
-    // Check if anniversary is active and popup should be shown
-    if (!isAnniversaryActive() || !anniversaryConfig.showPopup) {
+    // In test mode (disablePersistence) always show for this page load only
+    if (disablePersistence) {
+      setShouldRender(true);
+      setTimeout(() => setIsVisible(true), 100);
       return;
     }
 
-    // Check if popup was already dismissed in this session
-    const wasDismissed = sessionStorage.getItem(STORAGE_KEY);
-    if (wasDismissed) {
-      return;
+    try {
+      const wasDismissed = typeof window !== 'undefined' && sessionStorage.getItem(STORAGE_KEY);
+      if (wasDismissed) {
+        return;
+      }
+    } catch (e) {
+      // ignore storage errors and show popup
     }
 
     // Show popup
     setShouldRender(true);
     // Small delay for fade-in effect
     setTimeout(() => setIsVisible(true), 100);
-  }, []);
+  }, [disablePersistence]);
 
   const handleDismiss = () => {
     setIsVisible(false);
-    sessionStorage.setItem(STORAGE_KEY, 'true');
+    if (!disablePersistence) {
+      try {
+        sessionStorage.setItem(STORAGE_KEY, 'true');
+      } catch (e) {
+        // ignore
+      }
+    }
     // Remove from DOM after fade-out
     setTimeout(() => setShouldRender(false), 300);
   };
@@ -51,8 +61,8 @@ export default function JubileumPopup() {
       aria-labelledby="jubileum-title"
     >
       {/* Backdrop - clickable to dismiss */}
-      <div 
-        className="absolute inset-0" 
+      <div
+        className="absolute inset-0"
         onClick={handleDismiss}
         aria-hidden="true"
       />
@@ -90,8 +100,8 @@ export default function JubileumPopup() {
 
           {/* Story text */}
           <p className="text-lg text-gray-700 leading-relaxed mb-6">
-            Al tien jaar lang brengen wij de warmte en sfeer van de Middellandse Zee naar Nederland. 
-            Wat begon als een droom is uitgegroeid tot een plek waar kwaliteit, vakmanschap en passie 
+            Al tien jaar lang brengen wij de warmte en sfeer van de Middellandse Zee naar Nederland.
+            Wat begon als een droom is uitgegroeid tot een plek waar kwaliteit, vakmanschap en passie
             samenkomen. Dat hebben we aan u te danken.
           </p>
 

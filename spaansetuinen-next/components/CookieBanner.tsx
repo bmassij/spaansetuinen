@@ -3,22 +3,29 @@ import React, { useEffect, useState } from "react";
 
 const CONSENT_KEY = "spaansetuinen_cookie_consent_v1";
 
-export default function CookieBanner(): JSX.Element | null {
+export default function CookieBanner({ disablePersistence = false }: { disablePersistence?: boolean }): JSX.Element | null {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    if (disablePersistence) {
+      setVisible(true);
+      return;
+    }
+
     try {
       const stored = localStorage.getItem(CONSENT_KEY);
       if (!stored) setVisible(true);
     } catch (e) {
       setVisible(true);
     }
-  }, []);
+  }, [disablePersistence]);
 
   if (!visible) return null;
 
   const onAccept = () => {
-    try { localStorage.setItem(CONSENT_KEY, "1"); } catch (e) { }
+    if (!disablePersistence) {
+      try { localStorage.setItem(CONSENT_KEY, "1"); } catch (e) { }
+    }
     setVisible(false);
   };
 

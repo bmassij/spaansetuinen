@@ -2,25 +2,33 @@
 
 import { useEffect, useState } from 'react';
 
-export default function AnniversaryPopup() {
+export default function AnniversaryPopup({ disablePersistence = false }: { disablePersistence?: boolean }) {
   const storageKey = 'spaansetuinen.jubileum.dismissed';
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+
+    if (disablePersistence) {
+      setVisible(true);
+      return;
+    }
+
     try {
       const dismissed = sessionStorage.getItem(storageKey);
       if (!dismissed) setVisible(true);
     } catch (e) {
       setVisible(true);
     }
-  }, []);
+  }, [disablePersistence]);
 
   function dismiss() {
-    try {
-      sessionStorage.setItem(storageKey, '1');
-    } catch (e) {
-      // ignore
+    if (!disablePersistence) {
+      try {
+        sessionStorage.setItem(storageKey, '1');
+      } catch (e) {
+        // ignore
+      }
     }
     setVisible(false);
   }

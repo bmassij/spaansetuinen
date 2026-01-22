@@ -1,8 +1,8 @@
 /**
  * Anniversary configuration for 10 jaar Spaanse Tuin & Zo
- * 
+ *
  * This config controls all anniversary-related features across the site.
- * When enabled is false or the current date exceeds endDate, 
+ * When enabled is false or the current date exceeds endDate,
  * NO anniversary features will render.
  */
 
@@ -37,3 +37,11 @@ export function isAnniversaryActive(): boolean {
   
   return today <= end;
 }
+
+/**
+ * Toggle test mode for anniversary-related banners/popups.
+ *
+ * When true: components must not persist dismissals (no cookies/localStorage/sessionStorage).
+ * Default false preserves existing live behavior.
+ */
+export const ANNIVERSARY_TEST_MODE = false;
