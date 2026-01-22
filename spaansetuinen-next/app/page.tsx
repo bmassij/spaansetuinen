@@ -1,7 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
 import FourBlocks from '../components/home/FourBlocks'
-import overOns from '@/content/over-ons.json';
 
 export const metadata = {
   title: 'Home',
@@ -20,12 +19,17 @@ export default async function Page() {
   const heroTitle = data.heroTitle || ''
   const heroSubtitle = data.heroSubtitle || ''
   const intro = data.intro || ''
+  const ctaAnchor = data.ctaAnchor || ''
+  const introAfterHero = data.introAfterHero || ''
   const blocks = Array.isArray(data.blocks) ? data.blocks : []
   const usp = Array.isArray(data.usp) ? data.usp : []
+  const processTitle = data.processTitle || ''
+  const processText = data.processText || ''
+  const whyUsTitle = data.whyUsTitle || ''
+  const whyUs = Array.isArray(data.whyUs) ? data.whyUs : []
+  const aboutTitle = data.aboutTitle || ''
   const aboutTeaser = data.aboutTeaser || ''
-
-  // Load the over-ons content (use same field as /over-ons page)
-  const overSectionHtml = overOns.sectionHtml || ''
+  const aboutStory = data.aboutStory || ''
   return (
     <>
 
@@ -74,9 +78,9 @@ export default async function Page() {
       <section id="highlights" className="bg-gradient-to-b from-white to-gray-50 py-20">
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Alles wat wij voor u regelen</h2>
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{ctaAnchor}</h2>
             <p className="text-lg text-gray-600">
-              {data.introAfterHero || ''}
+              {introAfterHero}
             </p>
           </div>
 
@@ -84,14 +88,9 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* TOPSERVICE SECTION */}
-      <section id="topservice" className="bg-white py-20 border-t border-gray-100">
+      {/* USP SECTION */}
+      <section id="usp" className="bg-white py-20 border-t border-gray-100">
         <div className="container max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">🌟 Topservice</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">Bij ons draait alles om kwaliteit, eerlijkheid en complete ontzorging. Als kleinschalig familiebedrijf hebben we een grote liefde voor mediterrane bomen én voor onze klanten. Daarom leveren wij méér dan alleen een boom:</p>
-          </div>
-
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {usp.map((item: string, index: number) => {
               const icons = ['✔', '💰', '🛠️', '🌿', '💬', '📋']
@@ -117,55 +116,49 @@ export default async function Page() {
         </div>
       </section>
 
-      {/* OVER ONS SECTION */}
-      <div dangerouslySetInnerHTML={{ __html: overSectionHtml }} />
-      {/* RECENSIES SECTION */}
-      <section id="recensies" className="bg-white py-20">
+      {/* ABOUT SECTION */}
+      <section id="over-ons" className="bg-gradient-to-b from-white to-gray-50 py-20">
         <div className="container max-w-6xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Wat onze klanten zeggen</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">Lees de ervaringen van onze tevreden klanten en deel uw eigen verhaal.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">★★★★★</div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4 italic">{"Fantastische service! De olijfboom die we kochten is prachtig en de bezorging was perfect georganiseerd. Lisette en Hans zijn echte professionals."}</p>
-              <div className="text-sm text-gray-600"><strong>Maria van der Berg</strong><br />Klant sinds 2023</div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">★★★★★</div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4 italic">{"Eindelijk een bedrijf dat doet wat het belooft! De palmbomen zijn van topkwaliteit en het advies was eerlijk en deskundig."}</p>
-              <div className="text-sm text-gray-600"><strong>Jan Peters</strong><br />Klant sinds 2022</div>
-            </div>
-
-            <div className="bg-gray-50 rounded-xl p-6 border border-gray-200">
-              <div className="flex items-center mb-4">
-                <div className="flex text-yellow-400">★★★★★</div>
-                <span className="ml-2 text-sm text-gray-600">5.0</span>
-              </div>
-              <p className="text-gray-700 mb-4 italic">{"De verhuur van bloembakken voor ons feest was een groot succes. Mooie kwaliteit en uitstekende service. Bedankt!"}</p>
-              <div className="text-sm text-gray-600"><strong>Sarah de Vries</strong><br />Klant sinds 2024</div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Deel uw ervaring</h3>
-            <p className="text-gray-600 mb-6">Heeft u ook een mooie ervaring met Spaanse Tuin & Zo? Deel deze met ons!</p>
-            <a href="#footer" className="inline-flex items-center px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-lg shadow-lg transition transform hover:scale-105">Neem contact op</a>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">{aboutTitle}</h2>
+            <p className="text-xl text-gray-600 mb-8 text-center italic">{aboutTeaser}</p>
+            {(
+              Array.isArray(aboutStory) ? aboutStory : aboutStory.split(/\n\s*\n/)
+            ).filter(Boolean).map((para: string, idx: number) => (
+              <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para}</p>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* PROCES SECTION */}
+      <section id="proces" className="bg-gradient-to-b from-white to-gray-50 py-20">
+        <div className="container max-w-6xl mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">{processTitle}</h2>
+            <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">{processText}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY US SECTION */}
+      <section id="whyus" className="bg-white py-20 border-t border-gray-100">
+        <div className="container max-w-6xl mx-auto px-6 lg:px-8">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-12 text-center">{whyUsTitle}</h2>
+          <ul className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            {whyUs.map((item: string, index: number) => (
+              <li key={index} className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl">
+                <div className="flex-shrink-0">
+                  <div className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-lg font-bold">✓</div>
+                </div>
+                <p className="text-lg text-gray-700">{item}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* FOOTER - use existing component */}
-    
     </>
   )
 }
