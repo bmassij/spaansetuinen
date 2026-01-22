@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Balloon shape -->
+  <ellipse cx="100" cy="90" rx="70" ry="85" fill="#10b981" opacity="0.95"/>
+  <path d="M100 175 Q95 185, 90 195 L95 200 L100 195 L105 200 L110 195 Q105 185, 100 175 Z" fill="#059669"/>
+  
+  <!-- White circle background for text -->
+  <circle cx="100" cy="90" r="55" fill="white"/>
+  
+  <!-- Border circle -->
+  <circle cx="100" cy="90" r="55" fill="none" stroke="#10b981" stroke-width="3"/>
+  
+  <!-- "10 jaar" text -->
+  <text x="100" y="80" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#059669" text-anchor="middle">10</text>
+  <text x="100" y="105" font-family="Arial, sans-serif" font-size="18" font-weight="600" fill="#10b981" text-anchor="middle">jaar</text>
+  
+  <!-- Highlight reflection on balloon -->
+  <ellipse cx="75" cy="65" rx="25" ry="30" fill="white" opacity="0.25"/>
+</svg>
