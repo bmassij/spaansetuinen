@@ -1,22 +1,30 @@
 {
-  "hero": {
-    "title": "Intro pagina Douglas steigerhouten bloembakken:",
-    "subtitle": "",
-    "image": ""
-  },
-  "core": {
-    "html": "Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw\nbedrijfspand? Wij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw\nwensen. Bij Spaanse Tuin & Zo vindt u prachtige, met de hand gemaakte bloembakken van duurzaam\nDouglas steigerhout.\n\nOnze bloembakken zijn verkrijgbaar met of zonder beplanting, geheel afgestemd op uw voorkeur.\n\nKiest u voor een bloembak met beplanting en een bij ons gekochte boom? Dan vullen wij de bak met\nspeciale mediterrane potgrond, inclusief basisbemesting voor minimaal 6 tot 9 weken. De afwerking\ngebeurt met Franse boomschors van hoge kwaliteit, zodat het geheel er direct perfect uitziet. Zo is\nuw bloembak klaar om te shinen!"
-  },
-  "short_description": "",
-  "long_description": "",
+  "slug": "douglas-steigerhouten-bloembakken",
+  "type": "bloembakken",
+  "title": "Douglas steigerhouten bloembakken",
+
+  "description": "Wilt u uw terras of tuin mooi aankleden, gewoon thuis, bij de ingang van uw winkel, of bij uw bedrijfspand? Wij maken elke bloembak speciaal voor u op maat en beplanten deze volledig naar uw wensen. Bij Spaanse Tuin & Zo vindt u prachtige, met de hand gemaakte bloembakken van duurzaam Douglas steigerhout.\n\nOnze bloembakken zijn verkrijgbaar met of zonder beplanting, geheel afgestemd op uw voorkeur.\n\nKiest u voor een bloembak met beplanting en een bij ons gekochte boom? Dan vullen wij de bak met speciale mediterrane potgrond, inclusief basisbemesting voor minimaal 6 tot 9 weken. De afwerking gebeurt met Franse boomschors van hoge kwaliteit, zodat het geheel er direct perfect uitziet. Zo is uw bloembak klaar om te shinen!",
+
   "details": [
-    "✓ Hout hoeft niet te worden behandeld",
-    "✓ Plankdikte: 32/200 mm",
-    "✓ Op maat gemaakt",
-    "✓ Voorzien van isolatie tegen vorst",
-    "✓ Voorzien van antiworteldoek",
-    "✓ Optioneel: zwenkbare wielen",
-    "✓ Optioneel: beplanting"
+    "Hout hoeft niet te worden behandeld",
+    "Plankdikte: 32/200 mm",
+    "Op maat gemaakt",
+    "Voorzien van isolatie tegen vorst",
+    "Voorzien van antiworteldoek",
+    "Optioneel: zwenkbare wielen",
+    "Optioneel: beplanting"
   ],
-  "sections": []
+
+  "cta": {
+    "heading": "Interesse?",
+    "body": "Wilt u weten welke bloembak het beste past bij uw tuin, terras of bedrijfspand? Neem contact met ons op voor mogelijkheden, prijzen en persoonlijk advies. Wij denken graag met u mee!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
+  }
 }

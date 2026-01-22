@@ -1,23 +1,76 @@
 {
+  "slug": "trachycarpus-fortunei",
+  "type": "tree",
   "title": "Trachycarpus Fortunei",
-  "intro": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom, door ons persoonlijk geselecteerd en rechtstreeks geïmporteerd, geniet u het hele jaar door van een blijvend zomers gevoel. Een sterke palmboom, winterhard tot -18 °C en perfect geschikt voor het Nederlandse klimaat. Geef uw tuin met deze boom een echte tropische uitstraling.",
-  "kenmerken": [
-    "Winterhard tot -18 °C",
-    "Waaiervormig blad tot 1,5 meter breed",
-    "Kenmerkende harige stam",
-    "Groei tot 10 cm per jaar",
-    "Maximale hoogte: 9 meter"
-  ],
+
+  "intro": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom, door ons persoonlijk geselecteerd en rechtstreeks geïmporteerd, geniet u het hele jaar door van een blijvend zomers gevoel.\n\nEen sterke palmboom, winterhard tot -18 °C en perfect geschikt voor het Nederlandse klimaat. Geef uw tuin met deze boom een echte tropische uitstraling.",
+
+  "kenmerken": {
+    "heading": "BELANGRIJKE EIGENSCHAPPEN",
+    "list": [
+      "Winterhard tot -18 °C",
+      "Waaiervormig blad tot 1,5 meter breed",
+      "Kenmerkende harige stam",
+      "Groei tot 10 cm per jaar",
+      "Maximale hoogte: 9 meter"
+    ]
+  },
+
   "verzorging": {
-    "snoeien": "In het voorjaar kunt u de onderste, verdorde of verkleurde bladeren voorzichtig wegsnoeien. Snijd het blad tot circa 5 cm van de stam af; zo behoudt u een gezonde uitstraling en voorkomt u beschadiging.",
-    "winter": "De Trachycarpus fortunei is zeer winterhard tot ongeveer -18 °C dankzij de beschermende vezellaag rond de stam. Bij veel sneeuw of ijs is het verstandig de sneeuw voorzichtig van de bladeren te verwijderen zodat zij niet afbreken.",
-    "water": "Palmen in een bloembak of pot: Bij temperaturen tussen 10 en 20 °C: één keer per week water geven. Bij temperaturen tussen 20 en 25 °C: twee keer per week water geven. Bij temperaturen boven 25 °C: drie keer per week water geven. Palmen in de volle grond: De wortels in de volle grond voorzien de palm grotendeels van water. Bij langdurige hitte (boven 20 °C) is het raadzaam wekelijks extra water te geven om uitdroging te voorkomen.",
-    "voeding": "Voed de palm twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid. Ga voor gedetailleerde voedingstips naar onderstaande link: ……(hier linkje)."
+    "heading": "VERZORGING",
+    "sections": [
+      {
+        "title": "Snoeien",
+        "content": "In het voorjaar kunt u de onderste bladeren die verdord of verkleurd zijn, zorgvuldig wegsnoeien. Snijd het blad tot ongeveer 5 cm van de stam af om de boom gezond te houden."
+      },
+      {
+        "title": "Winterbescherming",
+        "content": "De Trachycarpus Fortunei is één van de sterkste onder de palmen en dankzij zijn harige stam winterhard tot wel -18 °C. Bij veel sneeuw is het verstandig de sneeuw van de bladeren te verwijderen, zodat de bladeren niet afbreken en de palm zijn tropische uitstraling behoudt."
+      },
+      {
+        "title": "Hydrateren – palmen in bloembak of pot",
+        "content": "Bij temperaturen tussen 10 en 20 °C: wekelijks water geven.\nBij temperaturen tussen 20 en 25 °C: twee keer per week water geven.\nBij temperaturen boven 25 °C: drie keer per week water geven."
+      },
+      {
+        "title": "Hydrateren – palmen in de volle grond",
+        "content": "De wortels van palmen in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de palm wekelijks extra water geven om uitdroging te voorkomen."
+      },
+      {
+        "title": "Voeding",
+        "content": "Voed de palm twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid."
+      }
+    ]
   },
+
   "plaatsing": {
-    "volleGrond": "De palm komt het beste tot zijn recht in de volle grond, waar de wortels zich optimaal kunnen ontwikkelen. Zo kan de boom jaarlijks circa 10 cm groeien.",
-    "pot": "Wilt u de palm in een bloembak of pot plaatsen? Ook dat is mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot vervolgens met noppenfolie om de wortels optimaal te isoleren tegen kou. Houdt hierbij de bodem vrij van noppenfolie."
+    "heading": "PLAATSING",
+    "sections": [
+      {
+        "title": "In de volle grond",
+        "content": "De palm groeit het beste in de volle grond, waar de wortels zich optimaal kunnen ontwikkelen. Zo kan de boom tot wel 10 cm per jaar groeien."
+      },
+      {
+        "title": "In een bloembak of pot",
+        "content": "Wilt u de palm in een bloembak of pot plaatsen? Ook dat is mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot vervolgens met noppenfolie om de wortels optimaal te isoleren tegen kou, zonder de bodem af te sluiten."
+      }
+    ]
   },
-  "locatie": "De Trachycarpus Fortunei groeit het beste op een zonnige, zuidelijke plek maar verdraagt ook halfschaduw.",
-  "cta": "Interesse in een Trachycarpus Fortunei? Vanaf €150,- voor een palm van 150–200 cm hoogte (indicatief; beschikbaarheid en prijs zijn afhankelijk van maat en voorraad). Wilt u weten welke palm het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid en persoonlijk advies."
+
+  "locatie": {
+    "heading": "LOCATIE",
+    "content": "De palm groeit het beste op een zonnige, zuidelijke plek, maar kan ook prima overleven in halfschaduw."
+  },
+
+  "cta": {
+    "heading": "",
+    "intro": "Wilt u weten welke palm het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale palmboom te vinden!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
+  }
 }

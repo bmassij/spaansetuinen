@@ -1,27 +1,75 @@
 {
   "slug": "yucca-rostrata",
+  "type": "tree",
   "title": "Yucca Rostrata",
-  "short_description": "Breng een vleugje tropen in uw tuin met deze zorgvuldig geselecteerde palmboom, rechtstreeks geïmporteerd uit de Costa Blanca. Een zeer sterke palmboom van oorsprong uit Mexico, die bestand is tegen kou en winterhard tot -21 °C.",
-  "long_description": "Deze Yucca Rostrata bieden wij aan in verschillende stamhoogtes. Een van de kenmerkende eigenschappen is de rechte witte stam met een bol van puntige bladeren. De palm groeit het beste op een zonnige, zuidelijke plek, maar kan ook goed overleven in halfschaduw. In de zomer verschijnt er een prachtige witte bloem op een hoge bloemstengel, wat de plant extra sierwaarde geeft.",
-  "heroImage": null,
-  "gallery": [],
-  "kenmerken": [
-    "Winterhard tot -21 °C",
-    "Grijs-groene bladeren met scherpe punten",
-    "Kenmerkende rechte, witte stam",
-    "Langzame groeier"
-  ],
+
+  "intro": "Breng een vleugje tropen in uw tuin met deze zorgvuldig geselecteerde palmboom, rechtstreeks geïmporteerd uit de Costa Blanca. Een zeer sterke palmboom van oorsprong uit Mexico, die bestand is tegen kou en winterhard tot -21 °C.",
+
+  "kenmerken": {
+    "heading": "BELANGRIJKE EIGENSCHAPPEN",
+    "list": [
+      "Winterhard tot -21 °C",
+      "Grijs-groene bladeren met scherpe punten",
+      "Kenmerkende rechte, witte stam",
+      "Langzame groeier"
+    ]
+  },
+
   "verzorging": {
-    "snoeien": "In het voorjaar kunnen de onderste, verkleurde of hangende bladeren worden weggesnoeid. Snijd tot circa 5 cm van de stam.",
-    "winter": "De Yucca Rostrata behoort tot de sterkste palmen en is winterhard tot -21 °C.",
-    "water": "Bloembak of pot: Geef pas water wanneer de grond volledig is opgedroogd. Volle grond: Bij temperaturen boven 20 °C wekelijks extra water geven om uitdroging te voorkomen.",
-    "voeding": "Twee keer per jaar voeden met mediterrane plantenvoeding. (links leeg laten of placeholder)"
+    "heading": "VERZORGING",
+    "sections": [
+      {
+        "title": "Snoeien",
+        "content": "In het voorjaar kunt u de onderste bladeren die gaan hangen of verkleurd zijn, zorgvuldig wegsnoeien. Snijd het blad tot ongeveer 5 cm van de stam af om de boom gezond te houden."
+      },
+      {
+        "title": "Winterbescherming",
+        "content": "De Yucca Rostrata behoort tot één van de sterkste onder de palmen en is winterhard tot wel -21 °C."
+      },
+      {
+        "title": "Hydrateren – palmen in bloembak of pot",
+        "content": "De Yucca Rostrata heeft van nature weinig water nodig. Geef pas water wanneer de grond in de bloembak volledig is opgedroogd."
+      },
+      {
+        "title": "Hydrateren – palmen in de volle grond",
+        "content": "De wortels van palmen in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de palm wekelijks extra water geven om uitdroging te voorkomen."
+      },
+      {
+        "title": "Voeding",
+        "content": "Voed de Yucca Rostrata twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid."
+      }
+    ]
   },
+
   "plaatsing": {
-    "volleGrond": "Ideaal voor optimale wortelontwikkeling.",
-    "pot": "Pot ca. tweederde groter dan de verkooppot. Drainagegaten, hydrokorrels op de bodem en noppenfolie aan de zijkanten (zonder de bodem af te sluiten).",
-    "locatie": "Zonnige, zuidelijke plek, halfschaduw mogelijk."
+    "heading": "PLAATSING",
+    "sections": [
+      {
+        "title": "In de volle grond",
+        "content": "De palm groeit het beste in de volle grond, waar de wortels zich optimaal kunnen ontwikkelen."
+      },
+      {
+        "title": "In een bloembak of pot",
+        "content": "Wilt u de Yucca Rostrata in een bloembak of pot plaatsen? Ook dat is bij deze palmsoort heel goed mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot met noppenfolie om de wortels optimaal te isoleren tegen kou, zonder de bodem af te sluiten."
+      }
+    ]
   },
-  "price": null,
-  "cta": "Wilt u weten welke palm het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken graag met u mee."
+
+  "locatie": {
+    "heading": "LOCATIE",
+    "content": "De palm groeit het beste op een zonnige, zuidelijke plek, maar kan ook prima overleven in halfschaduw."
+  },
+
+  "cta": {
+    "heading": "",
+    "intro": "Wilt u weten welke palm het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale palmboom te vinden!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
+  }
 }

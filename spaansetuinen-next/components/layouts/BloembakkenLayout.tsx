@@ -24,7 +24,7 @@ export default function BloembakkenLayout({ content }: Props) {
   return (
     <>
       {/* MainMenuTemplate used only as shell (nav + footer); it will render the hero using content.hero and the homepage FourBlocks */}
-      <MainMenuTemplate content={shellContent} />
+      <MainMenuTemplate content={shellContent} showServiceCards={false} />
 
       {/* Main content area: core.html EXACT één keer and details; sections are intentionally ignored */}
       {content?.core?.html && (

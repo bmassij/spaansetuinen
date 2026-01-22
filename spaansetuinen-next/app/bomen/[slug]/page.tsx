@@ -46,5 +46,5 @@ export default async function Page({ params }: { params: { slug: string } }) {
     );
   }
 
-  return <ProductLayout page={pageData} />;
+  return <ProductLayout page={pageData} isTreePage={true} />;
 }

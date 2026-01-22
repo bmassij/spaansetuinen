@@ -1,27 +1,77 @@
 {
   "slug": "ficus-carica",
-  "filename": "ficus-carica.html",
+  "type": "tree",
   "title": "Ficus Carica",
-  "intro": "De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat. Met deze boom haalt u niet alleen een mediterrane uitstraling in uw tuin, maar geniet u ook van heerlijke, verse vijgen uit eigen tuin.",
-  "long_description": "De Ficus Carica is verkrijgbaar als struik en op stam. Deze vijgenboom is te herkennen aan zijn decoratieve groene bladeren en gladde, grijze stam.\nDe boom draagt één keer per jaar vruchten. Zodra de vijgen vanzelf loslaten van de boom, zijn ze rijp en klaar om gegeten te worden.",
-  "kenmerken": [
-    "Winterhard tot -15 °C",
-    "Grote, lichtgroene bladeren",
-    "Gladde, grijze stam",
-    "Bladverliezend",
-    "Breed vertakkende groeiwijze",
-    "Draagt vijgen van groen tot paars/zwart"
-  ],
+
+  "intro": "De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat.\n\nMet deze boom haalt u niet alleen een mediterrane uitstraling in uw tuin, maar geniet u ook van heerlijke, verse vijgen uit eigen tuin!",
+
+  "kenmerken": {
+    "heading": "BELANGRIJKE EIGENSCHAPPEN",
+    "list": [
+      "Winterhard tot -15 °C",
+      "Grote, lichtgroene bladeren",
+      "Gladde, grijze stam",
+      "Bladverliezend",
+      "Breed vertakkende groeiwijze",
+      "Draagt vijgen in kleuren van groen tot paars/zwart"
+    ]
+  },
+
   "verzorging": {
-    "snoeien": "In het najaar verliest de boom zijn bladeren. Zodra de boom kaal is, kunt u de takken terugsnoeien.\nLet op bij bloedende takken: het witachtige sap kan huidirritatie veroorzaken. Draag bij voorkeur handschoenen.",
-    "winter": "De Ficus Carica is winterhard tot -15 °C en heeft geen extra winterbescherming nodig.",
-    "water": "Hydrateren – pot/bloembak:\nZorg dat de grond licht vochtig blijft. Laat de kluit niet volledig uitdrogen en voorkom natte voeten.\n\nHydrateren – volle grond:\nDe wortels voorzien de boom grotendeels van grondwater.\nBij temperaturen boven 20 °C kunt u extra water geven.\nLet op: geel blad duidt op te veel of te weinig water.\nIn het najaar is bladverlies normaal.",
-    "voeding": "Voed twee keer per jaar met mediterrane plantenvoeding. ()"
+    "heading": "VERZORGING",
+    "sections": [
+      {
+        "title": "Snoeien",
+        "content": "De vijgenboom verliest in het najaar zijn bladeren. Zodra de boom kaal is, kunt u de takken terug snoeien. Let op bij het snoeien van een bloedende tak: dit herkent u aan het witachtige vocht dat uit de tak stroomt. Dit sap kan huidirritatie veroorzaken, dus draag bij voorkeur handschoenen."
+      },
+      {
+        "title": "Winterbescherming",
+        "content": "De Ficus Carica is winterhard tot -15 °C en heeft verder geen extra winterbescherming nodig."
+      },
+      {
+        "title": "Hydrateren – vijgenboom in een bloembak of pot",
+        "content": "De vijgenboom groeit het beste in grond die licht vochtig blijft. Zorg ervoor dat de bodem nooit volledig uitdroogt, maar voorkom ook dat de wortels in water blijven staan."
+      },
+      {
+        "title": "Hydrateren – vijgenboom in de volle grond",
+        "content": "De wortels van de Ficus Carica in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de vijg extra water geven om uitdroging te voorkomen. Houd de bodem altijd licht vochtig.\n\nLet op: de Ficus Carica houdt niet van natte voeten. Wordt het blad geel, dan heeft de boom te weinig of juist te veel water gekregen. In het najaar is dit vaak normaal, omdat de boom zijn bladeren natuurlijk afwerpt voor de winter."
+      },
+      {
+        "title": "Voeding",
+        "content": "Voed de Ficus Carica twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid."
+      }
+    ]
   },
+
   "plaatsing": {
-    "volleGrond": "In de volle grond kan de boom zich optimaal ontwikkelen en zijn brede groeiwijze vormen.",
-    "pot": "Bloembak / bloempot: Gebruik een pot die circa tweederde groter is dan de verkooppot. Zorg voor drainagegaten, hydrokorrels en noppenfolie langs de zijkanten (zonder de bodem af te sluiten). Houd er rekening mee dat vruchtvorming in pot beperkter is."
+    "heading": "PLAATSING",
+    "sections": [
+      {
+        "title": "In de volle grond",
+        "content": "De vijg groeit het beste in de volle grond. Op deze manier kan de boom zich optimaal ontwikkelen en zijn breed vertakkende groeiwijze volledig ontplooien."
+      },
+      {
+        "title": "In een bloembak of pot",
+        "content": "Wilt u de vijg in een bloembak of pot plaatsen? Ook dat is mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot met noppenfolie om de wortels optimaal te isoleren tegen kou, zonder de bodem af te sluiten. Houd er rekening mee dat de boom zich in een bloembak minder goed zal ontwikkelen en minder kans heeft om vruchten te dragen."
+      }
+    ]
   },
-  "locatie": "Zonnige, beschutte plek. Vermijd open en winderige locaties.",
-  "cta": "Wilt u weten welke vijgenboom het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies.\nWij denken graag met u mee."
+
+  "locatie": {
+    "heading": "LOCATIE",
+    "content": "De vijgenboom staat het liefst op een zonnige en beschutte plek. Plaats de boom niet op een volledig open of winderige locatie, zodat hij zich optimaal kan ontwikkelen."
+  },
+
+  "cta": {
+    "heading": "",
+    "intro": "Wilt u weten welke vijgenboom het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale vijgenboom te vinden!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
+  }
 }

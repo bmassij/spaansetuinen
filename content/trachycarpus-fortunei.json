@@ -1,26 +1,20 @@
 {
+  "slug": "trachycarpus-fortunei",
   "title": "Trachycarpus Fortunei",
-  "heroText": "Wintervast tot -18 °C. Geef uw tuin een tropisch tintje met deze robuuste palm.",
-  "intro": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom geniet u het hele jaar door van een blijvend zomers gevoel. Deze Trachycarpus fortunei is winterhard tot -18 °C en goed geschikt voor het Nederlandse klimaat.",
-  "description": "Deze Trachycarpus fortunei is verkrijgbaar in meerdere stamhoogtes. De palmkenmerken omvatten een harige stam en waaiervormig blad, dat breed kan uitgroeien. De boom doet het goed op een zonnige of halfbeschaduwde plek en vormt in het voorjaar bloemen en later kleine vruchten.",
-  "kenmerken": {
-    "heading": "Kenmerken",
-    "content": "De Trachycarpus staat bekend om zijn harige stam en robuuste groeivorm. De bladeren zijn waaiervormig en kunnen een aanzienlijke breedte bereiken.",
-    "list": [
-      "Winterhard tot -18 °C",
-      "Waaiervormig blad tot 1,5 meter",
-      "Harige stam",
-      "Groeit circa 10 cm per jaar",
-      "Maximale hoogte: circa 9 meter"
-    ]
+  "type": "tree",
+  "hero": {
+    "title": "Trachycarpus Fortunei",
+    "image": ""
   },
-  "image": {
-    "url": "",
-    "alt": "Trachycarpus fortunei",
-    "placeholder": ""
-  },
+  "short_description": "Wilt u uw tuin een tropisch tintje geven? Dan bent u bij ons aan het juiste adres. Met deze prachtige palmboom geniet u het hele jaar door van een blijvend zomers gevoel. Deze Trachycarpus fortunei is winterhard tot -18 °C en goed geschikt voor het Nederlandse klimaat.",
+  "kenmerken": [
+    "Winterhard tot -18 °C",
+    "Waaiervormig blad tot 1,5 meter",
+    "Harige stam",
+    "Groeit circa 10 cm per jaar",
+    "Maximale hoogte: circa 9 meter"
+  ],
   "verzorging": {
-    "heading": "Verzorging",
     "sections": [
       {
         "title": "Snoeien",
@@ -36,12 +30,12 @@
       },
       {
         "title": "Palmen in een bloembak of pot",
+        "content": "Gebruik een ruime pot met goede drainage en bescherm de wortelkluit bij vorst.",
         "list": [
           "Bij 10–20 °C: wekelijks water geven",
           "Bij 20–25 °C: twee keer per week",
           "Bij >25 °C: drie keer per week"
-        ],
-        "content": "Gebruik een ruime pot met goede drainage en bescherm de wortelkluit bij vorst."
+        ]
       },
       {
         "title": "Palmen in de volle grond",
@@ -54,7 +48,6 @@
     ]
   },
   "plaatsing": {
-    "heading": "Plaatsing",
     "sections": [
       {
         "title": "Volle grond",
@@ -72,14 +65,11 @@
   },
   "cta": {
     "heading": "Interesse in Trachycarpus?",
-    "intro": "Neem contact op voor beschikbaarheid en advies.",
-    "body": "Wij helpen u graag bij het kiezen van de juiste palm en het bepalen van de beste standplaats.",
-    "phone": { "href": "tel:+31611929392", "text": "+31 6 11929392" },
-    "email": { "href": "mailto:lisette@spaansetuin-enzo.nl", "text": "lisette@spaansetuin-enzo.nl" }
+    "intro": "Neem contact op voor beschikbaarheid en advies.\n\nWij helpen u graag bij het kiezen van de juiste palm en het bepalen van de beste standplaats.\n\nlisette@spaansetuin-enzo.nl",
+    "phone": "+31611929392"
   },
-  "breadcrumbs": {
-    "home": "Home",
-    "trees": "Assortiment bomen",
-    "category": "Palmen"
-  }
+  "short_description_meta": "",
+  "long_description": "Deze Trachycarpus fortunei is verkrijgbaar in meerdere stamhoogtes. De palmkenmerken omvatten een harige stam en waaiervormig blad, dat breed kan uitgroeien. De boom doet het goed op een zonnige of halfbeschaduwde plek en vormt in het voorjaar bloemen en later kleine vruchten.",
+  "details": [],
+  "sections": []
 }

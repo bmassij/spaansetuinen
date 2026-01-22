@@ -1,59 +1,77 @@
 {
   "slug": "olea-europea",
-  "title": "Olea Europaea",
   "type": "tree",
-  "hero": {
-    "title": "Olea Europaea",
-    "image": ""
+  "title": "Olea Europea",
+
+  "intro": "Breng een vleugje mediterrane sfeer in uw tuin met één van onze olijfbomen uit de Costa Blanca.\nDeze prachtige, karakteristieke boom staat symbool voor warmte, zon en een ontspannen levensstijl.\nDankzij zijn winterhardheid en geringe onderhoudsbehoefte is de olijfboom perfect geschikt voor het Nederlandse klimaat.\n\nDe olijfboom is een echte blikvanger en brengt meteen een mediterrane sfeer in uw tuin. Elk jaar reizen wij met veel passie naar Costa Blanca om persoonlijk de mooiste bomen voor onze klanten te selecteren.\n\nOns uitgebreid assortiment biedt olijfbomen in allerlei soorten en maten, ieder met een uniek karakter. Van robuuste, grillige stammen tot gladde, lichte of donkere exemplaren – de stamdikte vertelt het verhaal van de leeftijd van de boom: hoe dikker de stam, hoe ouder de olijfboom.\n\nOndanks deze verschillen heeft elke olijf zijn karakteristieke bladvorm, die zorgt voor een tijdloze, elegante uitstraling.\n\nDe boom draagt één keer per jaar olijven. Deze zijn niet direct van de boom eetbaar, maar zorgen wel voor een extra mediterrane uitstraling en maken de boom nog levendiger en decoratiever.\n\nMet een olijfboom haalt u niet alleen een uniek stukje natuur in uw tuin, maar ook het echte zuidelijke gevoel van zon, rust en mediterrane charme. Elke boom is uniek en klaar om uw buitenruimte te transformeren.\n\nKom eens een kijkje nemen op onze tropische binnenplaats om inspiratie op te doen en te ontdekken welke olijfboom het beste past bij uw wensen.",
+
+  "kenmerken": {
+    "heading": "BELANGRIJKE EIGENSCHAPPEN",
+    "list": [
+      "Winterhard tot -15 °C",
+      "Stamhoogte maximaal 1.20 meter",
+      "Grijsgroene bladeren",
+      "Diverse stamsoorten",
+      "Smalle vertakking",
+      "Draagt één keer per jaar olijven"
+    ]
   },
-  "short_description": "Breng een vleugje mediterrane sfeer in uw tuin",
-  "kenmerken": [
-    "Winterhard tot -15 °C",
-    "Stamhoogte maximaal 1.20 meter",
-    "Grijsgroene bladeren",
-    "Diverse stamsoorten",
-    "Smalle vertakking",
-    "Draagt één keer per jaar olijven"
-  ],
+
   "verzorging": {
+    "heading": "VERZORGING",
     "sections": [
       {
         "title": "Snoeien",
-        "content": "De Olea Europaea behoudt ook in de winter zijn bladeren. U kunt de boom snoeien van april tot september. Snoeien stimuleert de groei: hoe vaker u snoeit, hoe voller de kruin blijft. Wordt de boom wat kaler, dan is het aan te raden om hem helemaal terug te snoeien tot aan de dikke stam. U zult versteld staan hoe snel en mooi de boom weer in blad komt.\nVoor het volledig terug snoeien geldt: doe dit bij voorkeur in het voorjaar (april), zodat de boom optimaal kan profiteren van het groeiseizoen in de lente en zomer."
+        "content": "De Olea Europaea behoudt ook in de winter zijn bladeren. U kunt de boom snoeien van april tot september. Snoeien stimuleert de groei: hoe vaker u snoeit, hoe voller de kruin blijft. Wordt de boom wat kaler, dan is het aan te raden om hem helemaal terug te snoeien tot aan de dikke stam. Doe dit bij voorkeur in het voorjaar (april), zodat de boom optimaal kan profiteren van het groeiseizoen in de lente en zomer."
       },
       {
         "title": "Winterbescherming",
-        "content": "De Olea Europaea is winterhard tot -15 °C en heeft verder geen extra winterbescherming nodig."
+        "content": "De Olea Europea is winterhard tot -15 °C en heeft verder geen extra winterbescherming nodig."
       },
       {
-        "title": "Hydrateren",
-        "content": "Olijfboom in bloembak of pot:\n- 10–20 °C: wekelijks water geven\n- 20–25 °C: twee keer per week water geven\n- Boven 25 °C: drie keer per week water geven\n\nOlijfbomen in de volle grond:\nDe wortels van de Olea Europaea in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de olijfboom wekelijks extra water geven om uitdroging te voorkomen.\nLet op: de Olea Europaea houdt niet van natte voeten. Wordt het blad bruin, dan is de boom aan het uitdrogen. Kleurt het blad geel, dan is de boom te nat of juist te droog."
+        "title": "Hydrateren – palmen in bloembak of pot",
+        "content": "Bij temperaturen tussen 10 en 20 °C: wekelijks water geven.\nBij temperaturen tussen 20 en 25 °C: twee keer per week water geven.\nBij temperaturen boven 25 °C: drie keer per week water geven."
+      },
+      {
+        "title": "Hydrateren – palmen in de volle grond",
+        "content": "De wortels van de Olea Europea in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de olijfboom wekelijks extra water geven om uitdroging te voorkomen.\n\nLet op: de Olea Europea houdt niet van natte voeten. Wordt het blad bruin, dan is de boom aan het uitdrogen. Kleurt het blad geel, dan is de boom te nat of juist te droog."
       },
       {
         "title": "Voeding",
-        "content": "Voed de Olea Europaea twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid. Voor een extra boost geeft u de Olea Europaea na zijn winterslaap, in het voorjaar, wekelijks vloeibare mediterrane voeding."
+        "content": "Voed de Olea Europea twee keer per jaar met speciale mediterrane plantenvoeding voor optimale groei en gezondheid. Voor een extra boost geeft u de Olea Europea na zijn winterslaap, in het voorjaar, wekelijks vloeibare mediterrane voeding."
       }
     ]
   },
+
   "plaatsing": {
+    "heading": "PLAATSING",
     "sections": [
       {
-        "title": "Volle grond",
+        "title": "In de volle grond",
         "content": "De olijfboom voelt zich het meest thuis in de volle grond. Hoe meer aarde rondom de wortels, hoe beter hij zich kan ontwikkelen en uitgroeien tot een prachtige, gezonde boom."
       },
       {
-        "title": "Bloembak / bloempot",
-        "content": "Wilt u de olijfboom in een bloembak of pot plaatsen? Ook dat is mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot vervolgens met noppenfolie om de wortels optimaal te isoleren tegen kou. Houd hierbij de bodem vrij van noppenfolie. Houd er rekening mee dat de boom zich in een bloembak minder goed zal ontwikkelen en minder kans heeft om vruchten te dragen."
+        "title": "In een bloembak of pot",
+        "content": "Wilt u de olijfboom in een bloembak of pot plaatsen? Ook dat is mogelijk. Zorg ervoor dat de bloempot ongeveer tweederde groter is dan de verkooppot. Voor een goede drainage maakt u gaten in de pot en bestrooit u de bodem met hydrokorrels. Bekleed de binnenzijde van de pot met noppenfolie om de wortels optimaal te isoleren tegen kou, zonder de bodem af te sluiten. Houd er rekening mee dat de boom zich in een bloembak minder goed zal ontwikkelen en minder kans heeft om vruchten te dragen."
       }
     ]
   },
-  "cta": {
-    "heading": "Wilt u weten welke olijfboom het beste bij uw tuin past?",
-    "intro": "Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale olijfboom te vinden!",
-    "phone": "+31611929392"
+
+  "locatie": {
+    "heading": "LOCATIE",
+    "content": "De Olea Europea groeit het beste op een zonnige, zuidelijke plek, maar kan ook prima overleven in halfschaduw."
   },
-  "short_description_meta": "",
-  "long_description": "",
-  "details": [],
-  "sections": []
+
+  "cta": {
+    "heading": "",
+    "intro": "Wilt u weten welke olijfboom het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale olijfboom te vinden!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
+  }
 }

@@ -23,8 +23,8 @@ export type ProductProps = {
   plaatsing?: Record<string, any> | string;
   price?: string | null;
   cta?: any;
+  isTreePage?: boolean;
 };
-
 // Helper: safe extract first non-empty line
 function firstLine(s?: string) {
   if (!s) return '';
@@ -161,7 +161,7 @@ function renderCTAContent(cta: any) {
   return null;
 }
 
-export default function ProductTemplate(props: ProductProps & { topContent?: React.ReactNode }) {
+export default function ProductTemplate(props: ProductProps & { topContent?: React.ReactNode; rawData?: any }) {
   const {
     title,
     short_description,
@@ -173,12 +173,166 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
     plaatsing,
     price,
     cta,
-  } = props as ProductProps & { topContent?: React.ReactNode };
+    isTreePage = false,
+  } = props as ProductProps & { topContent?: React.ReactNode; rawData?: any };
 
-  // helper: choose main visual
+  // STRICT MODE for tree pages
+  if (isTreePage) {
+    // rawData not required for tree rendering; kept for compatibility
+    const mainImage = (gallery && gallery.length > 0) ? gallery[0] : heroImage;
+    
+    return (
+      <div className="min-h-screen">
+        {/* Hero */}
+        <header className="relative bg-gradient-to-br from-emerald-600 to-emerald-800 text-white pt-24 pb-16">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: heroImage ? `url('${heroImage}')` : undefined,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-emerald-700/30 to-emerald-900/30" />
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center py-8">
+              <div>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title}</h1>
+                {short_description && (
+                  <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{short_description}</p>
+                )}
+              </div>
+
+              <div className="hidden md:flex justify-center items-center">
+                <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
+                  <div className="text-center p-8">
+                    <div className="text-6xl mb-4">🌳</div>
+                    <p className="text-white/80 text-sm">Afbeelding volgt</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        {/* Main content */}
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+          {props.topContent && (
+            <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
+              {props.topContent}
+            </section>
+          )}
+
+          <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+            <div className="space-y-8">
+              {/* Kenmerken - STRICT: only render explicit arrays */}
+              {kenmerken && kenmerken.length > 0 && (
+                <div>
+                  <h3 className="text-2xl font-semibold mb-3">BELANGRIJKE EIGENSCHAPPEN</h3>
+                  <ul className="space-y-2 bg-emerald-50 rounded-lg p-6 list-disc pl-5 text-gray-700">
+                    {kenmerken.map((k: string, i: number) => (
+                      <li key={i} className="flex items-start">
+                        <span className="mr-2 mt-1 text-emerald-600">✓</span>
+                        <span>{k}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Verzorging - STRICT: only render if sections exist */}
+              {verzorging && typeof verzorging === 'object' && 'sections' in verzorging && Array.isArray(verzorging.sections) && verzorging.sections.length > 0 && (
+                <div>
+                  {'heading' in verzorging && verzorging.heading && <h3 className="text-2xl font-semibold mb-3">{String(verzorging.heading)}</h3>}
+                  <div className="space-y-4 text-gray-700">
+                    {verzorging.sections.map((s: any, i: number) => (
+                      <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
+                        {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
+                        {s.content && <p className="mt-2 text-sm">{s.content}</p>}
+                        {Array.isArray(s.list) && s.list.length > 0 && (
+                          <ul className="mt-2 text-sm list-disc pl-5">
+                            {s.list.map((item: string, j: number) => (
+                              <li key={j}>{item}</li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Plaatsing - STRICT: only render if sections exist */}
+              {plaatsing && typeof plaatsing === 'object' && 'sections' in plaatsing && Array.isArray(plaatsing.sections) && plaatsing.sections.length > 0 && (
+                <div>
+                  {'heading' in plaatsing && plaatsing.heading && <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">{String(plaatsing.heading)}</h2>}
+                  <div className="text-gray-700 space-y-4">
+                    {plaatsing.sections.map((s: any, i: number) => (
+                      <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
+                        {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
+                        {s.content && <p className="mt-2 text-sm">{s.content}</p>}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Long description - STRICT: plain text only */}
+              {long_description && (
+                <div>
+                  <p className="text-gray-700">{long_description}</p>
+                </div>
+              )}
+            </div>
+
+            {/* Right visual */}
+            <aside className="flex flex-col gap-6">
+              <div className="rounded-2xl overflow-hidden shadow-lg bg-white/10 border border-white/20 h-96 flex items-center justify-center">
+                {mainImage ? (
+                  <img src={mainImage} alt={title || ''} className="w-full h-full object-cover" />
+                ) : (
+                  <div className="text-center p-8">
+                    <div className="text-8xl mb-4">🌿</div>
+                    <p className="text-emerald-50 font-medium">{title || ''}</p>
+                    <p className="text-emerald-200 text-sm mt-2">Afbeelding volgt</p>
+                  </div>
+                )}
+              </div>
+            </aside>
+          </section>
+
+          {/* CTA - STRICT: only if cta exists, use JSON content */}
+          {cta && (
+            <section className="w-full py-12">
+              <div className="max-w-5xl mx-auto">
+                <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 text-white text-center">
+                  {cta.heading && <h2 className="text-3xl font-bold mb-4">{cta.heading}</h2>}
+                  {cta.intro && <p className="text-lg text-emerald-50 mb-4">{cta.intro}</p>}
+                  {cta.body && <p className="text-lg text-emerald-50 mb-4">{cta.body}</p>}
+                  <div className="flex flex-wrap justify-center gap-4">
+                    {cta.phone && (
+                      <a href={cta.phone.href} className="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg">
+                        📞 {cta.phone.text}
+                      </a>
+                    )}
+                    {cta.email && (
+                      <a href={cta.email.href} className="inline-flex items-center px-6 py-3 bg-emerald-800 text-white font-semibold rounded-lg">
+                        ✉️ {cta.email.text}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
+        </main>
+      </div>
+    );
+  }
+
+  // ORIGINAL BEHAVIOR for non-tree pages (unchanged)
   const mainImage = (gallery && gallery.length > 0) ? gallery[0] : heroImage;
-
-  // page context (may be passed in props)
   const pageType = (props as any).page?.type || (props as any).type || '';
   const excludedTypes = ['potgrond', 'voeding', 'verhuur', 'tips'];
 const hasPlaatsing = hasContent(plaatsing);
@@ -222,8 +376,12 @@ const hasVerzorging = hasContent(verzorging);
             <div className="hidden md:flex justify-center items-center">
               <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
                 <div className="text-center p-8">
-                  <div className="text-6xl mb-4">🌳</div>
-                  <p className="text-white/80 text-sm">Afbeelding volgt</p>
+                  {!isTreePage && (
+                    <>
+                      <div className="text-6xl mb-4">🌳</div>
+                      <p className="text-white/80 text-sm">Afbeelding volgt</p>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
@@ -234,15 +392,17 @@ const hasVerzorging = hasContent(verzorging);
       {/* Main content area */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumbs */}
-        <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-6">
-          <ol className="flex items-center space-x-2">
-            <li>Home</li>
-            <li>/</li>
-            <li>Onze bomen</li>
-            <li>/</li>
-            <li className="font-medium">{title || ''}</li>
-          </ol>
-        </nav>
+        {!isTreePage && (
+          <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-6">
+            <ol className="flex items-center space-x-2">
+              <li>Home</li>
+              <li>/</li>
+              <li>Onze bomen</li>
+              <li>/</li>
+              <li className="font-medium">{title || ''}</li>
+            </ol>
+          </nav>
+        )}
 
         {props.topContent && (
           <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
@@ -259,7 +419,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Plaatsing */}
             {hasPlaatsing && (
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">Ideale standplaats</h2>
+                {!isTreePage && <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">Ideale standplaats</h2>}
                 <div className="text-gray-700 space-y-4">
                   {renderSections(plaatsing)}
                 </div>
@@ -269,7 +429,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Kenmerken */}
             {hasKenmerken && (
               <div>
-                <h3 className="text-2xl font-semibold mb-3">Kenmerken</h3>
+                {!isTreePage && <h3 className="text-2xl font-semibold mb-3">Kenmerken</h3>}
                 <ul className="space-y-2 bg-emerald-50 rounded-lg p-6 list-disc pl-5 text-gray-700">
                   {kenmerken.map((k, i) => (
                     <li key={i} className="flex items-start">
@@ -284,7 +444,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Verzorging */}
             {hasVerzorging && (
               <div>
-                <h3 className="text-2xl font-semibold mb-3">Verzorging</h3>
+                {!isTreePage && <h3 className="text-2xl font-semibold mb-3">Verzorging</h3>}
                 <div className="space-y-4 text-gray-700">
                   {renderSections(verzorging)}
                 </div>
@@ -294,7 +454,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Details / lange beschrijving */}
             {long_description && (
               <div>
-                <h3 className="text-2xl font-semibold mb-3">Details</h3>
+                {!isTreePage && <h3 className="text-2xl font-semibold mb-3">Details</h3>}
                 <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: long_description }} />
               </div>
             )}
@@ -309,9 +469,9 @@ const hasVerzorging = hasContent(verzorging);
                 <img src={mainImage} alt={title || ''} className="w-full h-full object-cover" />
               ) : (
                 <div className="text-center p-8">
-                  <div className="text-8xl mb-4">🌿</div>
+                  {!isTreePage && <div className="text-8xl mb-4">🌿</div>}
                   <p className="text-emerald-50 font-medium">{title || ''}</p>
-                  <p className="text-emerald-200 text-sm mt-2">Afbeelding volgt</p>
+                  {!isTreePage && <p className="text-emerald-200 text-sm mt-2">Afbeelding volgt</p>}
                 </div>
               )}
             </div>
