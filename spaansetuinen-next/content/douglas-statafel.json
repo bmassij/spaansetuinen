@@ -1,19 +1,20 @@
 {
-  "hero": {
-    "title": "Douglas steigerhouten statafel",
-    "subtitle": "",
-    "image": ""
-  },
-  "core": {
-    "html": "<p>Naast onze met de hand gemaakte bloembakken biedt Spaanse Tuin & Zo ook een Douglas steigerhouten statafel aan. Deze tafel is een echte aanrader voor op uw terras of balkon.</p><p>In het midden van de statafel staat een prachtige Trachycarpus Fortunei palmboom, die niet alleen een tropische uitstraling geeft, maar ook als natuurlijke parasol dient. Zo combineert u functionaliteit met sfeer en haalt u een echte blikvanger in uw buitenruimte.</p><p>Deze statafel wordt geïsoleerd met noppenfolie en bekleed met antiworteldoek. De palmboom wordt zorgvuldig geplant met speciale mediterrane potgrond.</p>"
-  },
-  "short_description": "",
-  "long_description": "",
-  "details": [],
-  "sections": [
-    {
-      "title": "Afmetingen en prijs",
-      "content": "Afmetingen en prijzen van de Douglas steigerhouten statafel zijn op aanvraag beschikbaar.<br/>Prijs statafel inclusief beplanting: € ?"
+  "slug": "statafel",
+  "type": "bloembakken",
+  "title": "Douglas steigerhouten statafel",
+
+  "description": "Naast onze met de hand gemaakte bloembakken biedt Spaanse Tuin & Zo ook een Douglas steigerhouten statafel aan. Deze tafel is een echte aanrader voor op uw terras of balkon.\n\nIn het midden van de statafel staat een prachtige Trachycarpus Fortunei palmboom, die niet alleen een tropische uitstraling geeft, maar ook als natuurlijke parasol dient. Zo combineert u functionaliteit met sfeer en haalt u een echte blikvanger in uw buitenruimte.\n\nDeze statafel wordt geïsoleerd met noppenfolie en bekleed met antiworteldoek. De palmboom wordt zorgvuldig geplant met speciale mediterrane potgrond.\n\nAfmeting en prijstabel volgen.\nPrijs statafel inclusief beplanting: € ?",
+
+  "cta": {
+    "heading": "",
+    "body": "Wilt u meer weten over deze Douglas steigerhouten statafel? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken graag met u mee!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
     }
-  ]
+  }
 }
