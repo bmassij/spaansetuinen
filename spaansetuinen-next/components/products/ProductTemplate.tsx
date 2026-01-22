@@ -32,6 +32,13 @@ function firstLine(s?: string) {
   return parts.length > 0 ? parts[0] : '';
 }
 
+// Helper: extract the first sentence (used for hero intro)
+function firstSentence(s?: string) {
+  if (!s) return '';
+  const m = s.trim().match(/[^.!?]+[.!?]?/);
+  return m ? m[0].trim() : firstLine(s);
+}
+
 // Helper: produce a short readable summary for info-boxes
 function getSummaryText(value: unknown): string {
   if (!value) return '';
@@ -199,9 +206,10 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
             <div className="grid md:grid-cols-2 gap-8 items-center py-8">
               <div>
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title}</h1>
-                {short_description && (
-                  <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{short_description}</p>
-                )}
+                {(() => {
+                  const heroIntro = typeof (props as any).heroIntro === 'string' ? String((props as any).heroIntro) : (typeof (props as any).rawData?.heroIntro === 'string' ? String((props as any).rawData.heroIntro) : undefined);
+                  return heroIntro ? <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{firstSentence(heroIntro)}</p> : null;
+                })()}
               </div>
 
               <div className="hidden md:flex justify-center items-center">
@@ -223,6 +231,16 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
               {props.topContent}
             </section>
           )}
+
+          {(() => {
+            const introText = typeof (props as any).intro === 'string' ? String((props as any).intro) : (typeof (props as any).rawData?.intro === 'string' ? String((props as any).rawData.intro) : undefined);
+            if (!introText) return null;
+            return (
+              <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
+                <div className="text-gray-700 whitespace-pre-line">{introText}</div>
+              </section>
+            );
+          })()}
 
           <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             <div className="space-y-8">
@@ -263,20 +281,64 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                 </div>
               )}
 
-              {/* Plaatsing - STRICT: only render if sections exist */}
-              {plaatsing && typeof plaatsing === 'object' && 'sections' in plaatsing && Array.isArray(plaatsing.sections) && plaatsing.sections.length > 0 && (
-                <div>
-                  {'heading' in plaatsing && plaatsing.heading && <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">{String(plaatsing.heading)}</h2>}
-                  <div className="text-gray-700 space-y-4">
-                    {plaatsing.sections.map((s: any, i: number) => (
-                      <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
-                        {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
-                        {s.content && <p className="mt-2 text-sm">{s.content}</p>}
+              {/* Plaatsing + Locatie for tree pages — render only when data exists */}
+              {(() => {
+                const plaatsingObj = (plaatsing && typeof plaatsing === 'object') ? plaatsing : undefined;
+                const inVolleGrond = plaatsingObj ? (plaatsingObj.inVolleGrond ?? plaatsingObj.inVollegrond ?? plaatsingObj.inVolledigeGrond) : undefined;
+                const inPotOfBloembak = plaatsingObj ? (plaatsingObj.inPotOfBloembak ?? plaatsingObj.inPotOrBloembak ?? plaatsingObj.inPot) : undefined;
+                const hasPlaatsingSections = plaatsingObj && Array.isArray(plaatsingObj.sections) && plaatsingObj.sections.length > 0;
+                const hasPlaatsingParts = hasPlaatsingSections || hasContent(inVolleGrond) || hasContent(inPotOfBloembak);
+
+                const locatieObj = (props as any).locatie ?? (props as any).rawData?.locatie;
+                const hasLocatie = locatieObj && typeof locatieObj === 'object' && (String(locatieObj.content || '').trim().length > 0);
+
+                return (
+                  <>
+                    {hasPlaatsingParts && (
+                      <div>
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">{plaatsingObj && plaatsingObj.heading ? String(plaatsingObj.heading) : 'Plaatsing'}</h2>
+
+                        <div className="text-gray-700 space-y-4">
+                          {hasPlaatsingSections && plaatsingObj.sections.map((s: any, i: number) => (
+                            <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
+                              {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
+                              {s.content && <p className="mt-2 text-sm">{s.content}</p>}
+                              {Array.isArray(s.list) && s.list.length > 0 && (
+                                <ul className="mt-2 text-sm list-disc pl-5">
+                                  {s.list.map((item: string, j: number) => <li key={j}>{item}</li>)}
+                                </ul>
+                              )}
+                            </div>
+                          ))}
+
+                          {!hasPlaatsingSections && hasContent(inVolleGrond) && (
+                            <div className="bg-white rounded-lg p-4 border border-gray-100">
+                              <h4 className="font-semibold text-gray-900">In de volle grond</h4>
+                              <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(inVolleGrond) }} />
+                            </div>
+                          )}
+
+                          {!hasPlaatsingSections && hasContent(inPotOfBloembak) && (
+                            <div className="bg-white rounded-lg p-4 border border-gray-100">
+                              <h4 className="font-semibold text-gray-900">In een bloembak of pot</h4>
+                              <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(inPotOfBloembak) }} />
+                            </div>
+                          )}
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              )}
+                    )}
+
+                    {hasLocatie && (
+                      <div className="mt-6">
+                        <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">{String(locatieObj.heading || 'Locatie')}</h2>
+                        <div className="text-gray-700">
+                          {locatieObj.content && <p>{locatieObj.content}</p>}
+                        </div>
+                      </div>
+                    )}
+                  </>
+                );
+              })()}
 
               {/* Long description - STRICT: plain text only */}
               {long_description && (
@@ -365,12 +427,10 @@ const hasVerzorging = hasContent(verzorging);
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{firstLine(title)}</h1>
-              {short_description && (
-                <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: short_description }} />
-              )}
-              {!short_description && (props as any).intro && (
-                <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: (props as any).intro }} />
-              )}
+              {(() => {
+                const heroIntro = typeof (props as any).heroIntro === 'string' ? String((props as any).heroIntro) : (typeof (props as any).rawData?.heroIntro === 'string' ? String((props as any).rawData.heroIntro) : undefined);
+                return heroIntro ? <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{firstSentence(heroIntro)}</div> : null;
+              })()}
             </div>
 
             <div className="hidden md:flex justify-center items-center">
@@ -409,6 +469,16 @@ const hasVerzorging = hasContent(verzorging);
             {props.topContent}
           </section>
         )}
+
+        {(() => {
+          const introText = typeof (props as any).intro === 'string' ? String((props as any).intro) : (typeof (props as any).rawData?.intro === 'string' ? String((props as any).rawData.intro) : undefined);
+          if (!introText) return null;
+          return (
+            <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
+              <div className="text-gray-700 whitespace-pre-line">{introText}</div>
+            </section>
+          );
+        })()}
 
         {/* Body intro under breadcrumbs disabled per task */}
 

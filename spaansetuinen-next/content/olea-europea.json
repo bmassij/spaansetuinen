@@ -2,16 +2,17 @@
     "slug":  "olea-europea",
     "type":  "tree",
     "title":  "Olea Europea",
-    "intro":  "Breng een vleugje mediterrane sfeer in uw tuin met Ã©Ã©n van onze olijfbomen uit de Costa Blanca.\nDeze prachtige, karakteristieke boom staat symbool voor warmte, zon en een ontspannen levensstijl.\nDankzij zijn winterhardheid en geringe onderhoudsbehoefte is de olijfboom perfect geschikt voor het Nederlandse klimaat.\n\nDe olijfboom is een echte blikvanger en brengt meteen een mediterrane sfeer in uw tuin. Elk jaar reizen wij met veel passie naar Costa Blanca om persoonlijk de mooiste bomen voor onze klanten te selecteren.\n\nOns uitgebreid assortiment biedt olijfbomen in allerlei soorten en maten, ieder met een uniek karakter. Van robuuste, grillige stammen tot gladde, lichte of donkere exemplaren â€“ de stamdikte vertelt het verhaal van de leeftijd van de boom: hoe dikker de stam, hoe ouder de olijfboom.\n\nOndanks deze verschillen heeft elke olijf zijn karakteristieke bladvorm, die zorgt voor een tijdloze, elegante uitstraling.\n\nDe boom draagt Ã©Ã©n keer per jaar olijven. Deze zijn niet direct van de boom eetbaar, maar zorgen wel voor een extra mediterrane uitstraling en maken de boom nog levendiger en decoratiever.\n\nMet een olijfboom haalt u niet alleen een uniek stukje natuur in uw tuin, maar ook het echte zuidelijke gevoel van zon, rust en mediterrane charme. Elke boom is uniek en klaar om uw buitenruimte te transformeren.\n\nKom eens een kijkje nemen op onze tropische binnenplaats om inspiratie op te doen en te ontdekken welke olijfboom het beste past bij uw wensen.",
+    "heroIntro": "Breng een vleugje mediterrane sfeer in uw tuin met één van onze karakteristieke olijfbomen uit de Costa Blanca.",
+    "intro":  "Breng een vleugje mediterrane sfeer in uw tuin met één van onze olijfbomen uit de Costa Blanca.\nDeze prachtige, karakteristieke boom staat symbool voor warmte, zon en een ontspannen levensstijl.\nDankzij zijn winterhardheid en geringe onderhoudsbehoefte is de olijfboom perfect geschikt voor het Nederlandse klimaat.\n\nDe olijfboom is een echte blikvanger en brengt meteen een mediterrane sfeer in uw tuin. Elk jaar reizen wij met veel passie naar Costa Blanca om persoonlijk de mooiste bomen voor onze klanten te selecteren.\n\nOns uitgebreid assortiment biedt olijfbomen in allerlei soorten en maten, ieder met een uniek karakter. Van robuuste, grillige stammen tot gladde, lichte of donkere exemplaren – de stamdikte vertelt het verhaal van de leeftijd van de boom: hoe dikker de stam, hoe ouder de olijfboom.\n\nOndanks deze verschillen heeft elke olijf zijn karakteristieke bladvorm, die zorgt voor een tijdloze, elegante uitstraling.\n\nDe boom draagt één keer per jaar olijven. Deze zijn niet direct van de boom eetbaar, maar zorgen wel voor een extra mediterrane uitstraling en maken de boom nog levendiger en decoratiever.\n\nMet een olijfboom haalt u niet alleen een uniek stukje natuur in uw tuin, maar ook het echte zuidelijke gevoel van zon, rust en mediterrane charme. Elke boom is uniek en klaar om uw buitenruimte te transformeren.\n\nKom eens een kijkje nemen op onze tropische binnenplaats om inspiratie op te doen en te ontdekken welke olijfboom het beste past bij uw wensen.",
     "kenmerken":  {
                       "heading":  "BELANGRIJKE EIGENSCHAPPEN",
                       "list":  [
-                                   "Winterhard tot -15 Â°C",
+                                   "Winterhard tot -15 °C",
                                    "Stamhoogte maximaal 1.20 meter",
                                    "Grijsgroene bladeren",
                                    "Diverse stamsoorten",
                                    "Smalle vertakking",
-                                   "Draagt Ã©Ã©n keer per jaar olijven"
+                                   "Draagt één keer per jaar olijven"
                                ]
                   },
     "verzorging":  {
@@ -23,15 +24,15 @@
                                         },
                                         {
                                             "title":  "Winterbescherming",
-                                            "content":  "De Olea Europea is winterhard tot -15 Â°C en heeft verder geen extra winterbescherming nodig."
+                                            "content":  "De Olea Europea is winterhard tot -15 °C en heeft verder geen extra winterbescherming nodig."
                                         },
                                         {
-                                            "title":  "Hydrateren â€“ palmen in bloembak of pot",
-                                            "content":  "Bij temperaturen tussen 10 en 20 Â°C: wekelijks water geven.\nBij temperaturen tussen 20 en 25 Â°C: twee keer per week water geven.\nBij temperaturen boven 25 Â°C: drie keer per week water geven."
+                                            "title":  "Hydrateren – palmen in bloembak of pot",
+                                            "content":  "Bij temperaturen tussen 10 en 20 °C: wekelijks water geven.\nBij temperaturen tussen 20 en 25 °C: twee keer per week water geven.\nBij temperaturen boven 25 °C: drie keer per week water geven."
                                         },
                                         {
-                                            "title":  "Hydrateren â€“ palmen in de volle grond",
-                                            "content":  "De wortels van de Olea Europea in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 Â°C kunt u de olijfboom wekelijks extra water geven om uitdroging te voorkomen.\n\nLet op: de Olea Europea houdt niet van natte voeten. Wordt het blad bruin, dan is de boom aan het uitdrogen. Kleurt het blad geel, dan is de boom te nat of juist te droog."
+                                            "title":  "Hydrateren – palmen in de volle grond",
+                                            "content":  "De wortels van de Olea Europea in de volle grond voorzien de boom grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u de olijfboom wekelijks extra water geven om uitdroging te voorkomen.\\n\\nLet op: de Olea Europea houdt niet van natte voeten. Wordt het blad bruin, dan is de boom aan het uitdrogen. Kleurt het blad geel, dan is de boom te nat of juist te droog."
                                         },
                                         {
                                             "title":  "Voeding",
