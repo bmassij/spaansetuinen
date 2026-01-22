@@ -28,7 +28,14 @@ export const anniversaryConfig = {
  * Helper function to check if anniversary features should be active
  */
 export function isAnniversaryActive(): boolean {
-  return true;
+  if (!anniversaryConfig.enabled) {
+    return false;
+  }
+  
+  const today = new Date();
+  const end = new Date(anniversaryConfig.endDate);
+  
+  return today <= end;
 }
 
 /**
@@ -37,4 +44,4 @@ export function isAnniversaryActive(): boolean {
  * When true: components must not persist dismissals (no cookies/localStorage/sessionStorage).
  * Default false preserves existing live behavior.
  */
-export const ANNIVERSARY_TEST_MODE = true;
+export const ANNIVERSARY_TEST_MODE = false;

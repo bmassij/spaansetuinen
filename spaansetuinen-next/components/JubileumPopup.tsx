@@ -7,26 +7,22 @@ import JubileumDecor from './JubileumDecor';
 const STORAGE_KEY = 'jubileum-popup-dismissed';
 
 export default function JubileumPopup({ disablePersistence = false }: { disablePersistence?: boolean }) {
-  const [isVisible, setIsVisible] = useState(true);
+  // Safe defaults for server render
+  const [visible, setVisible] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    if (disablePersistence) {
-      setIsVisible(true);
-      return;
-    }
+    setMounted(true);
 
-    try {
-      const dismissed = sessionStorage.getItem(STORAGE_KEY);
-      if (!dismissed) {
-        setIsVisible(true);
-      }
-    } catch (e) {
-      setIsVisible(true);
+    if (disablePersistence) {
+      // In test mode do not touch storage at all
+      setVisible(true);
+      return;
     }
   }, [disablePersistence]);
 
   const handleDismiss = () => {
-    setIsVisible(false);
+    setVisible(false);
     if (!disablePersistence) {
       try {
         sessionStorage.setItem(STORAGE_KEY, 'true');
@@ -36,14 +32,14 @@ export default function JubileumPopup({ disablePersistence = false }: { disableP
     }
   };
 
-  if (!isVisible) {
-    return null;
-  }
+  // Don't attempt to render until mounted to avoid SSR/client mismatch
+  if (!mounted) return null;
+  if (!visible) return null;
 
   return (
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 transition-opacity duration-300 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
+        visible ? 'opacity-100' : 'opacity-0'
       }`}
       role="dialog"
       aria-modal="true"

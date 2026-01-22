@@ -30,6 +30,7 @@ export default async function Page() {
   const processText = data.processText || ''
   const whyUsTitle = data.whyUsTitle || ''
   const whyUs = Array.isArray(data.whyUs) ? data.whyUs : []
+  const whyUsOutro = data.whyUsOutro || ''
   const footerTagline = data.footerTagline || ''
   return (
     <>
@@ -160,6 +161,7 @@ export default async function Page() {
               </li>
             ))}
           </ul>
+          <p>{whyUsOutro}</p>
         </div>
       </section>
 

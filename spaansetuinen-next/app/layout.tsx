@@ -4,10 +4,7 @@ import './globals.css'
 import '../../plans/logo-experiment.css'
 import Navbar from '../components/Navbar'
 import HtmlFooter from '../components/HtmlFooter'
-import CookieBanner from '../components/CookieBanner'
-import WhatsAppButton from '../components/WhatsAppButton'
-import { anniversaryConfig, isAnniversaryActive, ANNIVERSARY_TEST_MODE } from '../config/anniversary'
-import JubileumPopup from '../components/JubileumPopup'
+import ClientBanners from '@/components/ClientBanners'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,9 +24,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <HtmlFooter />
-        <JubileumPopup disablePersistence={true} />
-        <CookieBanner disablePersistence={true} />
-        <WhatsAppButton />
+        <ClientBanners />
       </body>
     </html>
   )
