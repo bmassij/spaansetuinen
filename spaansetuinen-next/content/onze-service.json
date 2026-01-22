@@ -1,17 +1,14 @@
 {
-  "slug": "onze-service",
-  "type": "pagina",
-  "title": "Onze service",
 
-  "hero": {
+  
     "title": "Onze service",
     "subtitle": "Van advies tot levering, wij regelen alles",
-    "image": "/images/placeholder-bloembakken.jpg"
-  },
+    "image": "/images/placeholder-bloembakken.jpg",
+  
 
-  "core": {
-    "html": "<p>Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken, inclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen de rest.</p>\n\n<p>Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen uit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich nergens druk om te maken en bent u verzekerd van een vakkundige aanpak.</p>\n\n<p>Of het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of terras.</p>"
-  },
+  
+    "description": "<p>Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken, inclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen de rest.</p>\n\n<p>Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen uit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich nergens druk om te maken en bent u verzekerd van een vakkundige aanpak.</p>\n\n<p>Of het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of terras.</p>"
+  ,
 
   "details": [
     "<strong>Advies op maat</strong> – Wij bieden persoonlijk advies afgestemd op plantenkeuze, locatie en onderhoud.",
