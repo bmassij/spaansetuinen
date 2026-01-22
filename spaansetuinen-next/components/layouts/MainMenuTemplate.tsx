@@ -6,9 +6,10 @@ import home from '@/content/home.json';
 type MainMenuTemplateProps = {
   content: any;
   showServiceCards?: boolean;
+  children?: React.ReactNode;
 };
 
-export default function MainMenuTemplate({ content, showServiceCards }: MainMenuTemplateProps) {
+export default function MainMenuTemplate({ content, showServiceCards, children }: MainMenuTemplateProps) {
   const c = content ?? {};
 
   const headerTitle = c?.hero?.title ?? c?.title ?? c?.name ?? '';
@@ -65,14 +66,12 @@ export default function MainMenuTemplate({ content, showServiceCards }: MainMenu
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid gap-6">
-          {/* Four-blocks (homepage cards) rendered inside white content wrapper above core text */}
           {showServiceCards !== false && (
             <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
               <FourBlocks blocks={c?.blocks ?? home.blocks} />
             </section>
           )}
 
-          {/* Core / intro block */}
           {(c?.core?.html || c?.core?.content || c?.core?.text) && (
             <section className="bg-white p-6 rounded-lg shadow-sm mb-6 prose max-w-none">
               {c?.core?.html ? (
@@ -85,7 +84,6 @@ export default function MainMenuTemplate({ content, showServiceCards }: MainMenu
             </section>
           )}
 
-          {/* Sections rendered as two-column cards */}
           {Array.isArray(c?.sections) &&
             c.sections.map((section: any, idx: number) => {
               const href = getActionHref(section);
@@ -93,7 +91,6 @@ export default function MainMenuTemplate({ content, showServiceCards }: MainMenu
 
               const TextColumn = (
                 <div>
-                  {/* Highlights (if present in JSON) */}
                   {Array.isArray(section.highlights) && section.highlights.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-2">
                       {section.highlights.map((h: string, i: number) => (
@@ -153,7 +150,6 @@ export default function MainMenuTemplate({ content, showServiceCards }: MainMenu
               );
             })}
 
-          {/* Benefits */}
           {c?.benefits && (
             <div>
               {c.benefits.html ? (
@@ -179,6 +175,8 @@ export default function MainMenuTemplate({ content, showServiceCards }: MainMenu
               )}
             </div>
           )}
+
+          {children}
 
         </div>
       </main>
