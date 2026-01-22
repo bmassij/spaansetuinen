@@ -1,7 +1,6 @@
 import fs from 'fs/promises'
 import path from 'path'
 import FourBlocks from '../components/home/FourBlocks'
-import home from '../content/home.json'
 import overOns from '@/content/over-ons.json';
 
 export const metadata = {
@@ -9,7 +8,7 @@ export const metadata = {
 }
 
 export default async function Page() {
-  const filePath = path.join(process.cwd(), 'spaansetuinen-next', 'content', 'home.json')
+  const filePath = path.join(process.cwd(), 'content', 'home.json')
   let data: any = {}
   try {
     const raw = await fs.readFile(filePath, 'utf8')
@@ -18,9 +17,9 @@ export default async function Page() {
     data = {}
   }
 
-  const heroTitle = home.heroTitle || data.heroTitle || ''
-  const heroSubtitle = home.heroSubtitle || data.heroSubtitle || ''
-  const intro = home.intro || data.intro || ''
+  const heroTitle = data.heroTitle || ''
+  const heroSubtitle = data.heroSubtitle || ''
+  const intro = data.intro || ''
   const blocks = Array.isArray(data.blocks) ? data.blocks : []
   const usp = Array.isArray(data.usp) ? data.usp : []
   const aboutTeaser = data.aboutTeaser || ''
@@ -76,10 +75,12 @@ export default async function Page() {
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Alles wat wij voor u regelen</h2>
-            <p className="text-lg text-gray-600">{intro}</p>
+            <p className="text-lg text-gray-600">
+              {data.introAfterHero || ''}
+            </p>
           </div>
 
-          <FourBlocks blocks={home.blocks} />
+          <FourBlocks blocks={blocks} />
         </div>
       </section>
 
@@ -92,65 +93,26 @@ export default async function Page() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">✔</div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Topservice</h3>
-                <p className="text-gray-600">Uw Mediterrane bomen in de beste handen. Van bestelling tot levering, altijd zorgvuldig verzorgd.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">💰</div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Eerlijke prijzen</h3>
-                <p className="text-gray-600">Topkwaliteit Mediterrane bomen tegen scherpe prijzen.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">🛠️</div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
-                <p className="text-gray-700 leading-relaxed">Op onze tropische binnenplaats van maar liefst <strong>400 m²</strong> vind je een ruim assortiment mediterrane bomen. We importeren rechtstreeks uit de Costa Blanca en selecteren elke boom persoonlijk en met detail.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">🌿</div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Hoogwaardige Mediterrane bomen</h3>
-                <p className="text-gray-600">Topkwaliteit Mediterrane bomen, met zorg geselecteerd en geschikt voor het Nederlandse klimaat.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">💬</div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-emerald-700 mb-3">Ons selectieproces</h3>
-                <p className="text-gray-700 leading-relaxed">Meerdere keren per jaar reizen we zelf naar Spanje om de mooiste exemplaren uit te zoeken. Elke boom wordt persoonlijk bekeken, gekeurd en gelabeld, zodat hij bij aankomst in Nederland precies aan onze hoge standaarden voldoet.</p>
-              </div>
-            </div>
-
-            <div className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">📋</div>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Nazorg</h3>
-                <p className="text-gray-600">Professionele nazorg gegarandeerd. Wij blijven betrokken bij uw Mediterrane bomen.</p>
-              </div>
-            </div>
+            {usp.map((item: string, index: number) => {
+              const icons = ['✔', '💰', '🛠️', '🌿', '💬', '📋']
+              const icon = icons[index] || '✔'
+              
+              const colonIndex = item.indexOf(':')
+              const title = colonIndex > -1 ? item.substring(0, colonIndex).trim() : item
+              const description = colonIndex > -1 ? item.substring(colonIndex + 1).trim() : ''
+              
+              return (
+                <div key={index} className="flex items-start space-x-4 p-6 bg-gray-50 rounded-xl hover:bg-emerald-50 transition-colors">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-emerald-600 text-white rounded-lg flex items-center justify-center text-xl font-bold">{icon}</div>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
+                    <p className="text-gray-600">{description}</p>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>
