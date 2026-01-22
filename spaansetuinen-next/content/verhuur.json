@@ -1,10 +1,7 @@
-{
+﻿{
   "hero": {
-    "title": "Verhuur",
-    "subtitle": "Verhuur Complete Bloembakken",
-    "image": "/foto huur/20180330_110404.jpg",
-    "secondaryImage": "/foto huur/20190414_091637.jpg",
-    "intro": "Creëer de perfecte mediterrane sfeer voor uw event, bruiloft of bedrijfsterrein. Van 1 dag tot 1 jaar\nmogelijk!"
+    "secondaryImage": "/images/verhuur/20190412_154952.jpg",
+    "image": "/images/verhuur/20180330_110404.jpg"
   },
   "core": {
     "html": "Verhuur van complete bloembakken\nOnze verhuurservice voor complete bloembakken neemt u alle zorg uit handen. De bloembakken\nworden geleverd met zorgvuldig geselecteerde beplanting en professionele potgrond, zodat ze er\ndirect verzorgd en sfeervol uitzien. Ideaal voor horecagelegenheden, bedrijven, evenementen of\nparticulieren gelegenheden.\n\nEen olijfboom zorgt meteen voor een aangekleed terras, tuin of binnenplaats. Steeds meer\nhorecaondernemers kiezen voor zo'n uitnodigende sfeer.\nBedrijven en particulieren kunnen de bomen kopen, maar ook huren. Wij plaatsen de bomen aan het\nbegin van het buitenseizoen op de gewenste plaats. Zaken als extra voeding en snoeiwerk nemen we\nuit handen.\n\nEen mediterrane boom zorgt direct voor een sfeervol en aangekleed terras, tuin of binnenplaats.\nSteeds meer horecaondernemers kiezen voor deze uitnodigende uitstraling. Zowel bedrijven als\nparticulieren kunnen onze bomen kopen of huren.\nBij verhuur plaatsen wij de bomen aan het begin van het buitenseizoen op de gewenste locatie. Alle\nverzorging, zoals extra voeding en snoeiwerk, nemen wij volledig uit handen. Dat maakt het huren\nbijzonder gemakkelijk. Aan het einde van het seizoen halen wij de bomen weer op, zodat ze bij ons\nop de juiste manier kunnen overwinteren. Huren is zelfs al mogelijk per dag.\nOrganiseert u een bruiloft, bedrijfsfeest of evenement? Overweeg dan eens het huren van\npalmbomen voor die echte wow-factor. Een statafel met een palmboom in het midden behoort\neveneens tot de mogelijkheden en is gegarandeerd een blikvanger op uw feest.\nVoor iedere gelegenheid hebben wij de perfecte boom en bloembak – de ideale match voor sfeer en\ngemak!"
@@ -22,7 +19,7 @@
     {
       "title": "Verhuur van complete bloembakken",
       "content": "Onze verhuurservice voor complete bloembakken neemt u alle zorg uit handen. De bloembakken worden geleverd met zorgvuldig geselecteerde beplanting en professionele potgrond, zodat ze er direct verzorgd en sfeervol uitzien. Ideaal voor horecagelegenheden, bedrijven, evenementen of feesten.\n\nBij verhuur plaatsen wij de bomen aan het begin van het buitenseizoen op de gewenste plaats. Alle verzorging, zoals extra voeding en snoeiwerk, nemen wij volledig uit handen. Aan het einde van het seizoen halen wij de bomen weer op.",
-      "image": "/foto huur/20190412_154952.jpg"
+      "image": "/images/verhuur/20190412_154952.jpg"
     }
   ],
   "benefits": [
@@ -50,5 +47,9 @@
       "title": "Eye catcher",
       "text": "Eye catcher bij uw bedrijf of evenement."
     }
+  ],
+  "images": [
+    "/images/verhuur/20180330_110404.jpg",
+    "/images/verhuur/20190414_091637.jpg"
   ]
 }

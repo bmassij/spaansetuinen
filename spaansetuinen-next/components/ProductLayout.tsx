@@ -9,7 +9,8 @@ export default function ProductLayout({ page, isTreePage: isTreePageProp }: { pa
       title: page?.title ?? '',
       short_description: page?.intro ?? '',
       long_description: page?.description ?? '',
-      heroImage: page?.image?.url ?? '',
+      // Accept both JSON styles: page.hero.image OR page.image.url
+      heroImage: page?.hero?.image ?? page?.image?.url ?? '',
       gallery: [],
       kenmerken: Array.isArray(page?.kenmerken?.list) ? page.kenmerken.list : [],
       verzorging: page?.verzorging ?? null,

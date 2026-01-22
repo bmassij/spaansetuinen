@@ -1,80 +1,80 @@
 {
-  "hero": {
-    "title": "Impressie",
-    "subtitle": "Mediterrane sfeer in beeld",
-    "image": "/images/impressie__hero__01.jpg"
-  },
-  "intro": "Ontdek de mediterrane wereld van Spaanse Tuin & Zo. Van sfeervolle tuinen tot karaktervolle bomen, van verfijnde details tot feestelijke verhuur-projecten. Laat u inspireren door onze passie voor mediterrane schoonheid.",
-  "sliders": [
-    {
-      "id": "tuinen",
-      "title": null,
-      "images": [
-        "/images/impressie__content__10.jpg",
-        "/images/impressie__content__14.png",
-        "/images/impressie__content__16.png",
-        "/images/impressie__content__18.jpg",
-        "/images/impressie__content__19.jpg",
-        "/images/impressie__content__25.jpg",
-        "/images/impressie__content__28.jpg",
-        "/images/impressie__content__29.jpg",
-        "/images/impressie__content__30.jpg",
-        "/images/impressie__content__31.jpg"
-      ]
-    },
-    {
-      "id": "bomen",
-      "title": "Onze bomen",
-      "images": [
-        "/images/impressie__content__32.jpg",
-        "/images/impressie__content__33.jpg",
-        "/images/impressie__content__34.jpg",
-        "/images/impressie__content__35.jpg",
-        "/images/impressie__content__36.jpg",
-        "/images/impressie__content__37.jpg",
-        "/images/impressie__content__38.jpg"
-      ]
-    },
-    {
-      "id": "details",
-      "title": "Details",
-      "images": [
-        "/images/impressie__content__39.jpg",
-        "/images/impressie__content__40.jpg",
-        "/images/impressie__content__41.jpg",
-        "/images/impressie__content__42.jpg",
-        "/images/impressie__content__43.jpg",
-        "/images/impressie__content__44.jpg",
-        "/images/impressie__content__45.jpg"
-      ]
-    },
-    {
-      "id": "verhuur",
-      "title": "Verhuur & Events",
-      "images": [
-        "/images/impressie__content__46.jpg",
-        "/images/impressie__content__47.jpg",
-        "/images/impressie__content__48.jpg",
-        "/images/impressie__content__49.jpg",
-        "/images/impressie__content__50.jpeg",
-        "/images/impressie__content__51.jpeg",
-        "/images/impressie__content__52.jpeg",
-        "/images/impressie__content__53.jpeg"
-      ]
-    }
-  ],
-  "cta": {
-    "heading": "Meer zien?",
-    "text": "Kom langs op onze tropische binnenplaats van 400 m² en ontdek ons volledige assortiment mediterrane bomen.",
-    "buttons": [
-      {
-        "text": "Maak afspraak",
-        "href": "#footer"
-      },
-      {
-        "text": "Bekijk assortiment",
-        "href": "/bomen"
-      }
-    ]
-  }
+    "hero":  {
+                 "title":  "Impressie",
+                 "subtitle":  "Mediterrane sfeer in beeld",
+                 "image":  "/images/impressie/impressie__content__01-dup-1.jpg"
+             },
+    "intro":  "Ontdek de mediterrane wereld van Spaanse Tuin \u0026 Zo. Van sfeervolle tuinen tot karaktervolle bomen, van verfijnde details tot feestelijke verhuur-projecten. Laat u inspireren door onze passie voor mediterrane schoonheid.",
+    "sliders":  [
+                    {
+                        "id":  "tuinen",
+                        "title":  null,
+                        "images":  [
+                                       "/images/impressie__content__10.jpg",
+                                       "/images/impressie__content__14.png",
+                                       "/images/impressie__content__16.png",
+                                       "/images/impressie__content__18.jpg",
+                                       "/images/impressie__content__19.jpg",
+                                       "/images/impressie__content__25.jpg",
+                                       "/images/impressie__content__28.jpg",
+                                       "/images/impressie__content__29.jpg",
+                                       "/images/impressie__content__30.jpg",
+                                       "/images/impressie__content__31.jpg"
+                                   ]
+                    },
+                    {
+                        "id":  "bomen",
+                        "title":  "Onze bomen",
+                        "images":  [
+                                       "/images/impressie__content__32.jpg",
+                                       "/images/impressie__content__33.jpg",
+                                       "/images/impressie__content__34.jpg",
+                                       "/images/impressie__content__35.jpg",
+                                       "/images/impressie__content__36.jpg",
+                                       "/images/impressie__content__37.jpg",
+                                       "/images/impressie__content__38.jpg"
+                                   ]
+                    },
+                    {
+                        "id":  "details",
+                        "title":  "Details",
+                        "images":  [
+                                       "/images/impressie__content__39.jpg",
+                                       "/images/impressie__content__40.jpg",
+                                       "/images/impressie__content__41.jpg",
+                                       "/images/impressie__content__42.jpg",
+                                       "/images/impressie__content__43.jpg",
+                                       "/images/impressie__content__44.jpg",
+                                       "/images/impressie__content__45.jpg"
+                                   ]
+                    },
+                    {
+                        "id":  "verhuur",
+                        "title":  "Verhuur \u0026 Events",
+                        "images":  [
+                                       "/images/impressie__content__46.jpg",
+                                       "/images/impressie__content__47.jpg",
+                                       "/images/impressie__content__48.jpg",
+                                       "/images/impressie__content__49.jpg",
+                                       "/images/impressie__content__50.jpeg",
+                                       "/images/impressie__content__51.jpeg",
+                                       "/images/impressie__content__52.jpeg",
+                                       "/images/impressie__content__53.jpeg"
+                                   ]
+                    }
+                ],
+    "cta":  {
+                "heading":  "Meer zien?",
+                "text":  "Kom langs op onze tropische binnenplaats van 400 mÂ² en ontdek ons volledige assortiment mediterrane bomen.",
+                "buttons":  [
+                                {
+                                    "text":  "Maak afspraak",
+                                    "href":  "#footer"
+                                },
+                                {
+                                    "text":  "Bekijk assortiment",
+                                    "href":  "/bomen"
+                                }
+                            ]
+            }
 }

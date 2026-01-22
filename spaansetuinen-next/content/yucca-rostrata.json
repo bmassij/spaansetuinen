@@ -71,5 +71,14 @@
       "href": "mailto:lisette@spaansetuin-enzo.nl",
       "text": "lisette@spaansetuin-enzo.nl"
     }
-  }
+  },
+
+  "hero": {
+    "image": "/images/bomen/palm/Yucca/20250405_180517.jpg",
+    "secondaryImage": "/images/bomen/palm/Yucca/FB_IMG_1673624470945.jpg"
+  },
+
+  "images": [
+    "/images/bomen/palm/Yucca/20220623_152420.jpg"
+  ]
 }

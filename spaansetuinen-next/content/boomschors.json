@@ -1,30 +1,34 @@
 {
-  "title": "Boomschors",
-  "description": "Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden. Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk. De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft. Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit.",
-  "details": [
-    "Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk.",
-    "De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft.",
-    "Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit."
-  ],
-  "pricing": {
-    "title": "Prijzen",
-    "items": [
-      {
-        "description": "Franse boomschors grof 20/40 mm 70 ltr",
-        "price": "€ 17,50"
-      }
-    ]
-  },
-  "cta": {
-    "heading": "Interesse?",
-    "body": "Wilt u meer informatie over Franse boomschors? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
-    "phone": {
-      "href": "tel:+31611929392",
-      "text": "+31 6 11 92 93 92"
-    },
-    "email": {
-      "href": "mailto:lisette@spaansetuin-enzo.nl",
-      "text": "lisette@spaansetuin-enzo.nl"
-    }
-  }
+    "title":  "Boomschors",
+    "description":  "Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden. Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk. De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft. Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit.",
+    "details":  [
+                    "Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk.",
+                    "De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft.",
+                    "Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit."
+                ],
+    "pricing":  {
+                    "title":  "Prijzen",
+                    "items":  [
+                                  {
+                                      "description":  "Franse boomschors grof 20/40 mm 70 ltr",
+                                      "price":  "â‚¬ 17,50"
+                                  }
+                              ]
+                },
+    "cta":  {
+                "heading":  "Interesse?",
+                "body":  "Wilt u meer informatie over Franse boomschors? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
+                "phone":  {
+                              "href":  "tel:+31611929392",
+                              "text":  "+31 6 11 92 93 92"
+                          },
+                "email":  {
+                              "href":  "mailto:lisette@spaansetuin-enzo.nl",
+                              "text":  "lisette@spaansetuin-enzo.nl"
+                          }
+            },
+    "hero":  {
+                 "secondaryImage":  "/images/impressie/impressie__content__01-dup-1.jpg",
+                 "image":  "/images/impressie/impressie__content__01-dup-1.jpg"
+             }
 }

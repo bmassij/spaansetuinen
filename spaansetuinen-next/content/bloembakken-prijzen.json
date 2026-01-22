@@ -1,30 +1,35 @@
 {
-  "slug": "bloembakken-prijzen",
-  "type": "bloembakken",
-  "title": "Prijzen bloembakken",
-
-  "description": "Onderstaande bloembakken worden geïsoleerd met noppenfolie en bekleed met antiworteldoek.\nDe prijzen zijn exclusief mediterrane boom, mediterrane potgrond en boomschors.\nMeerprijs voor zwenkwielen is op aanvraag.",
-
-  "details": [
-    "Bloembakken verkrijgbaar in diverse afmetingen",
-    "Geïsoleerd met noppenfolie",
-    "Bekleed met antiworteldoek",
-    "Prijzen exclusief mediterrane boom",
-    "Prijzen exclusief mediterrane potgrond en boomschors",
-    "Meerprijs voor zwenkwielen op aanvraag",
-    "Prijsindicatie beschikbaar op locatie of via persoonlijk contact"
-  ],
-
-  "cta": {
-    "heading": "Prijslijst ontvangen?",
-    "body": "Wilt u de actuele prijzen en mogelijkheden voor bloembakken ontvangen? Neem contact met ons op voor persoonlijk advies en een duidelijke prijsopgave.",
-    "phone": {
-      "href": "tel:+31611929392",
-      "text": "+31 6 11 92 93 92"
-    },
-    "email": {
-      "href": "mailto:lisette@spaansetuin-enzo.nl",
-      "text": "lisette@spaansetuin-enzo.nl"
-    }
-  }
+    "slug":  "bloembakken-prijzen",
+    "type":  "bloembakken",
+    "title":  "Prijzen bloembakken",
+    "description":  "Onderstaande bloembakken worden geÃ¯soleerd met noppenfolie en bekleed met antiworteldoek.\nDe prijzen zijn exclusief mediterrane boom, mediterrane potgrond en boomschors.\nMeerprijs voor zwenkwielen is op aanvraag.",
+    "details":  [
+                    "Bloembakken verkrijgbaar in diverse afmetingen",
+                    "GeÃ¯soleerd met noppenfolie",
+                    "Bekleed met antiworteldoek",
+                    "Prijzen exclusief mediterrane boom",
+                    "Prijzen exclusief mediterrane potgrond en boomschors",
+                    "Meerprijs voor zwenkwielen op aanvraag",
+                    "Prijsindicatie beschikbaar op locatie of via persoonlijk contact"
+                ],
+    "cta":  {
+                "heading":  "Prijslijst ontvangen?",
+                "body":  "Wilt u de actuele prijzen en mogelijkheden voor bloembakken ontvangen? Neem contact met ons op voor persoonlijk advies en een duidelijke prijsopgave.",
+                "phone":  {
+                              "href":  "tel:+31611929392",
+                              "text":  "+31 6 11 92 93 92"
+                          },
+                "email":  {
+                              "href":  "mailto:lisette@spaansetuin-enzo.nl",
+                              "text":  "lisette@spaansetuin-enzo.nl"
+                          }
+            },
+    "hero":  {
+                 "secondaryImage":  "/images/impressie/impressie__content__01-dup-1.jpg",
+                 "image":  "/images/impressie/impressie__content__01-dup-1.jpg"
+             },
+    "images": [
+        "/images/impressie/impressie__content__01-dup-1.jpg",
+        "/images/impressie/impressie__content__01-dup-1.jpg"
+    ]
 }

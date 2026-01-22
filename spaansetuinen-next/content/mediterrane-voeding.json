@@ -1,29 +1,33 @@
 {
-  "title": "Mediterrane voeding",
-  "description": "Pokon Mediterrane Planten Mest is een organische mest verrijkt met in de natuur voorkomende mineralen (zeoliet en algen). Het voedt de plant en verbetert de grond. Je mediterrane planten zullen sterker zijn met Pokon Mediterrane Planten Mest. Deze organische mest bevat essentiële voedingselementen en een rijke mix van sporenelementen waardoor jouw mediterrane planten mooi en gezond blijven.\n\nPokon Mediterrane Planten Voeding (vloeibaar) wordt geadviseerd na de winter te geven voor een extra boost. Volg de gebruiksaanwijzing voor dosering en toepassing.",
-  "pricing": {
-    "title": "Prijzen",
-    "items": [
-      {
-        "description": "Pokon Mediterrane planten mest 1 kg",
-        "price": "€ 8,50"
-      },
-      {
-        "description": "Pokon Mediterrane planten voeding 500 ml",
-        "price": "€ 8,50"
-      }
-    ]
-  },
-  "cta": {
-    "heading": "Interesse?",
-    "body": "Wilt u meer informatie over mediterrane voeding voor uw planten? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
-    "phone": {
-      "href": "tel:+31611929392",
-      "text": "+31 6 11 92 93 92"
-    },
-    "email": {
-      "href": "mailto:lisette@spaansetuin-enzo.nl",
-      "text": "lisette@spaansetuin-enzo.nl"
-    }
-  }
+    "title":  "Mediterrane voeding",
+    "description":  "Pokon Mediterrane Planten Mest is een organische mest verrijkt met in de natuur voorkomende mineralen (zeoliet en algen). Het voedt de plant en verbetert de grond. Je mediterrane planten zullen sterker zijn met Pokon Mediterrane Planten Mest. Deze organische mest bevat essentiÃ«le voedingselementen en een rijke mix van sporenelementen waardoor jouw mediterrane planten mooi en gezond blijven.\n\nPokon Mediterrane Planten Voeding (vloeibaar) wordt geadviseerd na de winter te geven voor een extra boost. Volg de gebruiksaanwijzing voor dosering en toepassing.",
+    "pricing":  {
+                    "title":  "Prijzen",
+                    "items":  [
+                                  {
+                                      "description":  "Pokon Mediterrane planten mest 1 kg",
+                                      "price":  "â‚¬ 8,50"
+                                  },
+                                  {
+                                      "description":  "Pokon Mediterrane planten voeding 500 ml",
+                                      "price":  "â‚¬ 8,50"
+                                  }
+                              ]
+                },
+    "cta":  {
+                "heading":  "Interesse?",
+                "body":  "Wilt u meer informatie over mediterrane voeding voor uw planten? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
+                "phone":  {
+                              "href":  "tel:+31611929392",
+                              "text":  "+31 6 11 92 93 92"
+                          },
+                "email":  {
+                              "href":  "mailto:lisette@spaansetuin-enzo.nl",
+                              "text":  "lisette@spaansetuin-enzo.nl"
+                          }
+            },
+    "hero":  {
+                 "secondaryImage":  "/images/impressie/impressie__content__01-dup-1.jpg",
+                 "image":  "/images/impressie/impressie__content__01-dup-1.jpg"
+             }
 }

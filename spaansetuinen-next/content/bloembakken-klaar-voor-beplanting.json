@@ -1,19 +1,21 @@
 {
-  "hero": {
-    "title": "Bloembakken klaar voor beplanting",
-    "subtitle": "Bloembakken voor beplanting",
-    "image": ""
-  },
-  "core": {
-    "html": "<h3>Bloembakken klaar voor beplanting</h3><p>Onderstaande bloembakken zijn geïsoleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn inclusief speciale mediterrane potgrond en Franse boomschors, maar exclusief de aanschafprijs van de mediterrane boom. Deze bloembakken zijn uitsluitend verkrijgbaar bij aanschaf van een mediterrane boom bij Spaanse Tuin & Zo. De aankleding en beplanting van de bak wordt door ons zorgvuldig en professioneel uitgevoerd, zodat uw boom direct een prachtige uitstraling krijgt.</p>"
-  },
-  "short_description": "Onderstaande bloembakken zijn geïsoleerd met noppenfolie en bekleed met antiworteldoek. Prijzen inclusief potgrond en boomschors.",
-  "long_description": "Onderstaande bloembakken zijn geïsoleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn inclusief speciale mediterrane potgrond en Franse boomschors, maar exclusief de aanschafprijs van de mediterrane boom. Deze bloembakken zijn uitsluitend verkrijgbaar bij aanschaf van een mediterrane boom bij Spaanse Tuin & Zo. De aankleding en beplanting van de bak wordt door ons zorgvuldig en professioneel uitgevoerd, zodat uw boom direct een prachtige uitstraling krijgt.\n\nPrijzentabel wordt hieronder getoond. (deze heb je in bezit.)",
-  "details": [],
-  "sections": [
-    {
-      "title": "Opmerking",
-      "content": "Prijzentabel wordt hieronder getoond. (deze heb je in bezit.)"
-    }
-  ]
+    "hero":  {
+                 "title":  "Bloembakken klaar voor beplanting",
+                 "subtitle":  "Bloembakken voor beplanting",
+                 "image":  "/images/impressie/impressie__content__01-dup-1.jpg"
+             },
+    "core":  {
+                 "html":  "\u003ch3\u003eBloembakken klaar voor beplanting\u003c/h3\u003e\u003cp\u003eOnderstaande bloembakken zijn geÃ¯soleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn inclusief speciale mediterrane potgrond en Franse boomschors, maar exclusief de aanschafprijs van de mediterrane boom. Deze bloembakken zijn uitsluitend verkrijgbaar bij aanschaf van een mediterrane boom bij Spaanse Tuin \u0026 Zo. De aankleding en beplanting van de bak wordt door ons zorgvuldig en professioneel uitgevoerd, zodat uw boom direct een prachtige uitstraling krijgt.\u003c/p\u003e"
+             },
+    "short_description":  "Onderstaande bloembakken zijn geÃ¯soleerd met noppenfolie en bekleed met antiworteldoek. Prijzen inclusief potgrond en boomschors.",
+    "long_description":  "Onderstaande bloembakken zijn geÃ¯soleerd met noppenfolie en bekleed met antiworteldoek. De prijzen zijn inclusief speciale mediterrane potgrond en Franse boomschors, maar exclusief de aanschafprijs van de mediterrane boom. Deze bloembakken zijn uitsluitend verkrijgbaar bij aanschaf van een mediterrane boom bij Spaanse Tuin \u0026 Zo. De aankleding en beplanting van de bak wordt door ons zorgvuldig en professioneel uitgevoerd, zodat uw boom direct een prachtige uitstraling krijgt.\n\nPrijzentabel wordt hieronder getoond. (deze heb je in bezit.)",
+    "details":  [
+
+                ],
+    "sections":  [
+                     {
+                         "title":  "Opmerking",
+                         "content":  "Prijzentabel wordt hieronder getoond. (deze heb je in bezit.)"
+                     }
+                 ]
 }
