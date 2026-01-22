@@ -1,64 +1,41 @@
 {
+  "slug": "onze-service",
+  "type": "pagina",
+  "title": "Onze service",
+
   "hero": {
     "title": "Onze service",
     "subtitle": "Van advies tot levering, wij regelen alles",
     "image": "/images/placeholder-bloembakken.jpg"
   },
+
   "core": {
-    "html": "<p>Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken,\ninclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen\nde rest.</p>\n\n<p>Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen\nuit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich\nnergens druk om te maken en bent u verzekerd van een vakkundige aanpak.\nOf het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het\nleveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt\ngeregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of\nterras.</p>"
+    "html": "<p>Wij verzorgen het totaalpakket: bezorgen, planten in de grond of op maat gemaakte bakken, inclusief persoonlijk advies. Van A tot Z geregeld, zodat u zorgeloos kunt genieten. Wij doen de rest.</p>\n\n<p>Klanten ervaren het als prettig dat wij het volledige totaalpakket verzorgen. Wij nemen alle zorgen uit handen, van advies en levering tot aan het planten en de nazorg. Op die manier hoeft u zich nergens druk om te maken en bent u verzekerd van een vakkundige aanpak.</p>\n\n<p>Of het nu gaat om het bezorgen van bomen, het professioneel aanplanten in de volle grond of het leveren van bomen in op maat gemaakte bakken: wij zorgen ervoor dat alles tot in detail wordt geregeld. Zo kunt u zorgeloos genieten van gezonde, sterke bomen die perfect passen bij uw tuin of terras.</p>"
   },
-  "sections": [
-    {
-      "title": "Advies op maat",
-      "text": "Wij bieden advies op maat voor elke klant, zodat u de beste keuze maakt voor uw situatie. Onze experts denken mee over plantenkeuze, locatie en onderhoud."
-    },
-    {
-      "title": "Professionele beplanting",
-      "text": "Onze planten worden professioneel geselecteerd en beplant. Wij zorgen voor correcte aanplanting en nazorg zodat uw beplanting direct goed kan groeien."
-    },
-    {
-      "title": "Levering en installatie",
-      "text": "Wij verzorgen levering en, indien gewenst, installatie op locatie. Met zorg en ervaring zorgen we dat alles op de juiste plek komt te staan."
-    }
+
+  "details": [
+    "<strong>Advies op maat</strong> – Wij bieden persoonlijk advies afgestemd op plantenkeuze, locatie en onderhoud.",
+    "<strong>Professionele beplanting</strong> – Zorgvuldige selectie, juiste aanplant en goede nazorg.",
+    "<strong>Levering en installatie</strong> – Bezorging en plaatsing op locatie met zorg en ervaring.",
+    "<strong>Bezorging</strong> – Betrouwbare bezorgservice.",
+    "<strong>Planten in de volle grond</strong> – Vakkundige aanplant voor optimale groei.",
+    "<strong>Op maat gemaakte bloembakken</strong> – Inclusief noppenfolie en antiworteldoek.",
+    "<strong>Persoonlijk advies</strong> – Wij denken graag met u mee.",
+    "<strong>Huisbezoek</strong> – Advies bij u op locatie.",
+    "<strong>Snoeien & nazorg</strong> – Voor onderhoud en blijvend mooie bomen.",
+    "<strong>Bezorgkosten</strong> – Vanaf €30,-"
   ],
-  "services": [
-    {
-      "title": "Bezorging",
-      "text": "Bezorging is goed."
+
+  "cta": {
+    "heading": "",
+    "intro": "Wilt u meer weten over onze service of persoonlijk advies ontvangen? Neem gerust contact met ons op. Wij helpen u graag verder!",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
     },
-    {
-      "title": "Planten in de volle grond",
-      "text": "Planten in de volle grond. (tekst erbij prima)"
-    },
-    {
-      "title": "Op maat gemaakte bloembakken",
-      "text": "Op maat gemaakte bloembakken (Levering in op maat gemaakte bloembakken,\nvoorzien van noppenfolie en antiworteldoek)."
-    },
-    {
-      "title": "Persoonlijk advies",
-      "text": "Wij staan u graag te woord voor een persoonlijk advies."
-    },
-    {
-      "title": "Huisbezoek",
-      "text": "Huisbezoek is goed."
-    },
-    {
-      "title": "Snoeien",
-      "text": "Voor vakkundig onderhoudt en nazorg kunt u ook bij ons terecht."
-    },
-    {
-      "title": "Bezorgkosten",
-      "text": "Bezorgkosten is vanaf 30 euro! De rest van omschrijving klopt."
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
     }
-  ],
-  "benefits": [
-    {
-      "title": "Persoonlijk advies",
-      "text": "Advies afgestemd op uw wensen en situatie."
-    },
-    {
-      "title": "Snelle levering",
-      "text": "Wij plannen snel en zorgvuldig, zodat u niet lang hoeft te wachten."
-    }
-  ]
+  }
 }
