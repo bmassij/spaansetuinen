@@ -1,25 +1,30 @@
 {
-  "hero": {
-    "title": "Mediterrane potgrond",
-    "subtitle": "Legro Mediterraan potgrond: geschikt voor citrus, olijf, palm, oleander en vijgen.",
-    "image": ""
-  },
-  "core": {
-    "html": "<h3>Legro Mediterraan potgrond</h3><p>Legro Mediterraan potgrond is geschikt voor het planten en verplanten van o.a. citrus-, olijf-, palm-, Oleander- en vijgenbomen. Deze potgrond is samengesteld uit natuurlijk hoogwaardige grondstoffen. De toevoeging van kokos en lava zorgt voor een groot vochtvasthoudend vermogen en bufferende voedingsstoffen zodat die beschikbaar blijven voor de bomen. Voor een perfecte groei van uw bomen is een basisbemesting toegevoegd voor minimaal 6 tot 9 weken.</p>"
-  },
-  "short_description": "Legro Mediterraan potgrond is geschikt voor het planten en verplanten van o.a. citrus-, olijf-, palm-, Oleander- en vijgenbomen.",
-  "long_description": "Legro Mediterraan potgrond is geschikt voor het planten en verplanten van o.a. citrus-, olijf-, palm-, Oleander- en vijgenbomen. Deze potgrond is samengesteld uit natuurlijk hoogwaardige grondstoffen. De toevoeging van kokos en lava zorgt voor een groot vochtvasthoudend vermogen en bufferende voedingsstoffen zodat die beschikbaar blijven voor de bomen. Voor een perfecte groei van uw bomen is een basisbemesting toegevoegd voor minimaal 6 tot 9 weken.",
-  "verzorging": [],
-  "plaatsing": [],
+  "title": "Mediterrane potgrond",
+  "description": "Legro Mediterraan potgrond is geschikt voor het planten en verplanten van o.a. citrus-, olijf-, palm-, Oleander- en vijgenbomen. Deze potgrond is samengesteld uit natuurlijk hoogwaardige grondstoffen. De toevoeging van kokos en lava zorgt voor een groot vochtvasthoudend vermogen en bufferende voedingsstoffen zodat die beschikbaar blijven voor de bomen.\n\nVoor een perfecte groei van uw bomen is een basisbemesting toegevoegd voor minimaal 6 tot 9 weken.",
   "details": [
     "Deze potgrond is samengesteld uit natuurlijk hoogwaardige grondstoffen.",
     "De toevoeging van kokos en lava zorgt voor een groot vochtvasthoudend vermogen en bufferende voedingsstoffen zodat die beschikbaar blijven voor de bomen.",
     "Voor een perfecte groei van uw bomen is een basisbemesting toegevoegd voor minimaal 6 tot 9 weken."
   ],
-  "sections": [
-    {
-      "title": "Legro Mediterraan potgrond",
-      "content": "Legro Mediterraan potgrond is geschikt voor het planten en verplanten van o.a. citrus-, olijf-, palm-, Oleander- en vijgenbomen. Deze potgrond is samengesteld uit natuurlijk hoogwaardige grondstoffen. De toevoeging van kokos en lava zorgt voor een groot vochtvasthoudend vermogen en bufferende voedingsstoffen zodat die beschikbaar blijven voor de bomen. Voor een perfecte groei van uw bomen is een basisbemesting toegevoegd voor minimaal 6 tot 9 weken."
+  "pricing": {
+    "title": "Prijzen",
+    "items": [
+      {
+        "description": "Legro mediterrane potgrond 40 ltr.",
+        "price": "€ 8,50"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Interesse?",
+    "body": "Wilt u meer informatie over onze mediterrane potgrond? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
     }
-  ]
+  }
 }

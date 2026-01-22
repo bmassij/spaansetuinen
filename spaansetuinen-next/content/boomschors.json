@@ -1,25 +1,30 @@
 {
-  "hero": {
-    "title": "Boomschors",
-    "subtitle": "Franse boomschors voor afwerking en bescherming van bloembakken en tuinpaden.",
-    "image": ""
-  },
-  "core": {
-    "html": "<h3>Franse boomschors</h3><p>Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden. Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk. De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft. Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit.</p>"
-  },
-  "short_description": "Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden.",
-  "long_description": "Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden. Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk. De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft. Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit.",
-  "verzorging": [],
-  "plaatsing": [],
+  "title": "Boomschors",
+  "description": "Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden. Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk. De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft. Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit.",
   "details": [
     "Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk.",
     "De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft.",
     "Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit."
   ],
-  "sections": [
-    {
-      "title": "Franse boomschors",
-      "content": "Franse boomschors is geschikt als decoratiemateriaal in bloem- en plantenbakken en voor het aanleggen van wandelpaden. Dit kwaliteitsproduct is afkomstig van naaldbomen uit Zuid-Frankrijk. De boomschors heeft een harde en vaste structuur waardoor een lange levensduur gewaarborgd blijft. Door een vakkundige productiecontrole kunt u verzekerd zijn van een constante kwaliteit."
+  "pricing": {
+    "title": "Prijzen",
+    "items": [
+      {
+        "description": "Franse boomschors grof 20/40 mm 70 ltr",
+        "price": "€ 17,50"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Interesse?",
+    "body": "Wilt u meer informatie over Franse boomschors? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
     }
-  ]
+  }
 }

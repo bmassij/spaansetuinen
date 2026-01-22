@@ -1,10 +1,29 @@
 {
-  "hero": {
-    "title": "Hydrokorrels",
-    "subtitle": "Hydrokorrels als drainagelaag en waterreservoir in potten en bakken.",
-    "image": ""
+  "title": "Hydrokorrels",
+  "description": "Hydrokorrels zijn ideaal als drainagelaag onderin bloempotten, plantenbakken en zelfs in de volle grond. Hydrokorrels zorgen ervoor dat het water langer wordt vastgehouden zodat jouw planten water hebben in een droge periode. Het voorkomt tevens natte voeten en bevordert een betere wortelontwikkeling.\n\nGebruik hydrokorrels onder de potgrond en bedek ze daarna met dementerende aarde of potgrond. De hoeveelheid is afhankelijk van de grootte van de pot of bak.",
+  "pricing": {
+    "title": "Prijzen",
+    "items": [
+      {
+        "description": "Hydrokorrels á 10 ltr",
+        "price": "€ 7,50"
+      },
+      {
+        "description": "Hydrokorrels á 40 ltr",
+        "price": "€ 20,00"
+      }
+    ]
   },
-  "core": {
-    "html": "<h3>Hydrokorrels</h3><p>Hydrokorrels zijn ideaal als drainagelaag onderin bloempotten, plantenbakken en zelfs in de volle grond. Hydrokorrels zorgen ervoor dat het water langer wordt vastgehouden zodat jouw planten water hebben in een droge periode. Het voorkomt tevens natte voeten en bevordert een betere wortelontwikkeling.</p><p>Gebruik hydrokorrels onder de potgrond en bedek ze daarna met dementerende aarde of potgrond. De hoeveelheid is afhankelijk van de grootte van de pot of bak.</p>"
+  "cta": {
+    "heading": "Interesse?",
+    "body": "Wilt u meer informatie over hydrokorrels? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
   }
 }
