@@ -2,7 +2,8 @@
     "slug":  "ficus-carica",
     "type":  "tree",
     "title":  "Ficus Carica",
-    "intro":  "De vijgenboom is winterhard tot -15 Â°C en uitstekend geschikt voor het Nederlandse klimaat.\n\nMet deze boom haalt u niet alleen een mediterrane uitstraling in uw tuin, maar geniet u ook van heerlijke, verse vijgen uit eigen tuin!",
+    "heroIntro": "De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat.",
+    "intro":  "De vijgenboom is winterhard tot -15 °C en uitstekend geschikt voor het Nederlandse klimaat.\n\nMet deze boom haalt u niet alleen een mediterrane uitstraling in uw tuin, maar geniet u ook van heerlijke, verse vijgen uit eigen tuin!",
     "kenmerken":  {
                       "heading":  "BELANGRIJKE EIGENSCHAPPEN",
                       "list":  [

@@ -33,7 +33,7 @@ export default async function Page() {
       {/* HERO SECTION - fullscreen with background images and overlays */}
       <header id="welkom" className="relative bg-gray-900 text-white">
         <div className="absolute inset-0 opacity-40" style={{ backgroundImage: "url('/assets/impressie/other1.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }} />
-        <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: "url('/hero-section.jpg')" }} />
+        <div className="absolute inset-0 bg-cover bg-center opacity-70" style={{ backgroundImage: "url('/images/misc/20210606_101635.jpg')" }} />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/50" />
 
         <div className="bunting-container">

@@ -290,7 +290,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                 const hasPlaatsingParts = hasPlaatsingSections || hasContent(inVolleGrond) || hasContent(inPotOfBloembak);
 
                 const locatieObj = (props as any).locatie ?? (props as any).rawData?.locatie;
-                const hasLocatie = locatieObj && typeof locatieObj === 'object' && (String(locatieObj.content || '').trim().length > 0);
+                const hasLocatie = locatieObj && typeof locatieObj === 'object' && typeof locatieObj.content === 'string' && locatieObj.content.trim().length > 0;
 
                 return (
                   <>
@@ -302,7 +302,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                           {hasPlaatsingSections && plaatsingObj.sections.map((s: any, i: number) => (
                             <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
                               {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
-                              {s.content && <p className="mt-2 text-sm">{s.content}</p>}
+                              {s.content && typeof s.content === 'string' && <p className="mt-2 text-sm">{s.content}</p>}
                               {Array.isArray(s.list) && s.list.length > 0 && (
                                 <ul className="mt-2 text-sm list-disc pl-5">
                                   {s.list.map((item: string, j: number) => <li key={j}>{item}</li>)}
@@ -332,7 +332,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                       <div className="mt-6">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">{String(locatieObj.heading || 'Locatie')}</h2>
                         <div className="text-gray-700">
-                          {locatieObj.content && <p>{locatieObj.content}</p>}
+                          {typeof locatieObj.content === 'string' && <p>{locatieObj.content}</p>}
                         </div>
                       </div>
                     )}
