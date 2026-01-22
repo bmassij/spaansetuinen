@@ -27,9 +27,9 @@ export default function RootLayout({
         <Navbar />
         {children}
         <HtmlFooter />
-        <CookieBanner disablePersistence={ANNIVERSARY_TEST_MODE} />
+        <JubileumPopup disablePersistence={true} />
+        <CookieBanner disablePersistence={true} />
         <WhatsAppButton />
-        {isAnniversaryActive() && anniversaryConfig.showPopup && <JubileumPopup disablePersistence={ANNIVERSARY_TEST_MODE} />}
       </body>
     </html>
   )

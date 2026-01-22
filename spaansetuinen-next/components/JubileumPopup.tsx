@@ -7,30 +7,22 @@ import JubileumDecor from './JubileumDecor';
 const STORAGE_KEY = 'jubileum-popup-dismissed';
 
 export default function JubileumPopup({ disablePersistence = false }: { disablePersistence?: boolean }) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [shouldRender, setShouldRender] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    // In test mode (disablePersistence) always show for this page load only
     if (disablePersistence) {
-      setShouldRender(true);
-      setTimeout(() => setIsVisible(true), 100);
+      setIsVisible(true);
       return;
     }
 
     try {
-      const wasDismissed = typeof window !== 'undefined' && sessionStorage.getItem(STORAGE_KEY);
-      if (wasDismissed) {
-        return;
+      const dismissed = sessionStorage.getItem(STORAGE_KEY);
+      if (!dismissed) {
+        setIsVisible(true);
       }
     } catch (e) {
-      // ignore storage errors and show popup
+      setIsVisible(true);
     }
-
-    // Show popup
-    setShouldRender(true);
-    // Small delay for fade-in effect
-    setTimeout(() => setIsVisible(true), 100);
   }, [disablePersistence]);
 
   const handleDismiss = () => {
@@ -42,12 +34,9 @@ export default function JubileumPopup({ disablePersistence = false }: { disableP
         // ignore
       }
     }
-    // Remove from DOM after fade-out
-    setTimeout(() => setShouldRender(false), 300);
   };
 
-  // Don't render if conditions aren't met
-  if (!shouldRender) {
+  if (!isVisible) {
     return null;
   }
 

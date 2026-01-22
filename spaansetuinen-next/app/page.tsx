@@ -23,13 +23,14 @@ export default async function Page() {
   const introAfterHero = data.introAfterHero || ''
   const blocks = Array.isArray(data.blocks) ? data.blocks : []
   const usp = Array.isArray(data.usp) ? data.usp : []
+  const aboutTitle = data.aboutTitle || ''
+  const aboutTeaser = data.aboutTeaser || ''
+  const aboutStory = data.aboutStory || ''
   const processTitle = data.processTitle || ''
   const processText = data.processText || ''
   const whyUsTitle = data.whyUsTitle || ''
   const whyUs = Array.isArray(data.whyUs) ? data.whyUs : []
-  const aboutTitle = data.aboutTitle || ''
-  const aboutTeaser = data.aboutTeaser || ''
-  const aboutStory = data.aboutStory || ''
+  const footerTagline = data.footerTagline || ''
   return (
     <>
 
@@ -62,15 +63,15 @@ export default async function Page() {
               <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">{intro}</p>
 
               <div className="flex flex-wrap gap-4">
-                <a href="#highlights" className="inline-flex items-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105">Bekijk ons assortiment</a>
-                <a href="#footer" className="inline-flex items-center px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border-2 border-white/30 transition transform hover:scale-105">Neem contact op</a>
+                <a href="#highlights" className="inline-flex items-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105">{ctaAnchor}</a>
+                <a href="#footer" className="inline-flex items-center px-8 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white text-lg font-semibold rounded-lg border-2 border-white/30 transition transform hover:scale-105">{footerTagline}</a>
               </div>
             </div>
           </div>
         </div>
 
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 animate-bounce">
-          <a href="#highlights" className="text-white/70 hover:text-white transition text-2xl" aria-label="Scroll naar beneden">↓</a>
+          <a href="#highlights" className="text-white/70 hover:text-white transition text-2xl" aria-label="Scroll naar beneden">{ctaAnchor}</a>
         </div>
       </header>
 
@@ -122,11 +123,11 @@ export default async function Page() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">{aboutTitle}</h2>
             <p className="text-xl text-gray-600 mb-8 text-center italic">{aboutTeaser}</p>
-            {(
-              Array.isArray(aboutStory) ? aboutStory : aboutStory.split(/\n\s*\n/)
-            ).filter(Boolean).map((para: string, idx: number) => (
-              <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para}</p>
-            ))}
+            <div className="space-y-4">
+              {aboutStory.split(/\n\s*\n/).filter(Boolean).map((para: string, idx: number) => (
+                <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para}</p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -136,7 +137,11 @@ export default async function Page() {
         <div className="container max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">{processTitle}</h2>
-            <p className="text-lg text-gray-600 leading-relaxed whitespace-pre-line">{processText}</p>
+            <div className="space-y-4">
+              {processText.split(/\n\s*\n/).filter(Boolean).map((para: string, idx: number) => (
+                <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para}</p>
+              ))}
+            </div>
           </div>
         </div>
       </section>
