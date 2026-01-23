@@ -183,6 +183,25 @@ function transformTreeContent(s?: unknown) {
   return (s as string).replace(/\. /g, '.\n');
 }
 
+// Helper: render plain text for tree pages into real paragraphs
+// - Splits on any sequence of newlines (\n) so both single and double
+//   newlines become paragraph boundaries
+// - Does NOT alter the text content (no trim / rewrite)
+// - Caller must not pass HTML strings (those should remain rendered via dangerouslySetInnerHTML)
+function renderTreeParagraphs(text?: string | null): JSX.Element[] | null {
+  if (!text || typeof text !== 'string') return null;
+  // normalize CRLF -> LF
+  const normalized = text.replace(/\r\n/g, '\n');
+  // split on one or more newlines to create paragraph blocks
+  const parts = normalized.split(/\n+/);
+  if (parts.length === 0) return null;
+  return parts.map((p, i) => (
+    <p key={i} className="mt-2 text-sm">
+      {p}
+    </p>
+  ));
+}
+
 export default function ProductTemplate(props: ProductProps & { topContent?: React.ReactNode; rawData?: any }) {
   const {
     title,
@@ -261,7 +280,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
             const transformedIntro = transformTreeContent(introText);
             return (
               <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
-                <div className="text-gray-700 whitespace-pre-line">{transformedIntro}</div>
+                <div className="text-gray-700">{renderTreeParagraphs(transformedIntro)}</div>
               </section>
             );
           })()}
@@ -274,7 +293,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                   <h3 className="text-2xl font-semibold mb-3">{omschrijvingHeading || 'Kenmerken'}</h3>
                   <div className="bg-white rounded-lg p-6 border border-gray-100">
                     {/* Inserted transform for tree pages: replace ". " with ".\n" while preserving existing newlines */}
-                    <p className="text-gray-700 whitespace-pre-line">{transformTreeContent(omschrijving)}</p>
+                    <div className="text-gray-700">{renderTreeParagraphs(transformTreeContent(omschrijving))}</div>
                   </div>
                 </div>
               )}
@@ -295,7 +314,13 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                     {verzorging.sections.map((s: any, i: number) => (
                       <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
                         {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
-                        {s.content && <p className="mt-2 text-sm whitespace-pre-line">{transformTreeContent(s.content)}</p>}
+                        {s.content && typeof s.content === 'string' && (
+                          (/<[^>]+>/).test(s.content) ? (
+                            <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: s.content }} />
+                          ) : (
+                            <>{renderTreeParagraphs(transformTreeContent(s.content))}</>
+                          )
+                        )}
                         {Array.isArray(s.list) && s.list.length > 0 && (
                           <ul className="mt-2 text-sm list-disc pl-5">
                             {s.list.map((item: string, j: number) => (
@@ -335,7 +360,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                                 (/<[^>]+>/).test(s.content) ? (
                                   <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: s.content }} />
                                 ) : (
-                                  <p className="mt-2 text-sm whitespace-pre-line">{transformTreeContent(s.content)}</p>
+                                  <>{renderTreeParagraphs(transformTreeContent(s.content))}</>
                                 )
                               )}
                               {Array.isArray(s.list) && s.list.length > 0 && (
@@ -368,7 +393,9 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                       <div className="mt-6">
                         <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">{String(locatieObj.heading || 'Locatie')}</h2>
                         <div className="text-gray-700">
-                          {typeof locatieObj.content === 'string' && <p>{locatieObj.content}</p>}
+                          {typeof locatieObj.content === 'string' && (
+                            <div>{renderTreeParagraphs(transformTreeContent(locatieObj.content))}</div>
+                          )}
                         </div>
                       </div>
                     )}

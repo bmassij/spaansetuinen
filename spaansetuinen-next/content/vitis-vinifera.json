@@ -2,12 +2,16 @@
   "slug": "vitis-vinifera",
   "type": "tree",
   "title": "Vitis Vinifera",
-  "heroIntro": "Wilt u uw tuin een tropische uitstraling geven? Met onze druivenrank brengt u direct sfeer en mediterrane charme in uw buitenruimte – wij helpen u graag bij de perfecte keuze!",
-  "intro": "De druivenrank is een veelzijdige en sfeervolle plant die direct een mediterrane uitstraling geeft aan uw tuin, balkon of terras. Ideaal om langs pergola’s, hekwerken of schuttingen te laten klimmen en een echte blikvanger in iedere tuin.",
+
+  "heroIntro": "Wilt u uw tuin een tropische uitstraling geven?\nMet onze druivenrank brengt u direct sfeer en mediterrane charme in uw buitenruimte – wij helpen u graag bij de perfecte keuze!",
+
+  "intro": "De druivenrank is een veelzijdige en sfeervolle plant die direct een mediterrane uitstraling geeft aan uw tuin, balkon of terras.\nIdeaal om langs pergola’s, hekwerken of schuttingen te laten klimmen en een echte blikvanger in iedere tuin.",
+
   "omschrijving": {
     "heading": "Kenmerken",
     "content": "Deze druivenrank bieden wij aan in twee verschillende stamhoogtes.\nDe druivenrank kenmerkt zich als een houtachtige klimplant die zich met ranken vasthecht.\nIn volle bloei is deze Vitis Vinifera een lust voor het oog."
   },
+
   "kenmerken": {
     "heading": "BELANGRIJKE EIGENSCHAPPEN",
     "list": [
@@ -18,20 +22,21 @@
       "Geeft druiven in de zomer"
     ]
   },
+
   "verzorging": {
     "heading": "VERZORGING",
     "sections": [
       {
         "title": "Snoeien",
-        "content": "De druivenrank kunt u het beste snoeien zodra hij zijn bladeren heeft verloren, meestal in de periode van november tot en met december. Snoei bij voorkeur op een vorstvrije dag om schade aan de takken te voorkomen."
+        "content": "De druivenrank kunt u het beste snoeien zodra hij zijn bladeren heeft verloren, meestal in de periode van november tot en met december.\nSnoei bij voorkeur op een vorstvrije dag om schade aan de takken te voorkomen."
       },
       {
         "title": "Winterbescherming",
-        "content": "De druivenrank is winterhard tot -15 °C en heeft geen extra winterbescherming nodig."
+        "content": "De druivenrank is <strong>winterhard tot -15 °C</strong> en heeft geen extra winterbescherming nodig."
       },
       {
         "title": "Hydrateren",
-        "content": "De wortels van de druivenrank voorzien de plant grotendeels van grondwater. Bij warme temperaturen boven 20 °C kunt u extra water geven om uitdroging te voorkomen. Houd de bodem licht vochtig."
+        "content": "De wortels van de druivenrank voorzien de plant grotendeels van grondwater.\nBij warme temperaturen <strong>boven 20 °C</strong> kunt u extra water geven om uitdroging te voorkomen.\nHoud de bodem licht vochtig."
       },
       {
         "title": "Voeding",
@@ -39,22 +44,25 @@
       }
     ]
   },
+
   "plaatsing": {
     "heading": "PLAATSING",
     "sections": [
       {
         "title": "In de volle grond",
-        "content": "De druivenrank staat het liefst in de volle grond, zodat de wortels zich goed kunnen verspreiden en de plant zich optimaal kan ontwikkelen tot een sterke, weelderige rank. Plaats de rank bij voorkeur langs een pergola, schutting of hekwerk."
+        "content": "De druivenrank staat het liefst in de volle grond, zodat de wortels zich goed kunnen verspreiden en de plant zich optimaal kan ontwikkelen tot een sterke, weelderige rank.\nPlaats de rank bij voorkeur langs een pergola, schutting of hekwerk."
       }
     ]
   },
+
   "locatie": {
     "heading": "LOCATIE",
-    "content": "De druivenrank groeit het beste op een zonnige, zuidelijke plek. Zorg voor een beschutte locatie zodat de plant beschermd is tegen harde wind."
+    "content": "De druivenrank groeit het beste op een zonnige, zuidelijke plek.\nZorg voor een beschutte locatie zodat de plant beschermd is tegen harde wind."
   },
+
   "cta": {
     "heading": "",
-    "intro": "Wilt u weten welke druivenrank het beste bij uw tuin past? Neem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies. Wij denken met plezier met u mee om de ideale druivenrank te vinden!",
+    "intro": "Wilt u weten welke druivenrank het beste bij uw tuin past?\nNeem contact met ons op voor beschikbaarheid, prijzen en persoonlijk advies.\nWij denken met plezier met u mee om de ideale druivenrank te vinden!",
     "phone": {
       "href": "tel:+31611929392",
       "text": "+31 6 11 92 93 92"
@@ -64,6 +72,7 @@
       "text": "lisette@spaansetuin-enzo.nl"
     }
   },
+
   "hero": {
     "secondaryImage": "/images/impressie/impressie__content__01-dup-1.jpg",
     "image": "/images/impressie/impressie__content__01-dup-1.jpg"
