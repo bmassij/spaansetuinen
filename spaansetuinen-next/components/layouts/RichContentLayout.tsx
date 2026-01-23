@@ -205,8 +205,8 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
                           {renderRichText(section.content)}
                         </div>
                       )}
-                      {/* Section images are allowed for verhuur */}
-                      {section.image && (
+                      {/* Section images: do NOT render on the verhuur page */}
+                      {!isVerhuur && section.image && (
                         <div className="my-6">
                           <Image
                             src={String(section.image)}
@@ -228,20 +228,41 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
 
           {/* CTA block — rendered as final, visually separated block */}
           {ctaText && (
-            <section className="mt-14">
-              <div className="p-6 bg-emerald-50 rounded-lg border border-emerald-200">
-                <div className="prose max-w-none text-gray-700">
-                  {renderRichText(String(ctaText))}
-                  {phone && <p className="mb-4">{phone}</p>}
-                  {email && <p className="mb-4">{email}</p>}
-                  <div>
-                    <a href="/contact" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700">
-                      Contactformulier
-                    </a>
+            isVerhuur ? (
+              <section className="w-full py-12">
+                <div className="max-w-5xl mx-auto">
+                  <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 text-white text-center">
+                    <h2 className="text-3xl font-bold mb-4">{(c.cta && c.cta.heading && String(c.cta.heading).trim()) ? String(c.cta.heading) : 'Interesse?'}</h2>
+                    {ctaText && <p className="text-lg text-emerald-50 mb-4">{ctaText}</p>}
+                    <div className="flex flex-wrap justify-center gap-4">
+                      {c.cta?.phone && c.cta.phone.href && (
+                        <a href={String(c.cta.phone.href)} className="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg">📞 {String(c.cta.phone.text ?? phone)}</a>
+                      )}
+                      {c.cta?.email && c.cta.email.href && (
+                        <a href={String(c.cta.email.href)} className="inline-flex items-center px-6 py-3 bg-emerald-800 text-white font-semibold rounded-lg">✉️ {String(c.cta.email.text ?? email)}</a>
+                      )}
+                      {/* Extra button linking to contactformulier */}
+                      <a href="/contact" className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg">Contactformulier</a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </section>
+              </section>
+            ) : (
+              <section className="mt-14">
+                <div className="p-6 bg-emerald-50 rounded-lg border border-emerald-200">
+                  <div className="prose max-w-none text-gray-700">
+                    {renderRichText(String(ctaText))}
+                    {phone && <p className="mb-4">{phone}</p>}
+                    {email && <p className="mb-4">{email}</p>}
+                    <div>
+                      <a href="/contact" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700">
+                        Contactformulier
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )
           )}
         </div>
       </main>
