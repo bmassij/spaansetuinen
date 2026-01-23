@@ -175,6 +175,14 @@ function renderCTAContent(cta: any) {
   return null;
 }
 
+// Helper: transform plain text for tree pages: insert a newline after every literal ". "
+// - Only used in render layer for specific content blocks on tree pages
+// - Preserves existing newlines
+function transformTreeContent(s?: unknown) {
+  if (!s || typeof s !== 'string') return s as any;
+  return (s as string).replace(/\. /g, '.\n');
+}
+
 export default function ProductTemplate(props: ProductProps & { topContent?: React.ReactNode; rawData?: any }) {
   const {
     title,
@@ -194,8 +202,12 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
     isTreePage = false,
   } = props as ProductProps & { topContent?: React.ReactNode; rawData?: any };
 
+  // Determine page type and treat any page with type === 'tree' as tree page
+  const pageType = (props as any).page?.type || (props as any).type || (props as any).rawData?.type || '';
+  const isTree = isTreePage || String(pageType).toLowerCase() === 'tree';
+
   // STRICT MODE for tree pages
-  if (isTreePage) {
+  if (isTree) {
     // rawData not required for tree rendering; kept for compatibility
     const mainImage = (gallery && gallery.length > 0) ? gallery[0] : heroImage;
     
@@ -246,9 +258,10 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
           {(() => {
             const introText = typeof (props as any).intro === 'string' ? String((props as any).intro) : (typeof (props as any).rawData?.intro === 'string' ? String((props as any).rawData.intro) : undefined);
             if (!introText) return null;
+            const transformedIntro = transformTreeContent(introText);
             return (
               <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
-                <div className="text-gray-700 whitespace-pre-line">{introText}</div>
+                <div className="text-gray-700 whitespace-pre-line">{transformedIntro}</div>
               </section>
             );
           })()}
@@ -260,7 +273,8 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                 <div>
                   <h3 className="text-2xl font-semibold mb-3">{omschrijvingHeading || 'Kenmerken'}</h3>
                   <div className="bg-white rounded-lg p-6 border border-gray-100">
-                    <p className="text-gray-700 whitespace-pre-line">{omschrijving}</p>
+                    {/* Inserted transform for tree pages: replace ". " with ".\n" while preserving existing newlines */}
+                    <p className="text-gray-700 whitespace-pre-line">{transformTreeContent(omschrijving)}</p>
                   </div>
                 </div>
               )}
@@ -281,7 +295,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                     {verzorging.sections.map((s: any, i: number) => (
                       <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
                         {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
-                        {s.content && <p className="mt-2 text-sm">{s.content}</p>}
+                        {s.content && <p className="mt-2 text-sm whitespace-pre-line">{transformTreeContent(s.content)}</p>}
                         {Array.isArray(s.list) && s.list.length > 0 && (
                           <ul className="mt-2 text-sm list-disc pl-5">
                             {s.list.map((item: string, j: number) => (
@@ -316,10 +330,18 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                           {hasPlaatsingSections && plaatsingObj.sections.map((s: any, i: number) => (
                             <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
                               {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
-                              {s.content && typeof s.content === 'string' && <p className="mt-2 text-sm">{s.content}</p>}
+                              {/* If content is a plain string, apply transform; if it contains HTML tags, render as HTML unchanged */}
+                              {s.content && typeof s.content === 'string' && (
+                                (/<[^>]+>/).test(s.content) ? (
+                                  <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: s.content }} />
+                                ) : (
+                                  <p className="mt-2 text-sm whitespace-pre-line">{transformTreeContent(s.content)}</p>
+                                )
+                              )}
                               {Array.isArray(s.list) && s.list.length > 0 && (
                                 <ul className="mt-2 text-sm list-disc pl-5">
-                                  {s.list.map((item: string, j: number) => <li key={j}>{item}</li>)}
+                                  {s.list.map((item: string, j: number) => <li key={j}>{item}</li>)
+                                  }
                                 </ul>
                               )}
                             </div>
@@ -409,11 +431,11 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
 
   // ORIGINAL BEHAVIOR for non-tree pages (unchanged)
   const mainImage = (gallery && gallery.length > 0) ? gallery[0] : heroImage;
-  const pageType = (props as any).page?.type || (props as any).type || '';
+  /* pageType already determined above */
   const excludedTypes = ['potgrond', 'voeding', 'verhuur', 'tips'];
-const hasPlaatsing = hasContent(plaatsing);
-const hasKenmerken = Array.isArray(kenmerken) && kenmerken.length > 0;
-const hasVerzorging = hasContent(verzorging);
+  const hasPlaatsing = hasContent(plaatsing);
+  const hasKenmerken = Array.isArray(kenmerken) && kenmerken.length > 0;
+  const hasVerzorging = hasContent(verzorging);
 
 
   // Verzorging should appear either as summary in intro-grid OR as full section, not both
@@ -450,7 +472,7 @@ const hasVerzorging = hasContent(verzorging);
             <div className="hidden md:flex justify-center items-center">
               <div className="w-full max-w-md h-80 bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl flex items-center justify-center border-2 border-white/20">
                 <div className="text-center p-8">
-                  {!isTreePage && (
+                  {!isTree && (
                     <>
                       <div className="text-6xl mb-4">🌳</div>
                       <p className="text-white/80 text-sm">Afbeelding volgt</p>
@@ -466,7 +488,7 @@ const hasVerzorging = hasContent(verzorging);
       {/* Main content area */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breadcrumbs */}
-        {!isTreePage && (
+        {!isTree && (
           <nav aria-label="Breadcrumb" className="text-sm text-gray-600 mb-6">
             <ol className="flex items-center space-x-2">
               <li>Home</li>
@@ -503,7 +525,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Plaatsing */}
             {hasPlaatsing && (
               <div>
-                {!isTreePage && <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">Ideale standplaats</h2>}
+                {!isTree && <h2 className="text-3xl font-bold text-gray-900 mb-4 border-l-4 border-emerald-600 pl-4">Ideale standplaats</h2>}
                 <div className="text-gray-700 space-y-4">
                   {renderSections(plaatsing)}
                 </div>
@@ -533,7 +555,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Verzorging */}
             {hasVerzorging && (
               <div>
-                {!isTreePage && <h3 className="text-2xl font-semibold mb-3">Verzorging</h3>}
+                {!isTree && <h3 className="text-2xl font-semibold mb-3">Verzorging</h3>}
                 <div className="space-y-4 text-gray-700">
                   {renderSections(verzorging)}
                 </div>
@@ -543,7 +565,7 @@ const hasVerzorging = hasContent(verzorging);
             {/* Details / lange beschrijving */}
             {long_description && (
               <div>
-                {!isTreePage && <h3 className="text-2xl font-semibold mb-3">Details</h3>}
+                {!isTree && <h3 className="text-2xl font-semibold mb-3">Details</h3>}
                 <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: long_description }} />
               </div>
             )}
@@ -558,9 +580,9 @@ const hasVerzorging = hasContent(verzorging);
                 <img src={mainImage} alt={title || ''} className="w-full h-full object-cover" />
               ) : (
                 <div className="text-center p-8">
-                  {!isTreePage && <div className="text-8xl mb-4">🌿</div>}
+                  {!isTree && <div className="text-8xl mb-4">🌿</div>}
                   <p className="text-emerald-50 font-medium">{title || ''}</p>
-                  {!isTreePage && <p className="text-emerald-200 text-sm mt-2">Afbeelding volgt</p>}
+                  {!isTree && <p className="text-emerald-200 text-sm mt-2">Afbeelding volgt</p>}
                 </div>
               )}
             </div>
