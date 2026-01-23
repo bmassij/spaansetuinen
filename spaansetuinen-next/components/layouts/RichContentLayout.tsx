@@ -27,7 +27,55 @@ function renderParagraphs(text?: string | null): JSX.Element[] | null {
   const normalized = text.replace(/\r\n/g, '\n');
   const parts = normalized.split(/\n+/).filter(p => p.trim());
   if (parts.length === 0) return null;
-  return parts.map((p, i) => <p key={i} className="mb-2">{p}</p>);
+  return parts.map((p, i) => <p key={i} className="mb-4">{p}</p>);
+}
+
+// Render description into the three required blocks for the verhuur page
+function renderDescriptionSplit(description: string, headerTitle: string) {
+  const normalized = description.replace(/\r\n/g, '\n');
+  const paragraphs = normalized.split('\n\n').filter(p => p.trim());
+  const blocks: { intro: string[]; how: string[]; occasions: string[] } = { intro: [], how: [], occasions: [] };
+
+  // Block 1: first two paragraphs
+  blocks.intro = paragraphs.slice(0, 2);
+
+  // Remaining paragraphs: classify by keywords into how / occasions
+  const howKeywords = ['plaats', 'plaatsen', 'verzorg', 'ophaal', 'ophalen'];
+  const occKeywords = ['bruiloft', 'event', 'wow', 'gelegenheid', 'gelegenheden'];
+
+  paragraphs.slice(2).forEach(p => {
+    const lower = p.toLowerCase();
+    if (howKeywords.some(k => lower.includes(k))) {
+      blocks.how.push(p);
+    } else if (occKeywords.some(k => lower.includes(k))) {
+      blocks.occasions.push(p);
+    } else {
+      // If unclear, prefer 'how' to keep flow (most description text about process)
+      blocks.how.push(p);
+    }
+  });
+
+  return (
+    <>
+      <section>
+        {blocks.intro.map((p, i) => <p key={`intro-${i}`} className="mb-4">{p.split('\n').join(' ')}</p>)}
+      </section>
+
+      {blocks.how.length > 0 && (
+        <section className="mt-10">
+          <h2 className="mt-10 mb-4 text-2xl font-semibold text-gray-900">Hoe werkt verhuur?</h2>
+          {blocks.how.map((p, i) => <p key={`how-${i}`} className="mb-4">{p.split('\n').join(' ')}</p>)}
+        </section>
+      )}
+
+      {blocks.occasions.length > 0 && (
+        <section className="mt-10">
+          <h2 className="mt-10 mb-4 text-2xl font-semibold text-gray-900">Voor welke gelegenheden?</h2>
+          {blocks.occasions.map((p, i) => <p key={`occ-${i}`} className="mb-4">{p.split('\n').join(' ')}</p>)}
+        </section>
+      )}
+    </>
+  );
 }
 
 export default function RichContentLayout({ content, showServiceCards }: RichContentLayoutProps) {
@@ -37,6 +85,16 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
   const resolvedHeroSubtitle = c.hero?.subtitle ?? c.subtitle ?? undefined;
   const resolvedHeroImage = c.hero?.image ?? undefined;
   const resolvedHeroSecondaryImage = c.hero?.secondaryImage ?? c.secondaryImage ?? undefined;
+
+  // Detect verhuur page by title or slug
+  const isVerhuur = String(headerTitle).toLowerCase().includes('verhuur') || String(c?.slug ?? '').toLowerCase() === 'verhuur';
+
+  // CTA values (use existing fields when present)
+  const ctaText = c.cta?.intro ?? null;
+  const phoneObj = c.cta?.phone ?? c.contact?.phone ?? c.phone ?? null;
+  const emailObj = c.cta?.email ?? c.contact?.email ?? c.email ?? null;
+  const phone = phoneObj?.text ?? (typeof phoneObj === 'string' ? phoneObj : null);
+  const email = emailObj?.text ?? (typeof emailObj === 'string' ? emailObj : null);
 
   return (
     <div className="min-h-screen">
@@ -123,18 +181,18 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
           )}
 
           {/* Rich Content Section */}
-          <section className="bg-white p-6 md:p-8 rounded-lg shadow-sm">
+          <section className="bg-white p-6 md:p-8 rounded-lg shadow-sm mt-10">
             <div className="prose max-w-none text-gray-700">
               {/* Main Description */}
               {c.description && (
                 <div className="mb-6">
-                  {renderRichText(c.description)}
+                  {isVerhuur ? renderDescriptionSplit(String(c.description), String(headerTitle)) : renderRichText(String(c.description))}
                 </div>
               )}
 
               {/* Sections */}
               {Array.isArray(c.sections) && c.sections.length > 0 && (
-                <div className="space-y-8">
+                <div className="space-y-8 mt-10">
                   {c.sections.map((section: any, idx: number) => (
                     <div key={idx}>
                       {section.title && (
@@ -147,6 +205,7 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
                           {renderRichText(section.content)}
                         </div>
                       )}
+                      {/* Section images are allowed for verhuur */}
                       {section.image && (
                         <div className="my-6">
                           <Image
@@ -163,19 +222,27 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
                 </div>
               )}
 
-              {/* CTA */}
-              {c.cta?.intro && (
-                <div className="mt-8 p-6 bg-emerald-50 rounded-lg border border-emerald-200">
-                  {renderRichText(c.cta.intro)}
-                  <div className="mt-4">
+              {/* Note: top-level content.images are intentionally not rendered on the verhuur page */}
+            </div>
+          </section>
+
+          {/* CTA block — rendered as final, visually separated block */}
+          {ctaText && (
+            <section className="mt-14">
+              <div className="p-6 bg-emerald-50 rounded-lg border border-emerald-200">
+                <div className="prose max-w-none text-gray-700">
+                  {renderRichText(String(ctaText))}
+                  {phone && <p className="mb-4">{phone}</p>}
+                  {email && <p className="mb-4">{email}</p>}
+                  <div>
                     <a href="/contact" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-emerald-600 hover:bg-emerald-700">
                       Contactformulier
                     </a>
                   </div>
                 </div>
-              )}
-            </div>
-          </section>
+              </div>
+            </section>
+          )}
         </div>
       </main>
     </div>
