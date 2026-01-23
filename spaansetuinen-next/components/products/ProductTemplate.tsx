@@ -7,10 +7,13 @@
  *
  * Wijzigingen aan content gebeuren uitsluitend via JSON.
  * Datum lock: 2026-01-18
+ *
+ * REFACTOR: 2026-01-23 - Kenmerken-blok geëxtraheerd naar TreeKenmerken component
  */
 
 
 import React from 'react';
+import TreeKenmerken from '../TreeKenmerken';
 
 export type ProductProps = {
   title?: string;
@@ -19,6 +22,10 @@ export type ProductProps = {
   heroImage?: string;
   gallery?: string[];
   kenmerken?: string[];
+  kenmerkenHeading?: string;
+  kenmerkenContent?: string;
+  omschrijving?: string;
+  omschrijvingHeading?: string;
   verzorging?: Record<string, any> | string;
   plaatsing?: Record<string, any> | string;
   price?: string | null;
@@ -176,6 +183,10 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
     heroImage,
     gallery,
     kenmerken,
+    kenmerkenHeading,
+    kenmerkenContent,
+    omschrijving,
+    omschrijvingHeading,
     verzorging,
     plaatsing,
     price,
@@ -244,20 +255,23 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
 
           <section className="mb-12 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
             <div className="space-y-8">
-              {/* Kenmerken - STRICT: only render explicit arrays */}
-              {kenmerken && kenmerken.length > 0 && (
+              {/* Omschrijving tekstblok - optioneel, boven Kenmerken */}
+              {omschrijving && omschrijving.trim().length > 0 && (
                 <div>
-                  <h3 className="text-2xl font-semibold mb-3">BELANGRIJKE EIGENSCHAPPEN</h3>
-                  <ul className="space-y-2 bg-emerald-50 rounded-lg p-6 list-disc pl-5 text-gray-700">
-                    {kenmerken.map((k: string, i: number) => (
-                      <li key={i} className="flex items-start">
-                        <span className="mr-2 mt-1 text-emerald-600">✓</span>
-                        <span>{k}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-2xl font-semibold mb-3">{omschrijvingHeading || 'Kenmerken'}</h3>
+                  <div className="bg-white rounded-lg p-6 border border-gray-100">
+                    <p className="text-gray-700 whitespace-pre-line">{omschrijving}</p>
+                  </div>
                 </div>
               )}
+
+              {/* Kenmerken - STRICT: only render explicit arrays */}
+              <TreeKenmerken
+                items={kenmerken || []}
+                heading={kenmerkenHeading}
+                content={kenmerkenContent}
+                variant="white"
+              />
 
               {/* Verzorging - STRICT: only render if sections exist */}
               {verzorging && typeof verzorging === 'object' && 'sections' in verzorging && Array.isArray(verzorging.sections) && verzorging.sections.length > 0 && (
@@ -496,19 +510,24 @@ const hasVerzorging = hasContent(verzorging);
               </div>
             )}
 
+            {/* Omschrijving tekstblok - optioneel, boven Kenmerken */}
+            {omschrijving && omschrijving.trim().length > 0 && (
+              <div>
+                <h3 className="text-2xl font-semibold mb-3">{omschrijvingHeading || 'Kenmerken'}</h3>
+                <div className="bg-white rounded-lg p-6 border border-gray-100">
+                  <p className="text-gray-700 whitespace-pre-line">{omschrijving}</p>
+                </div>
+              </div>
+            )}
+
             {/* Kenmerken */}
             {hasKenmerken && (
-              <div>
-                {!isTreePage && <h3 className="text-2xl font-semibold mb-3">Kenmerken</h3>}
-                <ul className="space-y-2 bg-emerald-50 rounded-lg p-6 list-disc pl-5 text-gray-700">
-                  {kenmerken.map((k, i) => (
-                    <li key={i} className="flex items-start">
-                      <span className="mr-2 mt-1 text-emerald-600">✓</span>
-                      <span>{k}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <TreeKenmerken
+                items={kenmerken || []}
+                heading={kenmerkenHeading || 'Kenmerken'}
+                content={kenmerkenContent}
+                variant="white"
+              />
             )}
 
             {/* Verzorging */}
