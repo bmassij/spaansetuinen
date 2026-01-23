@@ -17,7 +17,7 @@ function renderRichText(text: string): JSX.Element[] {
   const paragraphs = normalized.split('\n\n').filter(p => p.trim());
   
   return paragraphs.map((block, i) => (
-    <p key={i} className="mb-4">
+    <p key={i} className="mb-4 leading-relaxed">
       {block.split('\n').join(' ')}
     </p>
   ));
@@ -29,7 +29,7 @@ function renderParagraphs(text?: string | null): JSX.Element[] | null {
   const normalized = text.replace(/\r\n/g, '\n');
   const parts = normalized.split(/\n+/).filter(p => p.trim());
   if (parts.length === 0) return null;
-  return parts.map((p, i) => <p key={i} className="mb-4">{p}</p>);
+  return parts.map((p, i) => <p key={i} className="mb-4 leading-relaxed">{p}</p>);
 }
 
 // Render description into the three required blocks for the verhuur page
@@ -60,20 +60,20 @@ function renderDescriptionSplit(description: string, headerTitle: string) {
   return (
     <>
       <section>
-        {blocks.intro.map((p, i) => <p key={`intro-${i}`} className="mb-4">{p.split('\n').join(' ')}</p>)}
+        {blocks.intro.map((p, i) => <p key={`intro-${i}`} className="mb-4 leading-relaxed">{p.split('\n').join(' ')}</p>)}
       </section>
 
       {blocks.how.length > 0 && (
         <section className="mt-10">
           <h2 className="mt-10 mb-4 text-2xl font-semibold text-gray-900">Hoe werkt verhuur?</h2>
-          {blocks.how.map((p, i) => <p key={`how-${i}`} className="mb-4">{p.split('\n').join(' ')}</p>)}
+          {blocks.how.map((p, i) => <p key={`how-${i}`} className="mb-4 leading-relaxed">{p.split('\n').join(' ')}</p>)}
         </section>
       )}
 
       {blocks.occasions.length > 0 && (
         <section className="mt-10">
           <h2 className="mt-10 mb-4 text-2xl font-semibold text-gray-900">Voor welke gelegenheden?</h2>
-          {blocks.occasions.map((p, i) => <p key={`occ-${i}`} className="mb-4">{p.split('\n').join(' ')}</p>)}
+          {blocks.occasions.map((p, i) => <p key={`occ-${i}`} className="mb-4 leading-relaxed">{p.split('\n').join(' ')}</p>)}
         </section>
       )}
     </>

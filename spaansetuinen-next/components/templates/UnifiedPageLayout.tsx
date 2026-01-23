@@ -161,7 +161,11 @@ export default function UnifiedPageLayout({ page }: UnifiedProps) {
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title}</h1>
-              <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{short_description || ''}</p>
+              {String(short_description || '').replace(/\r\n/g, '\n').split('\n\n').filter(p => p.trim()).map((p: string, i: number) => (
+                <p key={i} className="mb-4 leading-relaxed text-lg sm:text-xl text-emerald-50">
+                  {p}
+                </p>
+              ))}
             </div>
 
             <div className="hidden md:flex justify-center items-center">
@@ -213,7 +217,11 @@ export default function UnifiedPageLayout({ page }: UnifiedProps) {
             {long_description && (
               <div>
                 <h3 className="text-2xl font-semibold mb-3">Details</h3>
-                <div className="prose max-w-none text-gray-700">{long_description}</div>
+                <div className="prose max-w-none text-gray-700">
+                  {String(long_description).replace(/\r\n/g, '\n').split('\n\n').filter(p => p.trim()).map((p: string, i: number) => (
+                    <p key={i} className="mb-4 leading-relaxed">{p}</p>
+                  ))}
+                </div>
               </div>
             )}
           </div>
