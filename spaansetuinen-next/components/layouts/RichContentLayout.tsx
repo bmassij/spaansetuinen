@@ -164,70 +164,139 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
             </section>
           )}
 
-          {/* Benefits Grid */}
-          {Array.isArray(c?.benefits) && c.benefits.length > 0 && (
-            <div className="mb-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                {c.benefits.map((b: any, i: number) => {
-                  const desc = b?.text ?? (b?.html ? String(b.html).replace(/<[^>]+>/g, '') : '');
-                  return (
-                    <ServiceCard
-                      key={i}
-                      icon={<span aria-hidden>🌿</span>}
-                      title={b?.title ?? ''}
-                      description={desc}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          )}
-
-          {/* Rich Content Section */}
-          <section className="bg-white p-6 md:p-8 rounded-lg shadow-sm mt-10">
-            <div className="prose max-w-none text-gray-700">
-              {/* Main Description */}
-              {c.description && (
-                <div className="mb-6">
-                  {isVerhuur ? renderDescriptionSplit(String(c.description), String(headerTitle)) : renderRichText(String(c.description))}
-                </div>
-              )}
-
-              {/* Sections */}
-              {Array.isArray(c.sections) && c.sections.length > 0 && (
-                <div className="space-y-8 mt-10">
-                  {c.sections.map((section: any, idx: number) => (
-                    <div key={idx}>
-                      {section.title && (
-                        <h3 className="text-2xl font-semibold mb-3 text-gray-900">
-                          {String(section.title)}
-                        </h3>
-                      )}
-                      {section.content && (
-                        <div className="mb-4">
-                          {renderRichText(section.content)}
-                        </div>
-                      )}
-                      {/* Section images: do NOT render on the verhuur page */}
-                      {!isVerhuur && section.image && (
-                        <div className="my-6">
-                          <Image
-                            src={String(section.image)}
-                            alt={String(section.title ?? 'Sectie afbeelding')}
-                            width={800}
-                            height={600}
-                            className="rounded-lg"
-                          />
-                        </div>
-                      )}
+          {isVerhuur && Array.isArray(c?.benefits) && c.benefits.length > 0 ? (
+            // Verhuur layout: two-column grid with text left and benefits right
+            <section className="bg-white p-6 md:p-8 rounded-lg shadow-sm mt-10">
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Left: description + sections (text) */}
+                <div className="prose max-w-none text-gray-700">
+                  {/* Main Description */}
+                  {c.description && (
+                    <div className="mb-6">
+                      {renderDescriptionSplit(String(c.description), String(headerTitle))}
                     </div>
-                  ))}
+                  )}
+
+                  {/* Sections */}
+                  {Array.isArray(c.sections) && c.sections.length > 0 && (
+                    <div className="space-y-8 mt-10">
+                      {c.sections.map((section: any, idx: number) => (
+                        <div key={idx}>
+                          {section.title && (
+                            <h3 className="text-2xl font-semibold mb-3 text-gray-900">
+                              {String(section.title)}
+                            </h3>
+                          )}
+                          {section.content && (
+                            <div className="mb-4">
+                              {renderRichText(section.content)}
+                            </div>
+                          )}
+                          {/* Section images: do NOT render on the verhuur page */}
+                          {!isVerhuur && section.image && (
+                            <div className="my-6">
+                              <Image
+                                src={String(section.image)}
+                                alt={String(section.title ?? 'Sectie afbeelding')}
+                                width={800}
+                                height={600}
+                                className="rounded-lg"
+                              />
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+
+                {/* Right: benefits grid */}
+                <div className="">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
+                    {c.benefits.map((b: any, i: number) => {
+                      const desc = b?.text ?? (b?.html ? String(b.html).replace(/<[^>]+>/g, '') : '');
+                      return (
+                        <ServiceCard
+                          key={i}
+                          icon={<span aria-hidden>🌿</span>}
+                          title={b?.title ?? ''}
+                          description={desc}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </section>
+          ) : (
+            // Default layout: benefits above, then rich content as before
+            <>
+              {/* Benefits Grid */}
+              {Array.isArray(c?.benefits) && c.benefits.length > 0 && (
+                <div className="mb-8">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
+                    {c.benefits.map((b: any, i: number) => {
+                      const desc = b?.text ?? (b?.html ? String(b.html).replace(/<[^>]+>/g, '') : '');
+                      return (
+                        <ServiceCard
+                          key={i}
+                          icon={<span aria-hidden>🌿</span>}
+                          title={b?.title ?? ''}
+                          description={desc}
+                        />
+                      );
+                    })}
+                  </div>
                 </div>
               )}
 
-              {/* Note: top-level content.images are intentionally not rendered on the verhuur page */}
-            </div>
-          </section>
+              {/* Rich Content Section */}
+              <section className="bg-white p-6 md:p-8 rounded-lg shadow-sm mt-10">
+                <div className="prose max-w-none text-gray-700">
+                  {/* Main Description */}
+                  {c.description && (
+                    <div className="mb-6">
+                      {isVerhuur ? renderDescriptionSplit(String(c.description), String(headerTitle)) : renderRichText(String(c.description))}
+                    </div>
+                  )}
+
+                  {/* Sections */}
+                  {Array.isArray(c.sections) && c.sections.length > 0 && (
+                    <div className="space-y-8 mt-10">
+                      {c.sections.map((section: any, idx: number) => (
+                        <div key={idx}>
+                          {section.title && (
+                            <h3 className="text-2xl font-semibold mb-3 text-gray-900">
+                              {String(section.title)}
+                            </h3>
+                          )}
+                          {section.content && (
+                            <div className="mb-4">
+                              {renderRichText(section.content)}
+                            </div>
+                          )}
+                          {/* Section images: do NOT render on the verhuur page */}
+                          {!isVerhuur && section.image && (
+                            <div className="my-6">
+                              <Image
+                                src={String(section.image)}
+                                alt={String(section.title ?? 'Sectie afbeelding')}
+                                width={800}
+                                height={600}
+                                className="rounded-lg"
+                              />
+                            </div>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Note: top-level content.images are intentionally not rendered on the verhuur page */}
+                </div>
+              </section>
+            </>
+          )}
 
           {/* CTA block — rendered as final, visually separated block */}
           {ctaText && (
