@@ -219,7 +219,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title}</h1>
                 {(() => {
                   const heroIntro = typeof (props as any).heroIntro === 'string' ? String((props as any).heroIntro) : (typeof (props as any).rawData?.heroIntro === 'string' ? String((props as any).rawData.heroIntro) : undefined);
-                  return heroIntro ? <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{firstSentence(heroIntro)}</p> : null;
+                  return heroIntro ? <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed whitespace-pre-line">{heroIntro}</p> : null;
                 })()}
               </div>
 
