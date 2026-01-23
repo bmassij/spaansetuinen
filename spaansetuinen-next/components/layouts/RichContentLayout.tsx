@@ -1,8 +1,10 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import Image from 'next/image';
 import ServiceCard from '@/components/cards/ServiceCard';
 import FourBlocks from '@/components/home/FourBlocks';
 import home from '@/content/home.json';
+import ContactForm from '@/components/ui/ContactForm';
 
 type RichContentLayoutProps = {
   content: any;
@@ -80,6 +82,7 @@ function renderDescriptionSplit(description: string, headerTitle: string) {
 
 export default function RichContentLayout({ content, showServiceCards }: RichContentLayoutProps) {
   const c = content ?? {};
+  const [showContactForm, setShowContactForm] = useState(false);
 
   const headerTitle = c?.hero?.title ?? c?.title ?? c?.name ?? '';
   const resolvedHeroSubtitle = c.hero?.subtitle ?? c.subtitle ?? undefined;
@@ -241,8 +244,8 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
                       {c.cta?.email && c.cta.email.href && (
                         <a href={String(c.cta.email.href)} className="inline-flex items-center px-6 py-3 bg-emerald-800 text-white font-semibold rounded-lg">✉️ {String(c.cta.email.text ?? email)}</a>
                       )}
-                      {/* Extra button linking to contactformulier */}
-                      <a href="/contact" className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg">Contactformulier</a>
+                      {/* Extra button opening the contactformulier modal */}
+                      <button onClick={() => setShowContactForm(true)} className="inline-flex items-center px-6 py-3 bg-emerald-600 text-white font-semibold rounded-lg">Contactformulier</button>
                     </div>
                   </div>
                 </div>
@@ -264,6 +267,22 @@ export default function RichContentLayout({ content, showServiceCards }: RichCon
               </section>
             )
           )}
+
+          {/* Modal for ContactForm (verhuur) */}
+          {isVerhuur && showContactForm && (
+            <div className="fixed inset-0 z-50 flex items-center justify-center">
+              <div className="absolute inset-0 bg-black/50" onClick={() => setShowContactForm(false)} />
+              <div className="relative z-60 max-w-xl w-full mx-4">
+                <div className="bg-white rounded-lg shadow-xl p-6">
+                  <div className="flex justify-end">
+                    <button aria-label="Sluit" onClick={() => setShowContactForm(false)} className="text-gray-500 hover:text-gray-700">✕</button>
+                  </div>
+                  <ContactForm />
+                </div>
+              </div>
+            </div>
+          )}
+
         </div>
       </main>
     </div>
