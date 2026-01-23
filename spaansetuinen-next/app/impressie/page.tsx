@@ -28,9 +28,11 @@ export default function ImpressiePage() {
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
                 {hero.title}
               </h1>
-              <p className="text-lg sm:text-xl text-gray-100 leading-relaxed">
-                {hero.subtitle}
-              </p>
+              <div className="text-lg sm:text-xl text-gray-100 leading-relaxed">
+                {hero.subtitle.split('\n').filter(Boolean).map((line: string, i: number) => (
+                  <p key={i} className="mb-2">{line}</p>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -49,9 +51,11 @@ export default function ImpressiePage() {
       {/* INTRO SECTION - whitespace buffer */}
       <section id="intro" className="bg-gradient-to-b from-white to-gray-50 py-20">
         <div className="container max-w-3xl mx-auto px-6 lg:px-8 text-center">
-          <p className="text-lg text-gray-600 leading-relaxed">
-            {intro}
-          </p>
+          <div className="text-lg text-gray-600 leading-relaxed">
+            {intro.split('\n').filter(Boolean).map((line: string, i: number) => (
+              <p key={i} className="mb-2">{line}</p>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -102,9 +106,11 @@ export default function ImpressiePage() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               {cta.heading}
             </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              {cta.text}
-            </p>
+            <div className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+              {cta.text.split('\n').filter(Boolean).map((line: string, i: number) => (
+                <p key={i} className="mb-2">{line}</p>
+              ))}
+            </div>
             <div className="flex flex-wrap justify-center gap-4">
               {cta.buttons.map((button, index) => (
                 <a

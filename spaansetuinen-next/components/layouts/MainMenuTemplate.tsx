@@ -9,6 +9,15 @@ type MainMenuTemplateProps = {
   children?: React.ReactNode;
 };
 
+// Helper: render plain text with \n as paragraphs
+function renderParagraphs(text?: string | null): JSX.Element[] | null {
+  if (!text || typeof text !== 'string') return null;
+  const normalized = text.replace(/\r\n/g, '\n');
+  const parts = normalized.split(/\n+/).filter(p => p.trim());
+  if (parts.length === 0) return null;
+  return parts.map((p, i) => <p key={i} className="mb-2">{p}</p>);
+}
+
 export default function MainMenuTemplate({ content, showServiceCards, children }: MainMenuTemplateProps) {
   const c = content ?? {};
 
@@ -35,13 +44,23 @@ export default function MainMenuTemplate({ content, showServiceCards, children }
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8 items-center py-8">
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white" dangerouslySetInnerHTML={{ __html: String(headerTitle) }} />
-              {resolvedHeroSubtitle && (
-                <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: String(resolvedHeroSubtitle) }} />
-              )}
-              {c.hero?.intro && (
-                <div className="mt-4 text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: String(c.hero.intro) }} />
-              )}
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">
+                {String(headerTitle)}
+              </h1>
+              {resolvedHeroSubtitle && (() => {
+                const subtitleText = String(resolvedHeroSubtitle);
+                const isPlain = !/<[^>]+>/.test(subtitleText);
+                return isPlain ?
+                  <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed">{renderParagraphs(subtitleText)}</div> :
+                  <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: subtitleText }} />;
+              })()}
+              {c.hero?.intro && (() => {
+                const introText = String(c.hero.intro);
+                const isPlain = !/<[^>]+>/.test(introText);
+                return isPlain ?
+                  <div className="mt-4 text-emerald-50 leading-relaxed">{renderParagraphs(introText)}</div> :
+                  <div className="mt-4 text-emerald-50 leading-relaxed" dangerouslySetInnerHTML={{ __html: introText }} />;
+              })()}
             </div>
 
             {resolvedHeroSecondaryImage ? (
@@ -77,9 +96,15 @@ export default function MainMenuTemplate({ content, showServiceCards, children }
               {c?.core?.html ? (
                 <div dangerouslySetInnerHTML={{ __html: c.core.html }} />
               ) : c?.core?.content ? (
-                <div dangerouslySetInnerHTML={{ __html: c.core.content }} />
+                (() => {
+                  const coreText = String(c.core.content);
+                  const isPlain = !/<[^>]+>/.test(coreText);
+                  return isPlain ?
+                    <div>{renderParagraphs(coreText)}</div> :
+                    <div dangerouslySetInnerHTML={{ __html: coreText }} />;
+                })()
               ) : (
-                <div>{c.core.text}</div>
+                <div>{renderParagraphs(c.core.text)}</div>
               )}
             </section>
           )}
@@ -102,15 +127,21 @@ export default function MainMenuTemplate({ content, showServiceCards, children }
                   )}
 
                   {section.title && (
-                    <h2 className="text-xl font-semibold mb-3" dangerouslySetInnerHTML={{ __html: String(section.title) }} />
+                    <h2 className="text-xl font-semibold mb-3">{String(section.title)}</h2>
                   )}
 
                   {section.html ? (
                     <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: section.html }} />
                   ) : section.content ? (
-                    <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: section.content }} />
+                    (() => {
+                      const sectionText = String(section.content);
+                      const isPlain = !/<[^>]+>/.test(sectionText);
+                      return isPlain ?
+                        <div className="text-gray-700 leading-relaxed">{renderParagraphs(sectionText)}</div> :
+                        <div className="text-gray-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: sectionText }} />;
+                    })()
                   ) : section.text ? (
-                    <p className="text-gray-700 leading-relaxed">{section.text}</p>
+                    <div className="text-gray-700 leading-relaxed">{renderParagraphs(section.text)}</div>
                   ) : null}
 
                   <div className="mt-4">

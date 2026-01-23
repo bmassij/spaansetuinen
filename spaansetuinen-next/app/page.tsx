@@ -60,8 +60,12 @@ export default async function Page() {
           <div className="container max-w-7xl mx-auto px-6 lg:px-8">
             <div className="max-w-3xl">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">{heroTitle}</h1>
-              <p className="text-lg sm:text-xl text-gray-100 leading-relaxed mb-4">{heroSubtitle}</p>
-              <p className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">{intro}</p>
+              {heroSubtitle.split('\n').filter(Boolean).map((line: string, i: number) => (
+                <p key={i} className="text-lg sm:text-xl text-gray-100 leading-relaxed mb-4">{line}</p>
+              ))}
+              {intro.split('\n').filter(Boolean).map((line: string, i: number) => (
+                <p key={i} className="text-base sm:text-lg text-gray-200 leading-relaxed mb-4">{line}</p>
+              ))}
 
               <div className="flex flex-wrap gap-4">
                 <a href="#highlights" className="inline-flex items-center px-8 py-3 bg-emerald-600 hover:bg-emerald-700 text-white text-lg font-semibold rounded-lg shadow-lg transition transform hover:scale-105">{ctaAnchor}</a>
@@ -81,9 +85,11 @@ export default async function Page() {
         <div className="container max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{ctaAnchor}</h2>
-            <p className="text-lg text-gray-600">
-              {introAfterHero}
-            </p>
+            <div className="text-lg text-gray-600">
+              {introAfterHero.split('\n').filter(Boolean).map((line: string, i: number) => (
+                <p key={i} className="mb-2">{line}</p>
+              ))}
+            </div>
           </div>
 
           <FourBlocks blocks={blocks} />
@@ -109,7 +115,11 @@ export default async function Page() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
-                    <p className="text-gray-600">{description}</p>
+                    <div className="text-gray-600">
+                      {description.split('\n').filter(Boolean).map((line: string, j: number) => (
+                        <p key={j} className="mb-1">{line}</p>
+                      ))}
+                    </div>
                   </div>
                 </div>
               )
@@ -123,10 +133,14 @@ export default async function Page() {
         <div className="container max-w-6xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">{aboutTitle}</h2>
-            <p className="text-xl text-gray-600 mb-8 text-center italic">{aboutTeaser}</p>
+            <div className="text-xl text-gray-600 mb-8 text-center italic">
+              {aboutTeaser.split('\n').filter(Boolean).map((line: string, i: number) => (
+                <p key={i} className="mb-2">{line}</p>
+              ))}
+            </div>
             <div className="space-y-4">
-              {aboutStory.split(/\n\s*\n/).filter(Boolean).map((para: string, idx: number) => (
-                <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para}</p>
+              {aboutStory.split(/\n+/).filter(Boolean).map((para: string, idx: number) => (
+                <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para.trim()}</p>
               ))}
             </div>
           </div>
@@ -139,8 +153,8 @@ export default async function Page() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6 text-center">{processTitle}</h2>
             <div className="space-y-4">
-              {processText.split(/\n\s*\n/).filter(Boolean).map((para: string, idx: number) => (
-                <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para}</p>
+              {processText.split(/\n+/).filter(Boolean).map((para: string, idx: number) => (
+                <p key={idx} className="text-lg text-gray-700 leading-relaxed">{para.trim()}</p>
               ))}
             </div>
           </div>
@@ -157,11 +171,19 @@ export default async function Page() {
                 <div className="flex-shrink-0">
                   <div className="w-8 h-8 bg-emerald-600 text-white rounded-full flex items-center justify-center text-lg font-bold">✓</div>
                 </div>
-                <p className="text-lg text-gray-700">{item}</p>
+                <div className="text-lg text-gray-700">
+                  {item.split('\n').filter(Boolean).map((line: string, j: number) => (
+                    <p key={j} className="mb-1">{line}</p>
+                  ))}
+                </div>
               </li>
             ))}
           </ul>
-          <p>{whyUsOutro}</p>
+          <div className="text-center mt-8 text-lg text-gray-700">
+            {whyUsOutro.split('\n').filter(Boolean).map((line: string, i: number) => (
+              <p key={i} className="mb-2">{line}</p>
+            ))}
+          </div>
         </div>
       </section>
 

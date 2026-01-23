@@ -1,33 +1,38 @@
 {
-    "title":  "Mediterrane voeding",
-    "description":  "Pokon Mediterrane Planten Mest is een organische mest verrijkt met in de natuur voorkomende mineralen (zeoliet en algen). Het voedt de plant en verbetert de grond. Je mediterrane planten zullen sterker zijn met Pokon Mediterrane Planten Mest. Deze organische mest bevat essentiÃ«le voedingselementen en een rijke mix van sporenelementen waardoor jouw mediterrane planten mooi en gezond blijven.\n\nPokon Mediterrane Planten Voeding (vloeibaar) wordt geadviseerd na de winter te geven voor een extra boost. Volg de gebruiksaanwijzing voor dosering en toepassing.",
-    "pricing":  {
-                    "title":  "Prijzen",
-                    "items":  [
-                                  {
-                                      "description":  "Pokon Mediterrane planten mest 1 kg",
-                                      "price":  "â‚¬ 8,50"
-                                  },
-                                  {
-                                      "description":  "Pokon Mediterrane planten voeding 500 ml",
-                                      "price":  "â‚¬ 8,50"
-                                  }
-                              ]
-                },
-    "cta":  {
-                "heading":  "Interesse?",
-                "body":  "Wilt u meer informatie over mediterrane voeding voor uw planten? Neem contact met ons op voor voorraad, levering en persoonlijk advies.",
-                "phone":  {
-                              "href":  "tel:+31611929392",
-                              "text":  "+31 6 11 92 93 92"
-                          },
-                "email":  {
-                              "href":  "mailto:lisette@spaansetuin-enzo.nl",
-                              "text":  "lisette@spaansetuin-enzo.nl"
-                          }
-            },
-    "hero":  {
-                 "secondaryImage":  "/images/impressie/impressie__content__01-dup-1.jpg",
-                 "image":  "/images/impressie/impressie__content__01-dup-1.jpg"
-             }
+  "title": "Mediterrane voeding",
+
+  "description": "Op deze pagina vindt u mediterrane voeding die speciaal is afgestemd op mediterrane planten zoals olijfbomen, palmen, citrus- en vijgenbomen.\n\nWij bieden zowel vaste mest als vloeibare voeding, zodat u uw planten gedurende het hele seizoen optimaal kunt ondersteunen.",
+
+  "sections": [
+    {
+      "title": "Pokon Mediterrane Planten Mest 1 kg",
+      "content": "Pokon Mediterrane Planten Mest is een organische mest verrijkt met in de natuur voorkomende mineralen zoals zeoliet en algen.\n\nHet voedt de plant en verbetert de grond. Mediterrane planten zullen sterker zijn met Pokon Mediterrane Planten Mest.\n\nDeze organische mest bevat essentiële voedingselementen en een rijke mix van sporenelementen waardoor mediterrane planten mooi en gezond blijven.\n\nDaarnaast wordt de mediterrane plant sterk en gezond door extra humusextracten en een plantaardige biostimulant. Hierdoor kan de plant de voeding beter opnemen.\n\nMagnesium (MgO) en ijzer (Fe) zorgen ervoor dat de groene kleur van de bladeren nog intenser zal zijn.\n\nPrijs: op aanvraag"
+    },
+    {
+      "title": "Pokon Mediterrane Planten Voeding 500 ml",
+      "content": "Pokon Mediterrane Planten Voeding zorgt ervoor dat mediterrane planten sterker en gezonder worden.\n\nDeze voeding bevat essentiële voedingselementen en een rijke mix van sporenelementen waardoor mediterrane planten mooi en gezond blijven.\n\nDaarnaast wordt de plant sterk en gezond door extra humusextracten en een plantaardige biostimulant. Hierdoor kan de mediterrane plant de voeding beter opnemen.\n\nMagnesium (MgO) en ijzer (Fe) zorgen ervoor dat de groene kleur van de bladeren nog intenser zal zijn.\n\nDe vloeibare voeding wordt geadviseerd na de winter te geven voor een extra boost.\n\nPrijs: op aanvraag"
+    },
+    {
+      "title": "Voedingstips",
+      "content": "Voor gedetailleerde voedingstips zie onderstaande link."
+    }
+  ],
+
+  "cta": {
+    "heading": "Interesse?",
+    "body": "Wilt u meer informatie over mediterrane voeding voor uw planten?\nNeem contact met ons op voor voorraad, levering en persoonlijk advies.",
+    "phone": {
+      "href": "tel:+31611929392",
+      "text": "+31 6 11 92 93 92"
+    },
+    "email": {
+      "href": "mailto:lisette@spaansetuin-enzo.nl",
+      "text": "lisette@spaansetuin-enzo.nl"
+    }
+  },
+
+  "hero": {
+    "secondaryImage": "/images/impressie/impressie__content__01-dup-1.jpg",
+    "image": "/images/impressie/impressie__content__01-dup-1.jpg"
+  }
 }

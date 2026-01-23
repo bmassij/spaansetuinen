@@ -117,40 +117,64 @@ function hasContent(value: unknown): boolean {
 // Helper: render sections for detailed rendering (verzorging / plaatsing)
 function renderSections(value: any) {
   if (!value) return null;
-  if (typeof value === 'string') return <div dangerouslySetInnerHTML={{ __html: value }} />;
+  
+  // Check if plain text (no HTML tags)
+  const isPlainText = (text: string) => typeof text === 'string' && !/<[^>]+>/.test(text);
+  
+  if (typeof value === 'string') {
+    return isPlainText(value) ? renderTreeParagraphs(value) : <div dangerouslySetInnerHTML={{ __html: value }} />;
+  }
+  
   if (Array.isArray(value)) {
     return value.map((item: any, i: number) => {
-      if (typeof item === 'string') return <div key={i} dangerouslySetInnerHTML={{ __html: item }} />;
+      if (typeof item === 'string') {
+        return isPlainText(item) ? <div key={i}>{renderTreeParagraphs(item)}</div> : <div key={i} dangerouslySetInnerHTML={{ __html: item }} />;
+      }
       if (item && typeof item === 'object') {
         const title = item.title || item.heading || '';
         const content = item.content || item.text || item.body || item.intro || '';
         return (
           <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
             {title && <h4 className="font-semibold text-gray-900">{title}</h4>}
-            {content && <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(content) }} />}
+            {content && (
+              isPlainText(String(content)) ?
+                <div className="mt-2 text-sm">{renderTreeParagraphs(String(content))}</div> :
+                <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(content) }} />
+            )}
           </div>
         );
       }
       return null;
     });
   }
+  
   if (typeof value === 'object') {
     if (Array.isArray(value.sections)) {
-      return value.sections.map((s: any, i: number) => (
-        <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
-          {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
-          {(s.content || s.text || s.body || s.intro) && (
-            <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(s.content || s.text || s.body || s.intro) }} />
-          )}
-        </div>
-      ));
+      return value.sections.map((s: any, i: number) => {
+        const sectionContent = s.content || s.text || s.body || s.intro;
+        return (
+          <div key={i} className="bg-white rounded-lg p-4 border border-gray-100">
+            {s.title && <h4 className="font-semibold text-gray-900">{s.title}</h4>}
+            {sectionContent && (
+              isPlainText(String(sectionContent)) ?
+                <div className="mt-2 text-sm">{renderTreeParagraphs(String(sectionContent))}</div> :
+                <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(sectionContent) }} />
+            )}
+          </div>
+        );
+      });
     }
     // fallback: render first string properties
     const nodes: JSX.Element[] = [];
     Object.values(value).forEach((v, i) => {
-      if (typeof v === 'string') nodes.push(<div key={i} dangerouslySetInnerHTML={{ __html: v }} />);
-      else if (Array.isArray(v)) {
-        v.forEach((it, j) => { if (typeof it === 'string') nodes.push(<div key={`${i}-${j}`} dangerouslySetInnerHTML={{ __html: it }} />); });
+      if (typeof v === 'string') {
+        nodes.push(isPlainText(v) ? <div key={i}>{renderTreeParagraphs(v)}</div> : <div key={i} dangerouslySetInnerHTML={{ __html: v }} />);
+      } else if (Array.isArray(v)) {
+        v.forEach((it, j) => {
+          if (typeof it === 'string') {
+            nodes.push(isPlainText(it) ? <div key={`${i}-${j}`}>{renderTreeParagraphs(it)}</div> : <div key={`${i}-${j}`} dangerouslySetInnerHTML={{ __html: it }} />);
+          }
+        });
       }
     });
     return nodes.length > 0 ? nodes : null;
@@ -161,14 +185,28 @@ function renderSections(value: any) {
 // Helper: render CTA content safely
 function renderCTAContent(cta: any) {
   if (!cta) return null;
-  if (typeof cta === 'string') return <div className="text-lg text-emerald-50 mb-4" dangerouslySetInnerHTML={{ __html: cta }} />;
+  
+  const isPlainText = (text: string) => typeof text === 'string' && !/<[^>]+>/.test(text);
+  
+  if (typeof cta === 'string') {
+    return isPlainText(cta) ? <div className="text-lg text-emerald-50 mb-4">{renderTreeParagraphs(cta)}</div> : <div className="text-lg text-emerald-50 mb-4" dangerouslySetInnerHTML={{ __html: cta }} />;
+  }
+  
   if (typeof cta === 'object') {
     const heading = cta.heading || cta.title || '';
     const intro = cta.intro || cta.body || cta.text || cta.description || '';
     return (
       <>
-        {heading && <div className="text-lg text-emerald-50 font-semibold mb-2" dangerouslySetInnerHTML={{ __html: heading }} />}
-        {intro && <div className="text-lg text-emerald-50 mb-4" dangerouslySetInnerHTML={{ __html: intro }} />}
+        {heading && (
+          isPlainText(String(heading)) ?
+            <div className="text-lg text-emerald-50 font-semibold mb-2">{String(heading)}</div> :
+            <div className="text-lg text-emerald-50 font-semibold mb-2" dangerouslySetInnerHTML={{ __html: String(heading) }} />
+        )}
+        {intro && (
+          isPlainText(String(intro)) ?
+            <div className="text-lg text-emerald-50 mb-4">{renderTreeParagraphs(String(intro))}</div> :
+            <div className="text-lg text-emerald-50 mb-4" dangerouslySetInnerHTML={{ __html: String(intro) }} />
+        )}
       </>
     );
   }
@@ -250,7 +288,8 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4 text-white">{title}</h1>
                 {(() => {
                   const heroIntro = typeof (props as any).heroIntro === 'string' ? String((props as any).heroIntro) : (typeof (props as any).rawData?.heroIntro === 'string' ? String((props as any).rawData.heroIntro) : undefined);
-                  return heroIntro ? <p className="text-lg sm:text-xl text-emerald-50 leading-relaxed whitespace-pre-line">{heroIntro}</p> : null;
+                  // heroIntro: preserve whitespace, no transform
+                  return heroIntro ? <div className="text-lg sm:text-xl text-emerald-50 leading-relaxed whitespace-pre-line">{heroIntro}</div> : null;
                 })()}
               </div>
 
@@ -372,19 +411,33 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
                             </div>
                           ))}
 
-                          {!hasPlaatsingSections && hasContent(inVolleGrond) && (
-                            <div className="bg-white rounded-lg p-4 border border-gray-100">
-                              <h4 className="font-semibold text-gray-900">In de volle grond</h4>
-                              <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(inVolleGrond) }} />
-                            </div>
-                          )}
+                          {!hasPlaatsingSections && hasContent(inVolleGrond) && (() => {
+                            const grondText = String(inVolleGrond);
+                            const isPlain = !/<[^>]+>/.test(grondText);
+                            return (
+                              <div className="bg-white rounded-lg p-4 border border-gray-100">
+                                <h4 className="font-semibold text-gray-900">In de volle grond</h4>
+                                {isPlain ?
+                                  <div className="mt-2 text-sm">{renderTreeParagraphs(grondText)}</div> :
+                                  <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: grondText }} />
+                                }
+                              </div>
+                            );
+                          })()}
 
-                          {!hasPlaatsingSections && hasContent(inPotOfBloembak) && (
-                            <div className="bg-white rounded-lg p-4 border border-gray-100">
-                              <h4 className="font-semibold text-gray-900">In een bloembak of pot</h4>
-                              <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: String(inPotOfBloembak) }} />
-                            </div>
-                          )}
+                          {!hasPlaatsingSections && hasContent(inPotOfBloembak) && (() => {
+                            const potText = String(inPotOfBloembak);
+                            const isPlain = !/<[^>]+>/.test(potText);
+                            return (
+                              <div className="bg-white rounded-lg p-4 border border-gray-100">
+                                <h4 className="font-semibold text-gray-900">In een bloembak of pot</h4>
+                                {isPlain ?
+                                  <div className="mt-2 text-sm">{renderTreeParagraphs(potText)}</div> :
+                                  <div className="mt-2 text-sm" dangerouslySetInnerHTML={{ __html: potText }} />
+                                }
+                              </div>
+                            );
+                          })()}
                         </div>
                       </div>
                     )}
@@ -433,8 +486,8 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
               <div className="max-w-5xl mx-auto">
                 <div className="bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-2xl p-8 text-white text-center">
                   {cta.heading && <h2 className="text-3xl font-bold mb-4">{cta.heading}</h2>}
-                  {cta.intro && <p className="text-lg text-emerald-50 mb-4">{cta.intro}</p>}
-                  {cta.body && <p className="text-lg text-emerald-50 mb-4">{cta.body}</p>}
+                  {cta.intro && (typeof cta.intro === 'string' && !/<[^>]+>/.test(cta.intro) ? <div className="text-lg text-emerald-50 mb-4">{renderTreeParagraphs(cta.intro)}</div> : <p className="text-lg text-emerald-50 mb-4">{cta.intro}</p>)}
+                  {cta.body && (typeof cta.body === 'string' && !/<[^>]+>/.test(cta.body) ? <div className="text-lg text-emerald-50 mb-4">{renderTreeParagraphs(cta.body)}</div> : <p className="text-lg text-emerald-50 mb-4">{cta.body}</p>)}
                   <div className="flex flex-wrap justify-center gap-4">
                     {cta.phone && (
                       <a href={cta.phone.href} className="inline-flex items-center px-6 py-3 bg-white text-emerald-600 font-semibold rounded-lg">
@@ -538,7 +591,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
           if (!introText) return null;
           return (
             <section className="bg-white p-6 rounded-lg shadow-sm mb-6">
-              <div className="text-gray-700 whitespace-pre-line">{introText}</div>
+              <div className="text-gray-700">{renderTreeParagraphs(introText)}</div>
             </section>
           );
         })()}
@@ -564,7 +617,7 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
               <div>
                 <h3 className="text-2xl font-semibold mb-3">{omschrijvingHeading || 'Kenmerken'}</h3>
                 <div className="bg-white rounded-lg p-6 border border-gray-100">
-                  <p className="text-gray-700 whitespace-pre-line">{omschrijving}</p>
+                  <div className="text-gray-700">{renderTreeParagraphs(omschrijving)}</div>
                 </div>
               </div>
             )}
@@ -593,7 +646,12 @@ export default function ProductTemplate(props: ProductProps & { topContent?: Rea
             {long_description && (
               <div>
                 {!isTree && <h3 className="text-2xl font-semibold mb-3">Details</h3>}
-                <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: long_description }} />
+                {(() => {
+                  const isPlain = !/<[^>]+>/.test(long_description);
+                  return isPlain ?
+                    <div className="prose max-w-none text-gray-700">{renderTreeParagraphs(long_description)}</div> :
+                    <div className="prose max-w-none text-gray-700" dangerouslySetInnerHTML={{ __html: long_description }} />;
+                })()}
               </div>
             )}
           </div>
